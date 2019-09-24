@@ -32,21 +32,21 @@ Introduction to JavaScript II programming (4 ECTS credits)
 
 This subject is the basis of the Master's in Web Application Development and the other subjects use it as a basis. It is also offered as an optional subject in the Master's in Application Development for Mobile Devices, in which the combination of HTML and CSS, followed by JavaScript programming, is a very important technology for multiplatform development.
 
-### * Contents:
+### Contents:
 
-#### 1. Introduction and basic concepts
+1. Introduction and basic concepts
 
-#### 2. Fundamentals of (X)HTML and CSS
+2. Fundamentals of (X)HTML and CSS
 
-#### 3. Lists, images, links, div, span and model boxes
+3. Lists, images, links, div, span and model boxes
 
-#### 4. Validation and accessibility
+4. Validation and accessibility
 
-#### 5. Tables
+5. Tables
 
-#### 6. Forms
+6. Forms
 
-#### 7. Layout
+7. Layout
 
 ## 2. Design of interactive interfaces
 
