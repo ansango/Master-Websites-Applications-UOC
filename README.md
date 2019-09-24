@@ -124,7 +124,7 @@ In this subject we will see the fundamentals of this work on the server. To do t
     - Integration with social networks
     - Themes
 
-04. PHP Frameworks. Laravel
+04. PHP Frameworks. Laravel:
 
     - Installation 
     - Configuration
@@ -138,15 +138,57 @@ In this subject we will see the fundamentals of this work on the server. To do t
 
 ### Contents:
 
+01. Reactive Programming: Forms
+02. Reactive Programming using RxJS + Redux Pattern (NgRx)
+03. Layout: Angular Material
+04. Tests
+05. Progressive Web Apps (PWA)
+06. Universal Angular (SEO)
+07. Deploying a frontend application
+08. Refactoring
+
 ## 7. HTML, CSS Tools I
 
+The layout of web pages is a complex process where having a very good knowledge of HTML and CSS is essential to save time and achieve the desired results. Anyone who needs to work with HTML and CSS needs to keep their knowledge of CSS up to date to know all its possibilities and take advantage of them for your benefit.
+
 ### Contents:
+
+01. Tools for web developers of browsers.
+02. A modern front-end development workflow.
+03. Images and animations on the web.
+    - Responsive images with art direction
+    - Clip-path shapes
+    - CSS transformations and animations
+
+04. Front-end performance and tools to monitor and optimize.
 
 ## 8. HTML, CSS Tools II
 
 ### Contents:
 
+The layout of web pages is a complex process where having a very good knowledge of HTML and CSS is essential to save time and achieve the desired results. Anyone who needs to work with HTML and CSS needs to keep their knowledge of CSS up to date to know all its possibilities and take advantage of them for your benefit.
+
+01. A modern front-end development workflow.
+    - Use of the terminal.
+    - Package managers. NPM.
+    - Module bundlers. Parcel. UOC Boilerplate.
+    - CSS pre and postprocessors. Sass / SCSS.
+    - Git version control. Publication of the web.
+    - CSS style guides and methodologies.
+
+02. Style guides.
+    - CSS methodologies: OOCSS, BEM, SMACSS, ITCs.
+    - Tools: Stylelint.
+
+03. Advanced layout.
+    - Flex.
+    - Grid.
+
+04. Component Libraries and Utilities Libraries
+    - Component libraries. Bootstrap.
+    - Atomic CSS. Utilities libraries. Tailwind.
+
 ## 9. Master's degree thesis
 
-### Contents:
+In the final master's work, students bring into play and demonstrate the knowledge acquired throughout the master's course. The student will be able to propose a project for the work, which will be reviewed by the faculty to ensure that it is feasible, meets the requirements and that its level of complexity is adequate. In the absence of a project proposal, the faculty will propose a series of projects to be carried out, from which the student will be able to choose the one that best suits their knowledge and preferences.
 
