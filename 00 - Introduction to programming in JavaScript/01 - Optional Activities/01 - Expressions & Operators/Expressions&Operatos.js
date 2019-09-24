@@ -109,8 +109,35 @@ console.log("Area", area)
 console.log("Perimetro", perimetro)
 
 //4. Escribid un programa en JavaScript que calcule el sueldo mensual a partir del número de horas trabajadas (160 horas) y el precio por hora trabajada (12 €). Probad con otros valores.
+
+let horas = 160
+let precioHora = 12
+let salario = horas * precioHora
+
+console.log("Salario", salario + " € " + "mensual")
+
 //5. Escribid un programa en JavaScript que calcule el índice de masa corporal (IMC) de una persona de 70 kg de peso y 1, 80 m de altura. Comprobad el resultado con diversos valores. Podéis consultar la fórmula en la wikipedia  https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal
+
+let peso = 70
+let altura = 1.80
+
+let imc = 70 / 1.80 ** 2
+
+console.log("IMC", imc)
+
 //6. Escribid un programa en JavaScript que calcule las soluciones de una ecuación de segundo grado de la forma a*x*x + b*x + c = 0, dados a, b i c (suponemos que b*b > 4*a*c).
+
+let a = 2
+let b = -2
+let c = -4
+let discr = (b ** 2) - (4 * a * c)
+let x1 = (- b + Math.sqrt(discr)) / 2
+let x2 = (- b - Math.sqrt(discr)) / 2
+
+console.log(`La solución es, para x1 = ${x1} y para x2 = ${x2}`)
+
+
+
 /*7. Escribid un programa en JavaScript que calcule el número de días de un mes concreto de un año concreto (teniendo en cuenta los años bisiestos). Podéis consultar la wikipedia https://es.wikipedia.org/wiki/A%C3%B1o_bisiesto
 
     Ejemplos:
@@ -120,6 +147,8 @@ console.log("Perimetro", perimetro)
     Mes:2 Año:2020 Días:29  (bisiesto, divisible por 4)
     Mes:2 Año:2100 Días:28 (no bisiesto, divisible por 100)
 */
+
+
 /*8. Escribid un programa en JavaScript que calcule el día de la semana de una fecha cualquiera. Podéis consultar la wikipedia https://es.wikipedia.org/wiki/Congruencia_de_Zeller
 
     Podéis comprobar los resultados en el sitio web https://www.timeanddate.com/calendar/
