@@ -1,4 +1,4 @@
-# UOC Master's Degree Documentation & Projects by Course :blue_book:
+# UOC Master's Degree Documentation & Projects by Course :computer: :books:
 
 The university master's degree in Website and Web Application Development trains professionals specialized in this field, capable of responding to the growing demand for professionals in web development and programming. This master's degree aims to cover the growing professional demand for front-end web developers, with in-depth knowledge of branding and layout, mastery of the tools used in production environments and back-end knowledge.
 
@@ -8,16 +8,16 @@ This is the documentation for the UOC's Master's degree in website and web appli
 
 ## List Of Contents
 
-00. [Introduction to programming in JavaScript](https://github.com/ansango/Master-Websites-Applications-UOC#0-introduction-to-programming-in-javascript)
-01. [HTML, CSS](https://github.com/ansango/Master-Websites-Applications-UOC#1-html--css)
-02. [Design of interactive interfaces](https://github.com/ansango/Master-Websites-Applications-UOC#2-design-of-interactive-interfaces)
-03. [JavaScript programming](https://github.com/ansango/Master-Websites-Applications-UOC#3-javascript-programming)
-04. [Frontend Javascript Frameworks](https://github.com/ansango/Master-Websites-Applications-UOC#4-frontend-javascript-frameworks)
-05. [Backend PHP](https://github.com/ansango/Master-Websites-Applications-UOC#5-backend-php)
-06. [Advanced Frontend Development](https://github.com/ansango/Master-Websites-Applications-UOC#6-advanced-frontend-development)
-07. [HTML, CSS Tools I](https://github.com/ansango/Master-Websites-Applications-UOC#7-html-css-tools-i)
-08. [HTML, CSS Tools II](https://github.com/ansango/Master-Websites-Applications-UOC#8-html-css-tools-ii)
-09. [Master's degree thesis](https://github.com/ansango/Master-Websites-Applications-UOC#9-masters-degree-thesis)
+00.[Introduction to programming in JavaScript](https://github.com/ansango/Master-Websites-Applications-UOC#0-introduction-to-programming-in-javascript)
+01.[HTML, CSS](https://github.com/ansango/Master-Websites-Applications-UOC#1-html--css)
+02.[Design of interactive interfaces](https://github.com/ansango/Master-Websites-Applications-UOC#2-design-of-interactive-interfaces)
+03.[JavaScript programming](https://github.com/ansango/Master-Websites-Applications-UOC#3-javascript-programming)
+04.[Frontend Javascript Frameworks](https://github.com/ansango/Master-Websites-Applications-UOC#4-frontend-javascript-frameworks)
+05.[Backend PHP](https://github.com/ansango/Master-Websites-Applications-UOC#5-backend-php)
+06.[Advanced Frontend Development](https://github.com/ansango/Master-Websites-Applications-UOC#6-advanced-frontend-development)
+07.[HTML, CSS Tools I](https://github.com/ansango/Master-Websites-Applications-UOC#7-html-css-tools-i)
+08.[HTML, CSS Tools II](https://github.com/ansango/Master-Websites-Applications-UOC#8-html-css-tools-ii)
+09.[Master's degree thesis](https://github.com/ansango/Master-Websites-Applications-UOC#9-masters-degree-thesis)
 
 ## 0. Introduction to programming in JavaScript
 
