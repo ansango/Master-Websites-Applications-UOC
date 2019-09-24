@@ -88,7 +88,26 @@ console.log(ev17)
 
 
 //2. Escribid un programa en JavaScript que calcule el perímetro y el área de un rectángulo de lados 20 y 80 unidades. Probad con otros valores.
-//3. Escribid un programa en JavaScript que calcule el perímetro i el área de un círculo de radio 10 unidades. Probad con otros valores.
+
+let a = 20
+let b = 80
+
+let area = b * a
+let perimetro = 2 * (b + a)
+
+console.log("Area", area)
+console.log("Perimetro", perimetro)
+
+//3. Escribid un programa en JavaScript que calcule el perímetro y el área de un círculo de radio 10 unidades. Probad con otros valores.
+
+let pi = Math.PI
+let radio = 10
+let area = pi * (10 ** 2)
+let perimetro = 2 * pi * radio
+
+console.log("Area", area)
+console.log("Perimetro", perimetro)
+
 //4. Escribid un programa en JavaScript que calcule el sueldo mensual a partir del número de horas trabajadas (160 horas) y el precio por hora trabajada (12 €). Probad con otros valores.
 //5. Escribid un programa en JavaScript que calcule el índice de masa corporal (IMC) de una persona de 70 kg de peso y 1, 80 m de altura. Comprobad el resultado con diversos valores. Podéis consultar la fórmula en la wikipedia  https://es.wikipedia.org/wiki/%C3%8Dndice_de_masa_corporal
 //6. Escribid un programa en JavaScript que calcule las soluciones de una ecuación de segundo grado de la forma a*x*x + b*x + c = 0, dados a, b i c (suponemos que b*b > 4*a*c).
