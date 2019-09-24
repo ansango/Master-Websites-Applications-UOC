@@ -8,16 +8,16 @@ This is the documentation for the UOC's Master's degree in website and web appli
 
 ## List Of Contents
 
-0. Introduction to programming in JavaScript
-1. HTML, CSS
-2. Design of interactive interfaces
-3. JavaScript programming
-4. Frontend Javascript Frameworks
-5. Backend PHP
-6. Advanced Frontend Development
-7. HTML, CSS Tools I
-8. HTML, CSS Tools II
-9. Master's degree thesis
+00. Introduction to programming in JavaScript
+01. HTML, CSS
+02. Design of interactive interfaces
+03. JavaScript programming
+04. Frontend Javascript Frameworks
+05. Backend PHP
+06. Advanced Frontend Development
+07. HTML, CSS Tools I
+08. HTML, CSS Tools II
+09. Master's degree thesis
 
 ## 0. Introduction to programming in JavaScript
 
@@ -34,19 +34,13 @@ This subject is the basis of the Master's in Web Application Development and the
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
 ## 2. Design of interactive interfaces
 
@@ -54,23 +48,15 @@ This course deals with interface design and interaction. It is about how the fea
 
 ### Contents:
 
-1. Fundamentals of Interaction Design and User Experience
-
-2. Interaction: models and typologies
-
-3. Cognitive, social, and emotional aspects of interaction
-
-4. Interfaces
-
-5. Research: data collection, interpretation and presentation
-
-6. Methods and processes of interaction design
-
-7. Identification and collection of requirements
-
-8. Prototyping
-
-9. Evaluation
+01. Fundamentals of Interaction Design and User Experience
+02. Interaction: models and typologies
+03. Cognitive, social, and emotional aspects of interaction
+04. Interfaces
+05. Research: data collection, interpretation and presentation
+06. Methods and processes of interaction design
+07. Identification and collection of requirements
+08. Prototyping
+09. Evaluation
 
 ## 3. JavaScript programming
 
@@ -80,133 +66,87 @@ This course makes an exhaustive review of the most recent version of JavaScript 
 
 ### Contents:
 
-1. Introduction to JavaScript. (Basic syntax. Data structures. Functions)
-
-2. Higher-level functions
-
-3. Object-oriented programming
-
-4. Error handling
-
-5. Regular Expressions
-
-6. Modules
-
-7. Asynchronous programming
-
-8. DOM
-
-9. Event handling
-
+01. Introduction to JavaScript. (Basic syntax. Data structures. Functions)
+02. Higher-level functions
+03. Object-oriented programming
+04. Error handling
+05. Regular Expressions
+06. Modules
+07. Asynchronous programming
+08. DOM
+09. Event handling
 10. Canvas
-
 11. HTTP & Forms
 
 ## 4. Frontend Javascript Frameworks
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
 ## 5. Backend PHP
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
 ## 6. Advanced Frontend Development
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
 ## 7. HTML, CSS Tools I
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
 ## 8. HTML, CSS Tools II
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
 ## 9. Master's degree thesis
 
 ### Contents:
 
-1. Introduction and basic concepts
-
-2. Fundamentals of (X)HTML and CSS
-
-3. Lists, images, links, div, span and model boxes
-
-4. Validation and accessibility
-
-5. Tables
-
-6. Forms
-
-7. Layout
+01. Introduction and basic concepts
+02. Fundamentals of (X)HTML and CSS
+03. Lists, images, links, div, span and model boxes
+04. Validation and accessibility
+05. Tables
+06. Forms
+07. Layout
 
