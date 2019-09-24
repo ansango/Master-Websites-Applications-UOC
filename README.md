@@ -6,7 +6,7 @@ The Master's curriculum is structured in three main areas: web design fundamenta
 
 This is the documentation for the UOC's Master's degree in website and web application development. I have collected all the documentation for each course and each of the projects carried out throughout the Master. You will find practices in HTML, CSS, Javascript, Tools, Angular JS, Laravel, Wordpress, Drupal, UI/UX and other examples. The content is arranged according to the subject matter taught by the Universitat Oberta de Catalunya (Open University of Catalonia, UOC)
 
-## List Of Contents
+## List Of Contents (Spanish Course Content)
 
 0. [Introduction to programming in JavaScript](https://github.com/ansango/Master-Websites-Applications-UOC#0-introduction-to-programming-in-javascript)
 1. [HTML, CSS](https://github.com/ansango/Master-Websites-Applications-UOC#1-html--css)
@@ -19,7 +19,7 @@ This is the documentation for the UOC's Master's degree in website and web appli
 8. [HTML, CSS Tools II](https://github.com/ansango/Master-Websites-Applications-UOC#8-html-css-tools-ii)
 9. [Master's degree thesis](https://github.com/ansango/Master-Websites-Applications-UOC#9-masters-degree-thesis)
 
-## :baby_bottle:  Introduction to programming in JavaScript 
+## :baby_bottle: Introduction to programming in JavaScript 
 
 In order to level the formative baggage, students without a recommended entrance profile must take 8 credits of formative complements.
 
@@ -28,7 +28,7 @@ The subjects foreseen for this purpose are the following:
 Introduction to JavaScript I programming (4 ECTS credits)
 Introduction to JavaScript II programming (4 ECTS credits)
 
-## :chocolate_bar:  HTML & CSS 
+## :chocolate_bar: HTML & CSS 
 
 This subject is the basis of the Master's in Web Application Development and the other subjects use it as a basis. It is also offered as an optional subject in the Master's in Application Development for Mobile Devices, in which the combination of HTML and CSS, followed by JavaScript programming, is a very important technology for multiplatform development.
 
@@ -42,7 +42,7 @@ This subject is the basis of the Master's in Web Application Development and the
 06. Forms
 07. Layout
 
-## :pizza:  Design of interactive interfaces 
+## :pizza: Design of interactive interfaces 
 
 This course deals with interface design and interaction. It is about how the features and functions of a product translate into something that people can use without obstacles, find useful and want to have. Although form and appearance are key, the subject content is not just about the visual interface. Now more than ever, for the user the visual interface is the machine. That's why interface design is so relevant and one of the main activities when developing a web product or application for a mobile device.
 
@@ -58,7 +58,7 @@ This course deals with interface design and interaction. It is about how the fea
 08. Prototyping
 09. Evaluation
 
-## :beers:  JavaScript programming 
+## :beers: JavaScript programming 
 
 Currently JavaScript is the language used in the Front-end web. Either directly, either through frameworks such as jQuery, Angular, Vue, React or others of the many existing ones, or through super-sets such as TypeScript, in the end programmers use JavaScript to make that part of the web applications that runs in the client's browser.
 
@@ -78,7 +78,7 @@ This course makes an exhaustive review of the most recent version of JavaScript 
 10. Canvas
 11. HTTP & Forms
 
-## :wine_glass:  Frontend Javascript Frameworks 
+## :wine_glass: Frontend Javascript Frameworks 
 
 In software design the front-end is the part of the software that interacts with the users. In web development, we can say that it is the part of the software that runs in the browser. The front-end is in charge of collecting user data, processing them, sending them to the server, receiving the response from the server and showing the results to the user. Although a few years ago there was hardly any programming on the front-end, today the interaction of web applications and the necessary good user experience requires that on the front-end there is a good combination of graphic design, interaction design, information architecture and programming.
 
@@ -93,7 +93,7 @@ In software design the front-end is the part of the software that interacts with
 07. Angular: Services
 08. Practice (Compilation of the course)
 
-## :coffee:  Backend PHP 
+## :coffee: Backend PHP 
 
 In this subject we will see the fundamentals of this work on the server. To do this, among the multiple solutions that exist, we will see two blocks, all based on the AMP platform (Apache, MySQL, PHP). Ordered from highest to lowest simplicity (and consequently, from lowest to highest power), it is the Drupal content manager, used as if it were an application framework, and Laravel, a PHP application framework that is probably the best alternative to Symfony, the PHP framework on which Drupal works.
 
@@ -134,7 +134,7 @@ In this subject we will see the fundamentals of this work on the server. To do t
     - Security
     - Databases
 
-## :tropical_drink:  Advanced Frontend Development 
+## :tropical_drink: Advanced Frontend Development 
 
 ### Contents:
 
@@ -147,7 +147,7 @@ In this subject we will see the fundamentals of this work on the server. To do t
 07. Deploying a frontend application
 08. Refactoring
 
-## :sushi:  HTML, CSS Tools I 
+## :sushi: HTML, CSS Tools I 
 
 The layout of web pages is a complex process where having a very good knowledge of HTML and CSS is essential to save time and achieve the desired results. Anyone who needs to work with HTML and CSS needs to keep their knowledge of CSS up to date to know all its possibilities and take advantage of them for your benefit.
 
@@ -162,7 +162,7 @@ The layout of web pages is a complex process where having a very good knowledge 
 
 04. Front-end performance and tools to monitor and optimize.
 
-## :ramen:  HTML, CSS Tools II 
+## :ramen: HTML, CSS Tools II 
 
 ### Contents:
 
@@ -188,7 +188,7 @@ The layout of web pages is a complex process where having a very good knowledge 
     - Component libraries. Bootstrap.
     - Atomic CSS. Utilities libraries. Tailwind.
 
-## :crown:  Master's degree thesis 
+## :crown: Master's degree thesis 
 
 In the final master's work, students bring into play and demonstrate the knowledge acquired throughout the master's course. The student will be able to propose a project for the work, which will be reviewed by the faculty to ensure that it is feasible, meets the requirements and that its level of complexity is adequate. In the absence of a project proposal, the faculty will propose a series of projects to be carried out, from which the student will be able to choose the one that best suits their knowledge and preferences.
 
