@@ -126,7 +126,13 @@ In this subject we will see the fundamentals of this work on the server. To do t
 
 04. PHP Frameworks. Laravel
 
-Installation Configuration. Architecture concepts. Fundamentals. Frontend. Security. Databases.
+    - Installation 
+    - Configuration
+    - Architecture concepts
+    - Fundamentals
+    - Frontend
+    - Security
+    - Databases
 
 ## 6. Advanced Frontend Development
 
