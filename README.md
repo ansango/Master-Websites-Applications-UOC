@@ -1,4 +1,4 @@
-# UOC Master's Degree Documentation & Projects by Course
+# UOC Master's Degree Documentation & Projects by Course :blue_book:
 
 The university master's degree in Website and Web Application Development trains professionals specialized in this field, capable of responding to the growing demand for professionals in web development and programming. This master's degree aims to cover the growing professional demand for front-end web developers, with in-depth knowledge of branding and layout, mastery of the tools used in production environments and back-end knowledge.
 
