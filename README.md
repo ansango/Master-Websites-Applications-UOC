@@ -20,12 +20,63 @@ This is the documentation for the UOC's Master's degree in website and web appli
 9. Master's degree thesis
 
 ## 0. Introduction to programming in JavaScript
-## 1. HTML, CSS
+
+In order to level the formative baggage, students without a recommended entrance profile must take 8 credits of formative complements.
+
+The subjects foreseen for this purpose are the following:
+
+Introduction to JavaScript I programming (4 ECTS credits)
+Introduction to JavaScript II programming (4 ECTS credits)
+
+## 1. HTML & CSS
+
+This subject is the basis of the Master's in Web Application Development and the other subjects use it as a basis. It is also offered as an optional subject in the Master's in Application Development for Mobile Devices, in which the combination of HTML and CSS, followed by JavaScript programming, is a very important technology for multiplatform development.
+
+### * Contents:
+
+#### 1. Introduction and basic concepts
+
+#### 2. Fundamentals of (X)HTML and CSS
+
+#### 3. Lists, images, links, div, span and model boxes
+
+#### 4. Validation and accessibility
+
+#### 5. Tables
+
+#### 6. Forms
+
+#### 7. Layout
+
 ## 2. Design of interactive interfaces
+
+### * Contents:
+
 ## 3. JavaScript programming
+
+### * Contents:
+
 ## 4. Frontend Javascript Frameworks
+
+### * Contents:
+
 ## 5. Backend PHP
+
+### * Contents:
+
 ## 6. Advanced Frontend Development
+
+### * Contents:
+
 ## 7. HTML, CSS Tools I
+
+### * Contents:
+
 ## 8. HTML, CSS Tools II
+
+### * Contents:
+
 ## 9. Master's degree thesis
+
+### * Contents:
+
