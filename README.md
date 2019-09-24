@@ -80,73 +80,67 @@ This course makes an exhaustive review of the most recent version of JavaScript 
 
 ## 4. Frontend Javascript Frameworks
 
+In software design the front-end is the part of the software that interacts with the users. In web development, we can say that it is the part of the software that runs in the browser. The front-end is in charge of collecting user data, processing them, sending them to the server, receiving the response from the server and showing the results to the user. Although a few years ago there was hardly any programming on the front-end, today the interaction of web applications and the necessary good user experience requires that on the front-end there is a good combination of graphic design, interaction design, information architecture and programming.
+
 ### Contents:
 
-01. Introduction and basic concepts
-02. Fundamentals of (X)HTML and CSS
-03. Lists, images, links, div, span and model boxes
-04. Validation and accessibility
-05. Tables
-06. Forms
-07. Layout
+01. Introduction to front-end development (ES5)
+02. Frontend programming languages (ES6/Typescript)
+03. View (BOM/DOM)
+04. Frameworks: Introduction to Angular 
+05. Angular: Routing 
+06. Angular: Working with Template-Driven Forms and Working with Reactive Forms
+07. Angular: Services
+08. Practice (Compilation of the course)
 
 ## 5. Backend PHP
 
+In this subject we will see the fundamentals of this work on the server. To do this, among the multiple solutions that exist, we will see two blocks, all based on the AMP platform (Apache, MySQL, PHP). Ordered from highest to lowest simplicity (and consequently, from lowest to highest power), it is the Drupal content manager, used as if it were an application framework, and Laravel, a PHP application framework that is probably the best alternative to Symfony, the PHP framework on which Drupal works.
+
 ### Contents:
 
-01. Introduction and basic concepts
-02. Fundamentals of (X)HTML and CSS
-03. Lists, images, links, div, span and model boxes
-04. Validation and accessibility
-05. Tables
-06. Forms
-07. Layout
+01. Content management systems:
+    - Definition of CMS. Frameworks vs CMS
+    - Use of CMS
+    - Server components needed to install CMS 
+    - Characteristics of a good CMS
+    - Other features of CMS
+    - Types of CMS
+
+02. WordPress:
+    - Introduction Installation
+    - The WordPress desktop
+    - Configuration and security
+    - Introduction to the topics
+    - Shortcodes
+    - Plug-ins
+
+03. Drupal:
+    - Introduction
+    - Installation
+    - Administration panel
+    - Modules
+    - Drupal vs WordPress
+    - Integration with social networks
+    - Themes
+
+04. PHP Frameworks. Laravel
+
+Installation Configuration. Architecture concepts. Fundamentals. Frontend. Security. Databases.
 
 ## 6. Advanced Frontend Development
 
 ### Contents:
 
-01. Introduction and basic concepts
-02. Fundamentals of (X)HTML and CSS
-03. Lists, images, links, div, span and model boxes
-04. Validation and accessibility
-05. Tables
-06. Forms
-07. Layout
-
 ## 7. HTML, CSS Tools I
 
 ### Contents:
-
-01. Introduction and basic concepts
-02. Fundamentals of (X)HTML and CSS
-03. Lists, images, links, div, span and model boxes
-04. Validation and accessibility
-05. Tables
-06. Forms
-07. Layout
 
 ## 8. HTML, CSS Tools II
 
 ### Contents:
 
-01. Introduction and basic concepts
-02. Fundamentals of (X)HTML and CSS
-03. Lists, images, links, div, span and model boxes
-04. Validation and accessibility
-05. Tables
-06. Forms
-07. Layout
-
 ## 9. Master's degree thesis
 
 ### Contents:
-
-01. Introduction and basic concepts
-02. Fundamentals of (X)HTML and CSS
-03. Lists, images, links, div, span and model boxes
-04. Validation and accessibility
-05. Tables
-06. Forms
-07. Layout
 
