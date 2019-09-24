@@ -2,26 +2,26 @@
 
 Intentad averiguar el resultado de las siguientes expresiones en  JavaScript. Comprobad después los resultados con pequeños programas:
 
-true && true
-false && true
-1 == 1 && 2 == 1
-"prueba" == "prueba"
-1 == 1 || 2 != 1
-true && 1 == 1
-false && 0 != 0
-true || 1 == 1
-"prueba" == "probado"
-1 != 0 && 2 == 1
-"prueba" != "probado"
-"prueba" == 1
-!(true && false)
-!(1 == 1 && 0 != 1)
-!(10 == 1 || 100 == 100)
-!(1 != 10 || 3 == 4)
-!("prueba" == "prueba" && "Java" == "JavaScript")
-1 == 1 && (!("prueba" == 1 || 1 == 0))
-"Java" == "JavaScript" && (!(2 == 3 || 2 == 2))
-2 == 2 && (!("prueba" == "prueba" || "Java" == "JavaScript"))
+true && true  
+false && true  
+1 == 1 && 2 == 1  
+"prueba" == "prueba"  
+1 == 1 || 2 != 1  
+true && 1 == 1  
+false && 0 != 0  
+true || 1 == 1  
+"prueba" == "probado"  
+1 != 0 && 2 == 1  
+"prueba" != "probado"  
+"prueba" == 1  
+!(true && false)  
+!(1 == 1 && 0 != 1)  
+!(10 == 1 || 100 == 100)  
+!(1 != 10 || 3 == 4)  
+!("prueba" == "prueba" && "Java" == "JavaScript")  
+1 == 1 && (!("prueba" == 1 || 1 == 0))  
+"Java" == "JavaScript" && (!(2 == 3 || 2 == 2))  
+2 == 2 && (!("prueba" == "prueba" || "Java" == "JavaScript"))  
 
 Escribid un programa en JavaScript que calcule el perímetro y el área de un rectángulo de lados 20 y 80 unidades. Probad con otros valores.
 Escribid un programa en JavaScript que calcule el perímetro i el área de un círculo de radio 10 unidades. Probad con otros valores.
