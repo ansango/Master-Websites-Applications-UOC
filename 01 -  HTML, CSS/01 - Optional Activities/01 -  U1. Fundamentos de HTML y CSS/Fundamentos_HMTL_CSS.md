@@ -152,7 +152,12 @@
       selector {
          propiedad: valor;
       }
-      
+
+      * selector: identifica los elementos HTML a los que se aplica la regla.
+      * llaves contienen a:
+         * propiedades: definen lo que se quiere hacer con los elementos seleccionados.
+         * valores: son los que cambian cada una de las propiedades de los elementos.
+
       ```css
       h2 { 
          font-size: 1.5em; 
@@ -161,12 +166,45 @@
       ```
    - En la actividad del apartado anterior, ¿qué método habéis usado para aplicar estilos al HTML? ¿Qué otros métodos podríais haber utilizado?
 
-   El css ha sido introducido en el html mediante las etiquetas <style></style>
+      En este caso el css ha sido creado en un archivo externo ```styles.css``` que es añadido en la cabecera del html (index.html), mediante la etiqueta siguiente:
+      ```html
+         <link rel="stylesheet" href="styles.css">
+      ```
 
-Otras formas pueden ser:
+      Otras formas de añadir estilos a nuestro html son:
 
-- Crear un fichero css y enlazarlo a través de la etiqueta <link> o mediante @import
+      * Introducir las etiquetas ```<style></style>`` en el documento html.
 
-- Insertar los estilos dentro de las etiquetas (aunque esto no es muy recomendable ya que dificulta el mantenimiento futuro de estos estilos)
+      * Introducir los estilos dentro de las etiquetas (no es recomendable porque dificultará el mantenimiento de los estilos).
 
    - ¿Habéis entendido en qué consiste la especificidad? Preparad un ejemplo donde se muestre el funcionamiento de este mecanismo de resolución de conflictos.
+
+     * La especificidad hace referencia a la relevancia que tiene un estilo concreto de CSS sobre un elemento de la página al cual le están afectando varios estilos de CSS al mismo tiempo. Es decir, hace referencia al grado de importancia de un estilo sobre otro.
+
+     * Cuanto mayor sea la especificidad que le estemos dando a un estilo, mayor será la probabilidad de que ese estilo sea el aplicado finalmente. Para ello, las reglas de CSS siguen un orden de prioridad.
+
+     * El orden de prioridad va de la siguiente manera, de menor a mayor especificidad:
+
+         * Selectores de título (p.ej: p) y pseudo-elementos (p.ej: :before)
+         * Selectores de clase (p.ej: .ejemplo), selectores de atributos (p.ej: [type="text"] y pseudo-clases (p.ej: :focus)
+         * Selectores ID (p.ej: #ejemplo)
+
+      Sin embargo, además de todas estas especificidades, si utilizamos estilos inline estos sobrescribirán cualquier estilo de las páginas externas de CSS. Se podría decir que los estilos inline son los que tienen una mayor especificidad, por lo tanto, nunca debemos utilizar estilos inline en nuestra página.
+
+      ```html
+         <p id="parrafo" class="parrafo">Esto es una prueba</p>
+         <p id="parrafo2" style="color: red">Esto es una prueba</p>
+      ```
+      ```css
+        #parrafo{
+          color: green;
+         }
+
+        #parrafo2{
+          color: green;
+         }
+
+        .parrafo{
+          color: red;
+         }
+      ```
