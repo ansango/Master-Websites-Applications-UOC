@@ -20,10 +20,9 @@
 #### 2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
 
    - **vuejs.org**
-
-      * `<meta charset="utf-8">` : Determina el tipo de carácteres del documento (Unicode utf-8)
-      * `<meta name="description" content="Vue.js - The Progressive JavaScript Framework">` : Descripción del sitio web para posicionamiento SEO
-      * `<meta name="viewport" content="width=device-width, initial-scale=1">` : Determina el ancho del viewport en escala 1.0
+      * `<meta charset="utf-8">` : determina el tipo de carácteres del documento (Unicode utf-8)
+      * `<meta name="description" content="Vue.js - The Progressive JavaScript Framework">` : descripción del sitio web para posicionamiento SEO
+      * `<meta name="viewport" content="width=device-width, initial-scale=1">` : determina el ancho del viewport en escala 1.0
       * `<link rel="alternate" hreflang="x-default" href="https://vuejs.org/index.html">` : enlace al sitio web según idioma por defecto.
       * `<link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/index.html">` : enlace al sitio web según el idioma chino.
 
@@ -41,14 +40,17 @@
       * `<script async="" src="https://www.google-analytics.com/analytics.js"></script>` : script para el rastreo analítico por parte de Google
 
    - **netflix.com/es**
-      * `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
-      * `<meta http-equiv="X-UA-Compatible" content="IE=edge">`
-      * `<title>Netflix España - Ver series en línea, ver películas en línea</title>`
-      * `<meta content="ver películas, películas en línea, películas online, ver TV, TV en línea, TV online, series en línea, series online, ver series, películas en streaming, TV en streaming, streaming inmediato, ver en línea, ver online, películas, ver películas en España, ver TV en línea, ver TV online, sin descargas, películas de duración completa, películas completas" name="keywords">`
-      * `<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">`
-      * `<meta property="al:ios:app_store_id" content="363590051">`
-      * `<meta property="al:ios:app_name" content="Netflix">`
-      * `<meta property="al:android:url" content="nflx://www.netflix.com/?locale=es-ES">`
+      * `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">` : determinación del tipo de contenido y caracteres.
+      * `<meta http-equiv="X-UA-Compatible" content="IE=edge">` : compatibilidad con IE Edge.
+      * `<title>Netflix España - Ver series en línea, ver películas en línea</title>` titulo de Netflix España para SEO
+      * `<meta content="ver películas, películas en línea, películas online, ver TV, TV en línea, TV online, series en línea, series online, ver series, películas en streaming, TV en streaming, streaming inmediato, ver en línea, ver online, películas, ver películas en España, ver TV en línea, ver TV online, sin descargas, películas de duración completa, películas completas" name="keywords">` : descripción de la página para posicionamiento SEO en motores de busqueda.
+      * `<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">`: determinación del viewport
+      
+      * AppLinks: son URLs HTTP que se pueden utilizar para enlazar con el contenido dentro de una aplicación nativa si está instalada en el dispositivo:
+      
+         * `<meta property="al:ios:app_store_id" content="363590051">` : AppLinks para AppleStore
+         * `<meta property="al:ios:app_name" content="Netflix">`: AppLinks para aplicaciones iOS
+         * `<meta property="al:android:url" content="nflx://www.netflix.com/?locale=es-ES">` : AppLinks para aplicaciones Android
 
    - **developer.mozilla.org**
 
