@@ -69,7 +69,7 @@
 [Developer Mozilla](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/texto)
 
 ##### Aprendizaje Activo: Dando estructura a nuestro contenido. 
-```htm
+```html
    <h1>My short story</h1>
    <p>I am a policewoman and my name is Trish.</p>
    <p>My legs are made of cardboard and I am married to a fish.</p>
