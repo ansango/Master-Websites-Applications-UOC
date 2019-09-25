@@ -66,6 +66,23 @@
 
 #### 3. Fundamentos de HTML: texto, títulos, listas, énfasis. En el material se plantean unas actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
 
+[Developer Mozilla](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/texto)
+
+##### Aprendizaje Activo: Dando estructura a nuestro contenido. 
+
+   `<h1>My short story</h1>`
+   `<p>I am a policewoman and my name is Trish.</p>`
+   `<p>My legs are made of cardboard and I am married to a fish.</p>`
+
+##### Aprendizaje activo: Marcando una lista desordeanda.
+
+   `<ul>`
+      `<li>milk</li>`
+      `<li>eggs</li>`
+      `<li>bread</li>`
+      `<li>humous</li>`
+   `</ul>`
+
 #### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
 
 #### 5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
