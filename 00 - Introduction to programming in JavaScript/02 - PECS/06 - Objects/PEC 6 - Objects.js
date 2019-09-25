@@ -38,6 +38,4 @@ Ejemplo: Si la entrada es “http://cv.uoc.edu/webapps/bustiaca/listMails.do?mai
 
 5. Escribid una función en JavaScript que convierta un objeto a formato JSON, sin usar la función JSON.stringify().
 
-
-
 */
