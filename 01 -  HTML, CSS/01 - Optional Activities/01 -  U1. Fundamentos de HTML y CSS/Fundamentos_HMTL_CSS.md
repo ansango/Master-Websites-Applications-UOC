@@ -2,8 +2,8 @@
 
 * Etiqueta: es un fragmento de texto rodeado por corchetes < >. Son la forma que tenemos para escribir código HTML. Pueden ser de dos tipos:
 
-  - de apertura <div>: nos indica cuando se inicia la etiqueta,
-  - de cierre </div>: nos indica el final del alcance de la misma.
+  - de apertura <div>, nos indica cuando se inicia la etiqueta,
+  - de cierre </div>, nos indica el final del alcance de la misma.
 
   Algunas etiquetas no tienen etiquetas de cierre, como <img>
 
@@ -11,9 +11,7 @@
 
 * Atributo: es una característica de las eqtiquetas que nos sirve para especificar detalles de ésta, por ejemplo, color, ancho, alto, alineación, etc. En muchos casos estos atributos son necesarios para que la etiqueta funcione. Ejemplo:
 
-   `<img src="./folder/ansan.jpg">`
-
-En este caso indicamos con el atributo la ruta donde se encuentra almacenada o alojada la imagen <img>
+   `<img src="./folder/ansan.jpg">` En este caso indicamos con el atributo la ruta donde se encuentra almacenada o alojada la imagen <img>
 
 2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
 
