@@ -139,9 +139,9 @@
    <p>Humous is suitable for freezing; you should thaw it and use it within a couple of months.</p>
 ```
 
-#### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
+#### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material.
 
-
+[Acceso al repositorio](https://github.com/ansango/Master-Websites-Applications-UOC/tree/master/01%20-%20%20HTML%2C%20CSS/01%20-%20Optional%20Activities/01%20-%20%20U1.%20Fundamentos%20de%20HTML%20y%20CSS/4.%20Primeros%20pasos%20con%20CSS)
 
 #### 5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
 
