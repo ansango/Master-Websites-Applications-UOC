@@ -19,7 +19,7 @@
 
 #### 2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
 
-   - vuejs.org:
+   - **vuejs.org**
 
       * `<meta charset="utf-8">` : Determina el tipo de carácteres del documento (Unicode utf-8)
       * `<meta name="description" content="Vue.js - The Progressive JavaScript Framework">` : Descripción del sitio web para posicionamiento SEO
@@ -40,11 +40,19 @@
       * `<link rel="stylesheet" href="/css/index.css">` : acceso a página principal de estilos CSS, utilizada como plantilla fuente o base.
       * `<script async="" src="https://www.google-analytics.com/analytics.js"></script>` : script para el rastreo analítico por parte de Google
 
-   - nuxtjs.org:
+   - **netflix.com/es**
+      * `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">`
+      * `<meta http-equiv="X-UA-Compatible" content="IE=edge">`
+      * `<title>Netflix España - Ver series en línea, ver películas en línea</title>`
+      * `<meta content="ver películas, películas en línea, películas online, ver TV, TV en línea, TV online, series en línea, series online, ver series, películas en streaming, TV en streaming, streaming inmediato, ver en línea, ver online, películas, ver películas en España, ver TV en línea, ver TV online, sin descargas, películas de duración completa, películas completas" name="keywords">`
+      * `<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">`
+      * `<meta property="al:ios:app_store_id" content="363590051">`
+      * `<meta property="al:ios:app_name" content="Netflix">`
+      * `<meta property="al:android:url" content="nflx://www.netflix.com/?locale=es-ES">`
 
-   - developer.mozilla.org:
+   - **developer.mozilla.org**
 
-   - google.com:
+   - **google.com**
 
 #### 3. Fundamentos de HTML: texto, títulos, listas, énfasis. En el material se plantean unas actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
 
