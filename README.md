@@ -21,7 +21,12 @@ This is the documentation for the UOC's Master's degree in website and web appli
 
 ## How to download this repository
 
+1. Select your favorite folder. For example Documents, and open inside a terminal.
+2. Copy and paste this:
 
+    ```
+    git clonehttps://github.com/ansango/Master-Websites-Applications-UOC.git
+    ```
 
 ## :baby_bottle: Introduction to programming in JavaScript 
 
