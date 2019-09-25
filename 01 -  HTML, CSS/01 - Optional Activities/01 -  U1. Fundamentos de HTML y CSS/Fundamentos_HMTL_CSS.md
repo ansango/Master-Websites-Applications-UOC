@@ -147,6 +147,26 @@
 
    - ¿Tenéis claro qué es una regla CSS? Describid su sintaxis.
 
+      CSS es un conjunto de instrucciones al navegador sobre cómo mostrar un elemento concreto. Estas reglas dicen qué elementos de html deben tener estilos. La sintáxis se conforma de la siguiente manera:
+      
+      selector {
+         propiedad: valor;
+      }
+      
+      ```css
+      h2 { 
+         font-size: 1.5em; 
+         color: red;
+         }
+      ```
    - En la actividad del apartado anterior, ¿qué método habéis usado para aplicar estilos al HTML? ¿Qué otros métodos podríais haber utilizado?
+
+   El css ha sido introducido en el html mediante las etiquetas <style></style>
+
+Otras formas pueden ser:
+
+- Crear un fichero css y enlazarlo a través de la etiqueta <link> o mediante @import
+
+- Insertar los estilos dentro de las etiquetas (aunque esto no es muy recomendable ya que dificulta el mantenimiento futuro de estos estilos)
 
    - ¿Habéis entendido en qué consiste la especificidad? Preparad un ejemplo donde se muestre el funcionamiento de este mecanismo de resolución de conflictos.
