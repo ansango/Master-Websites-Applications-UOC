@@ -81,7 +81,7 @@
       `<li>eggs</li>`  
       `<li>bread</li>`  
       `<li>humous</li>`  
-   `</ul>`, 
+   `</ul>`  
 
 #### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
 
