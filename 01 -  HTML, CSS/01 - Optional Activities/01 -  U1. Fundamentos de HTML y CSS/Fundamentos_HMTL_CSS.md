@@ -95,37 +95,37 @@
 
 #### Aprendizaje activo: Marcando nuestra página de receta
 
-   `<h1>Quick humous recipe</h1>`
-      `<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`
-      `<p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.<p>`
+   `<h1>Quick humous recipe</h1>`  
+      `<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`  
+      `<p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.<p>`  
       
-   `<h2>Ingredients</h2>`
-      `<ul>`
-         `<li>1 can (400g) of chick peas (garbanzo beans)</li>`
-         `<li>175g of tahini</li>`
-         `<li>6 sundried tomatoes</li>`
-         `<li>Half a red pepper</li>`
-         `<li>A pinch of cayenne pepper</li>`
-         `<li>1 clove of garlic</li>`
-         `<li>A dash of olive oil</li>`
-      `</ul>`
-   `<h2>Instructions</h2>`
-      `<ol>`
-         `<li>Remove the skin from the garlic, and chop coarsely</li>`
-         `<li>Remove all the seeds and stalk from the pepper, and chop coarsely</li>`
-         `<li>Add all the ingredients into a food processor</li>`
-         `<li>Process all the ingredients into a paste.</li>`
-         `<li>If you want a coarse "chunky" humous, process it for a short time</li>`
-         `<li>If you want a smooth humous, process it for a longer time</li>`
-      `</ol>`
+   `<h2>Ingredients</h2>`  
+      `<ul>`  
+         `<li>1 can (400g) of chick peas (garbanzo beans)</li>`  
+         `<li>175g of tahini</li>`  
+         `<li>6 sundried tomatoes</li>`  
+         `<li>Half a red pepper</li>`  
+         `<li>A pinch of cayenne pepper</li>`  
+         `<li>1 clove of garlic</li>`  
+         `<li>A dash of olive oil</li>`  
+      `</ul>`  
+   `<h2>Instructions</h2>`  
+      `<ol>`  
+         `<li>Remove the skin from the garlic, and chop coarsely</li>`  
+         `<li>Remove all the seeds and stalk from the pepper, and chop coarsely</li>`  
+         `<li>Add all the ingredients into a food processor</li>`  
+         `<li>Process all the ingredients into a paste.</li>`  
+         `<li>If you want a coarse "chunky" humous, process it for a short time</li>`  
+         `<li>If you want a smooth humous, process it for a longer time</li>`  
+      `</ol>`  
 
-   `<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>`
+   `<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>`  
 
-   `<h2>Storage</h2>`
+   `<h2>Storage</h2>`  
 
-   `<p>Refrigerate the finished humous in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.</p>`
+   `<p>Refrigerate the finished humous in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.</p>`  
 
-   `<p>Humous is suitable for freezing; you should thaw it and use it within a couple of months.</p>`
+   `<p>Humous is suitable for freezing; you should thaw it and use it within a couple of months.</p>`  
 
 #### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
 
