@@ -143,8 +143,6 @@
 
 [Codepen - First Steps CSS](https://codepen.io/ansango/pen/gOYEZvX)
 
-[Acceso al repositorio](https://github.com/ansango/Master-Websites-Applications-UOC/tree/master/01%20-%20%20HTML%2C%20CSS/01%20-%20Optional%20Activities/01%20-%20%20U1.%20Fundamentos%20de%20HTML%20y%20CSS/4.%20Primeros%20pasos%20con%20CSS)
-
 #### 5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
 
    - ¿Tenéis claro qué es una regla CSS? Describid su sintaxis.
