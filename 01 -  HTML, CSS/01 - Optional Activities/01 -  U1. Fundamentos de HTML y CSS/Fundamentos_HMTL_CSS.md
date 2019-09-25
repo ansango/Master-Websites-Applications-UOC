@@ -96,11 +96,11 @@
 #### Aprendizaje activo: Marcando nuestra página de receta
 
    `<h1>Quick humous recipe</h1>`  
-      &lt;`<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`  
+      `<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`  
       `<p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.<p>`  
       
    `<h2>Ingredients</h2>`  
-      `<ul>`  
+     `<ul>`  
          `<li>1 can (400g) of chick peas (garbanzo beans)</li>`  
          `<li>175g of tahini</li>`  
          `<li>6 sundried tomatoes</li>`  
