@@ -9,7 +9,7 @@
 
       Algunas etiquetas no tienen etiquetas de cierre, como <img>
 
-   - Elemento:
+   - Elemento: hace referencia a las partes que componen un documento HTML, formado por etiquetas de apertura, atributos, texto encerrado por la etiqueta y una etiqueta de cierre.
 
    - Atributo: es una característica de las eqtiquetas que nos sirve para especificar detalles de ésta, por ejemplo, color, ancho, alto, alineación, etc. En muchos casos estos atributos son necesarios para que la etiqueta funcione. Ejemplo:
 
