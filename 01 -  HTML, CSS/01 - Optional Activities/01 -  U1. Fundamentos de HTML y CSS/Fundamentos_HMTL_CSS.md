@@ -52,7 +52,11 @@
          * `<meta property="al:ios:app_name" content="Netflix">`: AppLinks para aplicaciones iOS
          * `<meta property="al:android:url" content="nflx://www.netflix.com/?locale=es-ES">` : AppLinks para aplicaciones Android
 
-   - **developer.mozilla.org**
+   - **developer.mozilla.org** (Además de algunas ya mencionadas)
+         * `<meta name="robots" content="index, follow">` :se utilizan como crawlers por moteres de busqueda para la indexación de contenido.
+         * `<link rel="preload" href="/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2" as="font" type="font/woff2" crossorigin />` : precarga del recurso tipografico.
+         * `<link href="/static/build/styles/mdn.cb0e95fe43cc.css" rel="stylesheet" type="text/css" />` : hoja de estilos utilizada por el documento html.
+         * `<meta name="google-site-verification" content="Phj8dHc2oKwic3FGPsKIhdOBk_1wnCTnKwjcjiLgJPc">` : verificación de las propiedades de la consola de Google.
 
    - **google.com**
 
