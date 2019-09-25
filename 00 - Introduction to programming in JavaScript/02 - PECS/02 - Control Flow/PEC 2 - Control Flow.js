@@ -23,7 +23,8 @@
     }
     catch(err) { console.log(err.name); }
 
-2 - Escribid un programa en JavaScript que, dada una fecha como un número de día (Número natural entre 1 y 31, ambos incluídos) y un número de mes (número natural entre 1 y 12, ambos incluídos), muestre por consola el nombre del mes y la estación del año, según estos rangos de datos:
+2 - Escribid un programa en JavaScript que, dada una fecha como un número de día (Número natural entre 1 y 31, ambos incluídos) 
+y un número de mes (número natural entre 1 y 12, ambos incluídos), muestre por consola el nombre del mes y la estación del año, según estos rangos de datos:
 
 Entre 21/03 y 20/06 la estación es "primavera"
 Entre 21/06 y 22/09 la estación es "verano"
@@ -36,9 +37,13 @@ Si el día es 1 y el mes es 5 debe escribir "mayo" y "primavera".
 Si el día es 25 y el mes es 6 debe escribir "junio" y "verano".
 Si el día es 31 y el mes es 12 debe escribir "diciembre" e "invierno".
 
-Los libros tienen un código identificador, el ISBN (International Standard Book Number). Hay códigos ISBN de 10 dígitos (ISBN-10) o de 13 dígitos (ISBN-13), estos últimos desde 2007. El dígito de control  de un código ISBN-13 se calcula multiplicando el primer dígito por 1, el segundo por 3, el tercero por 1, el cuarto por 3, etc, hasta llegar al 12º dígito. El 13º dígito es el de control, y es el valor que hay que añadir a la suma de todos estos productos para que sea divisible por 10.
+Los libros tienen un código identificador, el ISBN (International Standard Book Number). 
+Hay códigos ISBN de 10 dígitos (ISBN-10) o de 13 dígitos (ISBN-13), estos últimos desde 2007. 
+El dígito de control  de un código ISBN-13 se calcula multiplicando el primer dígito por 1, el segundo por 3, el tercero por 1, el cuarto por 3, etc, hasta llegar al 12º dígito. 
+El 13º dígito es el de control, y es el valor que hay que añadir a la suma de todos estos productos para que sea divisible por 10.
 
-3 - Escribid un programa en JavaScript que compruebe si un código ISBN-13 dado tiene el dígito de control correcto o no. Si el dígito de control es correcto debe escribir por consola el mensaje "CORRECTO", sinó debe escribir "INCORRECTO".
+3 - Escribid un programa en JavaScript que compruebe si un código ISBN-13 dado tiene el dígito de control correcto o no. 
+Si el dígito de control es correcto debe escribir por consola el mensaje "CORRECTO", sinó debe escribir "INCORRECTO".
 
 Podéis consultar la wikipedia: https://es.wikipedia.org/wiki/ISBN
 
