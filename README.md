@@ -11,7 +11,6 @@ This is the documentation for the UOC's Master's degree in website and web appli
 0. [Introduction to programming in JavaScript](https://github.com/ansango/Master-Websites-Applications-UOC#baby_bottle-introduction-to-programming-in-javascript)
 1. [HTML, CSS](https://github.com/ansango/Master-Websites-Applications-UOC#chocolate_bar-html--css)
 2. [Design of interactive interfaces](https://github.com/ansango/Master-Websites-Applications-UOC#pizza-design-of-interactive-interfaces)
-3. [JavaScript programming](hhttps://github.com/ansango/Master-Websites-Applications-UOC#beers-javascript-programming)
 4. [Frontend Javascript Frameworks](https://github.com/ansango/Master-Websites-Applications-UOC#wine_glass-frontend-javascript-frameworks)
 5. [Backend PHP](https://github.com/ansango/Master-Websites-Applications-UOC#coffee-backend-php)
 6. [Advanced Frontend Development](https://github.com/ansango/Master-Websites-Applications-UOC#tropical_drink-advanced-frontend-development)
