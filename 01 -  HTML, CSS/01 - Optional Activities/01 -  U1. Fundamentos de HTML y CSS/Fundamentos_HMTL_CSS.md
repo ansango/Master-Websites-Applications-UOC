@@ -77,11 +77,21 @@
 ##### Aprendizaje activo: Marcando una lista desordeanda.
 
    `<ul>`  
-      `<li>milk</li>`  
-      `<li>eggs</li>`  
-      `<li>bread</li>`  
-      `<li>humous</li>`  
+         `<li>milk</li>`  
+         `<li>eggs</li>`  
+         `<li>bread</li>`  
+         `<li>humous</li>`  
    `</ul>`  
+
+#### Aprendizaje activo: Marcando una lista ordenada
+
+   `<ol>`
+         `<li>Drive to the end of the road</li>`
+         `<li>Turn right</li>`
+         `<li>Go straight across the first two roundabouts</li>`
+         `<li>Turn left at the third roundabout</li>`
+         `<li>The school is on your right, 300 meters up the road</li>`
+   `</ol>`
 
 #### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
 
