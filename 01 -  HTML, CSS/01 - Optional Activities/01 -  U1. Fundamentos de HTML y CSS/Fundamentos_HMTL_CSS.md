@@ -109,6 +109,7 @@
          `<li>1 clove of garlic</li>`  
          `<li>A dash of olive oil</li>`  
       `</ul>`  
+      
    `<h2>Instructions</h2>`  
       `<ol>`  
          `<li>Remove the skin from the garlic, and chop coarsely</li>`  
