@@ -59,10 +59,10 @@
       * `<meta name="google-site-verification" content="Phj8dHc2oKwic3FGPsKIhdOBk_1wnCTnKwjcjiLgJPc">` : verificación de las propiedades de la consola de Google.
 
    - **google.com**
-      * <meta content="origin" name="referrer"> :
-      * <meta content="Google.es permite acceder a la información mundial en castellano, catalán, gallego, euskara e inglés." name="description"> :  funciona con la mayoría de los navegadores para pasar la información refererida de una manera definida por el usuario.
-      * <meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image"> : contenido de imagen png
-      * <meta content="noodp" name="robots"> : es una directiva que indica a los rastreadores de los motores de búsqueda que no utilicen metadatos para los títulos o fragmentos que se muestran en los resultados de búsqueda de la página en particular.
+      * `<meta content="origin" name="referrer"> :
+      * `<meta content="Google.es permite acceder a la información mundial en castellano, catalán, gallego, euskara e inglés." name="description">` :  funciona con la mayoría de los navegadores para pasar la información refererida de una manera definida por el usuario.
+      * `<meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image">` : contenido de imagen png
+      * `<meta content="noodp" name="robots">` : es una directiva que indica a los rastreadores de los motores de búsqueda que no utilicen metadatos para los títulos o fragmentos que se muestran en los resultados de búsqueda de la página en particular.
 
 #### 3. Fundamentos de HTML: texto, títulos, listas, énfasis. En el material se plantean unas actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
 
