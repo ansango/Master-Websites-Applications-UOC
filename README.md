@@ -8,16 +8,16 @@ This is the documentation for the UOC's Master's degree in website and web appli
 
 ## List Of Contents (Spanish Course Content)
 
-0. [Introduction to programming in JavaScript](https://github.com/ansango/Master-Websites-Applications-UOC#0-introduction-to-programming-in-javascript)
-1. [HTML, CSS](https://github.com/ansango/Master-Websites-Applications-UOC#1-html--css)
-2. [Design of interactive interfaces](https://github.com/ansango/Master-Websites-Applications-UOC#2-design-of-interactive-interfaces)
-3. [JavaScript programming](https://github.com/ansango/Master-Websites-Applications-UOC#3-javascript-programming)
-4. [Frontend Javascript Frameworks](https://github.com/ansango/Master-Websites-Applications-UOC#4-frontend-javascript-frameworks)
-5. [Backend PHP](https://github.com/ansango/Master-Websites-Applications-UOC#5-backend-php)
-6. [Advanced Frontend Development](https://github.com/ansango/Master-Websites-Applications-UOC#6-advanced-frontend-development)
-7. [HTML, CSS Tools I](https://github.com/ansango/Master-Websites-Applications-UOC#7-html-css-tools-i)
-8. [HTML, CSS Tools II](https://github.com/ansango/Master-Websites-Applications-UOC#8-html-css-tools-ii)
-9. [Master's degree thesis](https://github.com/ansango/Master-Websites-Applications-UOC#9-masters-degree-thesis)
+0. [Introduction to programming in JavaScript](https://github.com/ansango/Master-Websites-Applications-UOC#baby_bottle-introduction-to-programming-in-javascript)
+1. [HTML, CSS](https://github.com/ansango/Master-Websites-Applications-UOC#chocolate_bar-html--css)
+2. [Design of interactive interfaces](https://github.com/ansango/Master-Websites-Applications-UOC#pizza-design-of-interactive-interfaces)
+3. [JavaScript programming](hhttps://github.com/ansango/Master-Websites-Applications-UOC#beers-javascript-programming)
+4. [Frontend Javascript Frameworks](https://github.com/ansango/Master-Websites-Applications-UOC#wine_glass-frontend-javascript-frameworks)
+5. [Backend PHP](https://github.com/ansango/Master-Websites-Applications-UOC#coffee-backend-php)
+6. [Advanced Frontend Development](https://github.com/ansango/Master-Websites-Applications-UOC#tropical_drink-advanced-frontend-development)
+7. [HTML, CSS Tools I](https://github.com/ansango/Master-Websites-Applications-UOC#sushi-html-css-tools-i)
+8. [HTML, CSS Tools II](https://github.com/ansango/Master-Websites-Applications-UOC#ramen-html-css-tools-ii)
+9. [Master's degree thesis](https://github.com/ansango/Master-Websites-Applications-UOC#crown-masters-degree-thesis)
 
 ## :baby_bottle: Introduction to programming in JavaScript 
 
