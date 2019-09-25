@@ -191,6 +191,8 @@
 
       Sin embargo, además de todas estas especificidades, si utilizamos estilos inline estos sobrescribirán cualquier estilo de las páginas externas de CSS. Se podría decir que los estilos inline son los que tienen una mayor especificidad, por lo tanto, nunca debemos utilizar estilos inline en nuestra página.
 
+      [Codepen - EspecificidadCSS](https://codepen.io/ansango/pen/BaBbvmY)
+
       ```html
          <p id="parrafo" class="parrafo">Esto es una prueba</p>
          <p id="parrafo2" style="color: red">Esto es una prueba</p>
