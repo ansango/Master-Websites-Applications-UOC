@@ -2,8 +2,8 @@
 
    - Etiqueta: es un fragmento de texto rodeado por corchetes < >. Son la forma que tenemos para escribir código HTML. Pueden ser de dos tipos:
 
-      * de apertura <div> que nos indica cuando se inicia la etiqueta,
-      * de cierre </div> quenos indica el final del alcance de la misma.
+      * de apertura `<div>` que nos indica cuando se inicia la etiqueta,
+      * de cierre `</div>` quenos indica el final del alcance de la misma.
 
       Algunas etiquetas no tienen etiquetas de cierre, como <img>
 
