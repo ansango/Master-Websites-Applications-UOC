@@ -94,10 +94,10 @@
    `</ol>`  
 
 #### Aprendizaje activo: Marcando nuestra página de receta
-
+* 
    `<h1>Quick humous recipe</h1>`  
-      `<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`  
-      `<p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.<p>`  
+         `<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`
+         `<p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.<p>`  
       
    `<h2>Ingredients</h2>`  
      `<ul>`  
