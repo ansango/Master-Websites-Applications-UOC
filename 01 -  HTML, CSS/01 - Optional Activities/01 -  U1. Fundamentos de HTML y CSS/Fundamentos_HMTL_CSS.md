@@ -76,12 +76,15 @@
 ``` 
 ##### Aprendizaje activo: Marcando una lista desordeanda.
 
-   `<ul>`  
-         `<li>milk</li>`  
-         `<li>eggs</li>`  
-         `<li>bread</li>`  
-         `<li>humous</li>`  
-   `</ul>`  
+```html
+   <ul>  
+     <li>milk</li>  
+     <li>eggs</li>  
+     <li>bread</li>
+     <li>humous</li>
+   </ul>
+``` 
+   
 
 #### Aprendizaje activo: Marcando una lista ordenada
 
