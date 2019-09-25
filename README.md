@@ -27,6 +27,7 @@ This is the documentation for the UOC's Master's degree in website and web appli
     ```
     git clonehttps://github.com/ansango/Master-Websites-Applications-UOC.git
     ```
+3. Done! :grin:
 
 ## :baby_bottle: Introduction to programming in JavaScript 
 
