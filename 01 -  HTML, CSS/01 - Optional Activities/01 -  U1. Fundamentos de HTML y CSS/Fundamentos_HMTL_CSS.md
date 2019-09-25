@@ -77,27 +77,35 @@
 ##### Aprendizaje activo: Marcando una lista desordeanda.
 
 ```html
-   <ul>  
-     <li>milk</li>  
-     <li>eggs</li>  
-     <li>bread</li>
-     <li>humous</li>
-   </ul>
+<ul>  
+   <li>milk</li>  
+   <li>eggs</li>  
+   <li>bread</li>
+   <li>humous</li>
+</ul>
 ``` 
    
 
 #### Aprendizaje activo: Marcando una lista ordenada
 
-   `<ol>`  
-         `<li>Drive to the end of the road</li>`  
-         `<li>Turn right</li>`  
-         `<li>Go straight across the first two roundabouts</li>`  
-         `<li>Turn left at the third roundabout</li>`  
-         `<li>The school is on your right, 300 meters up the road</li>`  
-   `</ol>`  
+```html
+<ol>
+     <li>Drive to the end of the road</li>
+     <li>Turn right</li>
+     <li>Go straight across the first two roundabouts</li>
+     <li>Turn left at the third roundabout</li>
+     <li>The school is on your right, 300 meters up the road</li>
+</ol>
+```
+   
 
 #### Aprendizaje activo: Marcando nuestra página de receta
-* 
+
+```html
+
+
+```
+
    `<h1>Quick humous recipe</h1>`  
          `<p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>`
          `<p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.<p>`  
