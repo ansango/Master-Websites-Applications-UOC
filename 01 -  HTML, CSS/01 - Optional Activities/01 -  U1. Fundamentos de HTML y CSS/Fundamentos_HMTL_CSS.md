@@ -1,4 +1,6 @@
-1.  Comencemos con HTML: ¿Tenéis claro qué es una etiqueta, un elemento y un atributo? Explicad los tres conceptos en el foro en vuestras propias palabras.
+## U1. Fundamentos de HTML y CSS
+
+### 1.  Comencemos con HTML: ¿Tenéis claro qué es una etiqueta, un elemento y un atributo? Explicad los tres conceptos en el foro en vuestras propias palabras.
 
    - Etiqueta: es un fragmento de texto rodeado por corchetes < >. Son la forma que tenemos para escribir código HTML. Pueden ser de dos tipos:
 
@@ -15,13 +17,13 @@
       
       En este caso indicamos con el atributo la ruta donde se encuentra almacenada o alojada la imagen <img>
 
-2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
+### 2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
 
-3. Fundamentos de HTML: texto, títulos, listas, énfasis. En el material se plantean unas actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
+### 3. Fundamentos de HTML: texto, títulos, listas, énfasis. En el material se plantean unas actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
 
-4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
+### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material. Enviad un mensaje al foro en el que planteéis los posibles problemas con los que os hayáis encontrado; adjuntad al mensaje los dos archivos resultantes o bien recurrid a un servicio de pruebas de código, como por ejemplo, codepen.io o cssdeck.com, donde podréis obtener un enlace para compartir en el foro.
 
-5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
+### 5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
 
    - ¿Tenéis claro qué es una regla CSS? Describid su sintaxis.
 
