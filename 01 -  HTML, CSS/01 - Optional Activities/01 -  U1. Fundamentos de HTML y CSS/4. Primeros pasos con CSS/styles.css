@@ -1,90 +1,91 @@
-    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    header {
-        min-width: 600px;
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 150px;
-    }
-    
-    section {
-        min-width: 600px;
-        max-width: 700px;
-        margin: 0 auto;
-    }
-    
-    footer {
-        padding-top: 120px;
-    }
-    
-    h1 {
-        font-size: 3em;
-        text-align: center;
-        color: lightseagreen;
-    }
-    
-    h2 {
-        font-size: 1.50em;
-        padding-top: 30px;
-    }
-    
-    h3 {
-        font-size: 1.30em;
-        padding-top: 30px;
-    }
-    
-    h4 {
-        font-size: 1.25em;
-        padding: 10px;
-    }
-    
-    img {
-        max-width: 50%;
-        display: block;
-        margin: 0 auto;
-        padding: 30px;
-    }
-    
-    p {
-        font-size: 1.20em;
-        line-height: 150%;
-    }
-    
-    .t1 {
-        font-weight: bold;
-    }
-    
-    .info {
-        text-align: right;
-    }
-    
-    a {
-        text-decoration: none;
-        background-image: linear-gradient(currentColor, currentColor);
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        transition: background-size .3s;
-    }
-    
-    a:hover,
-    a:focus {
-        background-size: 100% 2px;
-    }
-    
-    a:visited {
-        color: lightseagreen;
-    }
-    
-    ul>li {
-        line-height: 150%;
-        padding: 10px;
-    }
-    
-    ol>li {
-        line-height: 200%;
-        padding: 10px;
-    }
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  min-width: 600px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 150px;
+}
+
+section {
+  min-width: 600px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+footer {
+  padding-top: 120px;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  color: lightseagreen;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding-top: 30px;
+}
+
+h3 {
+  font-size: 1.3em;
+  padding-top: 30px;
+}
+
+h4 {
+  font-size: 1.25em;
+  padding: 10px;
+}
+
+img {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+.t1 {
+  font-weight: bold;
+}
+
+.info {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+  color: black;
+}
+
+a:hover,
+a:focus {
+  background-size: 100% 2px;
+}
+
+a:visited {
+  color: lightseagreen;
+}
+
+ul > li {
+  line-height: 150%;
+  padding: 10px;
+}
+
+ol > li {
+  line-height: 200%;
+  padding: 10px;
+}
