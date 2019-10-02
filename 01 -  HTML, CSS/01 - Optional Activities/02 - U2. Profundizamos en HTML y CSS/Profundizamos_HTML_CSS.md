@@ -59,23 +59,137 @@ Tareas:
 
 #### 2. Más marcado de texto
 
-[Documentación Mozilla - Advanced Text Formatting](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting)
-
 En la primera unidad vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones, citas, abreviaturas, cómo marcar los detalles de un contacto o cómo mostrar código informático, entre otros.
 
 Realizad las actividades que se proponen en los apartados"Citas" (Quotations) y "Abreviaturas"  (Abbreviations) de este artículo. ¿Qué etiquetas habéis usado en cada caso? Preparad una lista de descripción con cada una de ellas y enviad el código al foro (como fichero adjunto, o como enlace a un servicio de pruebas de código).
+
+[Documentación Mozilla - Advanced Text Formatting](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting)
+
+#### Tipos de formateo avanzado
+
+1. Listas de Descripción
+
+```html
+    <dl>
+        <dt>soliloquio</dt>
+        <dd>In drama, where a character speaks to themselves, representing their inner thoughts or feelings and in the process relaying them to the audience (but not to other characters.)</dd>
+        <dt>monologue</dt>
+        <dd>In drama, where a character speaks their thoughts out loud to share them with the audience and any other characters present.</dd>
+        <dt>aside</dt>
+        <dd>In drama, where a character shares a comment only with the audience for humorous or dramatic effect. This is usually a feeling, thought, or piece of additional background information.</dd>
+    </dl>
+``` 
+
+2. Citas
+    - Blockquotes
+
+        ```html
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+            <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block 
+                Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+            </blockquote>
+        ``` 
+
+    - Inline quotations
+
+        ```html
+           <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended 
+           for short quotations that don't require paragraph breaks.</q></p>
+        ``` 
+
+    - Citas
+
+        ```html
+            <p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                <cite>MDN blockquote page</cite></a>:
+            </p>
+
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+                Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+            </blockquote>
+
+            <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+            for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+            <cite>MDN q page</cite></a>.</p>
+        ``` 
+
+3. Abreviaciones
+
+```html
+    <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+
+    <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+``` 
+
+4.Contactos
+
+```html
+    <address>
+      <p>Chris Mills, Manchester, The Grim North, UK</p>
+    </address>
+``` 
+
+5. Superíndice y subíndice
+
+```html
+    <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+    <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+    <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+``` 
+
+6. Código.
+
+```html
+    <pre><code>var para = document.querySelector('p');
+
+    para.onclick = function() {
+      alert('Owww, stop poking me!');
+    }</code></pre>
+
+    <p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+
+    <p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+
+
+    <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+
+    <pre>$ <kbd>ping mozilla.org</kbd>
+    <samp>PING mozilla.org (63.245.215.20): 56 data bytes 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+``` 
+
+7. Tiempo y fechas
+
+```html
+    <!-- Standard simple date -->
+    <time datetime="2016-01-20">20 January 2016</time>
+    <!-- Just year and month -->
+    <time datetime="2016-01">January 2016</time>
+    <!-- Just month and day -->
+    <time datetime="01-20">20 January</time>
+    <!-- Just time, hours and minutes -->
+    <time datetime="19:30">19:30</time>
+    <!-- You can do seconds and milliseconds too! -->
+    <time datetime="19:30:01.856">19:30:01.856</time>
+    <!-- Date and time -->
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+    <!-- Date and time with timezone offset-->
+    <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+    <!-- Calling out a specific week number-->
+    <time datetime="2016-W04">The fourth week of 2016</time>
+``` 
 
 ##### Aprendizaje activo: Marcar un conjunto de definiciones
 
 ```html
     <dl>
-     <dt>Bacon</dt>
-     <dd>The glue that binds the world together.</dd>
-     <dt>Eggs</dt>
-     <dd>The glue that binds the cake together.</dd>
-     <dt>Coffee</dt>
-     <dd>The drink that gets the world running in the morning.</dd>
-     <dd>A light brown color.</dd>
+        <dt>Bacon</dt>
+        <dd>The glue that binds the world together.</dd>
+        <dt>Eggs</dt>
+        <dd>The glue that binds the cake together.</dd>
+        <dt>Coffee</dt>
+        <dd>The drink that gets the world running in the morning.</dd>
+        <dd>A light brown color.</dd>
     </dl>
 ``` 
 
@@ -105,8 +219,13 @@ Incluir un elemento <cite> para cada enlace
 
 #### 3. Imágenes
 
+Las imágenes son un contenido importante de las páginas web. Pueden ser incorporados a las páginas incrustándolas mediante el uso del elemento HTML img o mediante el uso de la propiedad CSS background-image.
+
+Escribid el código necesario para incrustrar en un archivo HTML la imagen siguiente: http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pic_Montferrat.jpg/320px-Pic_Montferrat.jpg. Se trata de la fotografía del glaciar de Ossoue en el Pirineo frances; las dimensiones de la imagen son de 320x240 píxeles. Enviad el código al foro como fichero adjunto o como enlace a un servicio de pruebas de código.
 
 [Documentación Mozilla - Img](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+
+[Codepen - Link Html](https://codepen.io/ansango/pen/pozMLav)
 
 ##### Aprendizaje Activo: Dando estructura a nuestro contenido. 
 ```html
