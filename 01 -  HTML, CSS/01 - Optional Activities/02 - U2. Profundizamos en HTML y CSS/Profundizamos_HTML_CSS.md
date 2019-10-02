@@ -1,6 +1,10 @@
 ## U2. Profundizamos en HTML y CSS
 
-#### 1.  En el material se plantean dos actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
+#### 1.  Hipervínculos.
+
+Los hipervínculos (o hiperenlaces, o simplemente enlaces) son lo que hace que la web sea la web. Veremos qué son exactamente, la sintaxis que debemos usar para crearlos, qué es una URL y las mejores prácticas para crearlos.
+
+En el material se plantean dos actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
 
 [Documentación Mozilla - Links HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks)
 
@@ -53,58 +57,56 @@ Tareas:
 
 4. En cada página, elimina solo el link que hace referencia a sí misma. — es confuso y no tiene sentido que una página se llame a sí misma, y la falta del enlace actúa como recordatorio de la página en la que se está en cada momento.
 
+#### 2. Más marcado de texto
+
+[Documentación Mozilla - Advanced Text Formatting](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting)
+
+En la primera unidad vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones, citas, abreviaturas, cómo marcar los detalles de un contacto o cómo mostrar código informático, entre otros.
+
+Realizad las actividades que se proponen en los apartados"Citas" (Quotations) y "Abreviaturas"  (Abbreviations) de este artículo. ¿Qué etiquetas habéis usado en cada caso? Preparad una lista de descripción con cada una de ellas y enviad el código al foro (como fichero adjunto, o como enlace a un servicio de pruebas de código).
+
+##### Aprendizaje activo: Marcar un conjunto de definiciones
+
+```html
+    <dl>
+     <dt>Bacon</dt>
+     <dd>The glue that binds the world together.</dd>
+     <dt>Eggs</dt>
+     <dd>The glue that binds the cake together.</dd>
+     <dt>Coffee</dt>
+     <dd>The drink that gets the world running in the morning.</dd>
+     <dd>A light brown color.</dd>
+    </dl>
+``` 
+
+##### Aprendizaje activo: ¿Quién ha dicho eso?
+
+Convierta el párrafo del medio en una cita en bloque, que incluye un atributo cite.
+Convierta parte del tercer párrafo en una cita en línea, que incluye un atributo cite.
+Incluir un elemento <cite> para cada enlace
+
+```html
+    <p>Hello and welcome to my motivation page. As <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>Confucius</cite></a> once said:</p>
+    <blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+        <p>It does not matter how slowly you go as long as you do not stop.</p>
+    </blockquote>
+
+    <p>I also love the concept of positive thinking, and <q cite="http://www.affirmationsforpositivethinking.com/index.htm">The Need To Eliminate Negative Self Talk</q> (as mentioned in <a href="http://www.affirmationsforpositivethinking.com/index.htm"><cite>Affirmations for Positive Thinking</cite></a>.)</p>
+``` 
 
 
-#### 2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
+##### Aprendizaje activo: marcar una abreviatura
 
-   - **vuejs.org**
-      * `<meta charset="utf-8">` : determina el tipo de carácteres del documento (Unicode utf-8)
-      * `<meta name="description" content="Vue.js - The Progressive JavaScript Framework">` : descripción del sitio web para posicionamiento SEO
-      * `<meta name="viewport" content="width=device-width, initial-scale=1">` : determina el ancho del viewport en escala 1.0
-      * `<link rel="alternate" hreflang="x-default" href="https://vuejs.org/index.html">` : enlace al sitio web según idioma por defecto.
-      * `<link rel="alternate" hreflang="zh" href="https://cn.vuejs.org/index.html">` : enlace al sitio web según el idioma chino.
+```html
 
-      * Etiquetas meta para viralizar contenido por medio de twitter:
+    <p><abbr title="National Aeronautics and Space Administration">NASA</abbr> sure does some exciting work.</p>
 
-         * `<meta name="twitter:card" content="summary">`
-         * `<meta name="twitter:title" content="Vue.js">`
-         * `<meta name="twitter:description" content="Vue.js - The Progressive JavaScript Framework">`
-         * `<meta name="twitter:image" content="https://vuejs.org/images/logo.png">`
-      
-      * `<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono&amp;display=swap" rel="stylesheet" type="text/css">` : estilo de fuentes desde el cdn de Google como centro de recursos
-      * `<link href="https://maxcdn.bootstrapcdn.com" rel="preconnect" crossorigin="">` : acceso al cdn como fuente para la utilización del framework Bootstrap
+``` 
 
-      * `<link rel="stylesheet" href="/css/index.css">` : acceso a página principal de estilos CSS, utilizada como plantilla fuente o base.
-      * `<script async="" src="https://www.google-analytics.com/analytics.js"></script>` : script para el rastreo analítico por parte de Google
+#### 3. Imágenes
 
-   - **netflix.com/es**
-      * `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">` : determinación del tipo de contenido y caracteres.
-      * `<meta http-equiv="X-UA-Compatible" content="IE=edge">` : compatibilidad con IE Edge.
-      * `<title>Netflix España - Ver series en línea, ver películas en línea</title>` titulo de Netflix España para SEO
-      * `<meta content="ver películas, películas en línea, películas online, ver TV, TV en línea, TV online, series en línea, series online, ver series, películas en streaming, TV en streaming, streaming inmediato, ver en línea, ver online, películas, ver películas en España, ver TV en línea, ver TV online, sin descargas, películas de duración completa, películas completas" name="keywords">` : descripción de la página para posicionamiento SEO en motores de busqueda.
-      * `<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">`: determinación del viewport
-      
-      * AppLinks: son URLs HTTP que se pueden utilizar para enlazar con el contenido dentro de una aplicación nativa si está instalada en el dispositivo:
-      
-         * `<meta property="al:ios:app_store_id" content="363590051">` : AppLinks para AppleStore
-         * `<meta property="al:ios:app_name" content="Netflix">`: AppLinks para aplicaciones iOS
-         * `<meta property="al:android:url" content="nflx://www.netflix.com/?locale=es-ES">` : AppLinks para aplicaciones Android
 
-   - **developer.mozilla.org** (Además de algunas ya mencionadas)
-      * `<meta name="robots" content="index, follow">` :se utilizan como crawlers por moteres de busqueda para la indexación de contenido.
-      * `<link rel="preload" href="/static/fonts/locales/ZillaSlab-Bold.subset.e96c15f68c68.woff2" as="font" type="font/woff2" crossorigin />` : precarga del recurso tipografico.
-      * `<link href="/static/build/styles/mdn.cb0e95fe43cc.css" rel="stylesheet" type="text/css" />` : hoja de estilos utilizada por el documento html.
-      * `<meta name="google-site-verification" content="Phj8dHc2oKwic3FGPsKIhdOBk_1wnCTnKwjcjiLgJPc">` : verificación de las propiedades de la consola de Google.
-
-   - **google.com**
-      * `<meta content="origin" name="referrer">` : referrer funciona con la mayoría de los navegadores para pasar la información refererida de una manera definida por el usuario
-      * `<meta content="Google.es permite acceder a la información mundial en castellano, catalán, gallego, euskara e inglés." name="description">` :  funciona con la mayoría de los navegadores para pasar la información refererida de una manera definida por el usuario.
-      * `<meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image">` : contenido de imagen png
-      * `<meta content="noodp" name="robots">` : es una directiva que indica a los rastreadores de los motores de búsqueda que no utilicen metadatos para los títulos o fragmentos que se muestran en los resultados de búsqueda de la página en particular.
-
-#### 3. Fundamentos de HTML: texto, títulos, listas, énfasis. En el material se plantean unas actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
-
-[Developer Mozilla](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/texto)
+[Documentación Mozilla - Img](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 
 ##### Aprendizaje Activo: Dando estructura a nuestro contenido. 
 ```html
