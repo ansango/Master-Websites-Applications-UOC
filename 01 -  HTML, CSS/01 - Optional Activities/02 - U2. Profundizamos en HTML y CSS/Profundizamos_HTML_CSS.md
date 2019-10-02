@@ -8,7 +8,7 @@ En el material se plantean dos actividades bajo el epígrafe "Aprendizaje activo
 
 [Documentación Mozilla - Links HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks)
 
-##### Aprendizaje activo: crea tu propio ejemplo de link
+##### Aprendizaje activo: crea tu propio ejemplo de link.
 
 [Codepen - Link Html](https://codepen.io/ansango/pen/pozMWxG)
 
@@ -34,7 +34,7 @@ En el material se plantean dos actividades bajo el epígrafe "Aprendizaje activo
         </html>
 ``` 
 
-##### Aprendizaje activo: creando un menú de navegación
+##### Aprendizaje activo: creando un menú de navegación.
 
 Contenido en el directorio de este documento.
 
@@ -57,7 +57,7 @@ Tareas:
 
 4. En cada página, elimina solo el link que hace referencia a sí misma. — es confuso y no tiene sentido que una página se llame a sí misma, y la falta del enlace actúa como recordatorio de la página en la que se está en cada momento.
 
-#### 2. Más marcado de texto
+#### 2. Más marcado de texto.
 
 En la primera unidad vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones, citas, abreviaturas, cómo marcar los detalles de un contacto o cómo mostrar código informático, entre otros.
 
@@ -65,7 +65,7 @@ Realizad las actividades que se proponen en los apartados"Citas" (Quotations) y 
 
 [Documentación Mozilla - Advanced Text Formatting](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting)
 
-#### Tipos de formateo avanzado
+#### Tipos de formateo avanzado.
 
 1. Listas de Descripción
 
@@ -122,7 +122,7 @@ Realizad las actividades que se proponen en los apartados"Citas" (Quotations) y 
     <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
 ``` 
 
-4.Contactos
+4. Contactos
 
 ```html
     <address>
@@ -138,7 +138,7 @@ Realizad las actividades que se proponen en los apartados"Citas" (Quotations) y 
     <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
 ``` 
 
-6. Código.
+6. Código
 
 ```html
     <pre><code>var para = document.querySelector('p');
@@ -179,7 +179,7 @@ Realizad las actividades que se proponen en los apartados"Citas" (Quotations) y 
     <time datetime="2016-W04">The fourth week of 2016</time>
 ``` 
 
-##### Aprendizaje activo: Marcar un conjunto de definiciones
+##### Aprendizaje activo: Marcar un conjunto de definiciones.
 
 ```html
     <dl>
@@ -217,7 +217,7 @@ Incluir un elemento <cite> para cada enlace
 
 ``` 
 
-#### 3. Imágenes
+#### 3. Imágenes.
 
 Las imágenes son un contenido importante de las páginas web. Pueden ser incorporados a las páginas incrustándolas mediante el uso del elemento HTML img o mediante el uso de la propiedad CSS background-image.
 
@@ -227,80 +227,64 @@ Escribid el código necesario para incrustrar en un archivo HTML la imagen sigui
 
 [Codepen - Link Html](https://codepen.io/ansango/pen/pozMLav)
 
-##### Aprendizaje Activo: Dando estructura a nuestro contenido. 
-```html
-   <h1>My short story</h1>
-   <p>I am a policewoman and my name is Trish.</p>
-   <p>My legs are made of cardboard and I am married to a fish.</p>
-``` 
-##### Aprendizaje activo: Marcando una lista desordeanda.
+#### 4. Estructuremos nuestras páginas y sitios web.
 
-```html
-   <ul>  
-     <li>milk</li>  
-     <li>eggs</li>  
-     <li>bread</li>
-     <li>humous</li>
-   </ul>
-``` 
-   
+En HTML disponemos de mecanismos para separar las diferentes partes de una página web. Por un lado disponemos de elementos semánticos que nos permiten marcar cabeceras, menús de navegación o contenido principal, entre otros (con los elementos header, nav y main, entre otros) y por otro, elementos no semánticos que necesitaremos para separar las cosas en bloques cuando los elementos semánticos predeterminados no son suficientes.
 
-#### Aprendizaje activo: Marcando una lista ordenada
+[Documentación Mozilla - Estructura web y documentación](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/estructura)
 
-```html
-   <ol>
-      <li>Drive to the end of the road</li>
-      <li>Turn right</li>
-      <li>Go straight across the first two roundabouts</li>
-      <li>Turn left at the third roundabout</li>
-      <li>The school is on your right, 300 meters up the road</li>
-   </ol>
-```
-   
+1. header (encabezado)
 
-#### Aprendizaje activo: Marcando nuestra página de receta
+Normalmente formado por una gran franja que cruza la parte superior de la página con un encabezado y/o un logo. Esta parte suele permanecer invariable mientras navegamos entre página y página dentro de un sitio web.
 
-```html
-   <h1>Quick hummous recipe</h1>
+`<header>`
 
-      <p>This recipe makes quick, tasty humous, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>
-      <p>Humous is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>
+2. navigation bar (barra/menú de navegación)
 
-   <h2>Ingredients</h2>
+Son los enlaces a las principales secciones del sitio web; normalmente está formado por un menú con botones, enlaces o pestañas. Al igual que el encabezado, este contenido normalmente permanece invariable en las diferentes páginas del sitio — tener un menú inconsistente en nuestra web, inducirá a los usuarios a confusión y frustración. Muchos diseñadores web consideran el menú de navegación como parte del encabezado en lugar de un componente individual, pero esto no es necesario.
 
-      <ul>
-         <li>1 can (400g) of chick peas (garbanzo beans)</li>
-         <li>175g of tahini</li>
-         <li>6 sundried tomatoes</li>
-         <li>Half a red pepper</li>
-         <li>A pinch of cayenne pepper</li>
-         <li>1 clove of garlic</li>
-         <li>A dash of olive oil</li>
-      </ul>
+`<nav>`
 
-   <h2>Instructions</h2>
+3. main content (contenido principal)
 
-      <ol>
-         <li>Remove the skin from the garlic, and chop coarsely.</li>
-         <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
-         <li>Add all the ingredients into a food processor.</li>
-         <li>Process all the ingredients into a paste.</li>
-         <li>If you want a coarse "chunky" humous, process it for a short time.</li>
-         <li>If you want a smooth humous, process it for a longer time.</li>
-      </ol>
+Es la parte ancha central de nuestra página y contiene el contenido único de la misma, por ejemplo el video que quieres ver, la narración que estás leyendo, el mapa que quieres consultar, los titulares de las noticias, etc. Esta parte es distinta de una página a otra dentro de nuestro sitio web.
 
-   <p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>
+Contendrá el contenido único de esta página. Utilizaremos <main> solamente una vez para cada página, y lo situaremos inmediatamente interior al elemento <body>. Mejor que no lo anidemos con otros elementos
 
-   <h2>Storage</h2>
+`<main>`
 
-   <p>Refrigerate the finished humous in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.</p>
+- article
 
-   <p>Humous is suitable for freezing; you should thaw it and use it within a couple of months.</p>
-```
+    <article> Encuadra un bloque de contenido que tiene sentido por sí mismo aparte del resto de la página (por ejemplo una entrada en un blog).
 
-#### 4. Primeros pasos con CSS. Escoged un texto de pocas líneas y convertidlo en un documento HTML; cambiad su aspecto mediante CSS con las técnicas que se explican en el material.
+- section
 
-[Codepen - First Steps CSS](https://codepen.io/ansango/pen/gOYEZvX)
+    Es parecido al elemento <article>, pero se usa más para agrupar cada parte de la página que, por su funcionalidad, constituye una sección en sí misma (por ejemplo un mini-mapa, o un conjunto de titulares y resúmenes). Se considera una buena práctica comenzar cada una de estas secciones con un título heading; nótese que podemos subdividir artículos <article>s en distintas secciones <section>s, o también <section>s en distintos artículos <article>s, dependiendo del contexto.
+
+- div & span
+
+    elemento no semántico
+
+- br & hr
+
+    Elementos para el fin de línea y el salto de párrafo.
+
+
+4. sidebar (menú/barra lateral)
+
+Suele incluir algún tipo de información adicional, enlaces, citas, ads comerciales, etc. Normalmente está relacionado con el contenido principal de la página (por ejemplo en una página de noticias, la barra lateral podría contener la biografía del autor o enlaces a artículos relacionados) pero en otras ocasiones encontraremos elementos recurrentes como un menú de navegación secundario.
+
+`<aside>`
+
+5. footer (pie de página)
+
+Parte inferior de la página que generalmente contiene la letra pequeña, el copyright o la información de contacto. Es el sitio donde colocar información común (al igual que en el encabezado) pero normalmente esta información no es tan importante o es secundaria para la propia página. El pie también se suele usar para propósitos SEO, incluyendo enlaces de acceso rápido al contenido más popular.
+
+`<footer>`
+
+##### Visitad sitios web que utilicéis con frecuencia y descubrid sus secciones. Utilizando la opción de ver el código fuente del navegador, comprobad si se utilizan las etiquetas apropiadas para el marcado de esas secciones.
+
+
 
 #### 5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
 
