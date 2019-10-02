@@ -2,7 +2,11 @@
 
 #### 1.  En el material se plantean dos actividades bajo el epígrafe "Aprendizaje activo" (Active learning). Resolvedlas y plantead en el foro los posibles problemas con los que os hayáis encontrado y explicad lo que hayáis aprendido.
 
+[Documentación Mozilla - Links HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks)
+
 ##### Aprendizaje activo: crea tu propio ejemplo de link
+
+[Codepen - Link Html](https://codepen.io/ansango/pen/pozMWxG)
 
 ```html
     <!DOCTYPE html>
@@ -26,7 +30,30 @@
         </html>
 ``` 
 
-   
+##### Aprendizaje activo: creando un menú de navegación
+
+Contenido en el directorio de este documento.
+
+Para este ejercicio, deberás crear links a distintas páginas con un menú de navegación creando lo que se conoce como web multi-página. Esta una de la manera común de crear las páginas web — usaremos la misma estructura de página en todas las páginas, incluida la que contiene el menú de navegación, cuando los usuarios pulsan sobre los links tendrán la sensación de que están en la misma página, y que solo cambia el contenido que se está mostrando.
+
+Tendrás que hacer copias de las siguientes cuatro páginas a nivel local, en el mismo directorio (comprueba el directorio navigation-menu-start para el listado completo):
+
+- index.html
+- projects.html
+- pictures.html
+- social.html
+
+Tareas:
+
+1. Añade una lista no numerada en el lugar adecuado de la página, que contenga los nombres de las páginas a las que enlazas. Un menú de navegación es normalmente una lista de enlaces (links), por lo que esto es correcto semánticamente.
+
+2. Convierte cada nombre en un enlace a su página.
+
+3. Copia el menú de navegación en cada una de las páginas.
+
+4. En cada página, elimina solo el link que hace referencia a sí misma. — es confuso y no tiene sentido que una página se llame a sí misma, y la falta del enlace actúa como recordatorio de la página en la que se está en cada momento.
+
+
 
 #### 2. Metadatos en HTML: Escoged cuatro páginas al azar y utilizad la opción de ver el código fuente de vuestro navegador para ver qué elementos hay en el "head" e intentad analizar su significado.
 
