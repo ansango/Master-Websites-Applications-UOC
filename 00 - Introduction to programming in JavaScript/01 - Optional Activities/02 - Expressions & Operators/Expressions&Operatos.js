@@ -150,15 +150,15 @@ let month = prompt("Introduce un mes (número)");
 let day = null;
 
 days =
-  month === 4 || month === 6 || month === 9 || month === 11
-    ? 30
-    : month === 2
-    ? 28
-    : 31;
+    month === 4 || month === 6 || month === 9 || month === 11 ?
+    30 :
+    month === 2 ?
+    28 :
+    31;
 days =
-  month === 2 && (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0))
-    ? 28
-    : 29;
+    month === 2 && (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ?
+    28 :
+    29;
 
 console.log(`El mes ${month} del año ${year} tiene ${days} días`);
 
@@ -168,19 +168,20 @@ console.log(`El mes ${month} del año ${year} tiene ${days} días`);
 
 */
 
-let q = 6;
+let day = prompt("Introduce un dia (número):");
 
-// dia del mes
+let month = prompt("Introduce un mes (número):");
+let century = prompt("Introduce una centuria (dos primeros dígitos del año):");
+let decade = prompt("Introduce una década (dos últimos dígitos del año):");
 
-let m = 8;
-let k = 73;
-let j = 19;
 
 // dia de la semana
 
-let h = (q + 2.6 * (m + 1) + k + k / 4 + j / 4 - 2 * j) % 7;
+let h = (day + Math.floor(2.6 * (month + 1)) + decade + Math.floor(decade / 4) + Math.floor(century / 4) - 2 * century) % 7;
 
-console.log(day);
+let days = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+
+console.log(days[h]);
 
 /*9. Escribid un programa en JavaScript que calcule en qué cuadrante se encuentra un punto definido por la coordenadas cartesianas (x, y) definidas por las variables x e y. El programa sólo puede usar asignaciones, expresiones y operadores (no puede usar sentencias condicionales), y debe cumplir lo siguiente:
 
@@ -190,3 +191,10 @@ console.log(day);
     Si (x<0) y (y<0), entonces el cuadrante es 0
 
 */
+
+let x = prompt("Introduce un número (x");
+let y = prompt("Introduce un número (y");
+
+let quadrant = (x >= 0) && (y >= 0) ? 3 : (x < 0) && (y >= 0) ? 2 : (x >= 0) && (y < 0) ? 1 : 0
+
+console.log(`el cuadrante es: (${x}, ${y} )`)
