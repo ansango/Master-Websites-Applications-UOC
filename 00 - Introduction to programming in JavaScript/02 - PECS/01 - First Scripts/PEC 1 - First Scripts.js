@@ -112,7 +112,7 @@ q = q % 10
 let five = Math.floor(q / 5)
 q = q % 5
 
-console.log(`Los billetes son ${fiveH} de 500, ${twoH} de 200, ${oneH} de 100, ${fifty} de 50, ${twenty} de 20, ${ten} de 10, ${five} de 5, y el resto es ${q}`)
+console.log(`Los billetes son ${fiveH} de 500, ${twoH} de 200, ${oneH} de 100, ${fifty} de 50, ${twenty} de 20, ${ten} de 10, ${five} de 5, y el resto es ${q}. Resultado correcto`)
 
 /*
 
@@ -120,3 +120,7 @@ console.log(`Los billetes son ${fiveH} de 500, ${twoH} de 200, ${oneH} de 100, $
 Podéis consultar la wikipedia https://es.wikipedia.org/wiki/A%C3%B1o_bisiesto
 
 */
+
+let year = prompt('Introduce un año')
+let yearLeap = (year & 3) == 0 && ((year % 25) != 0 || (year & 15) == 0) ? `${year} es bisiesto` : `${year} no es bisiesto`
+alert(yearLeap)
