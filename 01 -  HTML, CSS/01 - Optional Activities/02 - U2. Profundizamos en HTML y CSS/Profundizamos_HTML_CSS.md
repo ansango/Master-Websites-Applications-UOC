@@ -284,72 +284,26 @@ Parte inferior de la página que generalmente contiene la letra pequeña, el cop
 
 ##### Visitad sitios web que utilicéis con frecuencia y descubrid sus secciones. Utilizando la opción de ver el código fuente del navegador, comprobad si se utilizan las etiquetas apropiadas para el marcado de esas secciones.
 
+**eldiario.es**
 
+    - Utiliza `<header>` para la cabeza, donde incluye el banner, una barra de navegación y el login para socios y suscriptores.
+    - Utiliza `<main>` para el contenido de las publicaciones de los artículos del periódico, organizado mediante un grid interno.
+    - Utiliza `<footer>` para publicitar sus aplicaciones y los hipervínculos a las redes sociales.
+    
+**elpais.com**
 
-#### 5. Cómo se estructura el CSS. Responded a las siguientes preguntas:
+    - `<main>` para el contenido de las publicaciones de los artículos del periódico, organizado mediante un grid interno.
+    - `<aside>` para publicaciones publicitarias y titulares.
+    - `<section>` para determinar bloques de contenido como actualidad, cuerpo, cierre y opinion.
+    - `<footer>` que determina el pie donde encontramos los cŕeditos del grupo Prisa.
+    
+**elmundo.es**
 
-   - ¿Tenéis claro qué es una regla CSS? Describid su sintaxis.
+    - Además de las anteres secciones y etiquetas, se utilizan:
+        * div para elementos vacios de contenido, pero utilizados para el grid por ejemplo.
 
-      CSS es un conjunto de instrucciones al navegador sobre cómo mostrar un elemento concreto. Estas reglas dicen qué elementos de html deben tener estilos. La sintáxis se conforma de la siguiente manera:
-      
-      selector {
-         propiedad: valor;
-      }
+#### 5. Cuando tenemos problemas con HTML:
 
-      * selector: identifica los elementos HTML a los que se aplica la regla.
-      * llaves contienen a:
-         * propiedades: definen lo que se quiere hacer con los elementos seleccionados.
-         * valores: son los que cambian cada una de las propiedades de los elementos.
+Este contenido os puede resultar muy útil cuando algo falle y tengáis dificultades para encontrar qué y cómo ha fallado exactamente.
 
-      ```css
-      h2 { 
-         font-size: 1.5em; 
-         color: red;
-         }
-      ```
-   - En la actividad del apartado anterior, ¿qué método habéis usado para aplicar estilos al HTML? ¿Qué otros métodos podríais haber utilizado?
-
-      En este caso el css ha sido creado en un archivo externo ```styles.css``` que es añadido en la cabecera del html (index.html), mediante la etiqueta siguiente:
-      ```html
-         <link rel="stylesheet" href="styles.css">
-      ```
-
-      Otras formas de añadir estilos a nuestro html son:
-
-      * Introducir las etiquetas ```<style></style>`` en el documento html.
-
-      * Introducir los estilos dentro de las etiquetas (no es recomendable porque dificultará el mantenimiento de los estilos).
-
-   - ¿Habéis entendido en qué consiste la especificidad? Preparad un ejemplo donde se muestre el funcionamiento de este mecanismo de resolución de conflictos.
-
-     * La especificidad hace referencia a la relevancia que tiene un estilo concreto de CSS sobre un elemento de la página al cual le están afectando varios estilos de CSS al mismo tiempo. Es decir, hace referencia al grado de importancia de un estilo sobre otro.
-
-     * Cuanto mayor sea la especificidad que le estemos dando a un estilo, mayor será la probabilidad de que ese estilo sea el aplicado finalmente. Para ello, las reglas de CSS siguen un orden de prioridad.
-
-     * El orden de prioridad va de la siguiente manera, de menor a mayor especificidad:
-
-         * Selectores de título (p.ej: p) y pseudo-elementos (p.ej: :before)
-         * Selectores de clase (p.ej: .ejemplo), selectores de atributos (p.ej: [type="text"] y pseudo-clases (p.ej: :focus)
-         * Selectores ID (p.ej: #ejemplo)
-
-      Sin embargo, además de todas estas especificidades, si utilizamos estilos inline estos sobrescribirán cualquier estilo de las páginas externas de CSS. Se podría decir que los estilos inline son los que tienen una mayor especificidad, por lo tanto, nunca debemos utilizar estilos inline en nuestra página.
-
-      [Codepen - Especificidad CSS](https://codepen.io/ansango/pen/BaBbvmY)
-
-      ```html
-         <p id="parrafo" class="parrafo">Esto es una prueba</p>
-         <p id="parrafo2" style="color: red">Esto es una prueba</p>
-      ```
-      ```css
-        #parrafo{
-          color: green;
-         }
-
-        #parrafo2{
-          color: green;
-         }
-
-        .parrafo{
-          color: red;
-         }
-      ```
+Mediante el uso del servicio de validación de marcas del W3C (https://validator.w3.org/) comprobad si las páginas de inicio de la web de la UOC (http://www.uoc.edu), la de Mosaic (http://mosaic.uoc.edu) y otras tres páginas web de vuestra elección contienen errores. Comentad en el foro los resultados obtenidos.
