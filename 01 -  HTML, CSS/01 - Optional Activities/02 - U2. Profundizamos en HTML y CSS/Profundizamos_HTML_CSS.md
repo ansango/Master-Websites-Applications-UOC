@@ -341,41 +341,109 @@ Mediante el uso del servicio de validación de marcas del W3C (https://validator
 
 * mosaic.uoc.edu
 
-  - Errors:
+    - Errors:
 
-    Error: A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.
-	    `<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">`
+        Error: A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.
+	        `<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">`
+    
+            La etiqueta se utiliza para hacer que IE se comporte lo mejor que pueda, en modo "estándar", y  si el autor sabe lo que está haciendo (la página está   diseñada para trabajar en que), la etiqueta es útil, debido a las molestas características de IE 9.
 
-    Bad value //fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Oswald:300,400 for attribute href on element link: Illegal character in query: | is not allowed.
-        `<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Oswald:300,400' rel='stylesheet' type='text/css'>`
+            La validación es una herramienta, no un fin, y no hay ningún mérito en conseguir una "validación limpia" de una heurística experimental mal documentada,  comprobando contra un versión desconocida de algunos trabajos en curso (que es lo que es HTML5)
 
-    Bad value 2019-10-9 for attribute datetime on element time: The literal did not satisfy the time-datetime format.
-        `<time class="datepub" datetime="2019-10-9">`
+        Bad value //fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Oswald:300,400 for attribute href on element link: Illegal character in query: | is not allowed.
+            
+            `<link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Oswald:300,400' rel='stylesheet' type='text/css'>`
 
-    Element div not allowed as child of element small in this context. (Suppressing further errors from this subtree.)
-        `<div class="license">`
-        `<div class="legal">`
-        `<ul class="corp-logos">`
+            URL codifica el caracter | (pipe caracteres) en el atributo href (%7C). Hay que reemplazar el carácter | por su correspondiente carácter UTF-8, lo que da como resultado
+
+            `<link rel="stylesheet" type="text/css" href="family=Lora:400,700,400italic,700italic%7Oswald:300,400">`
+
+        Bad value 2019-10-9 for attribute datetime on element time: The literal did not satisfy the time-datetime format.
+            `<time class="datepub" datetime="2019-10-9">`
+
+            El atributo datetime no tiene el formato correcto. La fecha indicada debería ser: 2019-10-09
+
+        Element div not allowed as child of element small in this context. (Suppressing further errors from this subtree.)
+            `<div class="license">`
+            `<div class="legal">`
+            `<ul class="corp-logos">`
+
+            El elemento div no se permite como hijo de un elemento pequeño, por lo que habría que envolerlo por ejemplo en un <li> si estamos usando <ul>
 
   - Warnings:
 
-    The type attribute is unnecessary for JavaScript resources.
-        `<script type="text/javascript">`
-        `<script type='text/javascript' src='http://mosaic.uoc.edu/wp-content/themes/mosaicuoc/library/js/libs/modernizr.custom.99715.js'>`
-        `<script type="text/javascript">`
-        `<script type="text/javascript" src="//www.uoc.edu/portal/system/modules/edu.uoc.portal.presentations/resources/js/cookiesUOC.js">`
-        `<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'>`
-        `<script type='text/javascript' src='http://mosaic.uoc.edu/wp-content/themes/mosaicuoc/library/js/scripts-ck.js'>`
-        `<script type='text/javascript' src='http://mosaic.uoc.edu/wp-includes/js/wp-embed.min.js'>`
-        `<script type="text/javascript">`
+        The type attribute is unnecessary for JavaScript resources.
+            `<script type="text/javascript">`
+            `<script type='text/javascript' src='http://mosaic.uoc.edu/wp-content/themes/mosaicuoc/library/js/libs/modernizr.custom.99715.js'>`
+            `<script type="text/javascript">`
+            `<script type="text/javascript" src="//www.uoc.edu/portal/system/modules/edu.uoc.portal.presentations/resources/js/cookiesUOC.js">`
+            `<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'>`
+            `<script type='text/javascript' src='http://mosaic.uoc.edu/wp-content/themes/mosaicuoc/library/js/scripts-ck.js'>`
+            `<script type='text/javascript' src='http://mosaic.uoc.edu/wp-includes/js/wp-embed.min.js'>`
+            `<script type="text/javascript">`
+
+            En estos casos el atributo type no es necesario para los recursos utilizados de JavaScript.
     
-    The type attribute for the style element is not needed and should be omitted
-        `<style type="text/css">`
+        The type attribute for the style element is not needed and should be omitted
+            `<style type="text/css">`
 
-    Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
-        `<section class="articles inner">`
+            Igual que los casos anteriores el atributo type en style deberia de ser omitido.
 
-    The navigation role is unnecessary for element nav
-        `<nav class="main-nav" role="navigation" id="menu">`
+        Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+            `<section class="articles inner">`
 
-    
+            La sección carece de un encabezamiento, por lo que se recomienda la utilización de las etiquetas h2 a h6 para identificar las secciones correspondientes.
+
+        The navigation role is unnecessary for element nav
+            `<nav class="main-nav" role="navigation" id="menu">`
+
+            En este caso no es necesario agregar el navigation como tipo de atributo de role.
+
+* www.un.org (Naciones Unidas)
+
+    - Errors:
+
+        Start tag seen without seeing a doctype first. Expected `<!DOCTYPE html>`
+            `<html><head>`
+
+        The element button must not appear as a descendant of the a element.
+            `<button class="ar btn un-language-btn animated10 fadeInUp" lang="ar">`
+            `<button class="zh btn un-language-btn animated11 fadeInUp" lang="zh">`
+            `<button class="en btn un-language-btn animated12 fadeInUp" lang="en">`
+            `<button class="fr btn un-language-btn animated13 fadeInUp" lang="fr">`
+            `<button class="ru btn un-language-btn animated14 fadeInUp" lang="ru">`
+            `<button class="es btn un-language-btn animated15 fadeInUp" lang="es">`
+            `<div class="col-lg-8 col-md-7 col-sm-4 col-xs-1">`
+   
+    - Warnings:
+
+        Consider adding a lang attribute to the html start tag to declare the language of this document.
+            `<html><head>`
+
+        The type attribute is unnecessary for JavaScript resources.
+            `<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js">`
+            `<script type="text/javascript">`
+
+* www.nasa.gov
+
+    - Errors:
+
+        X-UA-Compatible HTTP header must have the value IE=edge, was IE=edge,chrome=1
+            `<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />`
+
+        Duplicate attribute class.
+            `ics-menu" class="Array">`
+
+    - Warnings:
+
+        The language attribute on the script element is obsolete. You can safely omit it.
+            `<script language="javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&yt=true&dclink=true">`
+
+        The type attribute is unnecessary for JavaScript resources.
+            `<script type="text/javascript">`
+
+        The banner role is unnecessary for element header
+            `<header class="l-header container-fluid" role="banner">`
+
+        The contentinfo role is unnecessary for element footer.
+            `<footer class="l-footer container-fluid" role="contentinfo">`
