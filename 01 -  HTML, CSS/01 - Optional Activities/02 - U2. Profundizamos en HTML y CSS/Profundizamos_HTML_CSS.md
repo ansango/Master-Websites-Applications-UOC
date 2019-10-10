@@ -310,29 +310,34 @@ Mediante el uso del servicio de validación de marcas del W3C (https://validator
 
 * www.uoc.edu fallos:
 
-    Line 5, Column 69: end tag for "meta" omitted, but OMITTAG NO was specified
+    - Line 5, Column 69: end tag for "meta" omitted, but OMITTAG NO was specified
+        
         `<meta http-equiv="content-type" content="text/html; charset=UTF-8">`
+    
+        El mensaje de error indica la solución: sustituir la terminación > por />. Se debería arreglar las otras metaetiquetas de la misma manera.
 
-    Line 17, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
-       	`<link href="//www.uoc.edu/portal/ca/index.html" hreflang="ca" rel="alternate">`
-
-    Line 18, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
+    - Line 17, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
+        `<link href="//www.uoc.edu/portal/ca/index.html" hreflang="ca" rel="alternate">`
         `<link href="//www.uoc.edu/portal/es/index.html" hreflang="es" rel="alternate">`
-
-    Line 19, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
         `<link href="//www.uoc.edu/portal/en/index.html" hreflang="en" rel="alternate">`
-
-    Line 20, Column 87: end tag for "link" omitted, but OMITTAG NO was specified
         `<link href="//www.uoc.edu/portal/en/index.html" hreflang="x-default" rel="alternate">`
+        
+        El mensaje de error indica la solución: sustituir la terminación > por />
 
-    Line 81, Column 13: character "<" is the first character of a delimiter but occurred as data
+    - Line 81, Column 13: character "<" is the first character of a delimiter but occurred as data
     	`while (i < clen) {`
 
-    Line 201, Column 5: end tag for "br" omitted, but OMITTAG NO was specified
+        Necesitamos envolver nuestro código (por ejemplop JS) con `<script type="text/javascript"> </script>`
+
+    - Line 201, Column 5: end tag for "br" omitted, but OMITTAG NO was specified
         `<br><br>`
 
-    Line 208, Column 9: end tag for "tbody" which is not finished
+        El mensaje de error indica la solución: sustituir la terminación > por />
+
+    - Line 208, Column 9: end tag for "tbody" which is not finished
     	`</tbody>`
+
+        Este error le indica que el validador llegó al final de un elemento `<tbody>` y encontró que este elemento no contenía lo que se esperaba. Esto puede ocurrir si incluye inadvertidamente un elemento vacío que debería contener elementos hijo o si el marcado dentro del elemento no es válido.
 
 * mosaic.uoc.edu
 
