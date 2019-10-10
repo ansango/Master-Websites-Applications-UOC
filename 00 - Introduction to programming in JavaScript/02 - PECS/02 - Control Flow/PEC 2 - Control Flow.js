@@ -23,6 +23,10 @@
     }
     catch(err) { console.log(err.name); }
 
+*/
+
+/*
+
 2 - Escribid un programa en JavaScript que, dada una fecha como un número de día (Número natural entre 1 y 31, ambos incluídos) 
 y un número de mes (número natural entre 1 y 12, ambos incluídos), muestre por consola el nombre del mes y la estación del año, según estos rangos de datos:
 
@@ -42,6 +46,10 @@ Hay códigos ISBN de 10 dígitos (ISBN-10) o de 13 dígitos (ISBN-13), estos úl
 El dígito de control  de un código ISBN-13 se calcula multiplicando el primer dígito por 1, el segundo por 3, el tercero por 1, el cuarto por 3, etc, hasta llegar al 12º dígito. 
 El 13º dígito es el de control, y es el valor que hay que añadir a la suma de todos estos productos para que sea divisible por 10.
 
+*/
+
+/*
+
 3 - Escribid un programa en JavaScript que compruebe si un código ISBN-13 dado tiene el dígito de control correcto o no. 
 Si el dígito de control es correcto debe escribir por consola el mensaje "CORRECTO", sinó debe escribir "INCORRECTO".
 
@@ -52,6 +60,10 @@ Ejemplos:
 Si el código ISBN es 9781593272821, debe escribir "CORRECTO"
 Si el código ISBN es 9781593272820, debe escribir "INCORRECTO"
 
+
+*/
+
+/*
 
 4 - Escribid un programa en JavaScript que decida, dadas las longitudes de sus lados, si un triángulo es equilátero (los tres lados de la misma longitud), isósceles (sólo dos lados de la misma longitud) o escaleno (los tres lados de longitud diferente). Debe mostrarse por consola el tipo de triángulo ("equilátero", "isósceles" o "escaleno"). El programa también debe calcular y mostrar por pantalla el área del triángulo. haciendo uso de la fórmula de Herón. En caso que no se pueda calcular el área debe mostrar el mensaje "Área no calculable".
 
@@ -66,6 +78,11 @@ Si los lados miden 3,4 y 4, entonces mostrar “isósceles, área=5.562148865321
 Si los lados miden 3,4 y 5, entonces mostrar “escaleno, área=6”
 
 Si los lados miden 3,3 y 7, entonces mostrar “Área no calculable”
+
+
+*/
+
+/*
 
 5 - Escribid un programa en JavaScript que, dados 5 números, calcule y muestre por consola:
 

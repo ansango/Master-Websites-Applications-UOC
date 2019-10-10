@@ -307,3 +307,37 @@ Parte inferior de la página que generalmente contiene la letra pequeña, el cop
 Este contenido os puede resultar muy útil cuando algo falle y tengáis dificultades para encontrar qué y cómo ha fallado exactamente.
 
 Mediante el uso del servicio de validación de marcas del W3C (https://validator.w3.org/) comprobad si las páginas de inicio de la web de la UOC (http://www.uoc.edu), la de Mosaic (http://mosaic.uoc.edu) y otras tres páginas web de vuestra elección contienen errores. Comentad en el foro los resultados obtenidos.
+
+* www.uoc.edu fallos:
+
+Line 5, Column 69: end tag for "meta" omitted, but OMITTAG NO was specified
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+Line 17, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
+	<link href="//www.uoc.edu/portal/ca/index.html" hreflang="ca" rel="alternate">
+
+Line 18, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
+	<link href="//www.uoc.edu/portal/es/index.html" hreflang="es" rel="alternate">
+
+Line 19, Column 80: end tag for "link" omitted, but OMITTAG NO was specified
+    <link href="//www.uoc.edu/portal/en/index.html" hreflang="en" rel="alternate">
+
+Line 20, Column 87: end tag for "link" omitted, but OMITTAG NO was specified
+    <link href="//www.uoc.edu/portal/en/index.html" hreflang="x-default" rel="alternate">
+
+Line 81, Column 13: character "<" is the first character of a delimiter but occurred as data
+	while (i < clen) {
+
+Line 201, Column 5: end tag for "br" omitted, but OMITTAG NO was specified
+    <br><br>
+
+Line 208, Column 9: end tag for "tbody" which is not finished
+	</tbody>
+
+* mosaic.uoc.edu
+
+Error: A meta element with an http-equiv attribute whose value is X-UA-Compatible must have a content attribute with the value IE=edge.
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">↩	
+
+Bad value //fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Oswald:300,400 for attribute href on element link: Illegal character in query: | is not allowed.
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Oswald:300,400' rel='stylesheet' type='text/css'>
