@@ -515,6 +515,7 @@ A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS
 ##### Escoged un texto de pocas líneas y convertidlo en un documento HTML. Añadid estilos CSS haciendo uso de los diversos tipos de selectores que habéis aprendido en este apartado. Como mínimo deberíais hacer uso de 5 tipos de selectores diferentes. Enviad el resultado comentado al foro.
 
 
+
 #### 8. Accesibilidad:
 
 La accesibilidad es un concepto importante y debe ser tenido siempre en cuenta para garantizar que los sitios web puedan ser utilizados por el mayor número de personas posible,  independientemente de cuáles sean sus capacidades o del contexto en el que se realice su uso.
