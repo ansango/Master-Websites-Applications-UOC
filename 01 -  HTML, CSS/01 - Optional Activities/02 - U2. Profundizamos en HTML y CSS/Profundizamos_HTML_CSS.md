@@ -496,6 +496,8 @@ Esto es así porque el significado de !important, ignora las reglas subsiguiente
 
 ##### ¿Qué significa que el selector "#especial" es más específico que el selector ".especial"?
 
+`#` Es un selector por ID, es decir, un identificador aplicable a un elemento único por documento, al utilizar un selector de clase `.`, el aplicable en orden de especificidad es el del identificador, por lo que, el de clase podemos tenerlo aplicado a varios elementos dentro de un mismo documento.
+
 #### 7. Selectores CSS:
 
 A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir. En este contenido —estructurado en cinco pequeños artículos— veremos todos los selectores posibles en detalle.
