@@ -304,6 +304,8 @@ Parte inferior de la página que generalmente contiene la letra pequeña, el cop
 
 #### 5. Cuando tenemos problemas con HTML:
 
+[Documentación Mozilla - Debugging HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Debugging_HTML)
+
 Este contenido os puede resultar muy útil cuando algo falle y tengáis dificultades para encontrar qué y cómo ha fallado exactamente.
 
 Mediante el uso del servicio de validación de marcas del W3C (https://validator.w3.org/) comprobad si las páginas de inicio de la web de la UOC (http://www.uoc.edu), la de Mosaic (http://mosaic.uoc.edu) y otras tres páginas web de vuestra elección contienen errores. Comentad en el foro los resultados obtenidos.
@@ -447,3 +449,50 @@ Mediante el uso del servicio de validación de marcas del W3C (https://validator
 
         The contentinfo role is unnecessary for element footer.
             `<footer class="l-footer container-fluid" role="contentinfo">`
+
+* www.instagram.com
+
+    - Errors:
+        
+        A link element with an as attribute must have a rel attribute that contains the value preload.
+            `<link rel="prefetch" as="script" href="/static/bundles/metro/FeedPageContainer.js/328a1ba0f957.js" type="text/javascript" crossorigin="anonymous" />`
+        
+        Bad value stylesheet for attribute as on element link.
+            `<link rel="prefetch" as="stylesheet" href="/static/bundles/metro/FeedPageContainer.css/3c72e515e33c.css" type="text/css" crossorigin="anonymous" />`
+            
+        A link element with an as attribute must have a rel attribute that contains the value preload.
+            `<link rel="prefetch" as="stylesheet" href="/static/bundles/metro/FeedPageContainer.css/3c72e515e33c.css" type="text/css" crossorigin="anonymous" />`
+    
+    - Warnings:
+    
+        The type attribute is unnecessary for JavaScript resources.
+            `<script type="text/javascript">`
+            `<script type="text/javascript" src="/static/bundles/metro/Polyfills.js/7cabc91f583c.js" crossorigin="anonymous">`
+            `<script type="text/javascript" src="/static/bundles/metro/ConsumerLibCommons.js/ba240dadeb8e.js" crossorigin="anonymous">`
+        
+        The charset attribute on the script element is obsolete.
+            `<script type="text/javascript" src="/static/bundles/metro/Consumer.js/3bdefd9f6226.js" crossorigin="anonymous" charset="utf-8" async="">`
+            `<script type="text/javascript" src="/static/bundles/metro/LandingPage.js/6926adde5791.js" crossorigin="anonymous" charset="utf-8" async="">`
+            
+#### 6. Cascada y herencia:
+
+[Documentación Mozilla - Cascada y herencia](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
+#### 7. Selectores CSS:
+
+[Documentación Mozilla - CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+[Documentación Mozilla - Selectores de tipo, clase e ID](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+[Documentación Mozilla - Selectores de atributo](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+[Documentación Mozilla - Pseudoclases y pseudoelementos](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+[Documentación Mozilla - Combinadores](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir. En este contenido —estructurado en cinco pequeños artículos— veremos todos los selectores posibles en detalle.
+
+Escoged un texto de pocas líneas y convertidlo en un documento HTML. Añadid estilos CSS haciendo uso de los diversos tipos de selectores que habéis aprendido en este apartado. Como mínimo deberíais hacer uso de 5 tipos de selectores diferentes. Enviad el resultado comentado al foro.
+
+
+#### 8. Accesibilidad:
+
+[Documentación Mozilla - Accesibilidad](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)
+
+La accesibilidad es un concepto importante y debe ser tenido siempre en cuenta para garantizar que los sitios web puedan ser utilizados por el mayor número de personas posible,  independientemente de cuáles sean sus capacidades o del contexto en el que se realice su uso.
