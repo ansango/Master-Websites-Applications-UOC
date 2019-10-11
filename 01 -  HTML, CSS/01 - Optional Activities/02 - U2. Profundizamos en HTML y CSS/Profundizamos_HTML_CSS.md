@@ -485,7 +485,15 @@ También veremos el concepto de especifidad, de nuevo un mecanismo esencial a la
 Responded a las siguientes preguntas:
 
 ##### ¿Es cierta la afirmación de que todas las propiedades CSS se heredan? Razonad vuestra respuesta con algún ejemplo.
+
+Esta afirmación no es cierta, ya que algunas propiedades no heredan, por ejemplo, si se establece un ancho de 50% en un elemento, todos sus descendientes no obtienen un ancho de 50% del ancho de sus padres.
+
 ##### Si en el código que ilustra el apartado sobre especificidad (Specificity), añadimos a la propiedad "color" del selector "h2" "!important", ¿qué ocurre con el aspecto de los diversos "h2"? ¿Por qué?
+
+En este caso ocurre que los colores de los elementos h2, cambiarán su color atendiendo a la regla de !important por indiferentemente del tipo de selector.
+
+Esto es así porque el significado de !important, ignora las reglas subsiguientes, y cualquier asunto de especificidad usual. En uso normal, una regla definida en una hoja de estilo externa es anulada por un estilo definido en el encabezado del documento, el cual, a su vez, es anulado por un estilo en línea dentro del propio elemento (asumiendo la misma especificidad de los selectores). Definir una regla con el atributo !importante 'atributo' (?) descarta las consideraciones normales con respecto a la regla 'posterior' que prevalecen sobre las 'primarias'.
+
 ##### ¿Qué significa que el selector "#especial" es más específico que el selector ".especial"?
 
 #### 7. Selectores CSS:
