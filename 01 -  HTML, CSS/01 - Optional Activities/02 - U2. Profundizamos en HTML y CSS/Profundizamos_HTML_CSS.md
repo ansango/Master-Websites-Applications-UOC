@@ -221,6 +221,8 @@ Incluir un elemento <cite> para cada enlace
 
 Las imágenes son un contenido importante de las páginas web. Pueden ser incorporados a las páginas incrustándolas mediante el uso del elemento HTML img o mediante el uso de la propiedad CSS background-image.
 
+[Documentación Mozilla - Imágenes](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+
 Escribid el código necesario para incrustrar en un archivo HTML la imagen siguiente: http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pic_Montferrat.jpg/320px-Pic_Montferrat.jpg. Se trata de la fotografía del glaciar de Ossoue en el Pirineo frances; las dimensiones de la imagen son de 320x240 píxeles. Enviad el código al foro como fichero adjunto o como enlace a un servicio de pruebas de código.
 
 [Codepen - Link Html](https://codepen.io/ansango/pen/pozMLav)
