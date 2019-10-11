@@ -223,8 +223,6 @@ Las imágenes son un contenido importante de las páginas web. Pueden ser incorp
 
 Escribid el código necesario para incrustrar en un archivo HTML la imagen siguiente: http://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pic_Montferrat.jpg/320px-Pic_Montferrat.jpg. Se trata de la fotografía del glaciar de Ossoue en el Pirineo frances; las dimensiones de la imagen son de 320x240 píxeles. Enviad el código al foro como fichero adjunto o como enlace a un servicio de pruebas de código.
 
-[Documentación Mozilla - Img](https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-
 [Codepen - Link Html](https://codepen.io/ansango/pen/pozMLav)
 
 #### 4. Estructuremos nuestras páginas y sitios web.
@@ -304,9 +302,9 @@ Parte inferior de la página que generalmente contiene la letra pequeña, el cop
 
 #### 5. Cuando tenemos problemas con HTML:
 
-[Documentación Mozilla - Debugging HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Debugging_HTML)
-
 Este contenido os puede resultar muy útil cuando algo falle y tengáis dificultades para encontrar qué y cómo ha fallado exactamente.
+
+[Documentación Mozilla - Debugging HTML](https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Debugging_HTML)
 
 Mediante el uso del servicio de validación de marcas del W3C (https://validator.w3.org/) comprobad si las páginas de inicio de la web de la UOC (http://www.uoc.edu), la de Mosaic (http://mosaic.uoc.edu) y otras tres páginas web de vuestra elección contienen errores. Comentad en el foro los resultados obtenidos.
 
@@ -476,19 +474,21 @@ Mediante el uso del servicio de validación de marcas del W3C (https://validator
             
 #### 6. Cascada y herencia:
 
-[Documentación Mozilla - Cascada y herencia](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-
 En este contenido veremos cómo funcionan la cascada y la herencia, dos de los mecanismos fundamentales de CSS (tanto como para ser "la C de CSS"), que controlan cómo se aplica el CSS a nuestro HTML.
 
 También veremos el concepto de especifidad, de nuevo un mecanismo esencial a la hora de aplicar CSS a HTML. A estas alturas de curso el CSS con que trabajamos es todavía muy simple y la especifidad no nos planteará grandes problemas. Pero más adelante, cuando tengamos docenas, o centenares de clases y reglas CSS, la especificidad será "culpable" de múltiples dolores de cabeza. ¡Recordadlo!
 
+[Documentación Mozilla - Cascada y herencia](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
 Responded a las siguientes preguntas:
 
-¿Es cierta la afirmación de que todas las propiedades CSS se heredan? Razonad vuestra respuesta con algún ejemplo.
-Si en el código que ilustra el apartado sobre especificidad (Specificity), añadimos a la propiedad "color" del selector "h2" "!important", ¿qué ocurre con el aspecto de los diversos "h2"? ¿Por qué?
-¿Qué significa que el selector "#especial" es más específico que el selector ".especial"?
+##### ¿Es cierta la afirmación de que todas las propiedades CSS se heredan? Razonad vuestra respuesta con algún ejemplo.
+##### Si en el código que ilustra el apartado sobre especificidad (Specificity), añadimos a la propiedad "color" del selector "h2" "!important", ¿qué ocurre con el aspecto de los diversos "h2"? ¿Por qué?
+##### ¿Qué significa que el selector "#especial" es más específico que el selector ".especial"?
 
 #### 7. Selectores CSS:
+
+A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir. En este contenido —estructurado en cinco pequeños artículos— veremos todos los selectores posibles en detalle.
 
 [Documentación Mozilla - CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
@@ -500,13 +500,11 @@ Si en el código que ilustra el apartado sobre especificidad (Specificity), aña
 
 [Documentación Mozilla - Combinadores](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir. En este contenido —estructurado en cinco pequeños artículos— veremos todos los selectores posibles en detalle.
-
-Escoged un texto de pocas líneas y convertidlo en un documento HTML. Añadid estilos CSS haciendo uso de los diversos tipos de selectores que habéis aprendido en este apartado. Como mínimo deberíais hacer uso de 5 tipos de selectores diferentes. Enviad el resultado comentado al foro.
+##### Escoged un texto de pocas líneas y convertidlo en un documento HTML. Añadid estilos CSS haciendo uso de los diversos tipos de selectores que habéis aprendido en este apartado. Como mínimo deberíais hacer uso de 5 tipos de selectores diferentes. Enviad el resultado comentado al foro.
 
 
 #### 8. Accesibilidad:
 
-[Documentación Mozilla - Accesibilidad](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)
-
 La accesibilidad es un concepto importante y debe ser tenido siempre en cuenta para garantizar que los sitios web puedan ser utilizados por el mayor número de personas posible,  independientemente de cuáles sean sus capacidades o del contexto en el que se realice su uso.
+
+[Documentación Mozilla - Accesibilidad](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility)
