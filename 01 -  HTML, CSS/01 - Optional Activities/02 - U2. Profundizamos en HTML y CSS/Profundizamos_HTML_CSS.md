@@ -491,10 +491,14 @@ Si en el código que ilustra el apartado sobre especificidad (Specificity), aña
 #### 7. Selectores CSS:
 
 [Documentación Mozilla - CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-    - [Documentación Mozilla - Selectores de tipo, clase e ID](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Documentación Mozilla - Selectores de atributo](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Documentación Mozilla - Pseudoclases y pseudoelementos](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Documentación Mozilla - Combinadores](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+[Documentación Mozilla - Selectores de tipo, clase e ID](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+
+[Documentación Mozilla - Selectores de atributo](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+
+[Documentación Mozilla - Pseudoclases y pseudoelementos](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+
+[Documentación Mozilla - Combinadores](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir. En este contenido —estructurado en cinco pequeños artículos— veremos todos los selectores posibles en detalle.
 
