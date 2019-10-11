@@ -478,13 +478,23 @@ Mediante el uso del servicio de validación de marcas del W3C (https://validator
 
 [Documentación Mozilla - Cascada y herencia](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 
+En este contenido veremos cómo funcionan la cascada y la herencia, dos de los mecanismos fundamentales de CSS (tanto como para ser "la C de CSS"), que controlan cómo se aplica el CSS a nuestro HTML.
+
+También veremos el concepto de especifidad, de nuevo un mecanismo esencial a la hora de aplicar CSS a HTML. A estas alturas de curso el CSS con que trabajamos es todavía muy simple y la especifidad no nos planteará grandes problemas. Pero más adelante, cuando tengamos docenas, o centenares de clases y reglas CSS, la especificidad será "culpable" de múltiples dolores de cabeza. ¡Recordadlo!
+
+Responded a las siguientes preguntas:
+
+¿Es cierta la afirmación de que todas las propiedades CSS se heredan? Razonad vuestra respuesta con algún ejemplo.
+Si en el código que ilustra el apartado sobre especificidad (Specificity), añadimos a la propiedad "color" del selector "h2" "!important", ¿qué ocurre con el aspecto de los diversos "h2"? ¿Por qué?
+¿Qué significa que el selector "#especial" es más específico que el selector ".especial"?
+
 #### 7. Selectores CSS:
 
 [Documentación Mozilla - CSS Selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-[Documentación Mozilla - Selectores de tipo, clase e ID](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-[Documentación Mozilla - Selectores de atributo](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-[Documentación Mozilla - Pseudoclases y pseudoelementos](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-[Documentación Mozilla - Combinadores](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+    - [Documentación Mozilla - Selectores de tipo, clase e ID](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+    - [Documentación Mozilla - Selectores de atributo](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Documentación Mozilla - Pseudoclases y pseudoelementos](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+    - [Documentación Mozilla - Combinadores](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir. En este contenido —estructurado en cinco pequeños artículos— veremos todos los selectores posibles en detalle.
 
