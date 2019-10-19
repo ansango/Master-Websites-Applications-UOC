@@ -34,17 +34,16 @@ Debéis considerar las cinco líneas como un único programa. Explicad el porqu�
 
 let x=0;
 x+=(x++===0?1:0);
-x-=(++x!==2?3:4);
+x-=(++x!==2?3:4); x = 1 - (2 !== 2 ? 3: 4 )
 x+=(--x<0?4:5);
 x-=(++x!==2?0:1);
 
 
-let x=0; --- 0
-x+=(x++===0?1:0); --- 1, si x++ es 0 
-x-=(++x!==2?3:4); --- -3,
-x+=(--x<0?4:5); --- 1,
-x-=(++x!==2?0:1); --- 0,
-
+let x=0; --- 0 es una declaración de la variable x con la asginación del valor a 0
+x+=(x++===0?1:0); --- 1, x++ es igual a 0 porque se usa después de x, entonces añade 1 después y x ahora vale 1. Como devuelve primero el valor anterior x++ === 0 es true, por lo que devuelve (?) 1.
+x-=(++x!==2?3:4); --- -3, x ahora vale 1, entonces es 1 - (++x (que vale 2) !== (si no es estrictamente) 2 entonces devuelve (?) 3 : (de lo contrario devuelve) 4); entonces devuelve 4, por lo que x = 1 - 4
+x+=(--x<0?4:5); --- 1, -3 + (-4 (x vale -3, restando 1 son -4)< 0 (-4 es menor que 0) ? 4 : 5 (devuelve entonces 4)), -3 + 4 es igual a 1
+x-=(++x!==2?0:1); --- 0, 1 - (2 !== 2 ? 0 : 1), devuelve 0, porque 2 no es estrictamente desigual que 2, entonces entra en el primer resultado del operador condicional (?)
 */
 
 
@@ -62,6 +61,8 @@ let n3 = prompt("Introduce un numero")
 let n4 = prompt("Introduce un numero")
 
 let max = n1 > n2 && n3 && n4 ? n1 : n2 > n3 && n4 ? n2 : n3 > n4 ? n3 : n4
+
+console.log(`El número máximo introducido es: ${max}`)
 
 /*
 
@@ -123,4 +124,4 @@ Podéis consultar la wikipedia https://es.wikipedia.org/wiki/A%C3%B1o_bisiesto
 
 let year = prompt('Introduce un año')
 let yearLeap = (year & 3) == 0 && ((year % 25) != 0 || (year & 15) == 0) ? `${year} es bisiesto` : `${year} no es bisiesto`
-alert(yearLeap)
+console.log(`El año ${yearLeap}`)
