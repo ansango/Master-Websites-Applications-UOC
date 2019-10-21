@@ -63,20 +63,87 @@ Si el día es 31 y el mes es 12 debe escribir "diciembre" e "invierno".
 
 */
 
-let day = prompt("Introduce un número de día");
-let month = prompt ("Introduce un nḿero de mes")
+let day = parseInt(prompt("Introduce un número de día"))
+let month = parseInt(prompt("Introduce un nuḿero de mes"))
+
+if (day > 31 || day <= 0) {
+    console.log('introduce un valor válido de día')
+}
+else {
+    switch (month) {
+        case 1:
+            console.log('es enero y es invierno')
+            break;
+        case 2:
+            console.log('es febrero y es invierno')
+            break;
+        case 3:
+            if (day <= 20) {
+                console.log('es marzo y es invierno')
+            }
+            else {
+                console.log('es marzo y es primavera')
+            }
+            break;
+        case 4:
+            console.log('es abril y es primavera')
+            break;
+        case 5:
+            console.log('es mayo y es primevera')
+            break;
+        case 6:
+            if (day <= 20) {
+                console.log('es junio y es primavera')
+            }
+            else {
+                console.log('es junio y es verano')
+            }
+            break;
+        case 7:
+            console.log('es julio y es verano')
+            break;
+        case 8:
+            console.log('es agosto y es verano')
+            break;
+        case 9:
+            if (day <= 20) {
+                console.log('es septiembre y es verano')
+            }
+            else {
+                console.log('es septiembre y es otoño')
+            }
+            break;
+        case 10:
+            console.log('es octubre y es otoño')
+            break;
+        case 11:
+            console.log('es noviembre y es otoño')
+            break;
+        case 12:
+            if (day <= 20) {
+                console.log('es diciembre y es otoño')
+            }
+            else {
+                console.log('es diciembre y es invierno')
+            }
+            break;
+        default:
+            console.log('introduce un número de mes correcto por favor.')
+            break;
+    }
+}
 
 
 
 /*
 
-3 - Los libros tienen un código identificador, el ISBN (International Standard Book Number). 
-Hay códigos ISBN de 10 dígitos (ISBN-10) o de 13 dígitos (ISBN-13), estos últimos desde 2007. 
-El dígito de control  de un código ISBN-13 se calcula multiplicando el primer dígito por 1, el segundo por 3, el tercero por 1, el cuarto por 3, etc, hasta llegar al 12º dígito. 
+3 - Los libros tienen un código identificador, el ISBN (International Standard Book Number).
+Hay códigos ISBN de 10 dígitos (ISBN-10) o de 13 dígitos (ISBN-13), estos últimos desde 2007.
+El dígito de control  de un código ISBN-13 se calcula multiplicando el primer dígito por 1, el segundo por 3, el tercero por 1, el cuarto por 3, etc, hasta llegar al 12º dígito.
 El 13º dígito es el de control, y es el valor que hay que añadir a la suma de todos estos productos para que sea divisible por 10.
 
 
-Escribid un programa en JavaScript que compruebe si un código ISBN-13 dado tiene el dígito de control correcto o no. 
+Escribid un programa en JavaScript que compruebe si un código ISBN-13 dado tiene el dígito de control correcto o no.
 Si el dígito de control es correcto debe escribir por consola el mensaje "CORRECTO", sinó debe escribir "INCORRECTO".
 
 Podéis consultar la wikipedia: https://es.wikipedia.org/wiki/ISBN
