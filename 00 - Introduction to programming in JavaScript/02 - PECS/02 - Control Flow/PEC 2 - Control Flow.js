@@ -156,6 +156,14 @@ Si el código ISBN es 9781593272820, debe escribir "INCORRECTO"
 
 */
 
+let isbn = parseInt(prompt('introduce el código ISBN-13 para comprobar el dígito'))
+let isbnArray = Array.from(isbn)
+let isbnChecker = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
+let isbnMulti = (isbnArray * isbnChecker) % 10
+    console.log(isbnMulti)
+
+
+
 /*
 
 4 - Escribid un programa en JavaScript que decida, dadas las longitudes de sus lados, si un triángulo es equilátero (los tres lados de la misma longitud), isósceles (sólo dos lados de la misma longitud) o escaleno (los tres lados de longitud diferente). Debe mostrarse por consola el tipo de triángulo ("equilátero", "isósceles" o "escaleno"). El programa también debe calcular y mostrar por pantalla el área del triángulo. haciendo uso de la fórmula de Herón. En caso que no se pueda calcular el área debe mostrar el mensaje "Área no calculable".
