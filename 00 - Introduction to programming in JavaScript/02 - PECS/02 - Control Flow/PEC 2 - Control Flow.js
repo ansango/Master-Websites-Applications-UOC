@@ -23,6 +23,26 @@
     }
     catch(err) { console.log(err.name); }
 
+
+
+*/
+
+/* 
+
+A - 'ReferenceError' 
+
+    Este error quiere decir que hay una variable que está siendo referida en algún lugar y no está declarada, como vemos, se declara la variable x pero no la y.
+
+B - 'TypeError'
+
+    Este error hace referencia a que el argumento o el operando que se pasa a toLowercase() es incompatible con el tipo esperado por la función. En este caso le estamos pasando un número entero.
+    El metodo espera que le pasemos una cadena (string como argumento para devolverlo en minúsculas.
+
+C - 'RangeError'
+
+    Este error indica que un valor no se encuentra dentro de un rango de valores permitidos. Como el método toFixed() formatea un numero usando notacion de punto fijo, puede dar este error si los digitos
+    introducidos son demasiado grandes o demasiado pequeños, como en este caso el pasarle 1000.
+
 */
 
 /*
@@ -42,6 +62,11 @@ Si el día es 25 y el mes es 6 debe escribir "junio" y "verano".
 Si el día es 31 y el mes es 12 debe escribir "diciembre" e "invierno".
 
 */
+
+let day = prompt("Introduce un número de día");
+let month = prompt ("Introduce un nḿero de mes")
+
+
 
 /*
 
