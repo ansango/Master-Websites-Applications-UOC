@@ -63,77 +63,70 @@ Si el día es 31 y el mes es 12 debe escribir "diciembre" e "invierno".
 
 */
 
-let day = parseInt(prompt("Introduce un número de día"))
-let month = parseInt(prompt("Introduce un nuḿero de mes"))
+let day = parseInt(prompt("Introduce un número de día"));
+let month = parseInt(prompt("Introduce un nuḿero de mes"));
 
 if (day > 31 || day <= 0) {
-    console.log('introduce un valor válido de día')
+  console.log("introduce un valor válido de día");
+} else {
+  switch (month) {
+    case 1:
+      console.log("es enero y es invierno");
+      break;
+    case 2:
+      console.log("es febrero y es invierno");
+      break;
+    case 3:
+      if (day <= 20) {
+        console.log("es marzo y es invierno");
+      } else {
+        console.log("es marzo y es primavera");
+      }
+      break;
+    case 4:
+      console.log("es abril y es primavera");
+      break;
+    case 5:
+      console.log("es mayo y es primevera");
+      break;
+    case 6:
+      if (day <= 20) {
+        console.log("es junio y es primavera");
+      } else {
+        console.log("es junio y es verano");
+      }
+      break;
+    case 7:
+      console.log("es julio y es verano");
+      break;
+    case 8:
+      console.log("es agosto y es verano");
+      break;
+    case 9:
+      if (day <= 20) {
+        console.log("es septiembre y es verano");
+      } else {
+        console.log("es septiembre y es otoño");
+      }
+      break;
+    case 10:
+      console.log("es octubre y es otoño");
+      break;
+    case 11:
+      console.log("es noviembre y es otoño");
+      break;
+    case 12:
+      if (day <= 20) {
+        console.log("es diciembre y es otoño");
+      } else {
+        console.log("es diciembre y es invierno");
+      }
+      break;
+    default:
+      console.log("introduce un número de mes correcto por favor.");
+      break;
+  }
 }
-else {
-    switch (month) {
-        case 1:
-            console.log('es enero y es invierno')
-            break;
-        case 2:
-            console.log('es febrero y es invierno')
-            break;
-        case 3:
-            if (day <= 20) {
-                console.log('es marzo y es invierno')
-            }
-            else {
-                console.log('es marzo y es primavera')
-            }
-            break;
-        case 4:
-            console.log('es abril y es primavera')
-            break;
-        case 5:
-            console.log('es mayo y es primevera')
-            break;
-        case 6:
-            if (day <= 20) {
-                console.log('es junio y es primavera')
-            }
-            else {
-                console.log('es junio y es verano')
-            }
-            break;
-        case 7:
-            console.log('es julio y es verano')
-            break;
-        case 8:
-            console.log('es agosto y es verano')
-            break;
-        case 9:
-            if (day <= 20) {
-                console.log('es septiembre y es verano')
-            }
-            else {
-                console.log('es septiembre y es otoño')
-            }
-            break;
-        case 10:
-            console.log('es octubre y es otoño')
-            break;
-        case 11:
-            console.log('es noviembre y es otoño')
-            break;
-        case 12:
-            if (day <= 20) {
-                console.log('es diciembre y es otoño')
-            }
-            else {
-                console.log('es diciembre y es invierno')
-            }
-            break;
-        default:
-            console.log('introduce un número de mes correcto por favor.')
-            break;
-    }
-}
-
-
 
 /*
 
@@ -156,12 +149,25 @@ Si el código ISBN es 9781593272820, debe escribir "INCORRECTO"
 
 */
 
-let isbn = parseInt(prompt('introduce el código ISBN-13 para comprobar el dígito'))
-let isbnArray = Array.from(isbn)
-let isbnChecker = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3]
-let isbnMulti = (isbnArray * isbnChecker) % 10
-    console.log(isbnMulti)
+let isbn = Array.from(
+  String(prompt("introduce el código ISBN-13 para comprobar el dígito")),
+  Number
+);
+let digit = parseInt(isbn.slice(-1).toString());
+let isbnValidate = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3];
+isbn.pop();
+let result = 0
 
+for (let i = 0; i < isbn.length; i++){
+    result += (isbn[i] * isbnValidate[i])
+}
+result = result + digit
+
+if (result % 10 === 0){
+    console.log('correcto')
+} else {
+    console.log('incorrecto')
+}
 
 
 /*
