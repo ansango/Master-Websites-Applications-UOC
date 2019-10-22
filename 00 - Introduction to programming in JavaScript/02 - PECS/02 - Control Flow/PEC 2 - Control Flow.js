@@ -156,23 +156,24 @@ let isbn = Array.from(
 let digit = parseInt(isbn.slice(-1).toString());
 let isbnValidate = [1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3];
 isbn.pop();
-let result = 0
+let result = 0;
 
-for (let i = 0; i < isbn.length; i++){
-    result += (isbn[i] * isbnValidate[i])
+for (let i = 0; i < isbn.length; i++) {
+  result += isbn[i] * isbnValidate[i];
 }
-result = result + digit
+result = result + digit;
 
-if (result % 10 === 0){
-    console.log('correcto')
+if (result % 10 === 0) {
+  console.log("correcto");
 } else {
-    console.log('incorrecto')
+  console.log("incorrecto");
 }
-
 
 /*
 
-4 - Escribid un programa en JavaScript que decida, dadas las longitudes de sus lados, si un triángulo es equilátero (los tres lados de la misma longitud), isósceles (sólo dos lados de la misma longitud) o escaleno (los tres lados de longitud diferente). Debe mostrarse por consola el tipo de triángulo ("equilátero", "isósceles" o "escaleno"). El programa también debe calcular y mostrar por pantalla el área del triángulo. haciendo uso de la fórmula de Herón. En caso que no se pueda calcular el área debe mostrar el mensaje "Área no calculable".
+4 - Escribid un programa en JavaScript que decida, dadas las longitudes de sus lados, si un triángulo es equilátero (los tres lados de la misma longitud), isósceles (sólo dos lados de la misma longitud) o escaleno (los tres lados de longitud diferente). 
+Debe mostrarse por consola el tipo de triángulo ("equilátero", "isósceles" o "escaleno"). El programa también debe calcular y mostrar por pantalla el área del triángulo. haciendo uso de la fórmula de Herón. 
+En caso que no se pueda calcular el área debe mostrar el mensaje "Área no calculable".
 
 Podeís consultar la wikipedia https://es.wikipedia.org/wiki/F%C3%B3rmula_de_Her%C3%B3n
 
@@ -188,6 +189,24 @@ Si los lados miden 3,3 y 7, entonces mostrar “Área no calculable”
 
 
 */
+
+let a = parseInt(prompt("Introduce el primer lado"));
+let b = parseInt(prompt("Introduce el segundo lado"));
+let c = parseInt(prompt("Introduce el tercer lado"));
+let sem = (a + b + c) * 0.5;
+let area = Math.sqrt(sem * (sem - a) * (sem - b) * (sem - c));
+
+if (area.isNaN(NaN)) {
+  console.log("Área no ejecutable");
+} else {
+  if (a === b && a === c && b === c) {
+    console.log(`el triangulo es equilatero y tiene un área de ${area}`);
+  } else if (a === b || a === c || b === c) {
+    console.log(`el triangulo es isósceles y tiene un área de ${area}`);
+  } else {
+    console.log(`el triangulo es escaleno y tiene un área de ${area}`);
+  }
+}
 
 /*
 
