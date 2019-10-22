@@ -196,7 +196,7 @@ let c = parseInt(prompt("Introduce el tercer lado"));
 let sem = (a + b + c) * 0.5;
 let area = Math.sqrt(sem * (sem - a) * (sem - b) * (sem - c));
 
-if (area.isNaN(NaN)) {
+if (Number.isNaN(area)) {
   console.log("Área no ejecutable");
 } else {
   if (a === b && a === c && b === c) {
@@ -236,3 +236,47 @@ mínimo=-45
 rango=17.5
 
 */
+
+let a = parseInt(prompt("Introduce el primer número"));
+let b = parseInt(prompt("Introduce el segundo número"));
+let c = parseInt(prompt("Introduce el tercer número"));
+let d = parseInt(prompt("Introduce el cuarto número"));
+let e = parseInt(prompt("Introduce el quinto número"));
+
+let media = (a + b + c + d + e) / 5;
+
+console.log(`media = ${media}`)
+
+let maxVal
+if (a > b && a > c && a > d && a > e){
+    maxVal = a
+} else if (b >a && b > c && b > d && b > e) {
+    maxVal = b
+} else if (c > a && c > b && c > d && c > e) {
+    maxVal = c
+} else if (d > a && d > b && d > c && d > e) {
+    maxVal = d
+} else if (e > a && e > b && e > c && e > d) {
+    maxVal = e
+}
+
+console.log(`máximo = ${maxVal}`)
+
+let minVal
+if (a < b && a < c && a < d && a < e){
+    minVal = a
+} else if (b <a && b < c && b < d && b < e) {
+    minVal = b
+} else if (c < a && c < b && c < d && c < e) {
+    minVal = c
+} else if (d < a && d < b && d < c && d < e) {
+    minVal = d
+} else if (e < a && e < b && e < c && e < d) {
+    minVal = e
+}
+
+console.log(`mínimo = ${minVal}`)
+
+let range = (minVal + maxVal) / 2
+
+console.log(`rango = ${range}`)
