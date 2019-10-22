@@ -242,11 +242,8 @@ let b = parseInt(prompt("Introduce el segundo número"));
 let c = parseInt(prompt("Introduce el tercer número"));
 let d = parseInt(prompt("Introduce el cuarto número"));
 let e = parseInt(prompt("Introduce el quinto número"));
-
 let media = (a + b + c + d + e) / 5;
-
 console.log(`media = ${media}`)
-
 let maxVal
 if (a > b && a > c && a > d && a > e){
     maxVal = a
@@ -259,9 +256,7 @@ if (a > b && a > c && a > d && a > e){
 } else if (e > a && e > b && e > c && e > d) {
     maxVal = e
 }
-
 console.log(`máximo = ${maxVal}`)
-
 let minVal
 if (a < b && a < c && a < d && a < e){
     minVal = a
@@ -274,9 +269,6 @@ if (a < b && a < c && a < d && a < e){
 } else if (e < a && e < b && e < c && e < d) {
     minVal = e
 }
-
 console.log(`mínimo = ${minVal}`)
-
 let range = (minVal + maxVal) / 2
-
 console.log(`rango = ${range}`)
