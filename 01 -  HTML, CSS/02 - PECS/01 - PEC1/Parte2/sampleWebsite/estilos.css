@@ -1,31 +1,157 @@
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-  }
+/************ BODY RESET ************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/************ HEADER  & NAV ************/
+
 header {
-    padding: 30px;
-    text-align: center;
-  }
-
-.header-item{
-    margin-top: 30px ;
-}
-
-header > img {
-    width: 60px;
-}
-
-.header-item > h1 {
-    font-size: 40px;
-}
-
-
-h2 {
+    padding: 30px 30px 0 30px;
     text-align: center;
 }
 
-.books {
-    text-align: initial;
+header>img {
+    width: 50px;
 }
 
+header>h1 {
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+#nav-list li {
+    list-style-type: none;
+}
+
+#nav-list li a {
+    display: inline-block;
+    text-align: center;
+    font: normal 11px Arial;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#nav-list a:hover {
+    font-weight: bold;
+}
+
+#nav-list a:after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#nav-list a:visited {
+    color: black;
+}
+
+.header-item {
+    margin-top: 30px;
+}
+
+
+/************ CONTENT SITE ************/
+
+.content-space {
+    margin: auto;
+    width: 50%;
+}
+
+.content-title {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.content-subtitle {
+    margin: 20px 120px 0 120px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.content-credits {
+    margin: 25px;
+    text-align: center;
+}
+
+.author {
+    text-decoration: underline;
+}
+
+.content-img img {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.content-img p {
+    text-align: center;
+}
+
+ol {
+    padding: 20px 30px 40px 30px;
+}
+
+ul {
+    padding: 0 50px 20px 50px;
+}
+
+.content-text p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-title-text {
+    font-size: 20px;
+}
+
+.content-referece-text {
+    margin-left: 65px;
+    margin-right: 200px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: black;
+}
+
+.creative-commons {
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 30px;
+}
+
+.creative-commons img {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 12%;
+}
+
+.content-referece-text p {
+    margin-left: 15px;
+}
+
+#big-timonel {
+    margin-top: 30px;
+}
+
+
+/************ FOOTER ************/
+
+footer {
+    padding: 15px;
+    font-size: 10px;
+    text-align: center;
+}
