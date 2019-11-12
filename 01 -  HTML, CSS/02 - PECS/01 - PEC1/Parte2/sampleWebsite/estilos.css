@@ -12,6 +12,7 @@
 header {
     padding: 30px 30px 0 30px;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header>img {
@@ -39,15 +40,6 @@ header>h1 {
     font-weight: bold;
 }
 
-#nav-list a:after {
-    display: block;
-    content: attr(title);
-    font-weight: bold;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-}
-
 #nav-list a:visited {
     color: black;
 }
@@ -62,6 +54,7 @@ header>h1 {
 .content-space {
     margin: auto;
     width: 50%;
+    font-family: 'Arial Narrow Bold';
 }
 
 .content-title {
@@ -103,11 +96,42 @@ ol {
 
 ul {
     padding: 0 50px 20px 50px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+dt {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+dd {
+    padding: 0 0px 0 40px;
+    line-height: 150%;
+}
+
+dd>p {
+    margin-top: 15px;
+}
+
+iframe {
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+.content-iframe {
+    text-align: center;
+    font-size: 12px;
 }
 
 .content-text p {
     margin-top: 30px;
     margin-bottom: 30px;
+    line-height: 150%;
 }
 
 .content-title-text {
@@ -139,12 +163,20 @@ ul {
     width: 12%;
 }
 
-.content-referece-text p {
-    margin-left: 15px;
+.creative-commons a {
+    color: black;
 }
 
 #big-timonel {
     margin-top: 30px;
+}
+
+.italic-reference {
+    font-style: italic;
+}
+
+.underline-reference {
+    text-decoration: underline;
 }
 
 
