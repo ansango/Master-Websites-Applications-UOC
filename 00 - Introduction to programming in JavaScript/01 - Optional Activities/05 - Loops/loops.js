@@ -65,3 +65,30 @@ for (let i = 1; i <= 10; i++) {
     console.log(`${i} x ${j} = ${i * j}`)
   } 
 }
+
+/*Hacer el último ejercicio del apartado anterior, pero utilizando, primero la instrucción while y después con la instrucción for.*/
+
+let i = 0
+
+while (i <= 10) {
+  for(let j = 0; j <= 10; j ++){
+    console.log(`${i} x ${j} = ${i*j}`)
+  }
+  i++
+}
+
+/*Hacer un programa que cuente el número de "a" que hay en una cadena de caracteres.*/
+
+let t =  'super AAAAAfrase que cuenta la letra a'
+
+let r = t.match(/a/gi).length
+
+console.log(r)
+
+/*Hacer un programa que cuente el número de palabras que hay en una cadena terminada en punto, teniendo en cuenta que entre palabra y palabra hay siempre un espacio (y sólo un espacio).*/
+
+
+
+/*Hacer un programa que cuente el número de palabras que hay en una cadena terminada en punto, teniendo en cuenta que entre dos palabras puede haber uno o más espacios.*/
+
+
