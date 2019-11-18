@@ -94,6 +94,22 @@ n=48 f=4807526976
 n=49 f=7778742049
 suma=20365011073
 
+*/
+
+let fibonacci = []
+
+for(let n = 0; n < 50; n++) {
+  if(n <= 1) {
+    fibonacci.push(n)
+  } else {
+    fibonacci.push(fibonacci[n - 1] + fibonacci[n - 2])
+  }
+  console.log(`n=${n}, f=${fibonacci[n]}`)
+}
+console.log(`Suma: ${fibonacci.reduce((total, num) => { return total += num })}`)
+
+/*
+
 4 - Escribid un programa en JavaScript que muestre por consola la descomposición de un número natural positivo cualquiera en sus factores primos. 
 El programa también debe comprobar que el producto de todos sus factores coincide con el número original, y si es así mostrar "Correcto" por consola.
 
@@ -102,6 +118,26 @@ Ejemplos:
 Si N es 357, entonces mostrar “3*7*17. Correcto.”
 Si N es 1024, entonces mostrar “2*2*2*2*2*2*2*2*2*2. Correcto.”
 Si N es 22848, entonces mostrar “22848=2*2*2*2*2*2*3*7*17. Correcto.”
+
+*/
+
+let n = 22848
+let i = 2
+let primes = []
+
+for(;;) {  
+  if(n % i === 0) {
+    primes.push(i)
+    n = n / i
+  } else {
+    i++
+  }
+  if(n === 1) break
+}
+
+console.log(primes.join('*'))
+
+/*
 
 5 - Escribid un programa en JavaScript que muestre por consola una aproximación al número Pi mediante la serie de Leibniz. 
 Podéis consultar la wikipedia https://es.wikipedia.org/wiki/Serie_de_Leibniz
