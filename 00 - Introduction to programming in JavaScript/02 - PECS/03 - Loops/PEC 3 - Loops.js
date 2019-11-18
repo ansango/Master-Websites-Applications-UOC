@@ -121,7 +121,21 @@ Si N es 22848, entonces mostrar “22848=2*2*2*2*2*2*3*7*17. Correcto.”
 
 */
 
-let n = 22848
+let n = 22848let n = 22848
+let i = 2
+let primes = []
+
+for(;;) {  
+  if(n % i === 0) {
+    primes.push(i)
+    n = n / i
+  } else {
+    i++
+  }
+  if(n === 1) break
+}
+
+console.log(primes.join('*'))
 let i = 2
 let primes = []
 
@@ -152,3 +166,15 @@ Haciendo 1000000 iteraciones, entonces mostrar “pi = 3.1415916535897743”
 Haciendo 10000000 iteraciones, entonces mostrar “pi = 3.1415925535897915”
 
 */
+
+const MAX = 1000000
+
+let sum = 0
+
+for(let i = 0; i < MAX; i++) {
+  sum += (Math.pow(-1, i)) / ((2 * i) + 1)
+}
+
+let PI = sum * 4
+
+console.log(PI)
