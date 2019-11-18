@@ -5,19 +5,17 @@ Repetir estas operaciones hasta que el resultado sea 1.
 
 Ejemplo: Si el número inicial es 30, la serie calculada es 15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1
 
-let n = 30
-
-for (let i = 1; i < n; i++) {
-  if (n % 2 === 0){
-  n /= 2
-}
-console.log(n)
-if (n % 2 !== 0){
-  n = (n* 3) + 1
-}
-console.log(n)
-}
 */
+
+
+while (n > 1){
+  if (n % 2 === 0) {
+    n = n / 2
+  } else if (n % 2 !== 0) {
+    n = n * 3 + 1
+  }
+  console.log(n)
+}
 
 /*
 
@@ -27,6 +25,49 @@ Un número perfecto es un entero que es igual a la suma de sus divisores positiv
 
 */
 
+let i =  1 // Candidato a ser perfecto
+let arrayPerfects = []
+
+// Bucle infito que buscará los números perfectos
+for(;;) {
+  let sum = 0
+  // Bucle que compruebe si el número es perfecto
+  for (let j = 1; j < i; j++) {
+    if(i % j === 0) {
+      sum += j
+    }
+  }
+  if(sum === i) {
+    arrayPerfects.push(i)
+    console.log(arrayPerfects)
+  }
+  if(arrayPerfects.length === 4) break
+  i++ // Incrementamos el candidato a perfecto
+}
+
+const ZERO = 0
+const LIMIT_PERFECTS = 4
+const FIRST_CANDIDATE = 1
+
+let i =  FIRST_CANDIDATE // Candidato a ser perfecto
+let arrayPerfects = []
+
+// Bucle infito que buscará los números perfectos
+for(;;) {
+  let sum = ZERO
+  // Bucle que compruebe si el número es perfecto
+  for (let j = 1; j < i; j++) {
+    if(i % j === ZERO) {
+      sum += j
+    }
+  }
+  if(sum === i) {
+    arrayPerfects.push(i)
+    console.log(arrayPerfects)
+  }
+  if(arrayPerfects.length === LIMIT_PERFECTS) break
+  i++ // Incrementamos el candidato a perfecto
+}
 
 
 /*
