@@ -4,10 +4,31 @@
 Repetir estas operaciones hasta que el resultado sea 1.
 
 Ejemplo: Si el número inicial es 30, la serie calculada es 15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1
-Un número perfecto es un entero que es igual a la suma de sus divisores positivos, excepto él mismo. 
+ */
 
-2 - Escribid un programa en JavaScript que encuentre y muestre por consola los 5 primeros números perfectos.
+let n = parseInt(prompt("introduce un numero entero"));
 
+for (let i = 0; i < 1; i++){
+    if (n % 2 === 0){
+        n /= 2
+        if (n % 2 === 0){
+            n /= 2
+        } else {
+            n = n * 3 + 1
+        }
+        console.log(n)
+    }
+
+}
+
+/*
+
+2 - Un número perfecto es un entero que es igual a la suma de sus divisores positivos, excepto él mismo.
+Escribid un programa en JavaScript que encuentre y muestre por consola los 5 primeros números perfectos.
+
+*/
+
+/*
 
 3 - Escribid un programa en JavaScript que muestre por consola los 50 primeros términos de la serie de Fibonacci (n=0 a n=49). 
 El programa también debe mostrar la suma de estos 50 términos. Podéis consultar la wikipedia https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci
@@ -30,6 +51,13 @@ n=47 f=2971215073
 n=48 f=4807526976
 n=49 f=7778742049
 suma=20365011073
+
+*/
+
+
+
+
+/*
 
 4 - Escribid un programa en JavaScript que muestre por consola la descomposición de un número natural positivo cualquiera en sus factores primos. 
 El programa también debe comprobar que el producto de todos sus factores coincide con el número original, y si es así mostrar "Correcto" por consola.
