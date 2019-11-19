@@ -4,6 +4,7 @@
 Repetir estas operaciones hasta que el resultado sea 1.
 
 Ejemplo: Si el número inicial es 30, la serie calculada es 15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1
+<<<<<<< HEAD
  */
 
 let n = parseInt(prompt("introduce un numero entero"));
@@ -18,7 +19,6 @@ for (let i = 0; i < 1; i++){
         }
         console.log(n)
     }
-
 }
 
 /*
@@ -27,6 +27,73 @@ for (let i = 0; i < 1; i++){
 Escribid un programa en JavaScript que encuentre y muestre por consola los 5 primeros números perfectos.
 
 */
+=======
+
+*/
+
+
+while (n > 1){
+  if (n % 2 === 0) {
+    n = n / 2
+  } else if (n % 2 !== 0) {
+    n = n * 3 + 1
+  }
+  console.log(n)
+}
+
+/*
+
+2 - Escribid un programa en JavaScript que encuentre y muestre por consola los 5 primeros números perfectos.
+Un número perfecto es un entero que es igual a la suma de sus divisores positivos, excepto él mismo. 
+
+
+*/
+
+let i =  1 // Candidato a ser perfecto
+let arrayPerfects = []
+
+// Bucle infito que buscará los números perfectos
+for(;;) {
+  let sum = 0
+  // Bucle que compruebe si el número es perfecto
+  for (let j = 1; j < i; j++) {
+    if(i % j === 0) {
+      sum += j
+    }
+  }
+  if(sum === i) {
+    arrayPerfects.push(i)
+    console.log(arrayPerfects)
+  }
+  if(arrayPerfects.length === 4) break
+  i++ // Incrementamos el candidato a perfecto
+}
+
+const ZERO = 0
+const LIMIT_PERFECTS = 4
+const FIRST_CANDIDATE = 1
+
+let i =  FIRST_CANDIDATE // Candidato a ser perfecto
+let arrayPerfects = []
+
+// Bucle infito que buscará los números perfectos
+for(;;) {
+  let sum = ZERO
+  // Bucle que compruebe si el número es perfecto
+  for (let j = 1; j < i; j++) {
+    if(i % j === ZERO) {
+      sum += j
+    }
+  }
+  if(sum === i) {
+    arrayPerfects.push(i)
+    console.log(arrayPerfects)
+  }
+  if(arrayPerfects.length === LIMIT_PERFECTS) break
+  i++ // Incrementamos el candidato a perfecto
+}
+
+>>>>>>> 4f646e3e8977d1d227c2e4af67cd72b4aeccfd42
 
 /*
 
@@ -54,8 +121,17 @@ suma=20365011073
 
 */
 
+let fibonacci = []
 
-
+for(let n = 0; n < 50; n++) {
+  if(n <= 1) {
+    fibonacci.push(n)
+  } else {
+    fibonacci.push(fibonacci[n - 1] + fibonacci[n - 2])
+  }
+  console.log(`n=${n}, f=${fibonacci[n]}`)
+}
+console.log(`Suma: ${fibonacci.reduce((total, num) => { return total += num })}`)
 
 /*
 
@@ -67,6 +143,39 @@ Ejemplos:
 Si N es 357, entonces mostrar “3*7*17. Correcto.”
 Si N es 1024, entonces mostrar “2*2*2*2*2*2*2*2*2*2. Correcto.”
 Si N es 22848, entonces mostrar “22848=2*2*2*2*2*2*3*7*17. Correcto.”
+
+*/
+
+let n = 22848let n = 22848
+let i = 2
+let primes = []
+
+for(;;) {  
+  if(n % i === 0) {
+    primes.push(i)
+    n = n / i
+  } else {
+    i++
+  }
+  if(n === 1) break
+}
+
+console.log(primes.join('*'))
+let i = 2
+let primes = []
+
+for(;;) {  
+  if(n % i === 0) {
+    primes.push(i)
+    n = n / i
+  } else {
+    i++
+  }
+  if(n === 1) break
+}
+console.log(primes.join('*'))
+
+/*
 
 5 - Escribid un programa en JavaScript que muestre por consola una aproximación al número Pi mediante la serie de Leibniz. 
 Podéis consultar la wikipedia https://es.wikipedia.org/wiki/Serie_de_Leibniz
@@ -81,3 +190,15 @@ Haciendo 1000000 iteraciones, entonces mostrar “pi = 3.1415916535897743”
 Haciendo 10000000 iteraciones, entonces mostrar “pi = 3.1415925535897915”
 
 */
+
+const MAX = 1000000
+
+let sum = 0
+
+for(let i = 0; i < MAX; i++) {
+  sum += (Math.pow(-1, i)) / ((2 * i) + 1)
+}
+
+let PI = sum * 4
+
+console.log(PI)
