@@ -4,33 +4,11 @@
 Repetir estas operaciones hasta que el resultado sea 1.
 
 Ejemplo: Si el número inicial es 30, la serie calculada es 15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1
-<<<<<<< HEAD
- */
-
-let n = parseInt(prompt("introduce un numero entero"));
-
-for (let i = 0; i < 1; i++){
-    if (n % 2 === 0){
-        n /= 2
-        if (n % 2 === 0){
-            n /= 2
-        } else {
-            n = n * 3 + 1
-        }
-        console.log(n)
-    }
-}
-
-/*
-
-2 - Un número perfecto es un entero que es igual a la suma de sus divisores positivos, excepto él mismo.
-Escribid un programa en JavaScript que encuentre y muestre por consola los 5 primeros números perfectos.
-
-*/
-=======
 
 */
 
+let n = parseInt(prompt('Introduce un número'))
+let arrN = []
 
 while (n > 1){
   if (n % 2 === 0) {
@@ -38,8 +16,9 @@ while (n > 1){
   } else if (n % 2 !== 0) {
     n = n * 3 + 1
   }
-  console.log(n)
+  arrN.push(n)
 }
+console.log(arrN)
 
 /*
 
@@ -48,26 +27,6 @@ Un número perfecto es un entero que es igual a la suma de sus divisores positiv
 
 
 */
-
-let i =  1 // Candidato a ser perfecto
-let arrayPerfects = []
-
-// Bucle infito que buscará los números perfectos
-for(;;) {
-  let sum = 0
-  // Bucle que compruebe si el número es perfecto
-  for (let j = 1; j < i; j++) {
-    if(i % j === 0) {
-      sum += j
-    }
-  }
-  if(sum === i) {
-    arrayPerfects.push(i)
-    console.log(arrayPerfects)
-  }
-  if(arrayPerfects.length === 4) break
-  i++ // Incrementamos el candidato a perfecto
-}
 
 const ZERO = 0
 const LIMIT_PERFECTS = 4
@@ -92,8 +51,6 @@ for(;;) {
   if(arrayPerfects.length === LIMIT_PERFECTS) break
   i++ // Incrementamos el candidato a perfecto
 }
-
->>>>>>> 4f646e3e8977d1d227c2e4af67cd72b4aeccfd42
 
 /*
 
@@ -146,11 +103,12 @@ Si N es 22848, entonces mostrar “22848=2*2*2*2*2*2*3*7*17. Correcto.”
 
 */
 
-let n = 22848let n = 22848
+let n = parseInt(prompt('Introduce un numero'))
+const num = n
 let i = 2
 let primes = []
 
-for(;;) {  
+for(;;) {
   if(n % i === 0) {
     primes.push(i)
     n = n / i
@@ -159,21 +117,7 @@ for(;;) {
   }
   if(n === 1) break
 }
-
-console.log(primes.join('*'))
-let i = 2
-let primes = []
-
-for(;;) {  
-  if(n % i === 0) {
-    primes.push(i)
-    n = n / i
-  } else {
-    i++
-  }
-  if(n === 1) break
-}
-console.log(primes.join('*'))
+console.log(`${num} = ${primes.join('*')}. Correcto`)
 
 /*
 
