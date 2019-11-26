@@ -22,6 +22,7 @@ html, body {
     --primary-text: #1f1f11;
     --primary-text-white: #666666;
     --contrast: #D9645D;
+    --white: #ffffff;
 }
 
 /************ SET FONTS THEME ************/
@@ -112,7 +113,7 @@ article, p {
     position: relative;
     left: 100px;
     top: 0px;
-    background-color: white;
+    background-color: var(--white);
     border-left: 1px solid var(--primary);
     border-right: 1px solid var(--primary);
     border-bottom: 1px solid var(--primary);
