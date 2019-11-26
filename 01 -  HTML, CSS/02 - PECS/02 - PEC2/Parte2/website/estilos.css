@@ -36,6 +36,7 @@ h4,
 h5,
 h6 {
     font-family: 'Roboto Slab';
+    color: var(--primary);
 }
 
 h1 {
@@ -46,6 +47,7 @@ h1 {
 h2 {
     font-size: 24px;
     line-height: 32px;
+    text-transform: uppercase;
 }
 
 footer,
@@ -64,16 +66,11 @@ form {
     font-size: 22px;*/
 }
 
-li {
-    display: inline;
-}
-
-a {
-    text-decoration-style: solid 2px;
-}
-
-
 /************ SET NAVBAR ************/
+
+header {
+    width: 100%;
+}
 
 .logo-container {
     padding: 20px 20px 0px 100px;
@@ -81,6 +78,10 @@ a {
 
 .nav-container {
     padding: 10px 20px 20px 100px;
+}
+
+nav>ul>li{
+    display: inline;
 }
 
 nav>ul>li>a {
@@ -104,15 +105,14 @@ nav>ul>li>.current {
 /************ SET ARTICLE ************/
 
 article {
-    background-image: url(../material_PEC2/images/fonsrobot.jpg);
-    background-size: cover;
-    height: calc(header - footer);
+    max-width: 1200px;
 }
 
 
 /************ SET FOOTER ************/
 
 footer {
+    width: 100%;
     background-color: var(--primary-white);
 }
 
