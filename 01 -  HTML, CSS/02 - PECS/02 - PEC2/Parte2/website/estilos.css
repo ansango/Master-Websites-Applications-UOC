@@ -66,10 +66,11 @@ form {
     font-size: 22px;*/
 }
 
-/************ SET NAVBAR ************/
+/************ SET HEADER ************/
 
 header {
     width: 100%;
+    max-height: 155px;
 }
 
 .logo-container {
@@ -111,8 +112,16 @@ article, p {
 .background-index{
     background-image: url(../material_PEC2/images/fonsrobot.jpg);
     background-size:cover;
-    width: 100vw;
+    width: 100%;
+    height: calc(100% - (155px + 133px));
     
+}
+
+.container-info-index{
+    background-color: white;
+    border: blue solid 1px;
+    max-width: 300px;
+    padding: 20px;
 }
 
 
