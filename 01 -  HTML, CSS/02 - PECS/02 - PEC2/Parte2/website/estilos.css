@@ -104,8 +104,15 @@ nav>ul>li>.current {
 
 /************ SET ARTICLE ************/
 
-article {
+article, p {
     max-width: 1200px;
+}
+
+.background-index{
+    background-image: url(../material_PEC2/images/fonsrobot.jpg);
+    background-size:cover;
+    width: 100vw;
+    
 }
 
 
