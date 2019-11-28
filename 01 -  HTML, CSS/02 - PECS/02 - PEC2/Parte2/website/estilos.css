@@ -1,157 +1,244 @@
 /************ BODY RESET ************/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* setting font default */
-    font-family: 'Roboto';
-    font-size: 18px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* setting font default */
+  font-family: "Roboto";
+  font-size: 18px;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 /************ SET COLORS THEME ************/
 
 :root {
-    --primary: #306291;
-    --primary-dark: rgba(69, 141, 209, 0.5);
-    --primary-white: rgba(69, 141, 209, 0.2);
-    --primary-text: #1f1f11;
-    --primary-text-white: #666666;
-    --contrast: #D9645D;
-    --white: #ffffff;
+  --primary: #306291;
+  --primary-dark: rgba(69, 141, 209, 0.5);
+  --primary-white: rgba(69, 141, 209, 0.2);
+  --primary-text: #1f1f11;
+  --primary-text-white: #666666;
+  --contrast: #d9645d;
+  --white: #ffffff;
 }
 
 /************ SET FONTS THEME ************/
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab';
-    color: var(--primary);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab";
+  color: var(--primary);
 }
 
 h1 {
-    font-size: 40px;
-    line-height: 48px;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 h2 {
-    font-size: 24px;
-    line-height: 32px;
-    text-transform: uppercase;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
 }
 
-footer, article {
-    font-size: 16px;
+footer,
+article {
+  font-size: 16px;
 }
 
 .text-home {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 form {
-    /*LEYENDA*/
-    font-size: 24px;
-    /*BOTON ENVIAR
+  /*LEYENDA*/
+  font-size: 24px;
+  /*BOTON ENVIAR
     font-size: 22px;*/
 }
 
 /************ SET HEADER ************/
 
 header {
-    width: 100%;
-    max-height: 155px;
+  width: 100%;
+  max-height: 155px;
 }
 
 .logo-container {
-    padding: 20px 20px 0px 100px;
+  padding: 20px 20px 0px 100px;
 }
 
 .nav-container {
-    padding: 10px 20px 20px 100px;
+  padding: 10px 20px 20px 100px;
 }
 
-nav>ul>li {
-    display: inline;
+nav > ul > li {
+  display: inline;
 }
 
-nav>ul>li>a {
-    margin: 0px 40px 0px 0px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--primary);
+nav > ul > li > a {
+  margin: 0px 40px 0px 0px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primary);
 }
 
-nav>ul>li>.current {
-    color: var(--contrast);
+nav > ul > li > .current {
+  color: var(--contrast);
 }
 
 .line-nav {
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-white)100%);
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--primary-white) 100%
+  );
 }
 
 /************ SET MAIN ************/
 
-article, p {
-    max-width: 1200px;
+article,
+p {
+  max-width: 1200px;
 }
 
 /* INDEX */
 
 .background-index {
-    background-image: url(../material_PEC2/images/fonsrobot.jpg);
-    background-size: cover;
-    width: 100%;
-    height: calc(100% - (155px + 133px));
+  background-image: url(../material_PEC2/images/fonsrobot.jpg);
+  background-size: cover;
+  width: 100%;
+  height: calc(100% - (133px + 139px));
 }
 
 .container-info-index {
-    position: relative;
-    left: 100px;
-    top: 0px;
-    background-color: var(--white);
-    border-left: 1px solid var(--primary);
-    border-right: 1px solid var(--primary);
-    border-bottom: 1px solid var(--primary);
-    max-width: 400px;
-    padding: 20px;
+  position: relative;
+  left: 100px;
+  top: 0px;
+  background-color: var(--white);
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
+  max-width: 350px;
+  padding: 30px;
 }
 
 .item-index {
-    margin: 20px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;
 }
+
+h2 {
+  margin: 15px 0px 15px 0px;
+}
+
+article > p {
+  margin: 10px 0px 0px 0px;
+}
+
+.footer-article {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.content-article {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LEYES */
+
+.list-wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.list {
+  padding: 15px 30px 15px 30px;
+  display: inline-block;
+  background-color: var(--primary-white);
+  border: 1px solid var(--primary);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* DATOS */
+
+.table-wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.table-wrapper>p{
+    text-align: center;
+}
+
+.table-wrapper>table{
+    width: 100%;
+    border: 1px solid var(--primary);
+    text-align: center;
+}
+
+/* SOCI */
+
+section {
+  margin: 0 auto;
+  margin-top: 1em;
+  width: 60%;
+  padding: 1em;
+  border: 0.5px solid var(--primary);
+  border-radius: 0.5em;
+  background-color: var(--primary-white);
+}
+
+
+
 
 /************ SET FOOTER ************/
 
 footer {
-    width: 100%;
-    background-color: var(--primary-white);
+  width: 100%;
+  background-color: var(--primary-white);
 }
 
-footer>span {
-    padding: 15px;
-    text-align: center;
+footer > span {
+  padding: 15px;
+  text-align: center;
 }
 
 .footer-item {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
 .line-footer {
-    width: 100%;
-    height: 6px;
-    background: linear-gradient(90deg, var(--primary-white) 0%, var(--primary) 100%);
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-white) 0%,
+    var(--primary) 100%
+  );
 }
 
 .author {
-    color: var(--primary);
-    border-bottom: 5px solid var(--primary);
+  color: var(--primary);
+  border-bottom: 5px solid var(--primary);
 }

@@ -27,13 +27,131 @@
         </nav>
         <div class="line-nav"></div>
     </header>
-    <article>
-    </article>
+    <main class="content-main">
+        <article class="content-article">
+            <h1>Formulario para hacerte socio</h1>
+            <p>Para hacerte socio de nuestro club de fans, por favor rellena los siguientes datos y nos pondremos en
+                contacto contigo lo antes posible para terminar el proceso de incripción.</p>
+            <form>
+                <section>
+                    <h3><span>1</span>Datos personales</h3>
+                    <p>Todos los campos con * son obligatorios.</p>
+                    <p>
+                        <label for="name">
+                            <span>Nombre</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="name" name="name">
+                    </p>
+                    <p>
+                        <label for="lastname">
+                            <span>Primer apellido </span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="lastname" name="lastname">
+                    </p>
+                    <p>
+                        <label for="secondlastname">
+                            <span>Segundo apellido</span>
+                        </label>
+                        <input type="text" id="secondlastname" name="lastname2">
+                    </p>
+                    <p>
+                        <label for="documentid">
+                            <span>DNI o Pasaporte</span>
+                        </label>
+                        <input type="text" id="documentid" name="documentid" placeholder="DNI or Passport">
+                    </p>
+                    <p>
+                        <label for="birthdate">
+                            <span>Fecha de nacimiento</span>
+                        </label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </p>
+                </section>
+                <section>
+                    <h3><span>2</span>Datos de contacto</h3>
+                    <p>
+                        <label for="mail">
+                            <span>Correo electrónico</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="mail" name="usermail" placeholder="Correo electrónico">
+                    </p>
+                    <p>
+                        <label for="zipcode">
+                            <span>Código postal</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="zipcode" name="zipcode">
+                    </p>
+                    <p>
+                        <label for="postaladdress">
+                            <span>Dirección postal</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="postaladdress" name="address">
+                    </p>
+                    <p>
+                        <label for="city">
+                            <span>Población</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="city" name="city">
+                    </p>
+                </section>
+                <section>
+                    <h3><span>3</span>Datos de inscripción</h3>
+                    <p>
+                        <label for="type">
+                            <span>Tipo</span>
+                            <strong>*</strong>
+                        </label>
+                        <select id="type" name="type">
+                            <option value="senior">Senior</option>
+                            <option value="junior">Junior</option>
+                            <option value="old">Antiguo socio</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="cuote">
+                            <span>Cuota</span>
+                            <strong>*</strong>
+                        </label>
+                        <select id="cuote" name="cuote">
+                            <option value="general">General - 5€/mes</option>
+                            <option value="super">Super - 15€/mes</option>
+                            <option value="premium">Premium - 25€/mes</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="option1">
+                            <input type="checkbox" id="option1" value="three">Option 1
+                        </label>
+                        <label for="option2">
+                            <input type="checkbox" id="option2" value="six">Option 2
+                        </label>
+                        <label for="option3">
+                            <input type="checkbox" id="option3" value="twelve">Option 3
+                        </label>
+                    </p>
+                    <p>
+                        <label for="iban">
+                            <span>IBAN</span>
+                        </label>
+                        <input type="text" id="iban" name="iban" placeholder="(Si no lo sabes déjalo vacío)">
+                    </p>
+                    <p> <button type="submit">Enviar</button> </p>
+                </section>
+            </form>
+        </article>
+    </main>
     <footer>
         <div class="line-footer"></div>
         <div>
             <p class="footer-item">Actividad realizada por Aníbal Santos Gómez.</p>
-            <p class="footer-item">Fotografia de la portada de <span class="author"> Adam Muise</span> en <span class="author">Unsplash</span></p>
+            <p class="footer-item">Fotografia de la portada de <span class="author"> Adam Muise</span> en <span
+                    class="author">Unsplash</span></p>
             <img class="footer-item" src="../material_PEC2/images/creative-commons.png" alt="">
         </div>
     </footer>
