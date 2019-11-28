@@ -51,13 +51,6 @@ footer, article {
   font-size: 24px;
 }
 
-form {
-  /*LEYENDA*/
-  font-size: 24px;
-  /*BOTON ENVIAR
-    font-size: 22px;*/
-}
-
 /************ SET HEADER ************/
 
 header {
@@ -147,7 +140,7 @@ article>p {
   font-size: 16px;
 }
 
-.footer-article>span{
+.footer-article>span {
   font-size: 16px;
 }
 
@@ -233,6 +226,7 @@ th, td {
 
 .result {
   color: var(--primary);
+  font-weight: bold;
 }
 
 #total {
@@ -262,7 +256,7 @@ section {
 }
 
 .data-title>span {
-  font-size: 25px;
+  font-size: 24px;
   color: var(--primary);
 }
 
@@ -322,14 +316,19 @@ input[type=text], input[type=date], select {
   resize: vertical;
 }
 
+input[type=text]:focus, input[type=date]:focus, select:focus {
+  border: 1px solid var(--contrast);
+}
+
 input[type=submit] {
   background-color: var(--contrast);
-  color: white;
+  color: var(--white);
   padding: 12px 80px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 600px) {
@@ -368,5 +367,5 @@ footer>span {
 
 .author {
   color: var(--primary);
-  border-bottom: 5px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
 }
