@@ -32,118 +32,175 @@
             <h1>Formulario para hacerte socio</h1>
             <p>Para hacerte socio de nuestro club de fans, por favor rellena los siguientes datos y nos pondremos en
                 contacto contigo lo antes posible para terminar el proceso de incripción.</p>
-            <form>
-                <section>
-                    <h3><span>1</span>Datos personales</h3>
-                    <p>Todos los campos con * son obligatorios.</p>
-                    <p>
-                        <label for="name">
-                            <span>Nombre</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="name" name="name">
-                    </p>
-                    <p>
-                        <label for="lastname">
-                            <span>Primer apellido </span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="lastname" name="lastname">
-                    </p>
-                    <p>
-                        <label for="secondlastname">
-                            <span>Segundo apellido</span>
-                        </label>
-                        <input type="text" id="secondlastname" name="lastname2">
-                    </p>
-                    <p>
-                        <label for="documentid">
-                            <span>DNI o Pasaporte</span>
-                        </label>
-                        <input type="text" id="documentid" name="documentid" placeholder="DNI or Passport">
-                    </p>
-                    <p>
-                        <label for="birthdate">
-                            <span>Fecha de nacimiento</span>
-                        </label>
-                        <input type="date" id="birthdate" name="birthdate">
-                    </p>
-                </section>
-                <section>
-                    <h3><span>2</span>Datos de contacto</h3>
-                    <p>
-                        <label for="mail">
-                            <span>Correo electrónico</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="mail" name="usermail" placeholder="Correo electrónico">
-                    </p>
-                    <p>
-                        <label for="zipcode">
-                            <span>Código postal</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="zipcode" name="zipcode">
-                    </p>
-                    <p>
-                        <label for="postaladdress">
-                            <span>Dirección postal</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="postaladdress" name="address">
-                    </p>
-                    <p>
-                        <label for="city">
-                            <span>Población</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="city" name="city">
-                    </p>
-                </section>
-                <section>
-                    <h3><span>3</span>Datos de inscripción</h3>
-                    <p>
-                        <label for="type">
-                            <span>Tipo</span>
-                            <strong>*</strong>
-                        </label>
-                        <select id="type" name="type">
-                            <option value="senior">Senior</option>
-                            <option value="junior">Junior</option>
-                            <option value="old">Antiguo socio</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="cuote">
-                            <span>Cuota</span>
-                            <strong>*</strong>
-                        </label>
-                        <select id="cuote" name="cuote">
-                            <option value="general">General - 5€/mes</option>
-                            <option value="super">Super - 15€/mes</option>
-                            <option value="premium">Premium - 25€/mes</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="option1">
-                            <input type="checkbox" id="option1" value="three">Option 1
-                        </label>
-                        <label for="option2">
-                            <input type="checkbox" id="option2" value="six">Option 2
-                        </label>
-                        <label for="option3">
-                            <input type="checkbox" id="option3" value="twelve">Option 3
-                        </label>
-                    </p>
-                    <p>
-                        <label for="iban">
-                            <span>IBAN</span>
-                        </label>
-                        <input type="text" id="iban" name="iban" placeholder="(Si no lo sabes déjalo vacío)">
-                    </p>
-                    <p> <button type="submit">Enviar</button> </p>
-                </section>
-            </form>
+            <div class="container">
+                <form>
+                    <section>
+                        <h3 style="margin-top: -65px;"><span>1</span>Datos personales</h3>
+                        <p>Todos los campos con * son obligatorios.</p>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="name">
+                                    <span>Nombre</span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="name" name="name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="lastname">
+                                    <span>Primer apellido </span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="lastname" name="lastname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="secondlastname">
+                                    <span>Segundo apellido</span>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="secondlastname" name="lastname2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="documentid">
+                                    <span>DNI o Pasaporte</span>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="documentid" name="documentid" placeholder="DNI or Passport">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="birthdate">
+                                    <span>Fecha de nacimiento</span>
+                                </label>
+
+                            </div>
+                            <div class="col-65">
+                                <input type="date" id="birthdate" name="birthdate">
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3><span>2</span>Datos de contacto</h3>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="mail">
+                                    <span>Correo electrónico</span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="mail" name="usermail" placeholder="Correo electrónico">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="zipcode">
+                                    <span>Código postal</span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="zipcode" name="zipcode">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="postaladdress">
+                                    <span>Dirección postal</span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="postaladdress" name="address">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="city">
+                                    <span>Población</span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="city" name="city">
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3><span>3</span>Datos de inscripción</h3>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="type">
+                                    <span>Tipo</span>
+                                    <strong>*</strong>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <select id="type" name="type">
+                                    <option value="senior">Senior</option>
+                                    <option value="junior">Junior</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="cuote">
+                                    <span>Cuota</span>
+                                    <strong>*</strong>
+                                </label>
+
+                            </div>
+                            <div class="col-65">
+                                <select id="cuote" name="cuote">
+                                    <option value="general">General - 5€/mes</option>
+                                    <option value="jubilados">Jubilados - 3€/mes</option>
+                                    <option value="familiar">Familiar - 11€/mes</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="card-text">
+                                <p id="peri">Periodicidad</p>
+                                <label for="option1">
+                                    <input type="radio" id="option1" value="three">Trimestral
+                                </label>
+                                <label for="option2">
+                                    <input type="radio" id="option2" value="six">Semestral
+                                </label>
+                                <label for="option3">
+                                    <input type="radio" id="option3" value="twelve">Anual
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-35">
+                                <label for="iban">
+                                    <span>IBAN</span>
+                                </label>
+                            </div>
+                            <div class="col-65">
+                                <input type="text" id="iban" name="iban" placeholder="(Si no lo sabes déjalo vacío)">
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </section>
+                </form>
+            </div>
         </article>
     </main>
     <footer>
