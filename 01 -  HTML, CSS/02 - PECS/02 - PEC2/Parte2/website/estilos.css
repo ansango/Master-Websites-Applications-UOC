@@ -181,16 +181,27 @@ article > p {
 .table-wrapper{
     width: 80%;
     margin: 0 auto;
+    padding: 40px;
 }
 
 .table-wrapper>p{
     text-align: center;
+    padding: 50px;
 }
 
 .table-wrapper>table{
     width: 100%;
     border: 1px solid var(--primary);
     text-align: center;
+    border-collapse: collapse; /* ARREGLAAAAR*/
+}
+
+.primary-table {
+background-color: var(--primary);
+}
+
+.secondary-table {
+  background-color: var(--primary-white);
 }
 
 /* SOCI */
