@@ -178,30 +178,48 @@ article > p {
 
 /* DATOS */
 
-.table-wrapper{
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px;
+.table-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px;
 }
 
-.table-wrapper>p{
-    text-align: center;
-    padding: 50px;
+.table-wrapper > p {
+  text-align: center;
+  padding: 50px;
 }
 
-.table-wrapper>table{
-    width: 100%;
-    border: 1px solid var(--primary);
-    text-align: center;
-    border-collapse: collapse; /* ARREGLAAAAR*/
+.table-wrapper > table {
+  width: 100%;
+  border: 1px solid var(--primary);
+  text-align: center;
+  /* border-collapse: collapse;  ARREGLAAAAR*/
 }
 
 .primary-table {
-background-color: var(--primary);
+  background-color: var(--primary-dark);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .secondary-table {
   background-color: var(--primary-white);
+}
+
+th,
+td {
+  padding: 10px;
+  border-top-color: var(--primary);
+}
+
+.result {
+  color: var(--primary);
+}
+
+#total{
+  color: var(--primary-text);
+  font-weight: bold;
 }
 
 /* SOCI */
@@ -215,9 +233,6 @@ section {
   border-radius: 0.5em;
   background-color: var(--primary-white);
 }
-
-
-
 
 /************ SET FOOTER ************/
 
