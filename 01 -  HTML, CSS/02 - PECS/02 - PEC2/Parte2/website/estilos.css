@@ -82,6 +82,10 @@ nav>ul>li>a {
   color: var(--primary);
 }
 
+nav>ul>li>a:hover{
+  color: var(--contrast);
+}
+
 nav>ul>li>.current {
   color: var(--contrast);
 }
@@ -137,15 +141,16 @@ article>p {
 .footer-article {
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 16px;
+  font-size: 0.8rem;
 }
 
-.footer-article>span {
-  font-size: 16px;
+.footer-article>a {
+  font-size: 0.8rem;
 }
 
 .p-it {
   font-style: italic;
+  font-size: 0.9rem;
 }
 
 .p-bold {
@@ -251,18 +256,18 @@ section {
 .data-title {
   margin-top: -65px;
   padding-bottom: 20px;
-  font-size: 25px;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .data-title>span {
-  font-size: 24px;
+  font-size: 1.3rem;
   color: var(--primary);
 }
 
 .data-subtitle {
   padding-bottom: 20px;
-  font-size: 15px;
+  font-size: 0.8rem;
   font-style: italic;
   color: var(--primary-text-white);
 }
@@ -367,5 +372,11 @@ footer>span {
 
 .author {
   color: var(--primary);
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  text-decoration: none;
+}
+
+.author:hover {
+  color: var(--contrast);
+  border-bottom: 2px solid var(--contrast);
 }
