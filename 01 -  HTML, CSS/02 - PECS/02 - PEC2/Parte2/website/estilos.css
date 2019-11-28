@@ -69,15 +69,20 @@ form {
 
 header {
   width: 100%;
-  max-height: 155px;
 }
 
 .logo-container {
-  padding: 20px 20px 0px 100px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 0px 10px 0px;
 }
 
 .nav-container {
-  padding: 10px 20px 20px 100px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 0px 20px 0px;
 }
 
 nav > ul > li {
@@ -107,8 +112,7 @@ nav > ul > li > .current {
 
 /************ SET MAIN ************/
 
-article,
-p {
+article {
   max-width: 1200px;
 }
 
@@ -118,13 +122,16 @@ p {
   background-image: url(../material_PEC2/images/fonsrobot.jpg);
   background-size: cover;
   width: 100%;
-  height: calc(100% - (133px + 139px));
+  height: calc(100% - (143px + 139px));
+}
+
+.card-wrapper{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-info-index {
-  position: relative;
-  left: 100px;
-  top: 0px;
   background-color: var(--white);
   border-left: 1px solid var(--primary);
   border-right: 1px solid var(--primary);
@@ -151,11 +158,10 @@ article > p {
 }
 
 .content-main {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0px 20px 0px;
 }
 
-.content-article {
+.content-article{
   margin-left: auto;
   margin-right: auto;
 }
