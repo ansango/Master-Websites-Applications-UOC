@@ -145,7 +145,7 @@ article {
 }
 
 h2 {
-  margin: 15px 0px 15px 0px;
+  margin: 35px 0px 15px 0px;
 }
 
 article > p {
@@ -153,8 +153,16 @@ article > p {
 }
 
 .footer-article {
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
+}
+
+.p-it{
+  font-style: italic;
+}
+
+.p-bold{
+  font-weight: bold;
 }
 
 .content-main {
@@ -177,12 +185,24 @@ article > p {
   padding: 15px 30px 15px 30px;
   display: inline-block;
   background-color: var(--primary-white);
-  border: 1px solid var(--primary);
-  margin-top: 15px;
-  margin-bottom: 15px;
+  border: 2px solid var(--primary);
+  margin: 35px 0px 35px 0px;
+}
+
+.list>li{
+  margin-top: 5px;
 }
 
 /* DATOS */
+
+.data-text{
+  padding: 40px 0px 10px 0px;
+}
+
+.table-text{
+  text-transform: uppercase;
+  padding: 10px 0px 10px 0px;
+}
 
 .table-wrapper {
   width: 80%;
@@ -192,14 +212,14 @@ article > p {
 
 .table-wrapper > p {
   text-align: center;
-  padding: 50px;
+  
 }
 
 .table-wrapper > table {
   width: 100%;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--primary-dark);
   text-align: center;
-  /* border-collapse: collapse;  ARREGLAAAAR*/
+  border-collapse: collapse;
 }
 
 .primary-table {
@@ -216,7 +236,7 @@ article > p {
 th,
 td {
   padding: 10px;
-  border-top-color: var(--primary);
+  border: 1px solid var(--primary-dark);
 }
 
 .result {
@@ -258,6 +278,7 @@ footer > span {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
+  color: var(--primary-text-white);
 }
 
 .line-footer {
