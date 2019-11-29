@@ -105,7 +105,7 @@ article {
 /* INDEX */
 
 .background-index {
-  background-image: url(../material_PEC2/images/fonsrobot.jpg);
+  background-image: url(../img/fonsrobot.jpg);
   background-size: cover;
   width: 100%;
   height: calc(100% - (143px + 139px));
