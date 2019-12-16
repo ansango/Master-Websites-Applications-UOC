@@ -7,7 +7,8 @@
     <title>Datos de fabricación</title>
     <meta name="description" content="data-robot">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 
@@ -15,7 +16,7 @@
     <header>
         <div class="logo-container">
             <a href="./index.html">
-                <img src="./img/logoAsimovFans.png" alt="">
+                <img src="./img/logoAsimovFans.png" alt="index">
             </a>
         </div>
         <nav class="nav-container">
@@ -45,51 +46,50 @@
                 <table>
                     <tbody>
                         <tr class="primary-table">
-                            <th rowspan="2">
-                                </td>
-                            <th colspan="2">Europa</th>
-                            <th colspan="2">América</th>
+                            <th rowspan="2" id="blank">
+                            <th colspan="2" id="europe">Europa</th>
+                            <th colspan="2" id="america">América</th>
                         </tr>
                         <tr class="secondary-table">
-                            <th>normales</th>
-                            <th>posintrónicos</th>
-                            <th>normales</th>
-                            <th>posintrónicos</th>
+                            <th id="europe-n" headers="europe">normales</th>
+                            <th id="europe-p" headers="europe">posintrónicos</th>
+                            <th id="amrica-n" headers="america">normales</th>
+                            <th id="amrica-p" headers="america">posintrónicos</th>
                         </tr>
                         <tr>
                             <td class="primary-table">2025</td>
-                            <td>200</td>
-                            <td>50</td>
-                            <td>300</td>
-                            <td>80</td>
+                            <td headers="europe-n">200</td>
+                            <td headers="europe-p">50</td>
+                            <td headers="amrica-n">300</td>
+                            <td headers="amrica-p">80</td>
                         </tr>
                         <tr>
                             <td class="primary-table">2030</td>
-                            <td>250</td>
-                            <td>180</td>
-                            <td>380</td>
-                            <td>220</td>
+                            <td headers="europe-n">250</td>
+                            <td headers="europe-p">180</td>
+                            <td headers="amrica-n">380</td>
+                            <td headers="amrica-p">220</td>
                         </tr>
                         <tr>
                             <td class="primary-table">2035</td>
-                            <td>255</td>
-                            <td>280</td>
-                            <td>370</td>
-                            <td>410</td>
+                            <td headers="europe-n">255</td>
+                            <td headers="europe-p">280</td>
+                            <td headers="amrica-n">370</td>
+                            <td headers="amrica-p">410</td>
                         </tr>
                         <tr>
                             <td class="primary-table">2040</td>
-                            <td>120</td>
-                            <td>450</td>
-                            <td>200</td>
-                            <td>635</td>
+                            <td headers="europe-n">120</td>
+                            <td headers="europe-p">450</td>
+                            <td headers="amrica-n">200</td>
+                            <td headers="amrica-p">635</td>
                         </tr>
                         <tr class="secondary-table result">
                             <td id="total">Total</td>
-                            <td>825</td>
-                            <td>960</td>
-                            <td>1250</td>
-                            <td>1350</td>
+                            <td headers="europe-n">825</td>
+                            <td headers="europe-p">960</td>
+                            <td headers="amrica-n">1250</td>
+                            <td headers="amrica-p">1350</td>
                         </tr>
                     </tbody>
                 </table>

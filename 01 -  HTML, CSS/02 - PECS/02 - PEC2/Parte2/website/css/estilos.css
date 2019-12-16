@@ -23,6 +23,8 @@ html, body {
   --primary-text-white: #666666;
   --contrast: #d9645d;
   --white: #ffffff;
+  --black:#000000;
+  --roboto: font-family: "Roboto";
 }
 
 /************ SET FONTS THEME ************/
@@ -258,7 +260,9 @@ section {
   margin-right: auto;
 }
 
-.data-title {
+section>h5{
+  color: var(--black);
+  font-family: var(--roboto);
   margin-top: -65px;
   padding-bottom: 20px;
   font-size: 1.3rem;
@@ -350,7 +354,6 @@ footer {
 
 footer>span {
   padding: 15px;
-  text-align: center;
 }
 
 .footer-item {
