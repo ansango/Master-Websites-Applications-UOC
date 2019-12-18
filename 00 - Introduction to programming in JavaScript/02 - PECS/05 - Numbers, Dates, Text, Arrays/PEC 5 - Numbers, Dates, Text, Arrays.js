@@ -63,13 +63,15 @@ Ejemplo: si la entrada es '01/01/2019', la salida debe ser '31/12/2018'.
 
 */
 
-let data = prompt()
-let day = new Date(data)
-day.setDate(day.getDate()-1)
+function getYesterday(d) {
+  let date = new Date(d)
+  date.setDate(date.getDate() - 1)
+  let newDate = date
+  
+  console.log(newDate)
+}
 
-let yesterday = day
-
-console.log(`${yesterday}`)
+console.log(getYesterday('01/01/1989'))
 
 /*
 
@@ -80,6 +82,27 @@ Ejemplo: si la entrada és "Hola qué tal", la salida debe ser "Hopolapa qupuép
 
 */
 
+function changeString(string) {
+  return string.split('').map(e => {
+    if(e.toUpperCase() === 'A' ||
+       e.toUpperCase() === 'E' ||
+       e.toUpperCase() === 'I' ||
+       e.toUpperCase() === 'O' ||
+       e.toUpperCase() === 'U' ||
+       e.toUpperCase() === 'Á' ||
+       e.toUpperCase() === 'É' ||
+       e.toUpperCase() === 'Í' ||
+       e.toUpperCase() === 'Ó' ||
+       e.toUpperCase() === 'Ú') {
+      return e + 'p' + e
+    } else {
+      return e
+    }
+  }).join('')
+}
+
+console.log(changeString('Hola qué tal'))
+
 /*
 
 4. Escribid una función en JavaScript que ordene un array de números mediante ordenación de burbuja. 
@@ -89,6 +112,8 @@ y use las funciones anteriores para ordenarlos y comprobar que están ordenados,
 Podeís consultar la wikipedia:
 
 https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja
+
+https://medium.com/javascript-algorithms/javascript-algorithms-bubble-sort-3d27f285c3b2
 
 */
 
@@ -101,5 +126,7 @@ En las siguientes filas, los números son el resultado de sumar los dos números
 Podéis consultar la wikipedia:
 
 https://es.wikipedia.org/wiki/Tri%C3%A1ngulo_de_Pascal
+
+https://medium.com/javascript-in-plain-english/algorithms-101-pascals-triangle-in-javascript-9fbd9032871
 
 */
