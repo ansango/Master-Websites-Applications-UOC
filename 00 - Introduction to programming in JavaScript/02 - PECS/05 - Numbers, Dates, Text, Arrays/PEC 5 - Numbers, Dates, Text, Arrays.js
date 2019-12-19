@@ -63,14 +63,6 @@ Ejemplo: si la entrada es '01/01/2019', la salida debe ser '31/12/2018'.
 
 */
 
-let data = prompt()
-let day = new Date(data)
-day.setDate(day.getDate()-1)
-
-let yesterday = day
-
-console.log(`${yesterday}`)
-
 /*
 
 3. Escribid un programa en JavaScript que, dada una frase, la transforme y escriba por consola de manera que después de cada vocal se añada una "p" 
