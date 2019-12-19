@@ -104,7 +104,8 @@ console.log(changeString('Hola qué tal'))
 /*
 
 4. Escribid una función en JavaScript que ordene un array de números mediante ordenación de burbuja. 
-Escribid otra función que compruebe que un array de números está ordenado: debe devolver True si están ordenados o False si no lo están. Escribid un programa en JavaScript que genere 1000 números aleatorios,
+Escribid otra función que compruebe que un array de números está ordenado: debe devolver True si están ordenados o False si no lo están. 
+Escribid un programa en JavaScript que genere 1000 números aleatorios,
 y use las funciones anteriores para ordenarlos y comprobar que están ordenados, a continuación mostrarlos por consola.
 
 Podeís consultar la wikipedia:
@@ -114,6 +115,49 @@ https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja
 https://medium.com/javascript-algorithms/javascript-algorithms-bubble-sort-3d27f285c3b2
 
 */
+
+// bubble sort
+
+function bubble(arr) {
+  var len = arr.length;
+
+  for (var i = 0; i < len ; i++) {
+    for(var j = 0 ; j < len - i - 1; j++){ // this was missing
+    if (arr[j] > arr[j + 1]) {
+      // swap
+      var temp = arr[j];
+      arr[j] = arr[j+1];
+      arr[j + 1] = temp;
+    }
+   }
+  }
+  return arr;
+}
+
+console.log(bubble([1,9,2,3,7,6,4,5,5]));
+
+
+// Sample of true or false
+
+var str = ["1,2,3,4,5", "1,2,8,9,9", "1,2,2,3,2"];
+
+for (var i in str){
+    var list = str[i].split(',').map(Number);
+    console.log(list);
+    var isSorted = true;
+    for(var j = 0 ; j < list.length - 1 ; j++){
+        if(list[j] > list[j+1]) {
+            isSorted = false;
+            break;
+        }
+    }
+    console.log(isSorted);
+}
+
+
+// random numbers samples
+
+Array.from({length: 40}, () => Math.floor(Math.random() * 40));
 
 /*
 
