@@ -117,10 +117,8 @@ https://medium.com/javascript-algorithms/javascript-algorithms-bubble-sort-3d27f
 */
 
 // bubble sort
-
 function bubble(arr) {
-  var len = arr.length;
-
+  let len = arr.length;
   for (var i = 0; i < len ; i++) {
     for(var j = 0 ; j < len - i - 1; j++){ // this was missing
     if (arr[j] > arr[j + 1]) {
@@ -134,26 +132,22 @@ function bubble(arr) {
   return arr;
 }
 
-console.log(bubble([1,9,2,3,7,6,4,5,5]));
+let result = bubble([1,9,2,3,7,6,4,5,5])
+
+console.log(result)
 
 
-// Sample of true or false
+// order
 
-var str = ["1,2,3,4,5", "1,2,8,9,9", "1,2,2,3,2"];
 
-for (var i in str){
-    var list = str[i].split(',').map(Number);
-    console.log(list);
-    var isSorted = true;
-    for(var j = 0 ; j < list.length - 1 ; j++){
-        if(list[j] > list[j+1]) {
-            isSorted = false;
-            break;
-        }
+let isSorted = true;
+
+for(let i = 0; i < result.length -1; i++) {
+    if (result[i] > result [i+1]){
+      isSorted = false;
     }
-    console.log(isSorted);
 }
-
+console.log(isSorted)
 
 // random numbers samples
 
