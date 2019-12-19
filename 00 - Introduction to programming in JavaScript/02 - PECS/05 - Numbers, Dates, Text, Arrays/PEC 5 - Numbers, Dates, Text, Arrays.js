@@ -64,14 +64,12 @@ Ejemplo: si la entrada es '01/01/2019', la salida debe ser '31/12/2018'.
 */
 
 function getYesterday(d) {
-  let date = new Date(d)
-  date.setDate(date.getDate() - 1)
-  let newDate = date
-  
-  console.log(newDate)
+  let date = new Date(d);
+  date.setDate(date.getDate()-1);
+  return date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
 }
 
-console.log(getYesterday('01/01/1989'))
+console.log(getYesterday('01/01/2019'))
 
 /*
 
