@@ -112,9 +112,8 @@ Podeís consultar la wikipedia:
 
 https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja
 
-https://medium.com/javascript-algorithms/javascript-algorithms-bubble-sort-3d27f285c3b2
-
 */
+
 function bubble(arr) {
   for (let i = 0; i < arr.length ; i++) {
     for(let j = 0 ; j < arr.length - i - 1; j++){
