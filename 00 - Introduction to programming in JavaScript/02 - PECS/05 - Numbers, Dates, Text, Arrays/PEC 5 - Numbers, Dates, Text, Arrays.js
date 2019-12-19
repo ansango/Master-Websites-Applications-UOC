@@ -115,15 +115,11 @@ https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja
 https://medium.com/javascript-algorithms/javascript-algorithms-bubble-sort-3d27f285c3b2
 
 */
-
-// bubble sort
 function bubble(arr) {
-  let len = arr.length;
-  for (var i = 0; i < len ; i++) {
-    for(var j = 0 ; j < len - i - 1; j++){ // this was missing
+  for (let i = 0; i < arr.length ; i++) {
+    for(let j = 0 ; j < arr.length - i - 1; j++){
     if (arr[j] > arr[j + 1]) {
-      // swap
-      var temp = arr[j];
+      let temp = arr[j];
       arr[j] = arr[j+1];
       arr[j + 1] = temp;
     }
@@ -132,26 +128,23 @@ function bubble(arr) {
   return arr;
 }
 
-let result = bubble([1,9,2,3,7,6,4,5,5])
-
-console.log(result)
-
-
-// order
-
-
-let isSorted = true;
-
-for(let i = 0; i < result.length -1; i++) {
-    if (result[i] > result [i+1]){
-      isSorted = false;
-    }
+function isSorted(arr) {
+let sorted = true;
+ for(let i = 0; i < arr.length -1; i++){
+   if (arr[i] > arr[i+1]) {
+     sorted = false;
+   }
+ }
+ return sorted;
 }
-console.log(isSorted)
 
-// random numbers samples
+let nRandom = Array.from({length: 1000}, () => Math.floor(Math.random() * 1000))
 
-Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+let randomBubble = bubble(nRandom);
+let randomCheckSorted = isSorted(randomBubble)
+
+console.log(randomBubble)
+console.log(randomCheckSorted)
 
 /*
 
