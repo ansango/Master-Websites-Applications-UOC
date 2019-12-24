@@ -1,3 +1,5 @@
+// Anibal Santos Gomez
+
 /*
 2. Escribid una función en JavaScript que, dada una serie de 3 dígitos, devuelva su producto. Usad esta función en un programa que,
 dada una serie de dígitos numéricos en un único String,

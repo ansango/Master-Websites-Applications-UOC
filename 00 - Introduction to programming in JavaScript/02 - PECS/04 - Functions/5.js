@@ -1,3 +1,5 @@
+// Anibal Santos Gomez
+
 /*
 5. Escribid una función en JavaScript que calcule el término enésimo de una serie de Fibonacci.
     Escribid otra funcion que, usando la función anterior, calcule el factorial de Fibonacci (o fibonorial) de un número natural n,

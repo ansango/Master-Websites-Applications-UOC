@@ -1,3 +1,5 @@
+// Anibal Santos Gomez
+
 /*
 
 4. Un triplete pitagórico es un conjunto de tres números naturales, a < b < c, para los cuales se cumple que a*a+b*b=c*c.

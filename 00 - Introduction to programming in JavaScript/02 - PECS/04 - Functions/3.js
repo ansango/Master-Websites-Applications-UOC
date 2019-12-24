@@ -1,3 +1,5 @@
+// Anibal Santos Gomez
+
 /*
 
 3. Escribid una función en JavaScript que calcule el factorial de un número natural.

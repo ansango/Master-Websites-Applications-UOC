@@ -159,7 +159,7 @@ https://medium.com/javascript-in-plain-english/algorithms-101-pascals-triangle-i
 
 */
 
-let numRows = 5
+let numRows = 20
 
 var generate = function(numRows) {
     let triangle = [[1], [1,1]]
