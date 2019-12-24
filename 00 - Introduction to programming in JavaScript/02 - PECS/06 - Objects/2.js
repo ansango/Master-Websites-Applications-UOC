@@ -25,3 +25,33 @@ La función del ejercicio, pasándole como argumento la variable coche, tendría
   Métodos: edadAprox
 
   */
+
+ function Auto(marca, modelo, potencia, antiguedad, precio) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.potencia = potencia;
+  this.antiguedad = antiguedad;
+  this.precio = precio;
+  this.edadAprox = function (anio) {
+    return (anio - this.antiguedad);
+  }
+}
+
+let coche = new Auto("Seat", "Ibiza", 90, 2010, 5000);
+
+function getObjectAuto (car){
+  let methods = []
+  let props = []
+  for(let i in car) {
+    if (typeof car[i] == 'function'){
+      methods.push(i)
+    }
+    else{
+      props.push(i)
+    }
+  }
+  console.log(`Propiedades: ${props}`)
+  console.log(`Métodos: ${methods}`)
+}
+
+getObjectAuto(coche)
