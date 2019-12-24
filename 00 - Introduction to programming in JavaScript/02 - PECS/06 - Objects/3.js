@@ -8,3 +8,23 @@ y los valores en nombres de las propiedades.
 Ejemplo: dado el objeto { 0: 'a', 1: 'b', 2: 'c' }, la función podría devolver el objeto { 'a': 0, 'b': 1, 'c': 2 }.
 
 */
+
+let firstObject = {
+    0: 'a',
+    1: 'b',
+    2: 'c'
+  }
+  
+  function reverseValues(obj) {
+    let keys = []
+    let values = []
+    let result = {}
+    for (let i in obj) {
+      keys.push(i)
+      values.push(obj[i])
+    }
+    values.forEach((key, i) => result[key] = keys[i]);
+    console.log(result);
+  }
+  
+  reverseValues(firstObject)
