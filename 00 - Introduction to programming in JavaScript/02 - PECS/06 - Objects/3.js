@@ -10,21 +10,23 @@ Ejemplo: dado el objeto { 0: 'a', 1: 'b', 2: 'c' }, la función podría devolver
 */
 
 let firstObject = {
-    0: 'a',
-    1: 'b',
-    2: 'c'
+  0: "a",
+  1: "b",
+  2: "c"
+};
+
+let result = {};
+
+function reverseValues(obj) {
+  let keys = [];
+  let values = [];
+  for (let i in obj) {
+    keys.push(i);
+    values.push(obj[i]);
   }
-  
-  function reverseValues(obj) {
-    let keys = []
-    let values = []
-    let result = {}
-    for (let i in obj) {
-      keys.push(i)
-      values.push(obj[i])
-    }
-    values.forEach((key, i) => result[key] = keys[i]);
-    console.log(result);
-  }
-  
-  reverseValues(firstObject)
+  values.forEach((key, i) => (result[key] = keys[i]));
+  return result;
+}
+
+reverseValues(firstObject);
+console.log(result);

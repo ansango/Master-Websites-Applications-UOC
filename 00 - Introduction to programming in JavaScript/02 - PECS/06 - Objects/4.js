@@ -8,3 +8,6 @@ Ejemplo: Si la entrada es “http://cv.uoc.edu/webapps/bustiaca/listMails.do?mai
 { "protocolo": "http", "host": "cv.uoc.edu", "path": "/webapps/bustiaca/listMails.do", "query": {"mailId": "5848042_774330153", "l": "181_m4_250_01_t01"} }
 
 */
+
+// crear objeto con propiedades de la url
+
