@@ -1,3 +1,5 @@
+// Anibal Santos Gomez
+
 /*
 
 1 . Escribid funciones en JavaScript para convertir una temperatura entre escalas:

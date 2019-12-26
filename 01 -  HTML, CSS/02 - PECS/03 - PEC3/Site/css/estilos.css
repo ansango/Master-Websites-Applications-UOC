@@ -1,74 +1,87 @@
-/************ GENERAL ************/
-
-https://www.youtube.com/watch?v=n1Lnar9mTF8
+/* GENERAL */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* WRAPPER */
+
 .wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+
+  max-width: 100%;
+  margin: 10px;
 }
 
 .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
+  grid-column: col-start / span 12;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* NAV */
+
+.main-nav {
+  list-style: none;
+  padding: 0;
 }
 
-.wrapper {
+.main-nav a {
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(1, [col-start] 1fr);
+  grid-gap: 20px;
+}
+
+.main-footer ul {
+  list-style: none;
+  text-align: center;
+}
+
+.main-footer p {
+  text-align: center;
+}
+
+.footer-block-one,
+.footer-block-two,
+.footer-block-three {
+  padding: 10px;
+}
+
+@media (min-width: 600px) {
+  header {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .main-footer {
     display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-columns: repeat(2, [col-start] 1fr);
     grid-gap: 20px;
   }
 
-  .wrapper > * {
-    grid-column: col-start / span 12;
+  .footer-block-one ul,
+  .footer-block-two ul {
+    display: flex;
   }
 
-  @media (min-width: 500px) {
-
-    .side {
-      grid-column: col-start / span 3;
-      grid-row: 3;
-    }
-    .ad {
-      grid-column: col-start / span 3;
-      grid-row: 4;
-    }
-    .content, .main-footer {
-      grid-column: col-start 4 / span 9;
-    }
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-    }
+  .footer-block-one{
+      justify-content
   }
-  @media (min-width: 700px) {
-    .main-nav {
-      grid-column: col-start / span 2;
-      grid-row: 2 / 4;
-    }
-    .content {
-      grid-column: col-start / span 12;
-      grid-row: 2 / 4;
-    }
-
-    .main-footer {
-      grid-column: col-start / span 12;
-    }
-    nav ul {
-      flex-direction: column;
-    }
-  }
+}
