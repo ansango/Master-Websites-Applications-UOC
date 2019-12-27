@@ -17,8 +17,8 @@
                 <li><a href="objetivos.html" title="Objetivos">Objetivos</a></li>
                 <li><a href="" title="Actualidad">Actualidad</a></li>
                 <li><a href="index.html" title="Inicio">
-                    <img src="img/logo-site.png" alt="">
-                </a></li>
+                        <img src="img/logo-site.png" alt="">
+                    </a></li>
                 <li><a href="" title="Actividades">Actividades</a></li>
                 <li><a href="contacto.html" title="Contacto">Contacto</a></li>
             </nav>
@@ -28,6 +28,71 @@
                 <li><a href="index.html">Inicio</a></li>
                 <li>Contacto</li>
             </ul>
+            <article>
+                <h1>Propón una actividad</h1>
+                <form id="activiy-form">
+                    <section>
+                        <h2>Datos de contacto </h2>
+                        <label for="email">
+                            <span>Dirección de correo electrónico </span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="userinfo" name="name-lastname" required>
+                        <label for="userinfo">
+                            <span>Nombre y apellidos</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="userinfo" name="name-lastname" required>
+                        <label for="org">
+                            <span>Organización</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="org" name="organization" required>
+                        <label for="address">
+                            <span>Dirección postal</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="address" name="address" required>
+                        <label for="phone">
+                            <span>Teléfono</span>
+                            <strong>*</strong>
+                        </label>
+                        <input type="text" id="phone" name="phone" required>
+                    </section>
+                    <section>
+                        <h2>Propuesta de actividad </h2>
+                        <p>Objetivos de la Agenda 2030:</p>
+                        <select id="objetive" name="objetive" form="activiy-form" required>
+                            <option value="">1. Fin de la pobreza</option>
+                            <option value="">2. Hambre cero</option>
+                            <option value="">3. Salud y bienestar</option>
+                            <option value="">4. Educación de calidad</option>
+                            <option value="">5. Igualdad de género</option>
+                            <option value="">6. Agua limpia y saneamiento</option>
+                            <option value="">7. Energía asequible y no contaminante</option>
+                            <option value="">8. Trabajo decente y crecimiento económico</option>
+                            <option value="">9. Industria, innovación e infraestructura</option>
+                            <option value="">10. Reducción de las desigualdades</option>
+                            <option value="">11. Ciudades y comunidades sostenibles</option>
+                            <option value="">12. Producción y consumo responsables</option>
+                            <option value="">13. Acción por el clima</option>
+                            <option value="">14. Vida submarina</option>
+                            <option value="">15. Vida de ecosistemas terrestres</option>
+                            <option value="">16. Paz, justicia e instituciones sólidas</option>
+                            <option value="">17. Alianzas para lograr los objetivos</option>
+                        </select>
+                        <p>Descripción de la actividad propuesta:</p>
+                        <textarea rows="4" cols="50" name="description" form="activiy-form">
+                            Escribe aquí...</textarea>
+                    </section>
+                    <section>
+                        <input type="checkbox" id="option1" value="three"><a href="" title="Privacidad">Acepto la
+                            política de protección de
+                            datos</a>
+                        <input type="submit" value="Enviar">
+                    </section>
+                </form>
+            </article>
         </main>
         <footer class="main-footer">
 
@@ -42,8 +107,10 @@
                 <li>Twitter</li>
                 <li>Youtube</li>
             </ul>
-            <p>© 2019-2020 Aníbal Santos Gómez. Trabajo realizado para la asignatura  HTML y CSS. Primer semestre del curso 2019-2020</p>
+            <p>© 2019-2020 Aníbal Santos Gómez. Trabajo realizado para la asignatura HTML y CSS. Primer semestre del
+                curso 2019-2020</p>
         </footer>
     </div>
 </body>
+
 </html>
