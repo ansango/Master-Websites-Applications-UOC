@@ -12,30 +12,34 @@
 
 <body>
     <div class="wrapper">
-        <header class="main-head">
+        <header class="main-head" id="top">
             <nav class="main-nav">
-                <li><a href="objetivos.html" title="Objetivos">Objetivos</a></li>
-                <li><a href="" title="Actualidad">Actualidad</a></li>
-                <li><a href="index.html" title="Inicio">
-                        <img src="img/logo-site.png" alt="">
-                    </a></li>
-                <li><a href="" title="Actividades">Actividades</a></li>
-                <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                <ul>
+                    <li><a href="objetivos.html" title="Objetivos">Objetivos</a></li>
+                    <li><a href="" title="Actualidad">Actualidad</a></li>
+                    <li><a href="index.html" title="Inicio">
+                            <img src="img/logo-site.png" alt="">
+                        </a></li>
+                    <li><a href="" title="Actividades">Actividades</a></li>
+                    <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                </ul>
             </nav>
         </header>
         <main class="content">
-            <article>
+            <article class="index-article-1">
                 <h1>Objetivos de desarrollo sostenible</h1>
-                <p>En 2015, la ONU aprobó la Agenda 2030 sobre el Desarrollo Sostenible, una oportunidad para que los
+                <p class="index-title-description">En 2015, la ONU aprobó la Agenda 2030 sobre el Desarrollo Sostenible, una oportunidad para que los
                     países y sus sociedades emprendan un nuevo camino con el que mejorar la vida de todos, sin dejar a
                     nadie atrás.</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/0XTBYMfZyrM" frameborder="0"
+                    <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/0XTBYMfZyrM" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
+                </div>
             </article>
-            <article>
+            <article class="index-article-2">
                 <h2>17 objetivos para transformar el mundo</h2>
-                <div>
+                <div class="index-img-container">
                     <a href="objetivo-1-fin-pobreza.html" title="Objetivo-1">
                         <img src="img/goal-01.png" alt="">
                     </a>
@@ -95,20 +99,22 @@
 
         </main>
         <footer class="main-footer">
-
             <ul>
-                <li>Sobre nosotros</li>
-                <li>Aviso legal</li>
-                <li>Politica de privacidad</li>
+                <li><a href="" title="About">Sobre nosotros</a></li>
+                <li><a href="" title="Legal">Aviso legal</a></li>
+                <li><a href="" title="Privacy">Politica de privacidad</a></li>
             </ul>
 
             <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>Youtube</li>
+                <li><a href="" title="Facebook">Facebook</a></li>
+                <li><a href="" title="Twitter">Twitter</a></li>
+                <li><a href="" title="Youtube">Youtube</a></li>
             </ul>
             <p>© 2019-2020 Aníbal Santos Gómez. Trabajo realizado para la asignatura HTML y CSS. Primer semestre del
                 curso 2019-2020</p>
+            <div id="arrow">
+                <a href="#top">arrow-top</a>
+            </div>
         </footer>
     </div>
 </body>
