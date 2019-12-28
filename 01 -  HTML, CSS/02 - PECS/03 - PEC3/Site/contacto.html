@@ -21,50 +21,50 @@
                             <img src="img/logo-site.png" alt="">
                         </a></li>
                     <li><a href="" title="Actividades">Actividades</a></li>
-                    <li><a href="contacto.html" title="Contacto">Contacto</a></li>
+                    <li><a class="current" href="contacto.html" title="Contacto">Contacto</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="content">
+        <main class="contact-content">
             <ul class="breadcrumb">
                 <li><a href="index.html">Inicio</a></li>
                 <li>Contacto</li>
             </ul>
-            <article>
+            <article class="form-container">
                 <h1>Propón una actividad</h1>
                 <form id="activiy-form">
-                    <section>
+                    <section class="input-container">
                         <h2>Datos de contacto </h2>
-                        <label for="email">
+                        <label class="visuallyhidden" for="email">
                             <span>Dirección de correo electrónico </span>
                             <strong>*</strong>
                         </label>
-                        <input type="text" id="userinfo" name="name-lastname" required>
-                        <label for="userinfo">
+                        <input type="text" id="email" name="email" placeholder="Correo electrónico " required>
+                        <label class="visuallyhidden" for="userinfo">
                             <span>Nombre y apellidos</span>
                             <strong>*</strong>
                         </label>
-                        <input type="text" id="userinfo" name="name-lastname" required>
-                        <label for="org">
+                        <input type="text" id="userinfo" name="name-lastname" required placeholder="Nombre y apellidos">
+                        <label class="visuallyhidden" for="org">
                             <span>Organización</span>
                             <strong>*</strong>
                         </label>
-                        <input type="text" id="org" name="organization" required>
-                        <label for="address">
+                        <input type="text" id="org" name="organization" required placeholder="Organización">
+                        <label class="visuallyhidden" for="address">
                             <span>Dirección postal</span>
                             <strong>*</strong>
                         </label>
-                        <input type="text" id="address" name="address" required>
-                        <label for="phone">
+                        <input type="text" id="address" name="address" required placeholder="Dirección postal">
+                        <label class="visuallyhidden" for="phone">
                             <span>Teléfono</span>
                             <strong>*</strong>
                         </label>
-                        <input type="text" id="phone" name="phone" required>
+                        <input type="text" id="phone" name="phone" required placeholder="Teléfono">
                     </section>
-                    <section>
+                    <section class="input-container">
                         <h2>Propuesta de actividad </h2>
-                        <p>Objetivos de la Agenda 2030:</p>
                         <select id="objetive" name="objetive" form="activiy-form" required>
+                            <option disabled selected>Objetivos de la Agenda 2030:</option>
                             <option value="">1. Fin de la pobreza</option>
                             <option value="">2. Hambre cero</option>
                             <option value="">3. Salud y bienestar</option>
@@ -84,13 +84,13 @@
                             <option value="">17. Alianzas para lograr los objetivos</option>
                         </select>
                         <p>Descripción de la actividad propuesta:</p>
-                        <textarea rows="4" cols="50" name="description" form="activiy-form">
-                            Escribe aquí...</textarea>
+                        <textarea placeholder="Escribe aquí..." form="activiy-form" name="description"></textarea>
                     </section>
-                    <section>
-                        <input type="checkbox" id="option1" value="three"><a href="" title="Privacidad">Acepto la
-                            política de protección de
-                            datos</a>
+                    <section class="input-container">
+                        <input type="checkbox" id="option1" value="first">
+                        <a href="" title="Privacidad">Acepto la política de protección de datos</a>
+                    </section>
+                    <section class="input-submit-container">
                         <input type="submit" value="Enviar">
                     </section>
                 </form>
