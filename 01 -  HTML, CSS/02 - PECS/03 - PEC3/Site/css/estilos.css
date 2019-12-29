@@ -34,26 +34,11 @@ footer, article {
 
 /* MOBILE DEVICE */
 
-/* WRAPPER */
-
-.wrapper {
-  /*display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 20px;
-  max-width: 100%;
-  margin: 10px;*/
-}
-
-.wrapper>* {
-  /*grid-column: col-start / span 12;
-  border-radius: 5px;*/
-  padding: 10px;
-}
-
 /* NAV */
 
 .main-nav img {
   width: 40px;
+  padding: 20px 0 20px 0;
 }
 
 .main-nav a {
@@ -81,8 +66,7 @@ footer, article {
 
 .main-footer {
   width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px 0 25px;
 }
 
 .main-footer a {
@@ -90,20 +74,13 @@ footer, article {
   color: var(--text);
 }
 
-.links-group {
-  padding-top: 25px;
-  padding-bottom: 20px;
-}
-
-.links-social {
-  padding-top: 25px;
-  padding-bottom: 20px;
+.links-group, .links-social {
+  padding: 25px 0 25px 0;
 }
 
 #arrow a {
   float: right;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0 20px 0;
 }
 
 .main-footer a:hover {
@@ -119,8 +96,7 @@ footer, article {
 
 .main-footer p {
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px 0 15px;
 }
 
 .main-footer img {
@@ -131,13 +107,15 @@ footer, article {
 
 main {
   width: 100%;
+  padding: 0 20px 0 20px;
 }
 
 main>article>h1 {
-  padding-bottom: 15px;
+  padding: 30px 0 30px 0;
 }
 
 ul.breadcrumb {
+  margin-top: 40px;
   list-style: none;
   text-align: center;
 }
@@ -197,8 +175,7 @@ ul.breadcrumb li a:hover {
 }
 
 .index-article-2 h2 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0 20px 0;
 }
 
 .index-img-container img {
@@ -210,6 +187,7 @@ ul.breadcrumb li a:hover {
 /* OBJETIVES */
 
 .objetives-content {
+  max-width: 850px;
   padding: 0px 30px 0px 30px;
 }
 
@@ -220,21 +198,20 @@ ul.breadcrumb li a:hover {
 section img {
   width: 100%;
   height: auto;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding:50px 100px 50px 100px;
 }
 
-article>section>p {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.text-container p {
+  padding: 10px 0 15px 0;
+  text-align: justify;
 }
-
-article>section>a {
+.text-container a {
+  margin-top: 20px;
   color: var(--text);
   text-decoration: none;
 }
 
-article>section>a:hover {
+.text-container a:hover {
   color: var(--current);
   text-decoration: none;
   text-decoration: underline;
@@ -273,13 +250,11 @@ article>section>a:hover {
 }
 
 .objetive-container h1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 0;
 }
 
 .objetive-container h2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 0;
   text-align: start;
 }
 
@@ -289,8 +264,7 @@ article>section>a:hover {
 }
 
 .objetive-container>section>ol>li {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 0;
   text-align: justify;
   margin: 20px;
 }
@@ -303,7 +277,7 @@ article>section>a:hover {
 /* CONTACT */
 
 .form-container {
-  padding: 20px 0px 10px 0px;
+  padding: 20px 0 10px 0;
   width: 100%;
 }
 
@@ -314,12 +288,11 @@ form section>h2 {
 }
 
 .input-container {
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0 10px 0;
 }
 
 .input-container p {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 0;
   font-size: 1rem;
 }
 
@@ -327,10 +300,6 @@ form section>h2 {
   font-size: 1rem;
   text-decoration: none;
   color: var(--current);
-}
-
-.input-container a:hover {
-  text-decoration: underline;
 }
 
 input[type=text] {
@@ -348,22 +317,22 @@ input[type=checkbox] {
   margin-left: 10px;
 }
 
+.input-submit-container {
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0px 20px 0px;
+}
+
 input[type=submit] {
   background-color: var(--current);
   color: var(--text-hover);
-  padding: 12px 80px;
+  padding: 12px 50px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-.input-submit-container {
-  padding: 10px 50px 10px 50px;
 }
 
 .visuallyhidden {
@@ -406,7 +375,7 @@ textarea {
   .main-nav>ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
   /* FOOTER */
@@ -427,12 +396,10 @@ textarea {
     align-items: center;
   }
   .links-social ul>li {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px 0 10px;
   }
   .links-group ul>li {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px 0 10px;
   }
   /* MAIN */
   /** INDEX **/
@@ -440,12 +407,10 @@ textarea {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 50px 0 20px 0;
   }
   .index-article-2 {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0 100px 0;
   }
   .index-img-container {
     display: flex;
@@ -465,10 +430,10 @@ textarea {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 50px 0 20px 0;
   }
   .objetives-content .breadcrumb {
+    padding-left: 20px;
     text-align: start;
   }
   .unpair {
@@ -479,6 +444,11 @@ textarea {
     display: flex;
     justify-content: flex-end;
   }
+
+  section img {
+    padding: 50px 0px 50px 0;
+  }
+
   .img-container {
     flex-grow: 0;
     width: 33%;
@@ -497,8 +467,7 @@ textarea {
     padding-top: 0px;
   }
   .text-container p {
-    padding-top: 10px;
-    padding-bottom: 15px;
+    padding: 10px 0 15px 0;
     text-align: justify;
   }
   .text-container a {
@@ -509,21 +478,21 @@ textarea {
     max-width: 850px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding: 50px 0 20px 0;
   }
   .objetive-content .breadcrumb {
     text-align: start;
-    padding: 0 10px;
+    padding-left: 20px;
   }
   .objetive-subcontent {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
   .objetive-submenu {
     width: 30%;
-    padding: 0 10px;
+    padding-left: 20px;
   }
   .objetive-container {
     width: 70%;
@@ -543,5 +512,31 @@ textarea {
   }
   .objetive-container h1 {
     text-align: start;
+  }
+  /* CONTACT */
+  .contact-content {
+    max-width: 850px;
+    padding: 50px 0 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-content .breadcrumb {
+    text-align: start;
+    padding-left: 20px;
+  }
+  .form-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 0 70px 0;
+  }
+}
+
+@media (min-width: 950px) {
+  /* NAV */
+  .main-nav {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
