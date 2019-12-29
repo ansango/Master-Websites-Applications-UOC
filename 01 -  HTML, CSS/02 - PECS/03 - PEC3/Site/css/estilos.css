@@ -183,10 +183,12 @@ ul.breadcrumb li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 15px;
 }
 
 .index-article-1 {
   width: 100%;
+  padding-top: 30px;
 }
 
 .index-article-2 {
@@ -195,13 +197,14 @@ ul.breadcrumb li a:hover {
 }
 
 .index-article-2 h2 {
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .index-img-container img {
   width: 100%;
   height: auto;
-  padding-top: 10px;
+  padding: 25px;
 }
 
 /* OBJETIVES */
@@ -390,7 +393,7 @@ textarea {
 
 /* OTHER DEVICES */
 
-@media (min-width: 650px) {
+@media (min-width: 655px) {
   /* NAV */
   .main-nav {
     width: 650px;
@@ -434,22 +437,111 @@ textarea {
   /* MAIN */
   /** INDEX **/
   .index-article-1 {
-    width: 650px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .index-article-2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   .index-img-container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .index-img-container a {
     flex-shrink: 0;
-    flex-basis: 33.3333%;
     flex-basis: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1px;
+  }
+  /** OBJETIVES **/
+  .objetives-content {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .objetives-content .breadcrumb {
+    text-align: start;
+  }
+  .unpair {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .pair {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .img-container {
+    flex-grow: 0;
+    width: 33%;
+    height: auto;
+    padding: 20px;
+    align-self: center;
+  }
+  .text-container {
+    flex-grow: 0;
+    width: 33%;
+    height: auto;
+    padding: 20px;
+    align-self: center;
+  }
+  .text-container h2 {
+    padding-top: 0px;
+  }
+  .text-container p {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: justify;
+  }
+  .text-container a {
+    margin-top: 20px;
+  }
+  /** OBJETIVE-1 **/
+  .objetive-content {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .objetive-content .breadcrumb {
+    text-align: start;
+    padding: 0 10px;
+  }
+  .objetive-subcontent {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  .objetive-submenu {
+    width: 30%;
+    padding: 0 10px;
+  }
+  .objetive-container {
+    width: 70%;
+    padding-left: 100px;
+  }
+  .objetive-submenu>ul {
+    text-align: start;
+    padding: 0;
+  }
+  .objetive-submenu>ul>li {
+    text-align: start;
+    padding: 10px 0px 10px 0;
+  }
+  .objetive-submenu img {
+    padding-left: 0;
+    padding-right: 40px;
+  }
+  .objetive-container h1 {
+    text-align: start;
   }
 }
