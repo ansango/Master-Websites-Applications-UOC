@@ -11,121 +11,119 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="main-head" id="top">
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="objetivos.html" title="Objetivos">Objetivos</a></li>
-                    <li><a href="" title="Actualidad">Actualidad</a></li>
-                    <li><a href="index.html" title="Inicio">
-                            <img src="img/logo-site.png" alt="">
-                        </a></li>
-                    <li><a href="" title="Actividades">Actividades</a></li>
-                    <li><a class="current" href="contacto.html" title="Contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="contact-content">
-            <ul class="breadcrumb">
-                <li><a href="index.html">Inicio</a></li>
-                <li>Contacto</li>
+    <header class="main-head" id="top">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="objetivos.html" title="Objetivos">Objetivos</a></li>
+                <li><a href="" title="Actualidad">Actualidad</a></li>
+                <li><a href="index.html" title="Inicio">
+                        <img src="img/logo-site.png" alt="">
+                    </a></li>
+                <li><a href="" title="Actividades">Actividades</a></li>
+                <li><a class="current" href="contacto.html" title="Contacto">Contacto</a></li>
             </ul>
-            <article class="form-container">
-                <h1>Propón una actividad</h1>
-                <form id="activiy-form">
-                    <section class="input-container">
-                        <h2>Datos de contacto </h2>
-                        <label class="visuallyhidden" for="email">
-                            <span>Dirección de correo electrónico </span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="email" name="email" placeholder="Correo electrónico " required>
-                        <label class="visuallyhidden" for="userinfo">
-                            <span>Nombre y apellidos</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="userinfo" name="name-lastname" required placeholder="Nombre y apellidos">
-                        <label class="visuallyhidden" for="org">
-                            <span>Organización</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="org" name="organization" required placeholder="Organización">
-                        <label class="visuallyhidden" for="address">
-                            <span>Dirección postal</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="address" name="address" required placeholder="Dirección postal">
-                        <label class="visuallyhidden" for="phone">
-                            <span>Teléfono</span>
-                            <strong>*</strong>
-                        </label>
-                        <input type="text" id="phone" name="phone" required placeholder="Teléfono">
-                    </section>
-                    <section class="input-container">
-                        <h2>Propuesta de actividad </h2>
-                        <select id="objetive" name="objetive" form="activiy-form" required>
-                            <option disabled selected>Objetivos de la Agenda 2030:</option>
-                            <option value="">1. Fin de la pobreza</option>
-                            <option value="">2. Hambre cero</option>
-                            <option value="">3. Salud y bienestar</option>
-                            <option value="">4. Educación de calidad</option>
-                            <option value="">5. Igualdad de género</option>
-                            <option value="">6. Agua limpia y saneamiento</option>
-                            <option value="">7. Energía asequible y no contaminante</option>
-                            <option value="">8. Trabajo decente y crecimiento económico</option>
-                            <option value="">9. Industria, innovación e infraestructura</option>
-                            <option value="">10. Reducción de las desigualdades</option>
-                            <option value="">11. Ciudades y comunidades sostenibles</option>
-                            <option value="">12. Producción y consumo responsables</option>
-                            <option value="">13. Acción por el clima</option>
-                            <option value="">14. Vida submarina</option>
-                            <option value="">15. Vida de ecosistemas terrestres</option>
-                            <option value="">16. Paz, justicia e instituciones sólidas</option>
-                            <option value="">17. Alianzas para lograr los objetivos</option>
-                        </select>
-                        <p>Descripción de la actividad propuesta:</p>
-                        <textarea placeholder="Escribe aquí..." form="activiy-form" name="description"></textarea>
-                    </section>
-                    <section class="input-container">
-                        <input type="checkbox" id="option1" value="first">
-                        <a href="" title="Privacidad">Acepto la política de protección de datos</a>
-                    </section>
-                    <section class="input-submit-container">
-                        <input type="submit" value="Enviar">
-                    </section>
-                </form>
-            </article>
-        </main>
-        <footer class="main-footer">
-            <div class="links-container">
-                <div class="links-group">
-                    <ul>
-                        <li><a href="" title="About">Sobre nosotros</a></li>
-                        <li><a href="" title="Legal">Aviso legal</a></li>
-                        <li><a href="" title="Privacy">Politica de privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="links-social">
-                    <ul>
-                        <li><a href="" title="Facebook">
-                                <img src="img/facebook.png" alt="">
-                            </a></li>
-                        <li><a href="" title="Twitter">
-                                <img src="img/twitter.png" alt="">
-                            </a></li>
-                        <li><a href="" title="Youtube">
-                                <img src="img/youtube.png" alt="">
-                            </a></li>
-                    </ul>
-                </div>
+        </nav>
+    </header>
+    <main class="contact-content">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Inicio</a></li>
+            <li>Contacto</li>
+        </ul>
+        <article class="form-container">
+            <h1>Propón una actividad</h1>
+            <form id="activiy-form">
+                <section class="input-container">
+                    <h2>Datos de contacto </h2>
+                    <label class="visuallyhidden" for="email">
+                        <span>Dirección de correo electrónico </span>
+                        <strong>*</strong>
+                    </label>
+                    <input type="text" id="email" name="email" placeholder="Correo electrónico " required>
+                    <label class="visuallyhidden" for="userinfo">
+                        <span>Nombre y apellidos</span>
+                        <strong>*</strong>
+                    </label>
+                    <input type="text" id="userinfo" name="name-lastname" required placeholder="Nombre y apellidos">
+                    <label class="visuallyhidden" for="org">
+                        <span>Organización</span>
+                        <strong>*</strong>
+                    </label>
+                    <input type="text" id="org" name="organization" required placeholder="Organización">
+                    <label class="visuallyhidden" for="address">
+                        <span>Dirección postal</span>
+                        <strong>*</strong>
+                    </label>
+                    <input type="text" id="address" name="address" required placeholder="Dirección postal">
+                    <label class="visuallyhidden" for="phone">
+                        <span>Teléfono</span>
+                        <strong>*</strong>
+                    </label>
+                    <input type="text" id="phone" name="phone" required placeholder="Teléfono">
+                </section>
+                <section class="input-container">
+                    <h2>Propuesta de actividad </h2>
+                    <select id="objetive" name="objetive" form="activiy-form" required>
+                        <option disabled selected>Objetivos de la Agenda 2030:</option>
+                        <option value="">1. Fin de la pobreza</option>
+                        <option value="">2. Hambre cero</option>
+                        <option value="">3. Salud y bienestar</option>
+                        <option value="">4. Educación de calidad</option>
+                        <option value="">5. Igualdad de género</option>
+                        <option value="">6. Agua limpia y saneamiento</option>
+                        <option value="">7. Energía asequible y no contaminante</option>
+                        <option value="">8. Trabajo decente y crecimiento económico</option>
+                        <option value="">9. Industria, innovación e infraestructura</option>
+                        <option value="">10. Reducción de las desigualdades</option>
+                        <option value="">11. Ciudades y comunidades sostenibles</option>
+                        <option value="">12. Producción y consumo responsables</option>
+                        <option value="">13. Acción por el clima</option>
+                        <option value="">14. Vida submarina</option>
+                        <option value="">15. Vida de ecosistemas terrestres</option>
+                        <option value="">16. Paz, justicia e instituciones sólidas</option>
+                        <option value="">17. Alianzas para lograr los objetivos</option>
+                    </select>
+                    <p>Descripción de la actividad propuesta:</p>
+                    <textarea placeholder="Escribe aquí..." form="activiy-form" name="description"></textarea>
+                </section>
+                <section class="input-container">
+                    <input type="checkbox" id="option1" value="first">
+                    <a href="" title="Privacidad">Acepto la política de protección de datos</a>
+                </section>
+                <section class="input-submit-container">
+                    <input type="submit" value="Enviar">
+                </section>
+            </form>
+        </article>
+    </main>
+    <footer class="main-footer">
+        <div class="links-container">
+            <div class="links-group">
+                <ul>
+                    <li><a href="" title="About">Sobre nosotros</a></li>
+                    <li><a href="" title="Legal">Aviso legal</a></li>
+                    <li><a href="" title="Privacy">Politica de privacidad</a></li>
+                </ul>
             </div>
-            <p>© 2019-2020 Aníbal Santos Gómez. Trabajo realizado para la asignatura HTML y CSS. Primer semestre del
-                curso 2019-2020</p>
-            <div id="arrow">
-                <a href="#top"><img src="img/cheuron.svg" alt=""></a>
+            <div class="links-social">
+                <ul>
+                    <li><a href="" title="Facebook">
+                            <img src="img/facebook.png" alt="">
+                        </a></li>
+                    <li><a href="" title="Twitter">
+                            <img src="img/twitter.png" alt="">
+                        </a></li>
+                    <li><a href="" title="Youtube">
+                            <img src="img/youtube.png" alt="">
+                        </a></li>
+                </ul>
             </div>
-        </footer>
-    </div>
+        </div>
+        <p>© 2019-2020 Aníbal Santos Gómez. Trabajo realizado para la asignatura HTML y CSS. Primer semestre del
+            curso 2019-2020</p>
+        <div id="arrow">
+            <a href="#top"><img src="img/cheuron.svg" alt=""></a>
+        </div>
+    </footer>
 </body>
 
 </html>
