@@ -417,6 +417,9 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1924px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .index-img-container a {
     flex-shrink: 0;
