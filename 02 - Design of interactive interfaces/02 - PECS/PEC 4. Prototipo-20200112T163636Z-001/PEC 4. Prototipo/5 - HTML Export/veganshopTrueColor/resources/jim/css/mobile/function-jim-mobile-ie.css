@@ -1,0 +1,4 @@
+body.devMobile #jim-container.touch { cursor: url('./resources/jim/css/images/touch.cur'), default !important; }
+body.devMobile #jim-container { cursor: url('./resources/jim/css/images/blank.cur'), default !important; }
+body.devMobile .dropdown .dropdown-options { filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0); }
+body.devMobile .dropdown .icon { padding-right: 20px; }

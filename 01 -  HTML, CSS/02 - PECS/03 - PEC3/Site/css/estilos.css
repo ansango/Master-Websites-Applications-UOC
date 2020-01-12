@@ -44,7 +44,6 @@ footer, article {
 
 .main-nav a {
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--text);
 }
 
@@ -199,13 +198,14 @@ ul.breadcrumb li a:hover {
 section img {
   width: 100%;
   height: auto;
-  padding:50px 100px 50px 100px;
+  padding: 50px 100px 50px 100px;
 }
 
 .text-container p {
   padding: 10px 0 15px 0;
   text-align: justify;
 }
+
 .text-container a {
   margin-top: 20px;
   color: var(--text);
@@ -448,11 +448,9 @@ textarea {
     display: flex;
     justify-content: flex-end;
   }
-
   section img {
     padding: 50px 0px 50px 0;
   }
-
   .img-container {
     flex-grow: 0;
     width: 33%;

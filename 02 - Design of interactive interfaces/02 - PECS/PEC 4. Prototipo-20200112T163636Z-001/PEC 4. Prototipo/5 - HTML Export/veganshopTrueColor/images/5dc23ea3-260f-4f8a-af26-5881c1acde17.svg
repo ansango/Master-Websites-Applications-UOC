@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-714.000000, -1592.000000)" fill="#B2B2B2">
+            <g id="Icons" transform="translate(603.000000, 1492.000000)">
+                <path d="M111.173077,106.6 C111.057692,106.48 111,106.3 111,106.18 C111,106.06 111.057692,105.88 111.173077,105.76 L111.980769,104.92 C112.211538,104.68 112.557692,104.68 112.788462,104.92 L112.846154,104.98 L116.019231,108.52 C116.134615,108.64 116.307692,108.64 116.423077,108.52 L124.153846,100.18 L124.212115,100.18 C124.442308,99.94 124.789038,99.94 125.019231,100.18 L125.826923,101.02 C126.057692,101.26 126.057692,101.62 125.826923,101.86 L116.596154,111.82 C116.480769,111.94 116.365385,112 116.192308,112 C116.019231,112 115.903846,111.94 115.788462,111.82 L111.288462,106.78 L111.173077,106.6 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

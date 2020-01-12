@@ -1,0 +1,250 @@
+/*** start generic styles ***/
+* { padding: 0px; margin: 0px; outline: none; zoom: 1; -webkit-tap-highlight-color: transparent; }
+html, body { background-color: transparent; width: 100%; height: 100%; }
+table { border-spacing: 0px; /*CHROME-BUG: border-collapse: collapse;*/ }
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+.hidden { display: none; }
+.forceVisible { display: block !important; }
+.hover { background-color: #b2b4bf; }
+.clear { clear:both; }
+body.review { overflow: hidden; }
+body.force-reflow { border-right: 2px solid transparent; }
+#jim-mainWindow { background-color: #FFFFFF; height:100%; left:0px; overflow:hidden; width:auto; position:relative;}
+#jim-body { overflow: auto; width: 100%; height:auto; bottom:0; position:absolute; top:0;background-color: #efefef;}
+.showComments #jim-body { top: 47px; }
+.commentsMode.showComments #jim-body { top: 55px; }
+#jim-web{ margin: 0 auto; display: none; }
+body.web #jim-web{ display:block; }
+#simulation { position: relative; overflow: auto; height: 100%; z-index: 2; }
+.template, .screen { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+.masterinstance{ pointer-events: none; }
+.masterinstance #alignmentBox{ pointer-events: auto; }
+
+#jim-mobile{ display:none; }
+#toppanel{ display:none; }
+
+#jim-web #web-clip-left{ position: absolute; left: 0; width: 328px; height: 100%; background-color: #efefef; z-index: 3;}
+#jim-web #web-clip-right{ position: absolute; right: 0px; top: 0px; width: 327px; height: 100%; background-color: #efefef; z-index: 3;}
+.ui-page.invisible, .ui-page.invisible * { visibility:hidden !important; }
+.ui-page.visible { visibility:visible; } 
+
+/*** fonts ***/
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('./fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), 
+         url('./fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('./fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'), 
+         url('./fonts/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+/*** z-index ***/
+.label, .image, .richtext, .table, .cell, .rectangle, .dynamicpanel, .text, .password, .textarea, .checkbox, .radiobutton, .date, .time, .datetime, .file, .selectionlist, .dropdown, .nativedropdown, .radiobuttonlist, .checkboxlist, .tree, .treenode, .menu, .menunode, .datagrid, .datalist, .headerrow, .datarow, .datacell, .gridcell, .summary, .index, .texttable, .textcell, .line, .multiselectionlist, .button, .imagemap, .html, .url, .document, .flash, .website, .ellipse, .callout, .line, .triangle, .shapewrapper { z-index: 2; }
+
+/*** text-overflow ***/
+.label.singleline, .button.singleline, .summary, .index, .dropdown .value .nativedropdown .value, .text input, .password input, .date input, .time input, .datetime input, .file input { white-space: nowrap; text-overflow: ellipsis; }
+.multiline{white-space:normal;}
+
+/*** table ***/
+.table > table { width: 100%; height: 100%; }
+
+/*** image, imagemap ***/
+.image, .imagemap { -moz-outline-style: none; }
+.image > svg, .image > img { display: table-cell; }
+
+/*** menu ***/
+.menu { cursor: default; font-size:0 }
+.menu .menunode { overflow: hidden; box-sizing:border-box; }
+.menu .menunode span { position: relative; }  /* fix "display: table-cells" internal padding */
+.menu .menuWrapper { overflow: hidden; }
+.menu.horizontal {white-space: nowrap; }
+.menu.horizontal .menunode { display: inline-block; height: 100%; }
+.menu.horizontal .menunode.hidden { display: none;}
+.menu.vertical .menunode .content .valign { padding-top:5px; padding-bottom:6px; }
+.menunode .content {display: table; } 
+.submenu { display: none; position: absolute; top: 0; left: 100%; z-index: 100; }
+.menunodeicon { padding-right: 5px; vertical-align: inherit; }
+.menunode { position: relative; white-space: nowrap; padding: 0 5px; cursor: default; }
+div.firer.menunode { pointer-events: auto; }
+.menunode span { cursor: inherit; }
+.submenu .menunode.has-submenu .content .valign > span { margin-right: 10px; }
+.menunode .submenuicon { position: absolute; right: 2px; top: 40%; width: 9px; height: 7px; background: transparent url("../images/common/arrow-submenu.png") no-repeat 0 0 scroll; }
+.layout > .menu .menuWrapper { display: inline-block; position: absolute; }
+
+/*** html widgets ***/
+.html, .document, .url, .website, .flash { overflow: hidden; z-index: 3; } /* prototyper's "swt browser widget" always on top */
+
+/*** cellcontainer ***/
+.cellcontainer { overflow: hidden; }
+
+/*** input components ***/
+input { border:0px; }
+.checkbox input { position: absolute; left: 0px; top: 0px; }
+.layout.vertical > .checkbox input, .layout.horizontal > .checkbox input { position: static; }
+.date, .time, .datetime, .file { position: relative; } /* offset parent for icon */
+.text input, .password input, .date input, .time input, .datetime input, .file input { vertical-align: inherit; width: inherit; background-color: transparent; cursor: inherit; z-index: 3; } /* enforce z-index in date/time picker, fix "display: table-cells" internal padding */
+.date .icon, .time .icon, .datetime .icon { position: absolute; right: -24px; cursor: pointer; width: 18px; height: 18px; background-color: transparent; background-repeat: no-repeat; background-position: right center; background-attachment: scroll; }
+.date .icon { background-image: url("../images/common/date.gif"); }
+.datacell .date .icon[name][readonly] { display: none; }
+.time .icon { background-image: url("../images/common/time.gif"); }
+.datacell .time .icon[name][readonly] { display: none; }
+.datetime .icon { background-image: url("../images/common/date-time.gif"); }
+.datacell .datetime .icon[name][readonly] { display: none; }
+.file { margin-right: 70px; }
+.file .icon, .file-input { position: absolute; right: -71px; top: 50%; transform: translate(0px, -50%); }
+.file .icon { width: 66px; height: 19px; background: transparent url("../images/common/browse-enabled.gif") no-repeat left center scroll; }
+.file .icon[readonly] { background-image: url("../images/common/browse-disabled.gif"); }
+.file .file-input { overflow: hidden; z-index: 2; cursor: pointer; border: none; width: 66px; height: 19px; opacity: 0; -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0); filter: alpha(opacity=0); }
+.datacell .file .icon[name][readonly], .datacell .file .file-input[name][disabled] { display: none; }
+.radiobutton { border: none; vertical-align: top; font-size: 10px; height: 13px; width: 13px; }
+.textarea textarea { border: 0px; overflow: auto; resize: none; width:100%; height:100%; background: none repeat scroll 0 0 transparent; }
+
+ /*** date/timepicker - overwrite jquery.ui ***/
+.ui-datepicker.ui-widget { font-size: 0.7em; }
+.ui-datepicker-trigger { display: none; }
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd{ margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+/*** selection list ***/
+.selectionlist, .multiselectionlist { white-space: nowrap; }
+.selectionlist .scroll, .multiselectionlist .scroll { position: absolute; overflow: auto; height:100%; width:100%; text-decoration: inherit; }
+
+/*** checkboxlist/radiobuttonlist ***/
+.checkboxlist, .radiobuttonlist { white-space: nowrap; }
+.checkboxlist .option, .radiobuttonlist .option { vertical-align: middle; margin: 0 0 0 3px; }
+.checkboxlist input, .radiobuttonlist input { vertical-align: middle; }
+.checkboxlist .scroll, .radiobuttonlist .scroll { position: absolute; overflow: auto; height:100%; width:100%; text-decoration: inherit; }
+.radiobuttonlist .scroll { padding-left:1px; margin-left:1px; }
+.checkbox.nonMobile { width: 13px; height: 13px; }
+
+
+/*** dropdown ***/
+.dropdown { position: relative; }
+.dropdown .value { width: calc(100% - 18px); }
+.dropdown .icon { width: 100%; background: transparent url("../images/common/dropdown-enabled.png") right center no-repeat scroll; background-position-x: calc(100% - 5px); }
+.dropdown[readonly] .icon { background-image: url("../images/common/dropdown-disabled.png"); }
+.dropdown .dropdown-options { opacity: 0.0001; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); 
+                    position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; cursor: pointer; text-overflow: ellipsis; white-space: nowrap; background-color: inherit;
+                    color: inherit; text-align: inherit; text-decoration: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+
+/*** native dropdown ***/
+.nativedropdown { position: relative; overflow: hidden; height:20px; }
+.nativedropdown .value { width:inherit; visibility:hidden; }
+.nativedropdown .dropdown-options { padding:1px; position: absolute; cursor: pointer; text-overflow: ellipsis; white-space: nowrap; }
+
+/*** panel ***/
+.panel { position: relative; }
+.layoutWrapper { position: absolute;}
+.layoutWrapper .ghostHLayout { overflow: visible !important; }
+
+/*** group ***/
+.group { position: relative; pointer-events: none; }
+.group .firer { pointer-events: auto; }
+
+/*** datalist ***/
+.datarow input { border: none; }
+.datacell { overflow: hidden; }
+.datalist > table { width: 100%; height: 100%; }
+
+/*** datagrid ***/
+.datagrid.horizontal > .gridcell { float: left; }
+
+
+/*** index ***/
+.index span { margin: 0px 3px 0px 3px; cursor: default; }
+.index span.current { font-weight: bold; }
+
+/*** richtext, textcell ***/
+.shape .content, .richtext .content,.rectangle .content, .textcell .content, .label .content, .text .content, .password .content, .date .content, .time .content, .datetime .content, .dropdown .content, .button .content, .summary .content, .index .content, .file .content, .ui-scenario .Note .content, .menunode .content { height: inherit; width: inherit; /*overflow: hidden;*/ } /* buggy reflow after resize event? */
+/*** multi-line wrapping ***/
+.button.multiline .content, .label.multiline .content, .shapewrapper .content, .richtext .content,.rectangle .content, .textcell .content, .ui-scenario .Note .content { display: table; table-layout:fixed; word-wrap:break-word;}
+/*.shapewrapper,*/ .richtext .clipping, .Note .clipping, .rectangle .clipping, .textcell .clipping, .button.multiline .clipping, .label.multiline .clipping { height:100%; width:100%; overflow:hidden;}
+.textcell .clipping {height:inherit; width:inherit;}
+.layout.vertical > * > .clipping { display: inline-block; }
+/*single line*/
+.button.singleline .content, .label.singleline .content, .text .content, .password .content, .date .content, .time .content, .datetime .content, .dropdown .content, .button .content, .summary .content, .index .content, .file .content { overflow: hidden; }
+.button.singleline.autofit .content, .label.singleline.autofit .content { width: 100%; height: 100%; }
+
+/*** tree ***/
+.tree { list-style: none;}
+.tree ul { list-style: none; overflow: auto; }
+.tree > ul { position: absolute; }
+.tree li { list-style: none; }
+.tree table { width: 100%; }
+.tree li.closed ul { display:none; }
+.tree li.open .nodecontent img.open { display: inline; }
+.tree li.closed .nodecontent img.open { display: none; } 
+.tree li.open .nodecontent img.closed, .tree li.leaf .nodecontent img.closed { display: none; }
+.tree li.closed .nodecontent img.closed { display: inline; }
+.tree li.last.leaf .treeicon { display: none; }
+.tree li.leaf .treeicon { background-image: none !important; }
+.tree.withlines li { background-image: url("../images/common/treeline.gif"); background-repeat: repeat-y; }
+.tree.withlines li.last { background-image: url("../images/common/lastnode.gif"); background-repeat: no-repeat; }
+.tree.withlines li.last.leaf .treeicon { display: table-cell; background-image: none !important; background-repeat: no-repeat; }
+.tree.withlines li.leaf .treeicon { background-image: url("../images/common/leafnode.gif") !important; background-repeat: no-repeat; }
+
+/*** alignment ***/
+.valign { display: table-cell; height: inherit; width: inherit; vertical-align: inherit; text-align: inherit; }
+.dropdown > .paddingLayer > .content {vertical-align: inherit;}
+.dropdown > .paddingLayer { vertical-align: inherit; }
+.layout { height: inherit; width: inherit; position: relative; }
+table.layout { overflow: auto; } /* chrome bug: allow scrollbars */
+td.layout {font-size: 0; width: 100%; height: 100%;}
+td.layout > * { vertical-align: inherit; }
+td.layout.horizontal.verticalWrap.wrap { white-space: nowrap;}
+td.layout.horizontal { white-space: nowrap; }
+td.layout.horizontal.wrap { white-space: normal; }
+.verticalWrapper > img, .verticalWrapper > input {display: block;}
+td.layout.horizontal .richtext, td.layout.horizontal .textcell { white-space: normal; } /* exceptions are richtext and textcell */
+td.layout.horizontal > * { display: inline-block; position:relative;}
+td.layout.vertical > * { display: block; position:relative;}
+td.layout.vertical > .singleline { display: table; position:relative;}/*fix for autofit*/
+td.layout.vertical > .datagrid { display: table; }
+td.layout > *.hidden { display: none; }
+.verticalWrapper > div { transform: rotate(0deg); } 
+
+/*** spacing ***/
+.ghostHLayout {position:relative; height: inherit; overflow:hidden;}
+
+/*** selected lists ***/
+.selected {background-color: #3399FF !important; color: #FFFFFF !important; cursor: inherit;}
+
+/*** hostpot ***/
+.clickableSpot {width: 100%; height: 100%;}
+
+/*** SVG ***/
+foreignObject, svg, .shapewrapper {pointer-events:none;}
+/* .shapewrapper {overflow:hidden;} */
+.shapewrapper .content {pointer-events:none;}
+.shapewrapper .shapert-clipping {position:absolute; pointer-events:none; overflow:hidden;}
+.shapewrapper svg {position:absolute;left:0px;top:0px;}
+.shapewrapper svg .shape {position:relative;}
+ellipse, path{pointer-events:visiblepainted;}
+clipPath path{pointer-events:none;}
+.shapert-clipping > .content {width:100%;height:100%;}
+
+/*** VML ***/
+.vml {behavior: url(#default#VML)}
+
+/*** Background Layer ***/
+.backgroundLayer {z-index: -1; position: absolute; width: 100%; height: 100%;}
+.clipping > .content {width: 100%; height: 100%;}
+
+/*** url ***/
+@supports (-webkit-overflow-scrolling: touch) {
+  .html, .document, .url, .website, .flash { overflow: scroll; -webkit-overflow-scrolling: touch; pointer-events: auto !important; }
+}
+
+div.firer {pointer-events: none;}
+div.firer > * {pointer-events: auto;}
+.shapewrapper .content .valign {pointer-events: none;} 
+#simulation, .canvas {pointer-events: auto !important;}

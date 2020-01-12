@@ -1,0 +1,22 @@
+/* start android phone css values*/
+.devAndroid #jim-body { position: absolute; overflow: auto; }
+.devAndroid #jim-mobile { position: relative; top: 30px; margin: 0 auto; }
+.devAndroid #simulation { position: relative; height: 100%; }
+
+.devAndroid #jim-case #jim-case-top-left { background-image: url('../../../../images/mobile/android/phone/a16b718c-9afe-46fa-8ea6-699167bbc26a@2x.png'); background-repeat: no-repeat; float: left; }
+.devAndroid #jim-case #jim-case-top-center { background-image: url('../../../../images/mobile/android/phone/e291ad70-d0ea-4773-a255-47e6f537d3d3@2x.png'); background-repeat: repeat-x; float: left; }
+.devAndroid #jim-case #jim-case-top-center #jim-case-phone-speaker { background-image: url('../../../../images/mobile/android/phone/253b7150-4da1-4186-8d88-508ea2ac0448@2x.png'); background-size: 241px 55px; margin: auto; width: 241px; height:55px; }
+.devAndroid #jim-case #jim-case-top-right { background-image: url('../../../../images/mobile/android/phone/42c185c8-f8d8-4ce2-936c-762dbdcb8052@2x.png'); background-repeat: no-repeat; float: left; }
+
+.devAndroid #jim-case #jim-case-center-left { background-image: url('../../../../../jim/images/mobile/android/phone/63dc1f68-bc4e-498d-bc50-22d6fb5bb772@2x.png'); background-repeat: repeat-y; float: left; }
+.devAndroid #jim-case #jim-case-center-center { float: left; }
+.devAndroid #jim-case #jim-case-center-right { background-image: url('../../../../../jim/images/mobile/android/phone/35a0eb74-86d6-4408-80c7-a6628eb31594@2x.png'); background-repeat: repeat-y; float: left; }
+
+.devAndroid #jim-case #jim-case-bottom-left { background-image: url('../../../../../jim/images/mobile/android/phone/fb546e63-9cb8-4fe9-9457-28e47d814d18@2x.png'); background-repeat: no-repeat; float: left; }
+.devAndroid #jim-case #jim-case-bottom-center { background-image: url('../../../../../jim/images/mobile/android/phone/ea7011d3-36a0-4e8d-ad04-ef92def8411c@2x.png'); background-repeat: repeat-x; float: left; }
+.devAndroid #jim-case #jim-case-bottom-right { background-image: url('../../../../../jim/images/mobile/android/phone/305a1cf9-083b-4f91-a5f0-fcda34ce88d4@2x.png'); background-repeat: no-repeat; float: left; }
+
+.devAndroid #jim-case #cc-pieces {display:block;}
+.devAndroid #jim-mobile .ui-page { overflow:hidden; }
+
+.devAndroid #jim-case.landscape {-moz-transform : rotate(90deg); -webkit-transform : rotate(90deg); transform:rotate(90deg); -ms-transform:rotate(90deg); }
