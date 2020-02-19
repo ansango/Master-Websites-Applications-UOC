@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,oCAAZ;AACAD,OAAO,CAACC,GAAR,CAAY,gBAAZ","file":"00 - Sumatorio.e31bb0bc.js","sourceRoot":"..","sourcesContent":["console.log('Bienvenido a JS para programadores')\nconsole.log('This is a test')"]}
