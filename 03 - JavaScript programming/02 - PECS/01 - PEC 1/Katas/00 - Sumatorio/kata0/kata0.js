@@ -8,9 +8,4 @@ export default function sumatorio(num) {
     }
 
   return sumatorio;
-
-  // Otras soluciones menos legibles
-
-  //return(num * (num + 1)/2)
-  //return num ? num + sumatorio(num - 1):0;
 }
