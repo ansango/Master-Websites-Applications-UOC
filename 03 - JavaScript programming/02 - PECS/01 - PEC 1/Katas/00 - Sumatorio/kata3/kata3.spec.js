@@ -1,7 +1,7 @@
 import repiteString from './kata3'
 
 describe('Kata #03 repite un string', () => {
-    test('devuelve \' \'', () => {
+    test('devuelve: \' \'', () => {
         expect(repiteString('JavaScript', 0)).toBe('')
     })
     test('devuelve: miau', () => {
