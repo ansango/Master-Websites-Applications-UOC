@@ -1,3 +1,12 @@
-export default function repiteString(txt, num) {
-    return txt.repeat(num)
-}
+var coche = {
+    marca: "Ford",
+    obtenerMarca (){
+      console.log(this.marca);
+    }
+  };
+  
+  coche.obtenerMarca(); // Ford
+  
+  var marcaDelCoche = coche.obtenerMarca;
+  
+  marcaDelCoche(); // undefined
