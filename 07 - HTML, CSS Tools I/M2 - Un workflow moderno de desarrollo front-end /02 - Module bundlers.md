@@ -19,3 +19,5 @@ Actividad 1
     Sigue los pasos hasta Multiple entry files (sin incluir este apartado). Al final, deberías haber podido lanzar un servidor de desarrollo. Fíjate que deberás usar varias herramientas, como npm, además de instalar Parcel y crear algunos archivos HTML y JavaScript.
 
     Sigue ahora las instrucciones del apartado Adding parcel to your project. ¿Qué cambios has introducido o han aparecido en el archivo package.json?
+
+    https://parceljs.org/getting_started.html#adding-parcel-to-your-project
