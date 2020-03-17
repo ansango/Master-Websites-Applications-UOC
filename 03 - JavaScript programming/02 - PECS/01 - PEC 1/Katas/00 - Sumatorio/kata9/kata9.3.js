@@ -12,21 +12,22 @@ Debe cumplir estos tests:
 
 */
 
-// NO ESTÁ BIEN!
-
 export default function plantarArbol(especie, fruta) {
-    if (typeof especie !== 'string' && typeof fruta !== 'string') {
-      return null
-    } else {
-
-      var arbol = {
-          obtenerFruta: () => {
-              return this.fruta
-          },
-          obtenerEspecie: () =>  {
-              return this.especie
-          },
+  if (typeof especie !== 'string' && typeof fruta !== 'string') {
+    return null
+  } else {
+    const arbol = {
+      especie: especie,
+      fruta: fruta,
+      obtenerEspecie() { 
+        return especie
+      },
+      obtenerFruta() {
+        return fruta
       }
-      return arbol
+      
     }
+    delete arbol.especie && delete arbol.fruta
+    return arbol
+  }
 }
