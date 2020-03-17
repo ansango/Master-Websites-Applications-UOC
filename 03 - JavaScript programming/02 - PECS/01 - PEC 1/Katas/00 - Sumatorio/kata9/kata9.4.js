@@ -17,3 +17,21 @@ Debe cumplir estos tests:
 Pista: es posible que necesiteis definir variables internas var o let (reasignables) para poder hacer la asignación inicial y la posterior reasignación de valores.
  */
 
+export default function plantarArbol(especie, fruta) {
+    if (typeof especie !== 'string' && typeof fruta !== 'string') {
+        return null
+    } else {
+        const arbol = {
+            especie: especie,
+            fruta: fruta,
+            obtenerEspecie() {
+                return especie
+            },
+            obtenerFruta() {
+                return fruta
+            }
+
+        }
+        return arbol
+    }
+}
