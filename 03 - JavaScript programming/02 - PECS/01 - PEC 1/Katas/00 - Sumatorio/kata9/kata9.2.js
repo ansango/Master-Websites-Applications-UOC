@@ -25,15 +25,13 @@ export default function plantarArbol(especie, fruta) {
     if (typeof especie !== 'string' && typeof fruta !== 'string') {
       return null
     } else {
-      var arbol = {
+      const arbol = {
           especie: especie,
           fruta: fruta,
-          obtenerFruta: function () {
-              return this.fruta
-          }
+          obtenerFruta() {
+            return this.fruta
+        }
       }
       return arbol
     }
 }
-
-plantarArbol('peral', 'pera')

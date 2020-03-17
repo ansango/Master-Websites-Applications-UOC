@@ -11,7 +11,7 @@ Debe cumplir estos tests:
 2 - Al invocar la función con los parámetros peral y pera devuelve el objeto:
 
 {
-    especia: 'peral', 
+    especie: 'peral', 
     fruta: pera
 }
 
@@ -22,10 +22,10 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeo
 */
 
 export default function plantarArbol(especie, fruta) {
-    if (typeof especie !== 'string' && typeof fruta !== 'string') {
+    if (typeof especie !== 'string' || typeof fruta !== 'string') {
         return null
     } else {
-        var arbol = {
+        const arbol = {
             especie: especie,
             fruta: fruta
         }

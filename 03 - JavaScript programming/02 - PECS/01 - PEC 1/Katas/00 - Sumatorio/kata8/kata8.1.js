@@ -20,12 +20,14 @@ Nota: me gustaría hacer hincapié en lo similar que es el enunciado a la defini
 Es por esto que un buen conjunto de tests definen exactamente lo que hace y cómo funciona el módulo.
 */
 
-export const arbol = {
+const arbol = {
 
     especie: 'manzano',
     fruta: 'manzana',
     
-    obtenerFruta: function () {
+    obtenerFruta() {
         return this.fruta
     }
 }
+
+export default arbol
