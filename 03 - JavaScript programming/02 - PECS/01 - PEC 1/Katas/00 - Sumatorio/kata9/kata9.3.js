@@ -13,21 +13,18 @@ Debe cumplir estos tests:
 */
 
 export default function plantarArbol(especie, fruta) {
+
   if (typeof especie !== 'string' && typeof fruta !== 'string') {
-    return null
+    return 
   } else {
     const arbol = {
-      especie: especie,
-      fruta: fruta,
       obtenerEspecie() { 
-        return this.especie
+        return especie
       },
       obtenerFruta() {
-        return this.fruta
+        return fruta
       }
-      
     }
-    delete arbol.especie && delete arbol.fruta
     return arbol
   }
 }

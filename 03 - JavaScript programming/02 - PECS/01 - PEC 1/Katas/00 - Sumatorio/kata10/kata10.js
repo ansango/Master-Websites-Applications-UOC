@@ -3,11 +3,17 @@
 Kata #10: Prototipo
 
 La potencia del prototipo en JavaScript es enorme. 
-Nosotros vamos a hacer un caso sencillo y bastante insustancial pero que nos servirá para entender cómo podemos extender la funcionalidad.
+Nosotros vamos a hacer un caso sencillo y bastante insustancial 
+pero que nos servirá para entender cómo podemos extender la funcionalidad.
 
 
-Podríamos hacer una extensión de nuestro propio módulo pero resulta poco concluyente cuando tenemos acceso directo a su implementación. 
-Sin embargo imaginad que queremos añadir una funcionalidad muy concreta sobre cada instancia del tipo String en nuestra aplicación. Vamos a añadir un método para que dado un string cualquiera podamos invocar el método presentarArbol que lo único que hará es un console.log del string sobre el que se ejecuta más el texto 
+Podríamos hacer una extensión de nuestro propio módulo 
+pero resulta poco concluyente cuando tenemos acceso directo a su implementación. 
+
+Sin embargo imaginad que queremos añadir una funcionalidad muy concreta sobre 
+cada instancia del tipo String en nuestra aplicación. 
+Vamos a añadir un método para que dado un string cualquiera podamos invocar el método presentarArbol 
+que lo único que hará es un console.log del string sobre el que se ejecuta más el texto 
 
 
 "Este árbol es un ${nuestro_arbol} y da ${nuestra_fruta}".

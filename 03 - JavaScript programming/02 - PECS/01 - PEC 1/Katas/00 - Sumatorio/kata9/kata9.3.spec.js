@@ -2,7 +2,6 @@ import plantarArbol from './kata9.3'
 
 const arbol1 = plantarArbol('peral', 'pera')
 
-
 describe('Kata #9.3', () => {
     test('el objeto tiene la propiedad obtenerFruta', () => {
         expect(arbol1).toHaveProperty('obtenerFruta')
