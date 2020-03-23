@@ -1,7 +1,8 @@
-import funcion from './kata'
+import plantarArbol from './kata10'
+import presentarArbol from './kata10'
 
-describe('Kata #0 ', () => {
+describe('Kata #10 ', () => {
     test('devuelve ', () => {
-        expect(funcion('', )).toBe('')
+        expect(presentarArbol('manzano', 'manzana')).toBe('')
     })
 })
