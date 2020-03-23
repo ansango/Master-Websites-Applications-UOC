@@ -24,29 +24,40 @@ para poder hacer la asignación inicial y la posterior reasignación de valores.
  */
 
 export default function plantarArbol(especie, fruta) {
-
-    if (typeof especie !== 'string' && typeof fruta !== 'string') {
+    if (typeof especie !== 'string' || typeof fruta !== 'string') {
         return null
     } else {
+        
+
         const arbol = {
+            
             obtenerEspecie() {
                 return especie
             },
-            definirEspecie(especie) {
-                if (isNaN(parseFloat(especie)) && isFinite(especie)) {
-                    this.especie = especie
+
+            definirEspecie(value) {
+
+                let _especie = value
+                
+                if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
+                    return especie
                 } else {
-                    throw new Error('yuck, octopus flavor');
+                    return especie = _especie
                 }
             },
+
             obtenerFruta() {
                 return fruta
             },
-            definirFruta(fruta) {
-                if (isNaN(parseFloat(fruta)) && isFinite(fruta)) {
-                    this.fruta = fruta
+
+            definirFruta(value) {
+
+                let _fruta = value
+
+                if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
+                    return fruta
                 } else {
-                    throw new Error('yuck, octopus flavor');
+                    return fruta = _fruta
                 }
             },
         }

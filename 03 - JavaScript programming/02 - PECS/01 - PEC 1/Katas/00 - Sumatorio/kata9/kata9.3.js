@@ -14,7 +14,7 @@ Debe cumplir estos tests:
 
 export default function plantarArbol(especie, fruta) {
 
-  if (typeof especie !== 'string' && typeof fruta !== 'string') {
+  if (typeof especie !== 'string' || typeof fruta !== 'string') {
     return 
   } else {
     const arbol = {
