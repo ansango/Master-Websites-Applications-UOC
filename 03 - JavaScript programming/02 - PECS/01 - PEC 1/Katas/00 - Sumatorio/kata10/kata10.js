@@ -37,14 +37,24 @@ Pista: https://developer.mozilla.org/es/docs/Web/JavaScript/Herencia_y_la_cadena
 */
 
 
+
 export default function plantarArbol(especie, fruta) {
+
+    String.prototype.presentarArbol = function() {
+        console.log(`Este árbol es un ${this} y da ${fruta}`)
+    }
 
     if (typeof especie !== 'string' || typeof fruta !== 'string') {
         return null
     } else {
         const arbol = {
             obtenerEspecie() {
-                return especie
+                
+                String.prototype.presentarArbol = function () {
+                    console.log(`Este árbol es un ${this}`)
+                }
+                
+                return especie.presentarArbol()
             },
             definirEspecie(value) {
                 let _especie = value

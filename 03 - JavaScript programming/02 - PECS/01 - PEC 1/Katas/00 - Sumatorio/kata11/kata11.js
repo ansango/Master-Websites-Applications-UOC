@@ -18,6 +18,35 @@ Al crear un arbol e invocar posteriormente definirFruta con el valor 12 el méto
 Pista: https://jestjs.io/docs/en/expect#tothrowerror
 */
 
-export default function repiteString(txt, num) {
-    return txt.repeat(num)
+export default function plantarArbol(especie, fruta) {
+
+    if (typeof especie !== 'string' || typeof fruta !== 'string') {
+        return null
+    } else {
+        const arbol = {
+            obtenerEspecie() {
+                return especie
+            },
+            definirEspecie(value) {
+                let _especie = value
+                if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
+                    return especie
+                } else {
+                    return especie = _especie
+                }
+            },
+            obtenerFruta() {
+                return fruta
+            },
+            definirFruta(value) {
+                let _fruta = value
+                if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
+                    return fruta
+                } else {
+                    return fruta = _fruta
+                }
+            },
+        }
+        return arbol
+    }
 }
