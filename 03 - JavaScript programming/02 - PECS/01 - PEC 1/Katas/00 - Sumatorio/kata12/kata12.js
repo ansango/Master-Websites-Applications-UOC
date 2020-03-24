@@ -31,6 +31,53 @@ Pistas:
 
 */
 
-export default function repiteString(txt, num) {
-    return txt.repeat(num)
+
+String.prototype.presentarArbol = function (value) {
+
+    if (value !== undefined) {
+        console.log(`Este árbol es un ${this} y da ${value}`)
+    } else {
+        console.log(`Este árbol es un ${this}`)
+    }
+}
+
+export default function plantarArbol(especie, fruta) {
+
+
+    if (typeof especie !== 'string' || typeof fruta !== 'string') {
+        return null
+    } else {
+        const arbol = {
+            obtenerEspecie() {
+                return especie
+            },
+            definirEspecie(value) {
+
+                let _especie = value
+                
+                if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
+                    return especie
+                } else {
+                    return especie = _especie
+                }
+            },
+            obtenerFruta() {
+                return fruta
+            },
+            definirFruta(value) {
+                let _fruta = value
+                let match = value.match(/^[a-zA-Z]{4}/)
+                let _especie = especie.match(/^[a-zA-Z]{4}/)
+                
+                if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
+                    throw new Error();
+                } else if(match[0] !== _especie[0]) {
+                    throw new Error();
+                }else {
+                    return fruta = _fruta
+                }
+            },
+        }
+        return arbol
+    }
 }
