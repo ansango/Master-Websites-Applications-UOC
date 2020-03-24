@@ -2,13 +2,20 @@ import plantarArbol from './kata10'
 
 const arbol1 = plantarArbol('peral', 'pera')
 const spy = jest.spyOn(console,'log')
-console.log(arbol1.obtenerEspecie())
+
+arbol1.obtenerEspecie().presentarArbol()
+arbol1.obtenerEspecie().presentarArbol('pera')
+
+
 
 describe('Kata #10 ', () => {
-    test('', () => {
-       // expect(arbol1.obtenerEspecie())
+    test('El objeto tiene el metodo obtenerEspecie', () => {
+       expect(arbol1).toHaveProperty('obtenerEspecie')
     })
-    test('devuelve ', () => {
+    test('devuelve: Este arbol es un peral', () => {
         expect(spy).toHaveBeenCalledWith('Este árbol es un peral')
+    })
+    test('devuelve: Este arbol es un peral y da pera', () => {
+        expect(spy).toHaveBeenCalledWith('Este árbol es un peral y da pera')
     })
 })
