@@ -7,7 +7,6 @@ arbol1.obtenerEspecie().presentarArbol()
 arbol1.obtenerEspecie().presentarArbol('pera')
 
 
-
 describe('Kata #10 ', () => {
     test('El objeto tiene el metodo obtenerEspecie', () => {
        expect(arbol1).toHaveProperty('obtenerEspecie')
