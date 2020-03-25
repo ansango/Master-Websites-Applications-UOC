@@ -22,16 +22,15 @@ Estos métodos que nos permiten acceder a propiedades se conocen como getters.
 */
 
 export default function plantarArbol(especie, fruta) {
-    if (typeof especie !== 'string' || typeof fruta !== 'string') {
-      return null
-    } else {
-      const arbol = {
-          especie: especie,
-          fruta: fruta,
-          obtenerFruta() {
-            return this.fruta
-        }
-      }
-      return arbol
+
+  const arbol = {
+    especie: especie,
+    fruta: fruta,
+    obtenerFruta() {
+      return this.fruta
     }
+  }
+
+  return typeof especie === 'string' && typeof fruta === 'string' ? arbol : null
+
 }

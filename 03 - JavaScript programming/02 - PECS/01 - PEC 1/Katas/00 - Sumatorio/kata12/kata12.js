@@ -19,8 +19,8 @@ De los tres primeros casos vemos que se repiten las 4 primeras letras de la espe
 
 Debe cumplir estos tests:
 
-    Al crear un arbol con los valores manzano y manzana e invocar posteriormente definirFruta con el valor pera el método lanza un error y mantiene su valor previo
-    Al crear un arbol con los valores peral y manzana e invocar posteriormente definirFruta con el valor pera el método modifica el valor de la propiedad fruta
+    1 - Al crear un arbol con los valores manzano y manzana e invocar posteriormente definirFruta con el valor pera el método lanza un error y mantiene su valor previo
+    2 - Al crear un arbol con los valores peral y manzana e invocar posteriormente definirFruta con el valor pera el método modifica el valor de la propiedad fruta
 
  
 Pistas: 

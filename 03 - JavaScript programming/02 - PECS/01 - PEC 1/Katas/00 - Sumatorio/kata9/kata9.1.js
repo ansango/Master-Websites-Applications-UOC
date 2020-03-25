@@ -23,14 +23,10 @@ https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/typeo
 
 export default function plantarArbol(especie, fruta) {
 
-    
-    if (typeof especie !== 'string' || typeof fruta !== 'string') {
-        return null
-    } else {
-        const arbol = {
-            especie: especie,
-            fruta: fruta
-        }
-        return arbol
+    const arbol = {
+        especie: especie,
+        fruta: fruta
     }
+
+    return typeof especie === 'string' && typeof fruta === 'string' ? arbol : null
 }

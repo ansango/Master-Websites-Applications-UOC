@@ -11,10 +11,10 @@ describe('Kata #10 ', () => {
     test('El objeto tiene el metodo obtenerEspecie', () => {
        expect(arbol1).toHaveProperty('obtenerEspecie')
     })
-    test('devuelve: Este arbol es un peral', () => {
+    test('Prototype String: Este arbol es un peral', () => {
         expect(spy).toHaveBeenCalledWith('Este árbol es un peral')
     })
-    test('devuelve: Este arbol es un peral y da pera', () => {
+    test('Prototype String: Este arbol es un peral y da pera', () => {
         expect(spy).toHaveBeenCalledWith('Este árbol es un peral y da pera')
     })
 })

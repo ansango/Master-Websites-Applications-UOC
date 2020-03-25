@@ -4,16 +4,12 @@ const arbol1 = plantarArbol('peral', 'pera')
 
 
 describe('Kata #9.2', () => {
-    test('el objeto tiene la propiedad especie', () => {
+    test('El objeto tiene las propiedades especie, fruta y obtenerFruta', () => {
         expect(arbol1).toHaveProperty('especie')
-    })
-    test('el objeto tiene la propiedad fruta', () => {
-        expect(arbol1).toHaveProperty('especie')
-    })
-    test('el objeto tiene la propiedad especie', () => {
+        expect(arbol1).toHaveProperty('fruta')
         expect(arbol1).toHaveProperty('obtenerFruta')
     })
-    test('el objeto devuelve la propiedad pera', () => {
+    test('obtenerFruta devuelve el valor: pera', () => {
         expect(arbol1.obtenerFruta()).toBe('pera')
     })
 })

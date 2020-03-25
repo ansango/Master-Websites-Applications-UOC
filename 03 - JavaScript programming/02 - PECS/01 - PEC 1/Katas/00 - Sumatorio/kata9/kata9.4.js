@@ -14,8 +14,10 @@ Debe cumplir estos tests:
 
 2 - Al crear un arbol e invocar posteriormente definirFruta con el valor 12 el objeto arbol 
     mantiene su valor previo (volveremos a este punto cuando estemos viendo gestión de errores)
+
 3 - Al crear un arbol e invocar posteriormente definirFruta con el valor ‘manzana’ 
     el objeto arbol tiene manzana como valor la propiedad fruta.
+    
 4 - Haced el equivalente del superior para definirEspecie
  
 
