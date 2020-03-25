@@ -24,7 +24,7 @@ describe('Kata #13', () => {
 
     test('1.2 - Probamos que el constructor valida si es o no un string', () => {
         const arbol1 = new Arbol(12, 'pera');
-        expect(arbol1.especie).toBe(undefined)
+        expect(arbol1).toBeNull()
     })
 
     // 2 - Propiedades del objeto devuelto
@@ -54,7 +54,7 @@ describe('Kata #13', () => {
     })
 
     test('4.2 - Probamos a definir una nueva especie incorrecta y obtenemos la anterior', () => {
-        expect(arbol.definirEspecie('12')).toBe('peral')
+        expect(arbol.definirEspecie(12)).toBe('peral')
         expect(arbol.obtenerFruta()).toBe('manzana');
     })
 
@@ -75,7 +75,7 @@ describe('Kata #13', () => {
 
     test('6 - Probamos a definir una fruta como numero 12 y obtenemos el valor anterior', () => {
         expect(() => {
-            arbol.definirFruta('12');
+            arbol.definirFruta(12);
         }).toThrow();
         expect(arbol.obtenerFruta()).toBe('pera')
     })

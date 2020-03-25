@@ -27,7 +27,7 @@ export default function plantarArbol(especie, fruta) {
     especie: especie,
     fruta: fruta,
     obtenerFruta() {
-      return this.fruta
+      return fruta
     }
   }
 

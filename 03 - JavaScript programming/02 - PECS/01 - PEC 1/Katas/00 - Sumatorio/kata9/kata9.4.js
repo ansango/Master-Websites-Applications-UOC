@@ -27,33 +27,22 @@ para poder hacer la asignación inicial y la posterior reasignación de valores.
 
 export default function plantarArbol(especie, fruta) {
 
-    if (typeof especie !== 'string' || typeof fruta !== 'string') {
-        return null
-    } else {
-        const arbol = {
-            obtenerEspecie() {
-                return especie
-            },
-            definirEspecie(value) {
-                let _especie = value
-                if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
-                    return especie
-                } else {
-                    return especie = _especie
-                }
-            },
-            obtenerFruta() {
-                return fruta
-            },
-            definirFruta(value) {
-                let _fruta = value
-                if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
-                    return fruta
-                } else {
-                    return fruta = _fruta
-                }
-            },
+    const arbol = {
+        obtenerEspecie() {
+            return especie
+        },
+        obtenerFruta() {
+            return fruta
+        },
+        definirEspecie(value) {
+            let _especie = value
+            return typeof _especie !== 'string' ? especie : especie = _especie
+        },
+        definirFruta(value) {
+            let _fruta = value
+            return typeof _fruta !== 'string' ? fruta : fruta = _fruta
         }
-        return arbol
     }
+    return typeof especie === 'string' && typeof fruta === 'string' ? arbol : null
+
 }

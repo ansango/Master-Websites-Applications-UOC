@@ -13,9 +13,5 @@ Debe cumplir estos tests:
 */
 
 export default function obtenerFruta(objeto) {
-    if(typeof objeto.fruta != "undefined"){
-        return objeto.fruta
-    } else {
-      return 'No fruta'
-    }
-  }
+  return typeof objeto.fruta !== 'undefined' ? objeto.fruta : 'No fruta'
+}

@@ -1,7 +1,8 @@
 /*
 Kata #3: repite un string
 
-Implementa la función repiteString(String, Number) que toma un string y un número como argumentos y devuelve un string que contiene el string argumento repetido el número de veces designado por el argumento numérico. 
+Implementa la función repiteString(String, Number) que toma un string y un número como argumentos 
+y devuelve un string que contiene el string argumento repetido el número de veces designado por el argumento numérico. 
 
 Debe cumplir estos tests:
 

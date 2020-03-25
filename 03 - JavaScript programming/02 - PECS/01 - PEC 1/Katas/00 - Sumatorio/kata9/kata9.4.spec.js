@@ -11,7 +11,7 @@ describe('Kata #9.4', () => {
     })
 
     test('Comprobación de 12 devuelve valor anterior: pera', () => {
-        expect(arbol1.definirFruta('12')).toBe('pera')
+        expect(arbol1.definirFruta(12)).toBe('pera')
         expect(arbol1.obtenerFruta()).toBe('pera');
     })
 
@@ -21,7 +21,7 @@ describe('Kata #9.4', () => {
     })
 
     test('Comprobación de 12 devuelve valor anterior: pera', () => {
-        expect(arbol1.definirEspecie('12')).toBe('peral')
+        expect(arbol1.definirEspecie(12)).toBe('peral')
         expect(arbol1.obtenerEspecie()).toBe('peral');
     })
 

@@ -30,20 +30,13 @@ String.prototype.presentarArbol = function(value) {
 
 export default function plantarArbol(especie, fruta) {
 
-    if (typeof especie !== 'string' || typeof fruta !== 'string') {
-        return null
-    } else {
         const arbol = {
             obtenerEspecie() {
                 return especie
             },
             definirEspecie(value) {
                 let _especie = value
-                if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
-                    return especie
-                } else {
-                    return especie = _especie
-                }
+                return typeof _especie !== 'string' ? especie : especie = _especie
             },
             obtenerFruta() {
                 return fruta
@@ -57,6 +50,5 @@ export default function plantarArbol(especie, fruta) {
                 }
             },
         }
-        return arbol
-    }
+        return typeof especie === 'string' && typeof fruta === 'string' ? arbol : null
 }

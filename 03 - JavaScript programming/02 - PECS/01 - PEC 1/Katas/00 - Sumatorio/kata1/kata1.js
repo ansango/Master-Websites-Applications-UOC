@@ -14,10 +14,5 @@ par_o_impar(3) devuelve el string “Impar”
 */
 
 export default function par_o_impar(num) {
-    
-  if(num % 2 === 0) {
-    return 'pair'
-  } else {
-    return 'unpair'
-  }
+  return num % 2 === 0 ? 'pair' : 'unpair'
 }

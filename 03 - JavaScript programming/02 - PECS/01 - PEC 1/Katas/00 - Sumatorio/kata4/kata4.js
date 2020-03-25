@@ -15,9 +15,5 @@ elimina_primer_y_ultimo(‘ok’) devuelve el string ‘ok’
  */
 
 export default function elimina_primer_y_ultimo(str) {
-    if(str.length <= 2) {
-        return str
-    } else {
-        return str.slice(1,-1)
-    }
+    return str.length <=2 ? str : str.slice(1,-1)
 }

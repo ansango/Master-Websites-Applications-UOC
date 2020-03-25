@@ -4,11 +4,6 @@ const arbol1 = plantarArbol('manzano', 'manzana')
 const arbol2 = plantarArbol('peral', 'manzana')
 
 describe('Kata #12', () => {
-    test('Capturamos el error de introducir 12', () => {
-        expect(() => {
-            arbol1.definirFruta('12');
-        }).toThrow();
-    })
     test('Capturamos error de fruta incorrecta y devolvemos la anterior', () => {
         expect(() => {
             arbol1.definirFruta('pera');

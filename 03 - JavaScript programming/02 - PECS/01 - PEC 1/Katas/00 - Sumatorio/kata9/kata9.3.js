@@ -14,17 +14,13 @@ Debe cumplir estos tests:
 
 export default function plantarArbol(especie, fruta) {
 
-  if (typeof especie !== 'string' || typeof fruta !== 'string') {
-    return 
-  } else {
-    const arbol = {
-      obtenerEspecie() { 
-        return especie
-      },
-      obtenerFruta() {
-        return fruta
-      }
+  const arbol = {
+    obtenerEspecie() { 
+      return especie
+    },
+    obtenerFruta() {
+      return fruta
     }
-    return arbol
   }
+  return typeof especie === 'string' && typeof fruta === 'string' ? arbol : null
 }

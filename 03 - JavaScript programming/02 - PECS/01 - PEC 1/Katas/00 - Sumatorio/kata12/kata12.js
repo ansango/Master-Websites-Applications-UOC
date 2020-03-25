@@ -10,12 +10,8 @@ Para nuestros ejercicios vamos a tomarnos ciertas licencias para generalizar el 
     naranjo - naranja OK
     nogal - nueces KO
 
- 
-
-De los tres primeros casos vemos que se repiten las 4 primeras letras de la especie también en la fruta. 
+ De los tres primeros casos vemos que se repiten las 4 primeras letras de la especie también en la fruta. 
 Ésta será la comprobación que haremos en nuestro setter.
-
- 
 
 Debe cumplir estos tests:
 
@@ -25,12 +21,10 @@ Debe cumplir estos tests:
  
 Pistas: 
 
-    Creación de RegEx (usad el método que prefirais): https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions#Creaci%C3%B3n_de_una_expresi%C3%B3n_regular
-    Probador de regex: https://regexr.com, https://regex101.com/
-
+Creación de RegEx (usad el método que prefirais): https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions#Creaci%C3%B3n_de_una_expresi%C3%B3n_regular
+Probador de regex: https://regexr.com, https://regex101.com/
 
 */
-
 
 String.prototype.presentarArbol = function (value) {
 
@@ -43,40 +37,30 @@ String.prototype.presentarArbol = function (value) {
 
 export default function plantarArbol(especie, fruta) {
 
-    if (typeof especie !== 'string' || typeof fruta !== 'string') {
-        return null
-    } else {
-        const arbol = {
-            obtenerEspecie() {
-                return especie
-            },
-            definirEspecie(value) {
-
-                let _especie = value
-                
-                if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
-                    return especie
-                } else {
-                    return especie = _especie
-                }
-            },
-            obtenerFruta() {
-                return fruta
-            },
-            definirFruta(value) {
-                let _fruta = value
-                let match = value.match(/^[a-zA-Z]{4}/)
-                let _especie = especie.match(/^[a-zA-Z]{4}/)
-                
-                if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
-                    throw new Error();
-                } else if(match[0] !== _especie[0]) {
-                    throw new Error();
-                }else {
-                    return fruta = _fruta
-                }
-            },
-        }
-        return arbol
+    const arbol = {
+        obtenerEspecie() {
+            return especie
+        },
+        definirEspecie(value) {
+            let _especie = value
+            return typeof _especie !== 'string' ? especie : especie = _especie
+        },
+        obtenerFruta() {
+            return fruta
+        },
+        definirFruta(value) {
+            let _fruta = value
+            let match = value.match(/^[a-zA-Z]{4}/)
+            let _especie = especie.match(/^[a-zA-Z]{4}/)
+            if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
+                throw new Error();
+            } else if (match[0] !== _especie[0]) {
+                throw new Error();
+            }
+            else {
+                return fruta = _fruta
+            }
+        },
     }
+    return typeof especie === 'string' && typeof fruta === 'string' ? arbol : null
 }

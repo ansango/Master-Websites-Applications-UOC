@@ -21,7 +21,6 @@ String.prototype.presentarArbol = function (value) {
 export default class Arbol {
 
     constructor(especie, fruta){
-
         if (typeof especie !== 'string' || typeof fruta !== 'string') {
             return null
         } else {
@@ -34,16 +33,9 @@ export default class Arbol {
         return this.especie
     }
     definirEspecie(value) {
-
         let _especie = value
-        
-        if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
-            return this.especie
-        } else {
-            return this.especie = _especie
-        }
+        return !isNaN(parseFloat(_especie)) && isFinite(_especie) ? this.especie : this.especie = _especie
     }
-
     obtenerFruta() {
         return this.fruta
     }
@@ -51,12 +43,12 @@ export default class Arbol {
         let _fruta = value
         let match = value.match(/^[a-zA-Z]{4}/)
         let _especie = this.especie.match(/^[a-zA-Z]{4}/)
-        
         if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
             throw new Error();
-        } else if(match[0] !== _especie[0]) {
+        } else if (match[0] !== _especie[0]) {
             throw new Error();
-        }else {
+        }
+        else {
             return this.fruta = _fruta
         }
     }
