@@ -43,7 +43,6 @@ String.prototype.presentarArbol = function (value) {
 
 export default function plantarArbol(especie, fruta) {
 
-
     if (typeof especie !== 'string' || typeof fruta !== 'string') {
         return null
     } else {

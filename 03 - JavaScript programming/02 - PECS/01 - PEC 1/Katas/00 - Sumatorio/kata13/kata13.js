@@ -9,7 +9,55 @@ y el constructor como método de llamada inicial al instanciar.
 Pista: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes
 
 */
+String.prototype.presentarArbol = function (value) {
 
-export default function repiteString(txt, num) {
-    return txt.repeat(num)
+    if (value !== undefined) {
+        console.log(`Este árbol es un ${this} y da ${value}`)
+    } else {
+        console.log(`Este árbol es un ${this}`)
+    }
+}
+
+export default class Arbol {
+
+    constructor(especie, fruta){
+
+        if (typeof especie !== 'string' || typeof fruta !== 'string') {
+            return null
+        } else {
+            this.especie = especie
+            this.fruta = fruta
+        }
+    }
+
+    obtenerEspecie(){
+        return this.especie
+    }
+    definirEspecie(value) {
+
+        let _especie = value
+        
+        if (!isNaN(parseFloat(_especie)) && isFinite(_especie)) {
+            return this.especie
+        } else {
+            return this.especie = _especie
+        }
+    }
+
+    obtenerFruta() {
+        return this.fruta
+    }
+    definirFruta(value) {
+        let _fruta = value
+        let match = value.match(/^[a-zA-Z]{4}/)
+        let _especie = this.especie.match(/^[a-zA-Z]{4}/)
+        
+        if (!isNaN(parseFloat(_fruta)) && isFinite(_fruta)) {
+            throw new Error();
+        } else if(match[0] !== _especie[0]) {
+            throw new Error();
+        }else {
+            return this.fruta = _fruta
+        }
+    }
 }

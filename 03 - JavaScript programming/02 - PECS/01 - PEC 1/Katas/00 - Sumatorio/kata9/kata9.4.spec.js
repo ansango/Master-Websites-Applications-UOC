@@ -38,7 +38,7 @@ describe('Kata #9.4', () => {
     test('Comprobamos que el valor de especie nueva es manzano', () => {
         expect(arbol1.definirEspecie('manzano')).toBe('manzano');
     })
-    test('Comprobamos que el valor de la fruta nueva es el anterior', () => {
+    test('Comprobamos que el valor de la fruta es el anterior', () => {
         expect(arbol1.obtenerFruta()).toBe('pera');
     })
     test('Comprobamos que el valor de la fruta nueva es manzana', () => {
