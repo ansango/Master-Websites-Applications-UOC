@@ -1,7 +1,6 @@
 import Arbol from './kata13'
 
 const arbol = new Arbol('manzano', 'manzana')
-
 const spy = jest.spyOn(console, 'log')
 
 arbol.obtenerEspecie().presentarArbol()
@@ -17,14 +16,14 @@ describe('Kata #13', () => {
         const arbol1 = new Arbol('peral', 'pera');
         expect(arbol1.especie).toBe('peral')
         expect(arbol1.fruta).toBe('pera')
+        expect(arbol1).toEqual({'especie' : 'peral', 'fruta' : 'pera'})
     })
-
-
-    // ESTO NO FUNCIONA !!!
 
     test('1.2 - Probamos que el constructor valida si es o no un string', () => {
         const arbol1 = new Arbol(12, 'pera');
-        expect(arbol1).toBeNull()
+        expect(arbol1.especie).toBe(undefined)
+        expect(arbol1.fruta).toBe(undefined)
+        expect(arbol1).toEqual({})
     })
 
     // 2 - Propiedades del objeto devuelto
