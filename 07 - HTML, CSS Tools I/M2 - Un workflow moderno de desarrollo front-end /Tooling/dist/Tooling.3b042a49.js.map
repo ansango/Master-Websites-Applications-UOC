@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["name","console","log"],"mappings":";AAAA,IAAMA,EAAO,QACbC,QAAQC,IAAaF,SAAAA,OAAAA","file":"Tooling.3b042a49.js","sourceRoot":"..","sourcesContent":["const name = 'world'\nconsole.log(`Hello ${name}`)"]}
