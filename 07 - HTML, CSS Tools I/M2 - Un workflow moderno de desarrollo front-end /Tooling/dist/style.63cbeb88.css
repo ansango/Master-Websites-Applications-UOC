@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    color: #1f1f1f;
+    background: linear-gradient(180deg, #bada55, #c0ffee)
+}
+
+a:-webkit-any-link {
+    border: 1px solid #00f;
+    color: orange
+}
+
+a:-moz-any-link {
+    border: 1px solid #00f;
+    color: orange
+}
+
+a:any-link {
+    border: 1px solid #00f;
+    color: orange
+}
+
+/*# sourceMappingURL=/style.63cbeb88.css.map */
