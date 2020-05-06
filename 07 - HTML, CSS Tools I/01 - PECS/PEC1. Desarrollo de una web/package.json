@@ -1,0 +1,56 @@
+{
+  "name": "parcel-vue-bulma",
+  "version": "1.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel index.html",
+    "parcel:build": "parcel build index.html",
+    "watch": "parcel watch index.html",
+    "clean": "rimraf dist .cache .cache-loader"
+  },
+  "keywords": [
+    "parcel",
+    "vue",
+    "bulma",
+    "babel",
+    "postcss",
+    "autoprefixer"
+  ],
+  "author": "@ansango",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@vue/component-compiler-utils": "^3.1.1",
+    "autoprefixer": "^9.7.5",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0",
+    "rimraf": "^3.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "dependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "bulma": "^0.8.1",
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-router": "^3.1.6"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "browserslist": [
+    "last 4 version",
+    "> 2%",
+    "not dead",
+    "IE 8"
+  ],
+  "babel": {
+    "presets": [
+      "@vue/babel-preset-jsx"
+    ]
+  }
+}
