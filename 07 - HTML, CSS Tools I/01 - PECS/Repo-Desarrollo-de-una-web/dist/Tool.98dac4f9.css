@@ -1,0 +1,31 @@
+.hero .hero-body[data-v-d4ab6d] {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 1200px;
+}
+.section .container[data-v-d4ab6d] {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.sub-section[data-v-d4ab6d] {
+  width: 768px !important;
+}
+.sub-section-tool[data-v-d4ab6d] {
+  width: 768px !important;
+  padding: 30px 0;
+}
+.title-hero[data-v-d4ab6d] {
+  padding-bottom: 20px;
+}
+.content-title[data-v-d4ab6d] {
+  font-weight: bold;
+}
+.wrapper-video[data-v-d4ab6d] {
+  padding: 50px;
+}
+@media (min-width: 768px) {
+.hero .hero-body .container[data-v-d4ab6d] {
+    width: 70%;
+}
+}
