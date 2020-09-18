@@ -58,19 +58,12 @@ function checkLength(input, min, max) {
 
 // Check passwords match
 
-function checkPasswordsMatch(input1, input2) {
-    if (input1.value !== input2.value) {
-        showError(input2, 'Passwords do not match')
-    }
-}
-
-function checkPasswordReg(input) {
+function checkValidPasswordsMatch(input1, input2) {
     const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/
-
-    if (re.test(input.value.trim())) {
-        showSuccess(input)
-    } else {
-        showError(input, 'Must be a lower and upper case, special char and a number')
+    if (!re.test(input1.value.trim())) {
+        showError(input1, 'Must be lower, upper case and special char')
+    } else if (input1.value !== input2.value) {
+        showError(input2, 'Passwords do not match')
     }
 }
 
@@ -89,6 +82,5 @@ form.addEventListener('submit', function(event) {
     checkLength(username, 3, 15)
     checkLength(password, 6, 25)
     checkEmail(email)
-    checkPasswordsMatch(password, password2)
-    checkPasswordReg(password)
+    checkValidPasswordsMatch(password, password2)
 })
