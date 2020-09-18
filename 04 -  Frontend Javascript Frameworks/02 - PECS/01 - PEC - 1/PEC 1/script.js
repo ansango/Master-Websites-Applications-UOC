@@ -76,11 +76,11 @@ function getFieldName(input) {
 // Event Listeners
 
 form.addEventListener('submit', function(event) {
-            event.preventDefault()
+    event.preventDefault()
 
-            checkRequired([username, email, password, password2])
-            checkLength(username, 3, 15)
-            checkLength(password, 6, 25)
-            checkEmail(email)
-            checkValidPasswordsMatch(password, password2
-            })
+    checkRequired([username, email, password, password2])
+    checkLength(username, 3, 15)
+    checkLength(password, 6, 25)
+    checkEmail(email)
+    checkValidPasswordsMatch(password, password2)
+})
