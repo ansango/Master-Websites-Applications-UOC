@@ -123,7 +123,7 @@ function getFieldName(input) {
  * * EVENT LISTENERS
  * */
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   checkRequired([username, email, password, password2]);
