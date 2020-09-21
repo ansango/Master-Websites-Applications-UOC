@@ -42,14 +42,9 @@ const seats = document.querySelectorAll(".row .seat:not(.occupied)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
-const currencySelect = document.getElementById("currency");
-const filmOptions = document.querySelectorAll("#movie option");
-const currencyValue = document.getElementsByClassName("currency-value");
-const currencyTotal = document.getElementById("currency-total-price");
 
 let ticketPrice = +movieSelect.value; // ? Convert string into number;
 
-generateMoviesOptions();
 populateUI();
 
 /**
@@ -75,14 +70,6 @@ function setSeatsData(seatsIndex) {
 }
 
 /**
- * * Init Currency Value
- * */
-
-function initCurrencyValue() {
-  console.log(currencyValue);
-}
-
-/**
  * * Update total and count Function
  * */
 
@@ -102,20 +89,6 @@ function updateSelectedCount() {
 
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
-}
-
-/**
- * * GenerateMoviesOptions
- * */
-
-function generateMoviesOptions() {
-  films.forEach((film) => {
-    const options = document.createElement("option");
-    options.innerText = `${film.title} - ${film.price} ${film.currency}`;
-    options.value = film.price;
-    movieSelect.appendChild(options);
-  });
-  currencyTotal.innerText = films[0].currency;
 }
 
 /**
@@ -140,22 +113,6 @@ function populateUI() {
 }
 
 /**
- * * Fetch exchange
- */
-
-function calculate(options, currency) {
-  fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
-    .then((res) => res.json())
-    .then((data) => {
-      films.forEach((film) => {
-        options.innerText = `${film.title} - ${film.price} ${currency}`;
-        options.value = data.rates[currency];
-        movieSelect.appendChild(options); // ! El problema está en options
-      });
-    });
-}
-
-/**
  * * EVENT LISTENERS
  * */
 
@@ -165,7 +122,6 @@ movieSelect.addEventListener("change", (event) => {
   ticketPrice = +event.target.value;
   let selectedIndex = event.target.selectedIndex;
   let selectedValue = event.target.value;
-  console.log(selectedValue);
   setMovieData(selectedIndex, selectedValue);
   updateSelectedCount();
 });
@@ -182,13 +138,6 @@ container.addEventListener("click", (event) => {
   }
 });
 
-currency.addEventListener("change", (event) => {
-  const currencySelected = event.target.value;
-  currencyTotal.innerText = currencySelected;
-  calculate(options, currencySelected); // ! El problema está en options
-});
-
 // * Initial count and total set
 
-initCurrencyValue();
 updateSelectedCount();
