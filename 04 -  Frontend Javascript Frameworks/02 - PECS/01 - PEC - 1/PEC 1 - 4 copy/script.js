@@ -36,7 +36,8 @@ function setSeatsData(seatsIndex) {
   localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
 }
 
-function updateSelectedCount() {
+function updateSelectedCount(rate) {
+  console.log(rate);
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
   const selectedSeatsCount = selectedSeats.length;
   const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
@@ -44,7 +45,12 @@ function updateSelectedCount() {
   setSeatsData(seatsIndex);
 
   count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
+  if (rate !== undefined) {
+    console.log(selectedSeatsCount * ticketPrice * rate);
+    total.innerText = (selectedSeatsCount * ticketPrice * rate).toFixed(1);
+  } else {
+    total.innerText = selectedSeatsCount * ticketPrice;
+  }
 }
 
 function populateUI() {
@@ -73,25 +79,28 @@ async function calculate(currencyOld, currencyNew) {
   const dataRate = data.rates;
   const rate = dataRate[currencyNew];
   const movies = movieSelect.options;
+  console.log(movies);
+
   for (const movie of movies) {
-    const title = movie.text.split(" - "); // ? dividimos array por el char -
     movie.value = (movie.value * rate).toFixed(2);
-    movie.text =
-      title.length > 1
-        ? `${title[0]} - ${movie.value} ${currencyNew}`
-        : movie.text;
+    const title = movie.text;
+    const price = (movie.value * rate).toFixed(2);
+    movie.text = "";
+    
+    movie.text = `${title} ${price}`;
+    //movie.text = `${title} ${price}`
   }
-  updateSelectedCount()
+
+  console.log("rate new", rate);
+  updateSelectedCount(rate);
 }
 
-currency.addEventListener("change", async (event) => {
+currency.addEventListener("change", (event) => {
   const currencyOld = currencyValue;
   const currencyNew = event.target.value;
-  await calculate(currencyOld, currencyNew);
+  calculate(currencyOld, currencyNew);
   currencyValue = event.target.value;
   currencyTotal.innerText = event.target.value;
-  ticketPrice = +movieSelect.value;
-  updateSelectedCount();
 });
 
 movieSelect.addEventListener("change", (event) => {
