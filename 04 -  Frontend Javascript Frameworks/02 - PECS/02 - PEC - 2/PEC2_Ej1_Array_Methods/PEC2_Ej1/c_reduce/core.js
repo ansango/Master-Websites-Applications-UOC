@@ -1,9 +1,13 @@
 function sum(array) {
-  // your code here
+  const reducer = (acc, value) => acc + value;
+  const result = array.reduce(reducer);
+  return result;
 }
 
 function productAll(array) {
-  // your code here
+  const reducer = (acc, value) => acc * value;
+  const result = array.reduce(reducer);
+  return result;
 }
 
 function objectify(array) {
@@ -18,5 +22,5 @@ module.exports = {
   sum,
   productAll,
   objectify,
-  luckyNumbers
+  luckyNumbers,
 };
