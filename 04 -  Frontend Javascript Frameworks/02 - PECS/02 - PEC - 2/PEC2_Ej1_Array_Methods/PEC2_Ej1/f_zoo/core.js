@@ -1,5 +1,15 @@
+const data = require("./data");
 function entryCalculator(entrants) {
-  // your code here
+  let entry =
+    typeof entrants === "undefined" || Object.keys(entrants).length === 0
+      ? 0
+      : entrants;
+  const prices = data.prices;
+  const totalPriceAdult = prices.Adult * entry.Adult;
+  const totalPriceChild = prices.Child * entry.Child;
+  const totalPriceSenior = prices.Senior * entry.Senior;
+  entry = totalPriceAdult + totalPriceChild + totalPriceSenior;
+  return entry;
 }
 
 function schedule(dayName) {
@@ -53,5 +63,5 @@ module.exports = {
   employeesByIds,
   employeeByName,
   managersForEmployee,
-  employeeCoverage
+  employeeCoverage,
 };

@@ -13,16 +13,19 @@ function productAll(array) {
 }
 
 function objectify(array) {
-  const result = array.reduce((accumulator, currentValue) => {
-    accumulator[currentValue[0]] = currentValue[1];
-    return accumulator;
+  const result = array.reduce((acc, el) => {
+    acc[el[0]] = el[1];
+    return acc;
   }, {});
 
   return result;
 }
 
 function luckyNumbers(array) {
-  // your code here
+  const result = array.reduce((acc, el) => {
+    return `${acc} ${el}`;
+  }, `Your lucky numbers are: `);
+  return result;
 }
 
 module.exports = {
