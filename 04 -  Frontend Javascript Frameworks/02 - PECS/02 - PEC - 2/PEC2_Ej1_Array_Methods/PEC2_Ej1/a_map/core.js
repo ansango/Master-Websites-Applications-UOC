@@ -19,6 +19,7 @@ function doubleMatrix(array) {
   const double = (x) => x * 2;
   const doubledArray = array.map((subarray) => subarray.map(double));
   return doubledArray;
+  
 }
 
 module.exports = {
