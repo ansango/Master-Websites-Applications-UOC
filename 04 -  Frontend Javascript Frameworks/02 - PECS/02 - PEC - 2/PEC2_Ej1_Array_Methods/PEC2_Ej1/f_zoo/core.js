@@ -1,15 +1,14 @@
 const data = require("./data");
 function entryCalculator(entrants) {
-  let entry =
-    typeof entrants === "undefined" || Object.keys(entrants).length === 0
-      ? 0
-      : entrants;
-  const prices = data.prices;
-  const totalPriceAdult = prices.Adult * entry.Adult;
-  const totalPriceChild = prices.Child * entry.Child;
-  const totalPriceSenior = prices.Senior * entry.Senior;
-  entry = totalPriceAdult + totalPriceChild + totalPriceSenior;
-  return entry;
+  if (typeof entrants === "undefined" || Object.keys(entrants).length === 0) {
+    return 0;
+  } else {
+    const prices = data.prices;
+    const totalPriceAdult = prices.Adult * entrants.Adult;
+    const totalPriceChild = prices.Child * entrants.Child;
+    const totalPriceSenior = prices.Senior * entrants.Senior;
+    return totalPriceAdult + totalPriceChild + totalPriceSenior;
+  }
 }
 
 function schedule(dayName) {
