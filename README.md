@@ -25,7 +25,7 @@ This is the documentation for the UOC's Master's degree in website and web appli
 2. Copy and paste this:
 
     ```
-    git clonehttps://github.com/ansango/Master-Websites-Applications-UOC.git
+    git clone https://github.com/ansango/Master-Websites-Applications-UOC.git
     ```
 3. Done! :grin:
 
