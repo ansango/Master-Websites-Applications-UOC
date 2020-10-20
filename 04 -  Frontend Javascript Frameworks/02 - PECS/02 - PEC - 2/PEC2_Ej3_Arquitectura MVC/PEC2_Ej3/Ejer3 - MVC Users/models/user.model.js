@@ -5,10 +5,10 @@
  */
 
 class User {
-  constructor({ name, email, adress, phone }) {
+  constructor({ name, email, address, phone }) {
     this.name = name;
     this.email = email;
-    this.adress = adress;
+    this.address = address;
     this.phone = phone;
   }
 }

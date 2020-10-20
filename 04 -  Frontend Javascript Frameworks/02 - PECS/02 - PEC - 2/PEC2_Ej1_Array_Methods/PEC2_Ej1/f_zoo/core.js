@@ -16,7 +16,19 @@ function schedule(dayName) {
 }
 
 function animalCount(species) {
-  // your code here
+  const allAnimals = data.animals.reduce((acc, el) => {
+    acc[el.name] = el.residents.length;
+    return acc;
+  }, {});
+
+  if (typeof species === "undefined") {
+    return allAnimals;
+  } else {
+    const countAnimal = data.animals.filter(
+      (animal) => animal.name === species
+    )[0].residents.length;
+    return countAnimal;
+  }
 }
 
 function animalMap(options) {
@@ -28,11 +40,20 @@ function animalPopularity(rating) {
 }
 
 function animalsByIds(ids) {
-  // your code here
+  if(typeof ids === 'undefined') {
+    return []
+  }
+
+  const animbalById = data.animals.filter(x => x.id === ids)
+
+  
+
 }
 
 function animalByName(animalName) {
-  // your code here
+  if(typeof animalName === 'undefined') {
+    return {}
+  }
 }
 
 function employeesByIds(ids) {

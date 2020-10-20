@@ -23,7 +23,7 @@ function objectify(array) {
 
 function luckyNumbers(array) {
   const result = array.reduce((acc, el) => {
-    return `${acc} ${el}`;
+    return `${acc} ${el},`;
   }, `Your lucky numbers are: `);
   return result;
 }

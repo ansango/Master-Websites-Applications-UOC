@@ -4,32 +4,25 @@
  * Manages the data of the application.
  */
 
-const users = [
-  {
-    name: "",
-    email: "",
-    address: "",
-    phone: "",
-  },
-];
-
 class UserService {
   constructor() {
-    this.users = users;
+    this.users = (JSON.parse(localStorage.getItem("users")) || []).map(
+      (user) => new User(user)
+    );
   }
-  bindUserTableChanged(callback) {
-    this.onChangedUserTable = callback;
+
+  bindUserChanged(callback) {
+    this.onChangedUsers = callback;
   }
 
   _commit(users) {
-    this.onChangedUserTable(users);
-    localStorage.setItem("users", JSON.stringify(user));
+    this.onChangedUsers(users);
+    localStorage.setItem("users", JSON.stringify(users));
   }
 
   addUser(user) {
+    console.log("servicio",user)
     this.users.push(new User(user));
-    this._store(this.users);
+    this._commit(this.users);
   }
-  editUser(user) {}
-  deleteUser(user) {}
 }

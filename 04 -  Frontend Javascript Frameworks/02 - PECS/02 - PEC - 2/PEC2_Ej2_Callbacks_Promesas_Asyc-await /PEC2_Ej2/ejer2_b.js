@@ -2,7 +2,7 @@ function findOne(list, { key, value }) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const element = list.find((element) => element[key] === value);
-      element ? resolve(element) : reject();
+      element ? resolve(element) : reject(new Error("ERROR: Element Not Found"));
     }, 3000);
   });
 }
@@ -18,12 +18,23 @@ const users = [
   },
 ];
 
+const onSuccess = ({ name }) => console.log(`user: ${name}`);
+const onError = ({ message }) => console.log(message);
+
 findOne(users, { key: "name", value: "Carlos" })
   .then((element) => {
-    console.log(element);
+    onSuccess(element);
   })
-  .catch(() => {
-    console.log("NO FUE BIEN");
+  .catch((err) => {
+    onError(err);
+  });
+
+findOne(users, { key: "name", value: "Pepe" })
+  .then((element) => {
+    onSuccess(element);
+  })
+  .catch((err) => {
+    onError(err);
   });
 
 /*const findOne = (list, { key, value }, { onSuccess, onError }) => {
