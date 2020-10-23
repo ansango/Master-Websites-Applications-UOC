@@ -21,8 +21,25 @@ class UserService {
   }
 
   addUser(user) {
-    console.log("servicio",user)
     this.users.push(new User(user));
+    this._commit(this.users);
+  }
+
+  deleteUser(_id) {
+    console.log(_id)
+    this.users = this.users.filter(({ id }) => id !== _id);
+    this._commit(this.users);
+  }
+
+  deleteUserSelected(users){
+
+  }
+
+  editUser(updatedUser) {
+    console.log(updatedUser);
+    this.users = this.users.map((user) =>
+      user.id === updatedUser.id ? new User(updatedUser) : user
+    );
     this._commit(this.users);
   }
 }

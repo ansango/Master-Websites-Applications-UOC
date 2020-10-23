@@ -22,9 +22,14 @@ function objectify(array) {
 }
 
 function luckyNumbers(array) {
+  let counter = 0;
   const result = array.reduce((acc, el) => {
+    counter++;
+    if (counter === array.length) {
+      return `${acc} and ${el}`;
+    }
     return `${acc} ${el},`;
-  }, `Your lucky numbers are: `);
+  }, `Your lucky numbers are:`);
   return result;
 }
 
