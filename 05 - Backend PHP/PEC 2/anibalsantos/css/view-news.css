@@ -1,0 +1,19 @@
+.content-news{
+    margin: 0 auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-new{
+    width: 50%;
+    padding: 90px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-new img{
+    max-width: 500px;
+}
