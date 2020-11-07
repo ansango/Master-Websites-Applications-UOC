@@ -3,7 +3,7 @@
  *
  * Visual representation of the model.
  */
-class TodoView {
+export default class TodoView {
   constructor() {
     this.app = this.getElement("#root");
     this.form = this.createElement("form");
@@ -58,7 +58,7 @@ class TodoView {
       this.todoList.append(p);
     } else {
       // Create nodes
-      todos.forEach(todo => {
+      todos.forEach((todo) => {
         const li = this.createElement("li");
         li.id = todo.id;
 
@@ -92,7 +92,7 @@ class TodoView {
   }
 
   _initLocalListeners() {
-    this.todoList.addEventListener("input", event => {
+    this.todoList.addEventListener("input", (event) => {
       if (event.target.className === "editable") {
         this._temporaryTodoText = event.target.innerText;
       }
@@ -100,7 +100,7 @@ class TodoView {
   }
 
   bindAddTodo(handler) {
-    this.form.addEventListener("submit", event => {
+    this.form.addEventListener("submit", (event) => {
       event.preventDefault();
 
       if (this._todoText) {
@@ -111,7 +111,7 @@ class TodoView {
   }
 
   bindDeleteTodo(handler) {
-    this.todoList.addEventListener("click", event => {
+    this.todoList.addEventListener("click", (event) => {
       if (event.target.className === "delete") {
         const id = event.target.parentElement.id;
 
@@ -121,7 +121,7 @@ class TodoView {
   }
 
   bindEditTodo(handler) {
-    this.todoList.addEventListener("focusout", event => {
+    this.todoList.addEventListener("focusout", (event) => {
       if (this._temporaryTodoText) {
         const id = event.target.parentElement.id;
 
@@ -132,7 +132,7 @@ class TodoView {
   }
 
   bindToggleTodo(handler) {
-    this.todoList.addEventListener("change", event => {
+    this.todoList.addEventListener("change", (event) => {
       if (event.target.type === "checkbox") {
         const id = event.target.parentElement.id;
 

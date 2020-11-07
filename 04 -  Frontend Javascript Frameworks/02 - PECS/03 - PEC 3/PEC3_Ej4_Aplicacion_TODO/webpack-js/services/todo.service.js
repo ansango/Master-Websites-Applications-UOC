@@ -1,9 +1,10 @@
+import Todo from '../models/todo.model';
 /**
  * @class Service
  *
  * Manages the data of the application.
  */
-class TodoService {
+export default class TodoService {
   constructor() {
     this.todos = (JSON.parse(localStorage.getItem("todos")) || []).map(
       todo => new Todo(todo)

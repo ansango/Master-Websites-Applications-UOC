@@ -4,7 +4,7 @@
  * Manages the data of the application.
  */
 
-class Todo {
+export default class Todo {
   constructor({ text, complete } = { complete: false }) {
     this.id = this.uuidv4();
     this.text = text;

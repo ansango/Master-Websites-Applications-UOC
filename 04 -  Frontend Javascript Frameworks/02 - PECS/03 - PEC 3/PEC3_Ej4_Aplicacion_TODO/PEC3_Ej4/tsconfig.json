@@ -1,0 +1,9 @@
+{
+    "include": ["**/*"],
+    "exclude": ["dist", "node_modules"],
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ES6",
+        "noImplicitAny": true
+    }
+}
