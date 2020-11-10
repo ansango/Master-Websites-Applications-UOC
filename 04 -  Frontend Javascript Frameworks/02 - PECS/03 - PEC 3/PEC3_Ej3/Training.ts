@@ -1,6 +1,6 @@
-import { Player } from "./Player";
+import Player from "./Player";
 
-export class Training {
+export default class Training {
   private numWeeks: number = 0;
   player: Player;
 
@@ -8,14 +8,26 @@ export class Training {
     this.player = player;
   }
 
-  getNumWeeks() {}
-  setNumWeeks() {}
+  getNumWeeks(): number {
+    return this.numWeeks;
+  }
+  setNumWeeks(numWeeks: number) {
+    return (this.numWeeks = numWeeks);
+  }
 
-  getPlayer() {}
-  setPlayer() {}
+  getPlayer(): Player {
+    return this.player;
+  }
+  setPlayer(player: Player): Player {
+    return (this.player = player);
+  }
 
-  increaseNumWeeks() {}
-  decreaseNumWeeks() {}
+  increaseNumWeeks(): number {
+    return this.numWeeks++;
+  }
+  decreaseNumWeeks(): number {
+    return this.numWeeks--;
+  }
 
   toString(): string {
     return "";

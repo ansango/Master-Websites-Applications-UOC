@@ -1,15 +1,15 @@
-import { Country } from "./Country";
-export class League {
+import Country from "./Country";
+import Team from "./Team";
+export default class League {
   private shortName: string;
   private longName: string;
-  //country: Country;
-  constructor(
-    shortName: string,
-    longName: string
-    //country: Country
-  ) {
+  country: Country;
+  teams: Team[];
+  team: Team;
+  constructor(shortName: string, longName: string, country: Country) {
     this.shortName = shortName;
     this.longName = longName;
+    this.country = country;
   }
 
   getShortName(): string {
@@ -26,12 +26,22 @@ export class League {
     return (this.longName = longName);
   }
 
-  getCountry() {}
-  setCountry() {}
+  getCountry(): Country {
+    return this.country;
+  }
+  setCountry(country: Country): Country {
+    return (this.country = country);
+  }
 
-  getTeams() {}
-  addTeam() {}
-  removeTeam() {}
+  getTeams(): Team[] {
+    return this.teams;
+  }
+  addTeam(team: Team): Team[] {
+    return this.teams;
+  }
+  removeTeam(team: Team): Team[] {
+    return this.teams;
+  }
 
   toString(): string {
     return "";

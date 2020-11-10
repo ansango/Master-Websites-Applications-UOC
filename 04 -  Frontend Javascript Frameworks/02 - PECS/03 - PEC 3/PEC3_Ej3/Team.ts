@@ -1,5 +1,6 @@
-import { Player } from "./Player";
-export class Team {
+import Player from "./Player";
+import League from "./League";
+export default class Team {
   private shortName: string;
   private longName: string;
   private imgSrc: string;
@@ -8,7 +9,9 @@ export class Team {
   private members: number;
   private budget: number = 0;
   private founded: number;
-  //private players: Player[];
+  players: Player[];
+  player: Player;
+  league: League;
 
   constructor(
     shortName?: string,
@@ -79,10 +82,18 @@ export class Team {
     return (this.founded = founded);
   }
 
-  addPlayer() {}
-  removePlayer() {}
-  getLeague() {}
-  setLeague() {}
+  addPlayer(player: Player): Player[] {
+    return this.players;
+  }
+  removePlayer(player: Player): Player[] {
+    return this.players;
+  }
+  getLeague(): League {
+    return this.league;
+  }
+  setLeague(league: League): League {
+    return this.league;
+  }
 
   toString(): string {
     return "";

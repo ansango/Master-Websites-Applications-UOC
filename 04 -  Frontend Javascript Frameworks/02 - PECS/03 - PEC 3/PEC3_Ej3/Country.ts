@@ -1,4 +1,4 @@
-export enum Country {
+enum Country {
   AR,
   BR,
   DE,
@@ -18,3 +18,5 @@ export enum Country {
   US,
   YUG,
 }
+
+export default Country;
