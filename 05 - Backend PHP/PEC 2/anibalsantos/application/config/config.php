@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/anibalsantos';
+$config['base_url'] = 'https://eimtcms.eimt.uoc.edu/~anibalsantosgo/';
 
 /*
 |--------------------------------------------------------------------------

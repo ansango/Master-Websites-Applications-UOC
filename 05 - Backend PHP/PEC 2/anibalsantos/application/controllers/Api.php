@@ -13,33 +13,31 @@ class Api extends RestController
         $this->load->model('news_model');
     }
 
-    public function news_get()
-    {
-        $news = $this->news_model->getNews();
 
+    public function noticias_get()
+    {
+
+        $newsAll = $this->news_model->news_all_data();
+        $id = $this->get('id');
+
+        if ($id === null) {
+            $this->response($newsAll, 200);
+        } else {
+            $newsById = $this->news_model->new_detail_data($id);
+            $this->response($newsById, 200);
+        }
+    }
+
+    public function categoria_get()
+    {
+        $newsAll = $this->news_model->news_all_data();
         $id = $this->get('id');
         
         if ($id === null) {
-            // Check if the news data store contains news
-            if ($news) {
-                // Set the response and exit
-                $this->response($news, 200);
-            } else {
-                // Set the response and exit
-                $this->response([
-                    'status' => false,
-                    'message' => 'No users were found'
-                ], 404);
-            }
+            $this->response($newsAll, 200);
         } else {
-            if (array_key_exists($id, $news)) {
-                $this->response($news[$id], 200);
-            } else {
-                $this->response([
-                    'status' => false,
-                    'message' => 'No such user found'
-                ], 404);
-            }
+            $categoriesById = $this->news_model->category_detail_data($id);
+            $this->response($categoriesById, 200);
         }
     }
 }
