@@ -1,0 +1,42 @@
+<div>
+  <mat-card
+    class="wine-card"
+    [class]="wine.isOnStock() ? 'is-stock-shadow' : 'out-stock-shadow'"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ wine.name }}</mat-card-title>
+      <mat-card-subtitle
+        class="wine-subtitle"
+        [class]="wine.isOnStock() ? 'is-stock-color' : 'out-stock-color'"
+        (click)="unavilableWine()"
+        >{{ wine.isOnSale ? "available" : "unavilable" }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <mat-card-content class="wine-content">
+      <div class="img-container">
+        <img height="350px" [src]="wine.imgUrl" alt="" />
+      </div>
+      <div class="price">Price: {{ wine.price }} €</div>
+    </mat-card-content>
+    <mat-card-actions class="btn-actions">
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="decrement()"
+        *ngIf="counter > 0"
+      >
+        -
+      </button>
+      <!-- SELECTOR -->
+      <mat-select [(ngModel)]="counter">
+        <mat-option *ngFor="let unit of units" [value]="unit">
+          {{ unit }}
+        </mat-option>
+      </mat-select>
+      <!-- SELECTOR -->
+      <div>{{ counter }}</div>
+
+      <button mat-icon-button color="primary" (click)="increment()">+</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
