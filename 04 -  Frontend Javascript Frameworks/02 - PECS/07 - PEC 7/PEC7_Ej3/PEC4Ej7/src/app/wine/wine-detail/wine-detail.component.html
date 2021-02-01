@@ -1,0 +1,30 @@
+<div class="wine-container">
+  <div class="container">
+    <div class="header">
+      <h1 class="name">{{ wine.name }}</h1>
+
+      <h3 class="price">
+        Price: {{ wine.price | currency: "EUR":"symbol":"1.2-2" }}
+      </h3>
+      <img [src]="wine.imageUrl | image" alt="wine.name" />
+    </div>
+    <div class="content">
+      <div *ngIf="wine.foodPairing">
+        <h3>Food Pairing</h3>
+        <div *ngFor="let food of wine.foodPairing">
+          <div class="card-food">
+            <p>Name: {{ food.name }}</p>
+            <p>Calories: {{ food.kcal }} kcal</p>
+            <p>Gluten: {{ food.gluten === false ? "No" : "Yes" }}</p>
+            <p>Vegan: {{ food.vegan === false ? "No" : "Yes" }}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!wine.foodPairing">
+        <h3>No food pairing available</h3>
+      </div>
+
+      <h3>Available: {{ wine.isOnSale === false ? "No" : "Yes" }}</h3>
+    </div>
+  </div>
+</div>

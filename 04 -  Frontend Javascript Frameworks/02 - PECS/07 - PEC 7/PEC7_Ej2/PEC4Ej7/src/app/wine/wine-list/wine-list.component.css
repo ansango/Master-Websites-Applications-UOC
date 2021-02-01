@@ -1,0 +1,10 @@
+.search-wine{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.wine-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

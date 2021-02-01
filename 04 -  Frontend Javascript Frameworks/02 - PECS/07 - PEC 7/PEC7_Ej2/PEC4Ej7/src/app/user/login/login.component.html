@@ -1,0 +1,70 @@
+<div class="wrapper-login">
+  <div class="form-group wrapper-form">
+    <h2>Login</h2>
+    <h2>{{ message }}</h2>
+    <form
+      class="login-form"
+      (ngSubmit)="login(loginForm)"
+      [formGroup]="loginForm"
+    >
+      <div class="login-group">
+        <div class="user-name">
+          <mat-form-field appearance="fill" class="field">
+            <mat-label>username</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="username"
+              required
+              name="username"
+              formControlName="username"
+              required
+            />
+            <mat-error
+              *ngIf="
+                (loginForm.get('username')!.dirty ||
+                  loginForm.get('username')!.touched ||
+                  message) &&
+                loginForm.get('username')?.invalid
+              "
+            >
+              <div *ngIf="loginForm.get('username')?.errors?.required">
+                username is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="password">
+          <mat-form-field appearance="fill" class="field">
+            <mat-label>password</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="Password"
+              required
+              name="password"
+              formControlName="password"
+              required
+            />
+            <mat-error
+              *ngIf="
+                (loginForm.get('password')!.dirty ||
+                  loginForm.get('password')!.touched ||
+                  message) &&
+                loginForm.get('password')?.invalid
+              "
+            >
+              <div *ngIf="loginForm.get('password')?.errors?.required">
+                password is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="wrapper-button">
+        <button type="submit" mat-raised-button color="primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

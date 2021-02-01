@@ -1,0 +1,82 @@
+<div class="wrapper-new-wine">
+  <div class="form-group wrapper-form">
+    <h2>Create a New Wine</h2>
+    <form class="wine-form" (ngSubmit)="newWine(wineForm)" #wineForm="ngForm">
+      <div class="wine-group" ngModelGroup="wine">
+        <div class="wine-name">
+          <mat-form-field appearance="fill" class="field">
+            <mat-label>Wine Name</mat-label>
+            <input
+              matInput
+              type="text"
+              ngModel
+              #wineName="ngModel"
+              name="name"
+              required
+            />
+            <mat-error
+              *ngIf="(wineName.dirty || wineName.touched || message) && wineName.invalid"
+              >Wine Name is required</mat-error
+            >
+          </mat-form-field>
+        </div>
+        <div class="wine-price">
+          <mat-form-field appearance="fill" class="field">
+            <mat-label>Wine Price</mat-label>
+            <input
+              matInput
+              type="number"
+              ngModel
+              #winePrice="ngModel"
+              name="price"
+              required
+            />
+            <mat-error
+              *ngIf="
+                (winePrice.dirty || winePrice.touched || message) &&
+                winePrice.invalid
+              "
+            >
+              Wine Price is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="wine-image">
+          <mat-form-field appearance="fill" class="field">
+            <mat-label>Wine Img URL</mat-label>
+            <input
+              matInput
+              type="text"
+              ngModel
+              name="imageUrl"
+              #wineImageUrl="ngModel"
+              pattern="^http(s?)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$"
+              required
+            />
+            <mat-error
+              *ngIf="
+                (wineImageUrl.dirty || wineImageUrl.touched || message) &&
+                wineImageUrl.invalid
+              "
+            >
+              <div *ngIf="wineImageUrl.errors?.required">
+                Wine Image URL is required
+              </div>
+              <div *ngIf="wineImageUrl.errors?.pattern">
+                Wine Image URL does not seem to be a valid URL
+              </div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="wine-sale">
+          <mat-checkbox name="isOnSale" ngModel>On Sale</mat-checkbox>
+        </div>
+      </div>
+      <div class="wrapper-button">
+        <button type="submit" mat-raised-button color="primary">
+          Create Wine
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.wine-subtitle {
+  cursor: pointer;
+}
+
+.wine-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.is-stock-color {
+  color: rgb(76, 202, 76);
+}
+
+.out-stock-color {
+  color: rgb(212, 103, 103);
+}
+
+.is-stock-shadow {
+  box-shadow: 0px 3px 5px -1px rgb(112 193 106 / 66%),
+    0px 5px 8px 0px rgb(55 173 64 / 35%), 0px 1px 14px 0px rgb(80 167 86 / 12%);
+}
+
+.out-stock-shadow {
+  box-shadow: 0px 3px 5px -1px rgb(193 106 107 / 66%),
+    0px 5px 8px 0px rgb(173 55 77 / 35%), 0px 1px 14px 0px rgb(167 80 104 / 12%);
+}

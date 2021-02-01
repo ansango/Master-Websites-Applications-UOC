@@ -1,0 +1,20 @@
+<div class="search-wine">
+  <mat-form-field appearance="fill" class="field">
+    <input
+      matInput
+      type="text"
+      placeholder="Search products"
+      name="searchBox"
+      [(ngModel)]="searchTerm"
+      (keyup)="search()"
+    />
+  </mat-form-field>
+</div>
+
+<div class="wine-container">
+  <app-wine-item
+    *ngFor="let wine of wines$ | async"
+    [wine]="wine"
+    (quantityChange)="onQuantityChange($event)"
+  ></app-wine-item>
+</div>
