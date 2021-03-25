@@ -1,0 +1,198 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** COMPONENTS - 06_components
+ *? Specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ */
+
+/**
+* @imports
+*/
+@import "01_settings";
+@import "02_tools";
+/**
+* @imports
+*/
+
+/* ------------------------------------ *\
+  #BODY COMPONENT
+\* ------------------------------------ */
+
+#cv {
+  display: none;
+}
+
+/* ------------------------------------ *\
+  #LOADER
+\* ------------------------------------ */
+
+#loading {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: theme-color("tools", "black");
+}
+
+#loading .container-img {
+  width: 200px;
+  height: 200px;
+  background-image: url("/src/assets/images/icons/stars.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: heartbeat 4s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.75);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+
+/* ------------------------------------ *\
+  #HEADER
+\* ------------------------------------ */
+
+.header {
+  @include align-end;
+
+  & h1 {
+    @include underline;
+  }
+
+  & span {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+/* ------------------------------------ *\
+  #FOOTER
+\* ------------------------------------ */
+
+.footer {
+  @include align-end;
+  align-items: center;
+
+  & > * {
+    margin: 0 10px;
+  }
+}
+
+/* ------------------------------------ *\
+  #DATES
+\* ------------------------------------ */
+
+.date {
+  font-style: italic;
+  color: contrast("light", "secondary");
+}
+
+/* ------------------------------------ *\
+  #GITHUB
+\* ------------------------------------ */
+
+.github {
+  @include align-center;
+  @include desktop {
+    @include align-start;
+  }
+}
+
+/* ------------------------------------ *\
+  #ICON
+\* ------------------------------------ */
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+/* ------------------------------------ *\
+  #AVATAR
+\* ------------------------------------ */
+
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* ------------------------------------ *\
+  #BUTTONS
+\* ------------------------------------ */
+
+.button {
+  position: relative;
+  width: 230px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background-color: theme-color("tools", "full-black");
+  color: theme-color("primary", "dark");
+  box-shadow: 3px 3px theme-color("primary", "dark");
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+  & span {
+    margin: 0 10px;
+  }
+
+  &:hover {
+    box-shadow: none;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+/* ------------------------------------ *\
+  #CHIP
+\* ------------------------------------ */
+
+.chip {
+  position: relative;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: theme-color("primary", "mid");
+  box-shadow: 3px 3px contrast("light", "hint");
+  text-align: center;
+  font-weight: bold;
+
+  &:hover {
+    box-shadow: none;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+

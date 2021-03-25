@@ -1,0 +1,38 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** TRUMPS - 07_utilities
+ *? Utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+ * Text.................Text helpers.
+ */
+
+/* ------------------------------------ *\
+  #TEXT
+\* ------------------------------------ */
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* ------------------------------------ *\
+  #BORDER TYPE
+\* ------------------------------------ */
+
+.b-dash {
+  border: 2px;
+  border-style: dashed;
+}
+
+.b-inset {
+  border: 2px;
+  border-style: inset;
+  border-color: theme-color("primary", "dark");
+}
+
+ul.list-styled > li {
+  list-style-type: circle;
+}

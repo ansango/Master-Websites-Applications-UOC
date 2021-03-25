@@ -1,0 +1,346 @@
+/* stylelint-disable */
+
+/* FOR HIGHLIGHT COMMENTS INSTALL Better Comment Extension (VSCODE) */
+
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** SETTINGS - 01_settings"
+ *? Used with preprocessors and contain font, colors definitions, etc.
+ * Global...............Globally-available variables and config.
+ *
+ ** TOOLS - 02_tools
+ *? Globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+ * Mixins...............Useful mixins.
+ *
+ ** GENERIC - 03_generic
+ *? Reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ ** ELEMENTS - 04_elements
+ *? Styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+ * Headings.............H1–H6 styles.
+ *
+ ** OBJECTS - 05_objects // OOCSS
+ *? Class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ ** COMPONENTS - 06_components
+ *? Specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ ** TRUMPS - 07_utilities
+ *? Utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+ * Text.................Text helpers.
+ */
+
+/**
+*? @@@ - REMEMBER RULES
+*/
+
+/**
+ *! DECLARATION ORDER:
+ ** Positioning
+ ** Box model
+ ** Typographic
+ ** Visual
+ ** Misc
+ */
+
+/* ------------------------------------ *\
+  #Sample
+\* ------------------------------------ */
+
+.declaration-order {
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  /* Box-model */
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+
+  /* Typography */
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  text-align: center;
+
+  /* Visual */
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+
+  /* Misc */
+  opacity: 1;
+}
+
+/**
+ *! MEDIA QUERIES PLACEMENT
+ ** Place media queries as close to their relevant rule sets whenever possible.
+ */
+
+/* ------------------------------------ *\
+  #Sample
+\* ------------------------------------ */
+
+.element {
+}
+.element-avatar {
+}
+.element-selected {
+}
+
+@media (min-width: 480px) {
+  .element {
+  }
+  .element-avatar {
+  }
+  .element-selected {
+  }
+}
+
+/**
+ ** SINGLE DECLARATIONS
+ */
+
+/* ------------------------------------ *\
+  #Single declarations on one line
+\* ------------------------------------ */
+
+.span1 {
+  width: 60px;
+}
+.span2 {
+  width: 140px;
+}
+.span3 {
+  width: 220px;
+}
+
+/* ------------------------------------ *\
+  #Multiple declarations, one per line
+\* ------------------------------------ */
+
+.sprite {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url("../img/sprite.png");
+}
+.icon {
+  background-position: 0 0;
+}
+.icon-home {
+  background-position: 0 -20px;
+}
+.icon-account {
+  background-position: 0 -40px;
+}
+
+/**
+ *! SHORTHAND NOTATION
+ ** Limit shorthand declaration usage to instances where you must explicitly set all available values.
+ */
+
+/* ------------------------------------ *\
+  #Bad example
+\* ------------------------------------ */
+
+.element {
+  margin: 0 0 10px;
+  background: red;
+  background: url("image.jpg");
+  border-radius: 3px 3px 0 0;
+}
+
+/* ------------------------------------ *\
+  #Good example
+\* ------------------------------------ */
+
+.element {
+  margin-bottom: 10px;
+  background-color: red;
+  background-image: url("image.jpg");
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/**
+ *! NESTING IN LESS AND SASS
+ ** Just because you can nest, doesn't mean you always should.
+ */
+
+/* ------------------------------------ *\
+  #Without nesting
+\* ------------------------------------ */
+
+.table > thead > tr > th {
+}
+.table > thead > tr > td {
+}
+
+/* ------------------------------------ *\
+  #With nesting
+\* ------------------------------------ */
+
+.table > thead > tr {
+  > th {
+  }
+  > td {
+  }
+}
+
+/**
+ *! OPERATORS IN LESS AND SASS
+ ** Wrap all math operations in parentheses with a single space between values, variables, and operators.
+ */
+
+/* ------------------------------------ *\
+  #Bad example
+\* ------------------------------------ */
+
+.element {
+  margin: 10px 0 $variable * 2 10px;
+}
+
+/* ------------------------------------ *\
+  #Good example
+\* ------------------------------------ */
+
+.element {
+  margin: 10px 0 ($variable * 2) 10px;
+}
+
+/**
+ *! COMMENTS
+ ** Ensure your code is descriptive, well commented, and approachable by others.
+ */
+
+/* ------------------------------------ *\
+  #Bad example
+\* ------------------------------------ */
+
+/* Modal header */
+
+.modal-header {
+}
+
+/* ------------------------------------ *\
+  #Good example
+\* ------------------------------------ */
+
+/* Wrapping element for .modal-title and .modal-close */
+.modal-header {
+}
+
+/**
+ *! CLASS NAMES
+ ** Classes in lowercase and use dashes.
+ ** Avoid excessive and arbitrary shorthand notation.
+ ** Keep classes as short and succinct as possible.
+ ** Use structural or purposeful names over presentational.
+ ** Prefix classes based on the closest parent or base class.
+ */
+
+/* ------------------------------------ *\
+  #Bad example
+\* ------------------------------------ */
+
+.t {
+}
+.red {
+}
+.header {
+}
+
+/* ------------------------------------ *\
+  #Good example
+\* ------------------------------------ */
+
+.tweet {
+}
+.important {
+}
+.tweet-header {
+}
+
+/**
+ *! SELECTORS
+ ** Use classes over generic element tag for optimum rendering performance.
+ ** Avoid using several attribute selectors (e.g., [class^="..."]).
+ ** Keep selectors short and strive to limit the number of elements in each selector to three.
+ ** Scope classes to the closest parent only when necessary.
+ */
+
+/* ------------------------------------ *\
+  #Bad example
+\* ------------------------------------ */
+
+span {
+}
+.page-container #stream .stream-item .tweet .tweet-header .username {
+}
+.avatar {
+}
+
+/* ------------------------------------ *\
+  #Good example
+\* ------------------------------------ */
+
+.avatar {
+}
+.tweet-header .username {
+}
+.tweet .avatar {
+}
+
+/**
+ *! ORGANIZATION
+ ** Organize sections of code by component.
+ ** Develop a consistent commenting hierarchy.
+ ** Use consistent white space to your advantage when separating sections of code for scanning larger documents.
+ ** When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.
+ */
+
+/* ------------------------------------ *\
+  #Sample
+\* ------------------------------------ */
+
+/**
+ * Component section heading
+ */
+
+.element {
+}
+
+/**
+ * Component section heading
+ * Sometimes you need to include optional context for the entire component. Do that up here if it's important enough.
+ */
+
+.element {
+}
+
+/* Contextual sub-component or modifer */
+
+.element-heading {
+}
+
+/**
+ *! EDITOR PREFERENCES
+ ** Use soft-tabs set to two spaces.
+ ** Trim trailing white space on save.
+ ** Set encoding to UTF-8.
+ ** Add new line at end of files.
+ ** Install Prettier and Stylelint :)
+ */

@@ -1,0 +1,57 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** ELEMENTS - 04_elements
+ *? Styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+ * Headings.............H1–H6 styles.
+ */
+
+/**
+* @imports
+*/
+@import "02_tools";
+/**
+* @imports
+*/
+
+h1,
+h2 {
+  @include text-setting("xl");
+  text-shadow: 3px 3px 0 theme-color("primary", "dark");
+  font-weight: bold;
+}
+
+h3 {
+  @include text-setting("lg");
+  font-weight: bold;
+}
+
+h4,
+h5,
+h6 {
+  @include text-setting("md");
+}
+
+p,
+a,
+span,
+ul,
+ol,
+li {
+  @include text-setting("base");
+}
+
+header,
+footer,
+main {
+  padding: 20px 0;
+}
+
+a {
+  @include hover-link;
+  @include underline;
+}
+
+p {
+  margin: 10px 0;
+}

@@ -1,0 +1,120 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** OBJECTS - 05_objects
+ *? Class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+ * Wrappers.............Wrapping and constraining elements.
+ */
+
+/**
+* @imports
+*/
+@import "01_settings";
+@import "02_tools";
+/**
+* @imports
+*/
+
+/* ------------------------------------ *\
+  #BASE
+\* ------------------------------------ */
+
+.base {
+  font-family: $base-font;
+  @include text-setting("base");
+  background-color: theme-color("primary", "base");
+}
+
+/* ------------------------------------ *\
+  #CONTAINERS
+\* ------------------------------------ */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  @include tablet {
+    max-width: 768px;
+  }
+
+  @include desktop {
+    max-width: 992px;
+  }
+
+  @include large {
+    max-width: 1200px;
+  }
+}
+
+.container-img {
+  @include align-center;
+  @include desktop {
+    @include align-start;
+  }
+  margin-bottom: 30px;
+}
+
+.item {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.sub-item {
+  padding-top: 10px;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+  &.no-column {
+    flex-flow: wrap;
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-flow: wrap;
+    flex-direction: row;
+  }
+}
+
+.column {
+  padding: 20px;
+  width: 100%;
+
+  @include desktop {
+    &.one {
+      width: 33%;
+    }
+
+    &.two {
+      width: 50%;
+    }
+
+    &.two-third {
+      width: 66%;
+    }
+
+    &.full {
+      width: 100%;
+    }
+  }
+}
+
+
+/* ------------------------------------ *\
+  #CONTENT
+\* ------------------------------------ */
+
+.title {
+  text-transform: capitalize;
+}
+
+.content {
+  padding: 15px;
+}
+
+.sub-content {
+  padding: 15px 0;
+}

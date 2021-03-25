@@ -1,0 +1,139 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** TOOLS - 02_tools
+ *? Globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+ * Mixins...............Useful mixins.
+ */
+
+/**
+* @imports
+*/
+@import "01_settings";
+/**
+* @imports
+*/
+
+/* ------------------------------------ *\
+  #TEXT UTILS
+\* ------------------------------------ */
+
+@function text-scale($level) {
+  @return map-get(map-get($text-settings, $level), "font-size");
+}
+
+@function line-height($level) {
+  @return map-get(map-get($text-settings, $level), "line-height");
+}
+
+@mixin text-setting($level) {
+  font-size: text-scale($level);
+  line-height: line-height($level);
+}
+
+@mixin truncateText($overflow: ellipsis) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+/* ------------------------------------ *\
+  #THEME UTILS
+\* ------------------------------------ */
+
+@function theme-color($key: "primary", $variant: "base") {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
+@function contrast($background: "light", $type: "primary") {
+  $map: map-get($contrast-colors, $background);
+  @return map-get($map, $type);
+}
+
+@mixin contrast($background: "light", $type: "primary") {
+  color: contrast($background, $type);
+}
+
+/* ------------------------------------ *\
+  #MEDIA QUERY DEVICES
+\* ------------------------------------ */
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* ------------------------------------ *\
+  #CENTER CONTAINERS FLEX
+\* ------------------------------------ */
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin align-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ------------------------------------ *\
+  #LINKS
+\* ------------------------------------ */
+
+@mixin hover-link {
+  text-decoration: none;
+  color: #000000;
+
+  &:visited {
+    color: #000000;
+  }
+}
+
+/* ------------------------------------ *\
+  #ANIMATION UNDERLINE
+\* ------------------------------------ */
+
+@mixin underline {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: theme-color("tools", "black");
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  &.no-underline {
+    &:before {
+      height: 0;
+    }
+  }
+}

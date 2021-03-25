@@ -1,0 +1,86 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** SETTINGS - 01_settings"
+ *? Used with preprocessors and contain font, colors definitions, etc.
+ * Global...............Globally-available variables and config.
+ */
+
+/* ------------------------------------ *\
+  #HELPERS
+\* ------------------------------------ */
+
+@use "sass:color";
+
+/* ------------------------------------ *\
+  #FONTS
+\* ------------------------------------ */
+
+$base-font: "Courier New", Courier, monospace;
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+$text-settings: (
+  "xs": (
+    font-size: 0.75rem,
+    // 12px
+    line-height: $base-line-height,
+  ),
+  "sm": (
+    font-size: 0.875rem,
+    // 14px
+    line-height: $base-line-height,
+  ),
+  "base": (
+    font-size: 1rem,
+    // 16px
+    line-height: $base-line-height,
+  ),
+  "md": (
+    font-size: 1.125rem,
+    // 18px
+    line-height: $base-line-height * 2,
+  ),
+  "lg": (
+    font-size: 1.25rem,
+    // 20px
+    line-height: $base-line-height * 2,
+  ),
+  "xl": (
+    font-size: 1.5rem,
+    // 24px
+    line-height: $base-line-height * 2,
+  ),
+);
+
+/* ------------------------------------ *\
+  THEME COLORS
+\* ------------------------------------ */
+
+$theme-colors: (
+  "primary": (
+    "base": #ffd700,
+    "light": #fffb00,
+    "mid": #ffbb00,
+    "dark": #ffae00,
+  ),
+  "tools": (
+    "black": #1d1d1d,
+    "full-black": #050505,
+  ),
+);
+
+$contrast-colors: (
+  "dark": (
+    "primary": rgb(255, 255, 255),
+    "secondary": rgba(255, 255, 255, 0.7),
+    "disabled": rgba(255, 255, 255, 0.5),
+    "hint": rgba(255, 255, 255, 0.12),
+  ),
+  "light": (
+    "primary": rgba(0, 0, 0, 0.87),
+    "secondary": rgba(0, 0, 0, 0.54),
+    "disabled": rgba(0, 0, 0, 0.38),
+    "hint": rgba(0, 0, 0, 0.12),
+  ),
+);
