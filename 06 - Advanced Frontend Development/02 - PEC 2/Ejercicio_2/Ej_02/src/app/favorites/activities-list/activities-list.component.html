@@ -1,0 +1,43 @@
+<div class="row mt-5">
+  <div class="col-md-8">
+    <h3>Favorites List</h3>
+    <div
+      class="alert alert-primary mt-5"
+      *ngIf="(favorites$ | async)!.length === 0"
+    >
+      Please add some activities to favorites
+    </div>
+    <table class="table table-striped" *ngIf="(favorites$ | async)!.length > 0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Language</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of favorites$ | async">
+          <td>{{ activity.name }}</td>
+          <td>{{ activity.category }}</td>
+          <td>{{ activity.price }}</td>
+          <td>{{ activity.language }}</td>
+          <td>{{ activity.date | date: "dd/MM/yyyy" }}</td>
+          <td>
+            <a
+              href="#"
+              class="btn btn-success"
+              [routerLink]="['detail', activity.id]"
+              >Show</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>

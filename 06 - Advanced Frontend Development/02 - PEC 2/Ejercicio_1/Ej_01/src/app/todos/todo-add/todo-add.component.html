@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Insert title for task..."
+      [formControl]="titleInput"
+    />
+    <div class="input-group-append">
+      <button class="btn btn-success" type="button" (click)="addTodoTask()">
+        Add Todo Task
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+  <button class="btn btn-primary" type="button" (click)="completeAllTodos()">
+    Complete All Todos
+  </button>
+</div>
+
+<div class="container mt-5">
+  <button
+    class="btn btn-danger"
+    type="button"
+    (click)="deleteAllCompletedTodos()"
+  >
+    Delete All Completed
+  </button>
+</div>

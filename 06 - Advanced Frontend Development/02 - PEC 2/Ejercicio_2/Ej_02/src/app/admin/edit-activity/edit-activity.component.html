@@ -1,0 +1,159 @@
+<div class="row my-4">
+  <div class="col-md-12">
+    <h3>Update Activity</h3>
+    <hr />
+    <form [formGroup]="activityForm" (ngSubmit)="onUpdate()">
+      <div class="mb-3">
+        <label>Title</label>
+        <input type="text" class="form-control" formControlName="name" />
+        <div
+          *ngIf="
+            activityForm.get('name')?.errors &&
+            (activityForm.get('name')!.dirty ||
+              activityForm.get('name')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('name')?.errors?.required">
+            name is required
+          </div>
+          <div *ngIf="activityForm.get('name')?.errors?.minlength">
+            name is too short
+          </div>
+          <div *ngIf="activityForm.get('name')?.errors?.maxlength">
+            name is too long
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label>Category</label>
+        <select
+          class="form-control"
+          formControlName="category"
+          (change)="activityForm.patchValue({ subcategory: null })"
+        >
+          <option disabled value="null">Select a category</option>
+          <option *ngFor="let category of categories" [value]="category">
+            {{ category }}
+          </option>
+        </select>
+        <span
+          *ngIf="
+            activityForm.get('category')?.errors &&
+            (activityForm.get('category')!.dirty ||
+              activityForm.get('category')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('category')?.errors?.required">
+            category is required
+          </div>
+        </span>
+      </div>
+
+      <div class="my-3">
+        <label *ngIf="activityForm.get('category')?.value !== ''"
+          >Subcategory</label
+        >
+        <select
+          class="form-control"
+          formControlName="subcategory"
+          *ngIf="
+            activityForm.get('category')?.value === ActivityCategory.CULTURE
+          "
+        >
+          <option disabled value="null">Select a subcategory</option>
+          <option *ngFor="let subcategory of subCulture" [value]="subcategory">
+            {{ subcategory }}
+          </option>
+        </select>
+        <select
+          class="form-control"
+          formControlName="subcategory"
+          *ngIf="activityForm.get('category')?.value === ActivityCategory.WINE"
+        >
+          <option disabled value="null">Select a subcategory</option>
+          <option *ngFor="let subcategory of subWine" [value]="subcategory">
+            {{ subcategory }}
+          </option>
+        </select>
+        <select
+          class="form-control"
+          formControlName="subcategory"
+          *ngIf="activityForm.get('category')?.value === ActivityCategory.BEACH"
+        >
+          <option disabled value="null">Select a subcategory</option>
+          <option *ngFor="let subcategory of subBeach" [value]="subcategory">
+            {{ subcategory }}
+          </option>
+        </select>
+        <div
+          *ngIf="
+            activityForm.get('subcategory')?.errors &&
+            (activityForm.get('subcategory')!.dirty ||
+              activityForm.get('subcategory')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('subcategory')?.errors?.required">
+            subcategory is required
+          </div>
+        </div>
+      </div>
+      <div class="my-3">
+        <label>Description</label>
+        <input type="text" class="form-control" formControlName="description" />
+      </div>
+      <div class="my-3">
+        <label>Language</label>
+        <select class="form-control" formControlName="language">
+          <option disabled value="null">Select a language</option>
+          <option *ngFor="let language of languages">{{ language }}</option>
+        </select>
+        <span
+          *ngIf="
+            activityForm.get('language')?.errors &&
+            (activityForm.get('language')!.dirty ||
+              activityForm.get('language')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('language')?.errors?.required">
+            language is required
+          </div>
+        </span>
+      </div>
+      <div class="my-3">
+        <label>Date</label>
+        <input type="date" class="form-control" formControlName="date" />
+      </div>
+
+      <div class="my-3">
+        <label>price</label>
+        <input type="number" class="form-control" formControlName="price" />
+        <div
+          *ngIf="
+            activityForm.get('price')?.errors &&
+            (activityForm.get('price')!.dirty ||
+              activityForm.get('price')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('price')?.errors?.required">
+            price is required
+          </div>
+          <div *ngIf="activityForm.get('price')?.errors?.min">
+            price must be greater than or equal to 0
+          </div>
+        </div>
+      </div>
+      <div class="my-3">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!activityForm.valid"
+        >
+          Update
+        </button>
+        <button class="btn btn-danger mx-1" [routerLink]="['/admin']">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

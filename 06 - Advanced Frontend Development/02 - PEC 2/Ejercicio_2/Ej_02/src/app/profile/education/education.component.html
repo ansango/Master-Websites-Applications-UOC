@@ -1,0 +1,50 @@
+<div class="col-md-12">
+  <h3>Education</h3>
+  <hr />
+  <div class="my-3">
+    <button class="btn btn-primary" [routerLink]="['edu/add']">
+      Add Education
+    </button>
+  </div>
+  <div
+    class="alert alert-warning mt-5"
+    *ngIf="(education$ | async)!.length === 0"
+  >
+    Loading education...
+  </div>
+  <table class="table table-striped" *ngIf="(education$ | async)!.length > 0">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Level</th>
+        <th>Name</th>
+        <th>University</th>
+        <th>Finish Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let certificate of education$ | async">
+        <td>{{ certificate.type }}</td>
+        <td>{{ certificate.level }}</td>
+        <td>{{ certificate.name }}</td>
+        <td>{{ certificate.school }}</td>
+        <td>{{ certificate.finishDate | date: "dd/MM/yyyy" }}</td>
+        <td>
+          <button
+            class="btn btn-success mx-1"
+            [routerLink]="['edu/edit', certificate.id]"
+          >
+            Update
+          </button>
+          <button
+            class="btn btn-danger mx-1"
+            (click)="onDelete(certificate.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,10 @@
+.navbar a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  background-image: url("../../../../assets/1FAA2.svg");
+  background-repeat: no-repeat;
+}
+
+.navbar .logo span {
+  padding-left: 50px;
+}

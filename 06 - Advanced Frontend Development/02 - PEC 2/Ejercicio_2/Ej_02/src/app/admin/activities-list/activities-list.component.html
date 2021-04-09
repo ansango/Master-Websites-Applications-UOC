@@ -1,0 +1,54 @@
+<div class="row mt-5">
+  <div class="col-md-8">
+    <h3>Admin Activities</h3>
+
+    <button class="btn btn-primary my-3" [routerLink]="['add']">
+      Add Activity
+    </button>
+
+    <div
+      class="alert alert-warning mt-5"
+      *ngIf="(activities$ | async)!.length === 0"
+    >
+      Loading activities...
+    </div>
+    <table
+      class="table table-striped"
+      *ngIf="(activities$ | async)!.length > 0"
+    >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Language</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of activities$ | async">
+          <td>{{ activity.name }}</td>
+          <td>{{ activity.category }}</td>
+          <td>{{ activity.price }}</td>
+          <td>{{ activity.language }}</td>
+          <td>{{ activity.date | date: "dd/MM/yyyy" }}</td>
+          <td>
+            <button
+              class="btn btn-success mx-1"
+              [routerLink]="['edit', activity.id]"
+            >
+              Update
+            </button>
+            <button class="btn btn-danger mx-1" (click)="onDelete(activity.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>

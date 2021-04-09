@@ -1,0 +1,139 @@
+<div class="container">
+  <div class="row my-5">
+    <div class="col-md-6 offset-md-3">
+      <h3>Register</h3>
+      <hr />
+      <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <div class="mb-3">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="firstName" />
+          <div
+            *ngIf="
+              registerForm.get('firstName')?.errors &&
+              (registerForm.get('firstName')!.dirty ||
+                registerForm.get('firstName')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('firstName')?.errors?.required">
+              First name is required
+            </div>
+            <div *ngIf="registerForm.get('firstName')?.errors?.minlength">
+              first name is too short
+            </div>
+            <div *ngIf="registerForm.get('firstName')?.errors?.maxlength">
+              first name is too long
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label>Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName" />
+          <div
+            *ngIf="
+              registerForm.get('lastName')?.errors &&
+              (registerForm.get('lastName')!.dirty ||
+                registerForm.get('lastName')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('lastName')?.errors?.minlength">
+              last name is too short
+            </div>
+            <div *ngIf="registerForm.get('lastName')?.errors?.maxlength">
+              last name is too long
+            </div>
+            <div *ngIf="registerForm.get('lastName')?.errors?.pattern">
+              last name is invalid
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label>Type</label>
+          <select class="form-control" formControlName="type">
+            <option disabled value="null">Select a type</option>
+            <option *ngFor="let option of options">{{ option }}</option>
+          </select>
+          <div
+            *ngIf="
+              registerForm.get('type')?.errors &&
+              (registerForm.get('type')!.dirty ||
+                registerForm.get('type')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('type')?.errors?.required">
+              type is required
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="text" class="form-control" formControlName="email" />
+          <div
+            *ngIf="
+              registerForm.get('email')?.errors &&
+              (registerForm.get('email')!.dirty ||
+                registerForm.get('email')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('email')?.errors?.required">
+              email is required
+            </div>
+            <div *ngIf="registerForm.get('email')?.errors?.email">
+              email invalid
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="password"
+          />
+          <span
+            *ngIf="
+              registerForm.get('password')?.errors &&
+              (registerForm.get('password')!.dirty ||
+                registerForm.get('password')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('password')?.errors?.required">
+              password is required
+            </div>
+            <div *ngIf="registerForm.get('password')?.errors?.minlength">
+              password is too short
+            </div>
+          </span>
+        </div>
+        <div class="mb-3">
+          <label>Repeat password</label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="rePassword"
+          />
+          <div
+            *ngIf="
+              (registerForm.get('rePassword')?.errors ||
+                registerForm?.errors) &&
+              (registerForm.get('rePassword')!.dirty ||
+                registerForm.get('rePassword')!.touched)
+            "
+          >
+            <div *ngIf="registerForm?.errors?.different">
+              passwords does not match
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!registerForm.valid"
+          >
+            Join
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

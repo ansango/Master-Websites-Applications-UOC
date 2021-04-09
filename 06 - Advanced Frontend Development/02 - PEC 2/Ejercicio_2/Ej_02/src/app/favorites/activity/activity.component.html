@@ -1,0 +1,16 @@
+<div><h3>Activity Detail</h3></div>
+<div class="card" style="width: 28rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ activity.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ activity.category }}</h6>
+    <p><span>Subcategory: </span>{{ activity.subcategory }}</p>
+    <p><span>Description: </span>{{ activity.description }}</p>
+    <p><span>Language: </span>{{ activity.language }}</p>
+    <p><span>Price: </span>{{ activity.price }}</p>
+    <p><span>Date: </span>{{ activity.date | date: "dd/MM/yyyy" }}</p>
+    <p><span>People Registered: </span>{{ activity.peopleRegistered }}</p>
+    <button class="btn btn-secondary mx-1" (click)="onDelete()">
+      Remove Favorite
+    </button>
+  </div>
+</div>

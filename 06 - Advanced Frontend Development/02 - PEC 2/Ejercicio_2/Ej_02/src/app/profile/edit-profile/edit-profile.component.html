@@ -1,0 +1,162 @@
+<div>
+  <h3>Update Profile</h3>
+  <hr />
+  <form [formGroup]="profileForm" (ngSubmit)="onUpdate()">
+    <div class="mb-3">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="firstName" />
+      <span
+        *ngIf="
+          profileForm.get('firstName')?.errors &&
+          (profileForm.get('firstName')!.dirty ||
+            profileForm.get('firstName')!.touched)
+        "
+      >
+        <div *ngIf="profileForm.get('firstName')?.errors?.required">
+          First name is required
+        </div>
+        <div *ngIf="profileForm.get('firstName')?.errors?.minlength">
+          First name is too short
+        </div>
+        <div *ngIf="profileForm.get('firstName')?.errors?.maxlength">
+          First name is too long
+        </div>
+      </span>
+    </div>
+    <div class="mb-3">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName" />
+      <span
+        *ngIf="
+          profileForm.get('lastName')?.errors &&
+          (profileForm.get('lastName')!.dirty ||
+            profileForm.get('lastName')!.touched)
+        "
+      >
+        <div *ngIf="profileForm.get('lastName')?.errors?.required">
+          First name is required
+        </div>
+        <div *ngIf="profileForm.get('lastName')?.errors?.minlength">
+          First name is too short
+        </div>
+        <div *ngIf="profileForm.get('lastName')?.errors?.maxlength">
+          First name is too long
+        </div>
+      </span>
+    </div>
+    <div class="mb-3">
+      <label>Birthday</label>
+      <input type="date" class="form-control" formControlName="birthday" />
+    </div>
+    <div class="mb-3">
+      <label>phone</label>
+      <input type="number" class="form-control" formControlName="phone" />
+    </div>
+    <div class="mb-3">
+      <label>Nationality</label>
+      <select
+        class="form-control"
+        formControlName="nationality"
+        (change)="selectNat($event)"
+      >
+        <option disabled value="null">Select a nationality</option>
+        <option *ngFor="let nationality of nationalities">
+          {{ nationality }}
+        </option>
+      </select>
+      <span
+        *ngIf="
+          profileForm.get('nationality')?.errors &&
+          (profileForm.get('nationality')!.dirty ||
+            profileForm.get('nationality')!.touched)
+        "
+      >
+        <div *ngIf="profileForm.get('nationality')?.errors?.required">
+          nationality is required
+        </div>
+      </span>
+    </div>
+    <div class="mb-3">
+      <label>NIF</label>
+      <input type="text" class="form-control" formControlName="nif" />
+      <span
+        *ngIf="
+          profileForm.get('nif')?.errors &&
+          (profileForm.get('nif')!.dirty || profileForm.get('nif')!.touched)
+        "
+      >
+        <div *ngIf="profileForm.get('nif')?.errors?.required">
+          nif is required
+        </div>
+      </span>
+      <div *ngIf="profileForm.errors?.errorNIF">nif isn't ok</div>
+    </div>
+    <div class="mb-3">
+      <label>About</label>
+      <textarea
+        cols="38"
+        rows="5"
+        class="form-control"
+        formControlName="about"
+      ></textarea>
+    </div>
+    <div *ngIf="(profileType$ | async) === 'company'">
+      <div class="mb-3">
+        <label>Company Name</label>
+        <input type="text" class="form-control" formControlName="companyName" />
+        <span
+          *ngIf="
+            profileForm.get('companyName')?.errors &&
+            (profileForm.get('companyName')!.dirty ||
+              profileForm.get('companyName')!.touched)
+          "
+        >
+          <div *ngIf="profileForm.get('companyName')?.errors?.required">
+            company name is required
+          </div>
+          <div *ngIf="profileForm.get('companyName')?.errors?.minlength">
+            company name is too short
+          </div>
+          <div *ngIf="profileForm.get('companyName')?.errors?.maxlength">
+            company name is too long
+          </div>
+        </span>
+      </div>
+      <div class="mb-3">
+        <label>Company Description</label>
+        <textarea
+          cols="38"
+          rows="5"
+          class="form-control"
+          formControlName="companyDescription"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label>CIF</label>
+        <input type="text" class="form-control" formControlName="cif" />
+        <span
+          *ngIf="
+            profileForm.get('cif')?.errors &&
+            (profileForm.get('cif')!.dirty || profileForm.get('nif')!.touched)
+          "
+        >
+          <div *ngIf="profileForm.get('cif')?.errors?.required">
+            cif is required
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="mb-3">
+      <button
+        class="btn btn-warning mx-1"
+        type="submit"
+        [disabled]="!profileForm.valid"
+      >
+        Confirm
+      </button>
+      <button class="btn btn-danger mx-1" [routerLink]="['/profile']">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

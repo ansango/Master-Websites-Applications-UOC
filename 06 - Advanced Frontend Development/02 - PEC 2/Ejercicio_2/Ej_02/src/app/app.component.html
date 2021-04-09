@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div
+        class="alert alert-danger mt-5"
+        *ngIf="errorMessage | async as error"
+      >
+        {{ error }}
+      </div>
+      <div
+        class="alert alert-success mt-5"
+        *ngIf="successMessage | async as success"
+      >
+        {{ success }}
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

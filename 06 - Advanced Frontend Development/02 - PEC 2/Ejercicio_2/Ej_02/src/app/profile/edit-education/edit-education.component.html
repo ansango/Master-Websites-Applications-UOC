@@ -1,0 +1,132 @@
+<div class="cointainer">
+  <div class="row my-5">
+    <div class="col-md-6 offset-md-3">
+      <h3>Education Update</h3>
+      <hr />
+      <form [formGroup]="educationForm" (ngSubmit)="onUpdate()">
+        <div class="mb-3">
+          <label>Type</label>
+          <select
+            class="form-control"
+            formControlName="type"
+            (change)="educationForm.patchValue({ level: null })"
+          >
+            <option value="null" disabled>Select a type education</option>
+            <option *ngFor="let type of types">{{ type }}</option>
+          </select>
+          <div
+            *ngIf="
+              educationForm.get('type')?.errors &&
+              (educationForm.get('type')!.dirty ||
+                educationForm.get('type')!.touched)
+            "
+          >
+            <div *ngIf="educationForm.get('type')?.errors?.required">
+              type is required
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label *ngIf="educationForm.get('type')?.value !== ''">Level</label>
+          <select
+            class="form-control"
+            formControlName="level"
+            *ngIf="educationForm.get('type')?.value === EducationType.TRAINING"
+          >
+            <option value="null" disabled>Select a type education</option>
+            <option *ngFor="let level of training" [value]="level">
+              {{ level }}
+            </option>
+          </select>
+          <select
+            class="form-control"
+            formControlName="level"
+            *ngIf="
+              educationForm.get('type')?.value === EducationType.UNIVERSITY
+            "
+          >
+            <option value="null" disabled>Select a type education</option>
+            <option *ngFor="let level of university" [value]="level">
+              {{ level }}
+            </option>
+          </select>
+          <div
+            *ngIf="
+              educationForm.get('level')?.errors &&
+              (educationForm.get('level')!.dirty ||
+                educationForm.get('level')!.touched)
+            "
+          >
+            <div *ngIf="educationForm.get('level')?.errors?.required">
+              level is required
+            </div>
+          </div>
+        </div>
+        <div *ngIf="educationForm.get('type')?.value !== ''">
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="name" />
+            <div
+              *ngIf="
+                educationForm.get('name')?.errors &&
+                (educationForm.get('name')!.dirty ||
+                  educationForm.get('name')!.touched)
+              "
+            >
+              <div *ngIf="educationForm.get('name')?.errors?.required">
+                name is required
+              </div>
+              <div *ngIf="educationForm.get('name')?.errors?.minlength">
+                name is too short
+              </div>
+              <div *ngIf="educationForm.get('name')?.errors?.maxlength">
+                name is too long
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label>School</label>
+            <input type="text" class="form-control" formControlName="school" />
+            <div
+              *ngIf="
+                educationForm.get('school')?.errors &&
+                (educationForm.get('school')!.dirty ||
+                  educationForm.get('school')!.touched)
+              "
+            >
+              <div *ngIf="educationForm.get('school')?.errors?.required">
+                school is required
+              </div>
+              <div *ngIf="educationForm.get('school')?.errors?.minlength">
+                school is too short
+              </div>
+              <div *ngIf="educationForm.get('school')?.errors?.maxlength">
+                school is too long
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label>Finish date</label>
+            <input
+              type="date"
+              class="form-control"
+              formControlName="finishDate"
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <button
+            class="btn btn-primary"
+            [disabled]="!educationForm.valid"
+            type="submit"
+          >
+            Update
+          </button>
+          <button class="btn btn-danger mx-1" [routerLink]="['/profile']">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

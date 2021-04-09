@@ -1,0 +1,116 @@
+<div class="cointainer">
+  <div class="row my-5">
+    <div class="col-md-6">
+      <h3>Profile</h3>
+      <hr />
+      <div *ngIf="profile$ | async as profile">
+        <div class="mb-3">
+          <label>First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="profile.firstName"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label>Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="profile.lastName"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label>Birthday</label>
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="profile.birthday | date: 'dd/MM/yyyy'"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label>Phone</label>
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="profile.phone"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label>Nationality</label>
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="profile.nationality"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label>NIF</label>
+          <input
+            type="text"
+            class="form-control"
+            [placeholder]="profile.nif"
+            readonly
+          />
+        </div>
+        <div class="mb-3">
+          <label>About</label>
+          <textarea
+            cols="38"
+            rows="5"
+            class="form-control"
+            [placeholder]="profile.about"
+            readonly
+          ></textarea>
+        </div>
+        <div *ngIf="(profileType$ | async) === 'company'">
+          <div class="mb-3">
+            <label>Company Name</label>
+            <input
+              type="text"
+              class="form-control"
+              [placeholder]="profile.companyName"
+              readonly
+            />
+          </div>
+          <div class="mb-3">
+            <label>Company Description</label>
+            <textarea
+              cols="38"
+              rows="5"
+              class="form-control"
+              [placeholder]="profile.companyDescription"
+              readonly
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label>CIF</label>
+            <input
+              type="text"
+              class="form-control"
+              [placeholder]="profile.cif"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <button class="btn btn-primary" [routerLink]="['edit', profile.id]">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="my-5">
+      <app-education></app-education>
+    </div>
+  </div>
+</div>
