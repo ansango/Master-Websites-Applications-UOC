@@ -1,0 +1,178 @@
+<div class="wrapper-activity">
+  <div class="form-group wrapper-form">
+    <h2>Activity</h2>
+    <form
+      class="activity-form"
+      (ngSubmit)="onSubmit(newActivityForm)"
+      [formGroup]="newActivityForm"
+    >
+      <div class="activity-group">
+        <div class="name">
+          <label>name</label>
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            formControlName="name"
+          />
+          <span
+            *ngIf="
+              newActivityForm.get('name')?.errors &&
+              (newActivityForm.get('name')!.dirty ||
+                newActivityForm.get('name')!.touched)
+            "
+          >
+            <div *ngIf="newActivityForm.get('name')?.errors?.required">
+              name is required
+            </div>
+            <div *ngIf="newActivityForm.get('name')?.errors?.minlength">
+              name is too short
+            </div>
+            <div *ngIf="newActivityForm.get('name')?.errors?.maxlength">
+              name is too long
+            </div>
+          </span>
+        </div>
+        <div class="category">
+          <label>category</label>
+          <select
+            aria-placeholder="Category"
+            name="category"
+            formControlName="category"
+            (change)="selectedCategory($event)"
+          >
+            <option disabled value="null">Select a category</option>
+            <option *ngFor="let category of categories">{{ category }}</option>
+          </select>
+          <span
+            *ngIf="
+              newActivityForm.get('category')?.errors &&
+              (newActivityForm.get('category')!.dirty ||
+                newActivityForm.get('category')!.touched)
+            "
+          >
+            <div *ngIf="newActivityForm.get('category')?.errors?.required">
+              category is required
+            </div>
+          </span>
+        </div>
+
+        <div class="subcategory">
+          <label *ngIf="selectedCat !== ''">subcategory</label>
+          <select
+            aria-placeholder="Subcategory"
+            name="subcategory"
+            formControlName="subcategory"
+            *ngIf="selectedCat === 'culture'"
+          >
+            <option disabled value="null">Select a subcategory</option>
+            <option *ngFor="let subcategory of subCulture">
+              {{ subcategory }}
+            </option>
+          </select>
+          <select
+            aria-placeholder="Subcategory"
+            name="subcategory"
+            formControlName="subcategory"
+            *ngIf="selectedCat === 'wine'"
+          >
+            <option disabled value="null">Select a subcategory</option>
+            <option *ngFor="let subcategory of subWine">
+              {{ subcategory }}
+            </option>
+          </select>
+          <select
+            aria-placeholder="Subcategory"
+            name="subcategory"
+            formControlName="subcategory"
+            *ngIf="selectedCat === 'beach'"
+          >
+            <option disabled value="null">Select a subcategory</option>
+            <option *ngFor="let subcategory of subBeach">
+              {{ subcategory }}
+            </option>
+          </select>
+          <span
+            *ngIf="
+              newActivityForm.get('subcategory')?.errors &&
+              (newActivityForm.get('subcategory')!.dirty ||
+                newActivityForm.get('subcategory')!.touched)
+            "
+          >
+            <div *ngIf="newActivityForm.get('subcategory')?.errors?.required">
+              subcategory is required
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="description">
+        <label>description</label>
+        <input
+          type="text"
+          placeholder="Description"
+          name="description"
+          formControlName="description"
+        />
+      </div>
+
+      <div class="language">
+        <label>language</label>
+        <select
+          aria-placeholder="Language"
+          name="language"
+          formControlName="language"
+        >
+          <option disabled value="null">Select a language</option>
+          <option *ngFor="let language of languages">{{ language }}</option>
+        </select>
+        <span
+          *ngIf="
+            newActivityForm.get('language')?.errors &&
+            (newActivityForm.get('language')!.dirty ||
+              newActivityForm.get('language')!.touched)
+          "
+        >
+          <div *ngIf="newActivityForm.get('language')?.errors?.required">
+            language is required
+          </div>
+        </span>
+      </div>
+
+      <div class="date">
+        <label>date</label>
+        <input type="date" placeholder="" name="date" formControlName="date" />
+      </div>
+
+      <div class="price">
+        <label>price</label>
+        <input
+          type="number"
+          placeholder="Price"
+          name="price"
+          formControlName="price"
+        />
+        <span
+          *ngIf="
+            newActivityForm.get('price')?.errors &&
+            (newActivityForm.get('price')!.dirty ||
+              newActivityForm.get('price')!.touched)
+          "
+        >
+          <div *ngIf="newActivityForm.get('price')?.errors?.required">
+            price is required
+          </div>
+          <div *ngIf="newActivityForm.get('price')?.errors?.min">
+            price must be greater than or equal to 0
+          </div>
+        </span>
+      </div>
+
+      <div class="wrapper-button">
+        <button type="submit" [disabled]="!newActivityForm.valid">
+          Create
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

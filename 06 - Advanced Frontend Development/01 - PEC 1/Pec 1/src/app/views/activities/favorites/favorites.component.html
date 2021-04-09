@@ -1,0 +1,80 @@
+<div *ngIf="favorites!.length > 0">
+  <div class="wrapper-blocks">
+    <div class="wrapper-table">
+      <div class="main-container">
+        <div class="table-container">
+          <div class="table-row heading">
+            <div class="row-item">Name</div>
+            <div class="row-item">Category</div>
+            <div class="row-item">Price</div>
+            <div class="row-item">Language</div>
+            <div class="row-item">Date</div>
+            <div class="row-item">Actions</div>
+          </div>
+
+          <div
+            class="table-row"
+            *ngFor="let activity of favorites"
+            [class.selected]="activity === selectedActivity"
+          >
+            <div class="row-item">{{ activity.name }}</div>
+            <div class="row-item">{{ activity.category }}</div>
+            <div class="row-item">{{ activity.price }}</div>
+            <div class="row-item">{{ activity.language }}</div>
+            <div class="row-item">
+              {{ activity.date | date: "dd/MM/yyyy" }}
+            </div>
+            <div class="row-item buttons">
+              <button (click)="onSelect(activity)">Show</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="selectedActivity">
+      <div class="wrapper-container">
+        <h2>Activities Details</h2>
+        <div class="wrapper-details">
+          <div class="container">
+            <span>name: </span>
+            <p>{{ selectedActivity.name }}</p>
+          </div>
+          <div class="container">
+            <span>description: </span>
+            <p>{{ selectedActivity.description }}</p>
+          </div>
+          <div class="container">
+            <span>language: </span>
+            <p>{{ selectedActivity.language }}</p>
+          </div>
+          <div class="container">
+            <span>date: </span>
+            <p>{{ selectedActivity.date | date: "dd/MM/yyyy" }}</p>
+          </div>
+          <div class="container">
+            <span>people registered: </span>
+            <p>{{ selectedActivity.peopleRegistered }}</p>
+          </div>
+          <div class="container">
+            <span> category: </span>
+            <p>{{ selectedActivity.category }}</p>
+          </div>
+          <div class="container">
+            <span>subcategory: </span>
+            <p>{{ selectedActivity.subcategory }}</p>
+          </div>
+          <div class="container">
+            <span>price: </span>
+            <p>{{ selectedActivity.price }}</p>
+          </div>
+        </div>
+        <div class="wrapper-buttons">
+          <button (click)="removeFavorite(selectedActivity)">delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="favorites!.length === 0">
+  <h2>favorites not found</h2>
+</div>

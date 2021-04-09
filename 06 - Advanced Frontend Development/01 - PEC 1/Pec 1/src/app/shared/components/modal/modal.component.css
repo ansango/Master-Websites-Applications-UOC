@@ -1,0 +1,37 @@
+app-modal {
+  display: none;
+}
+app-modal .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+app-modal .modal .modal-body {
+  max-width: 320px;
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  
+}
+app-modal .modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 900;
+}
+body.modal-open {
+  overflow: hidden;
+}

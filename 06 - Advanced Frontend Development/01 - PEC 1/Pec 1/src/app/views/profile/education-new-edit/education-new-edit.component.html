@@ -1,0 +1,150 @@
+<div class="wrapper-education">
+  <div class="form-group wrapper-form">
+    <h2 *ngIf="!isEducation">Create Education</h2>
+    <h2 *ngIf="isEducation">Update Education</h2>
+    <form
+      class="education-form"
+      (ngSubmit)="onSubmit(newEducationForm)"
+      [formGroup]="newEducationForm"
+    >
+      <div class="education-group">
+        <div class="type">
+          <label>type</label>
+          <select
+            name="type"
+            aria-placeholder="Type"
+            formControlName="type"
+            (change)="newEducationForm.patchValue({ level: null })"
+          >
+            <option value="null" disabled>Select a type education</option>
+            <option *ngFor="let type of types">{{ type }}</option>
+          </select>
+          <span
+            *ngIf="
+              newEducationForm.get('type')?.errors &&
+              (newEducationForm.get('type')!.dirty ||
+                newEducationForm.get('type')!.touched)
+            "
+          >
+            <div *ngIf="newEducationForm.get('type')?.errors?.required">
+              type is required
+            </div>
+          </span>
+        </div>
+        <div class="level">
+          <label *ngIf="newEducationForm.get('type')?.value !== ''"
+            >level</label
+          >
+          <select
+            aria-placeholder="level"
+            name="level"
+            formControlName="level"
+            *ngIf="
+              newEducationForm.get('type')?.value === EducationType.TRAINING
+            "
+          >
+            <option value="null" disabled>Select a type education</option>
+            <option *ngFor="let level of training" [value]="level">
+              {{ level }}
+            </option>
+          </select>
+          <select
+            aria-placeholder="level"
+            name="level"
+            formControlName="level"
+            *ngIf="
+              newEducationForm.get('type')?.value === EducationType.UNIVERSITY
+            "
+          >
+            <option value="null" disabled>Select a type education</option>
+            <option *ngFor="let level of university" [value]="level">
+              {{ level }}
+            </option>
+          </select>
+          <span
+            *ngIf="
+              newEducationForm.get('level')?.errors &&
+              (newEducationForm.get('level')!.dirty ||
+                newEducationForm.get('level')!.touched)
+            "
+          >
+            <div *ngIf="newEducationForm.get('level')?.errors?.required">
+              level is required
+            </div>
+          </span>
+        </div>
+
+        <div *ngIf="newEducationForm.get('type')?.value !== ''">
+          <div class="name">
+            <label>name</label>
+            <input
+              type="text"
+              placeholder="Name"
+              name="name"
+              formControlName="name"
+            />
+            <span
+              *ngIf="
+                newEducationForm.get('name')?.errors &&
+                (newEducationForm.get('name')!.dirty ||
+                  newEducationForm.get('name')!.touched)
+              "
+            >
+              <div *ngIf="newEducationForm.get('name')?.errors?.required">
+                name is required
+              </div>
+              <div *ngIf="newEducationForm.get('name')?.errors?.minlength">
+                name is too short
+              </div>
+              <div *ngIf="newEducationForm.get('name')?.errors?.maxlength">
+                name is too long
+              </div>
+            </span>
+          </div>
+          <div class="school">
+            <label>school</label>
+            <input
+              type="text"
+              placeholder="School"
+              name="school"
+              formControlName="school"
+            />
+            <span
+              *ngIf="
+                newEducationForm.get('school')?.errors &&
+                (newEducationForm.get('school')!.dirty ||
+                  newEducationForm.get('school')!.touched)
+              "
+            >
+              <div *ngIf="newEducationForm.get('school')?.errors?.required">
+                school is required
+              </div>
+              <div *ngIf="newEducationForm.get('school')?.errors?.minlength">
+                school is too short
+              </div>
+              <div *ngIf="newEducationForm.get('school')?.errors?.maxlength">
+                school is too long
+              </div>
+            </span>
+          </div>
+          <div class="finish-date">
+            <label>finish date</label>
+            <input
+              type="date"
+              placeholder=""
+              name="finisDate"
+              formControlName="finishDate"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper-button">
+        <button type="submit" [disabled]="!newEducationForm.valid">
+          <span *ngIf="!isEducation"> Create </span>
+          <span *ngIf="isEducation"> Update </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

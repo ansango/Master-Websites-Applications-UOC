@@ -1,0 +1,154 @@
+<div class="wrapper-register">
+  <div class="form-group wrapper-form">
+    <h2>Register</h2>
+    <form
+      class="register-form"
+      (ngSubmit)="onSubmit(registerForm)"
+      [formGroup]="registerForm"
+    >
+      <div class="register-group">
+        <div class="first-name">
+          <label>name</label>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="firstName"
+            formControlName="firstName"
+          />
+          <span
+            *ngIf="
+              registerForm.get('firstName')?.errors &&
+              (registerForm.get('firstName')!.dirty ||
+                registerForm.get('firstName')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('firstName')?.errors?.required">
+              First name is required
+            </div>
+            <div *ngIf="registerForm.get('firstName')?.errors?.minlength">
+              First name is too short
+            </div>
+            <div *ngIf="registerForm.get('firstName')?.errors?.maxlength">
+              First name is too long
+            </div>
+          </span>
+        </div>
+        <div class="last-name">
+          <label>Last Name</label>
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="lastName"
+            formControlName="lastName"
+          />
+          <span
+            *ngIf="
+              registerForm.get('lastName')?.errors &&
+              (registerForm.get('lastName')!.dirty ||
+                registerForm.get('lastName')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('lastName')?.errors?.minlength">
+              Last name is too short
+            </div>
+            <div *ngIf="registerForm.get('lastName')?.errors?.maxlength">
+              Last name is too long
+            </div>
+            <div *ngIf="registerForm.get('lastName')?.errors?.pattern">
+              Last name is invalid
+            </div>
+          </span>
+        </div>
+        <div class="type">
+          <label>Type</label>
+          <select aria-placeholder="Type" name="type" formControlName="type">
+            <option disabled value="null">Select a type</option>
+            <option *ngFor="let option of options">{{ option }}</option>
+          </select>
+          <span
+            *ngIf="
+              registerForm.get('type')?.errors &&
+              (registerForm.get('type')!.dirty ||
+                registerForm.get('type')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('type')?.errors?.required">
+              type is required
+            </div>
+          </span>
+        </div>
+        <div class="email">
+          <label>email</label>
+          <input
+            type="text"
+            placeholder="Email"
+            name="email"
+            formControlName="email"
+          />
+          <span
+            *ngIf="
+              registerForm.get('email')?.errors &&
+              (registerForm.get('email')!.dirty ||
+                registerForm.get('email')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('email')?.errors?.required">
+              email is required
+            </div>
+            <div *ngIf="registerForm.get('email')?.errors?.email">
+              email invalid
+            </div>
+          </span>
+        </div>
+        <div class="password">
+          <label>password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            formControlName="password"
+          />
+          <span
+            *ngIf="
+              registerForm.get('password')?.errors &&
+              (registerForm.get('password')!.dirty ||
+                registerForm.get('password')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('password')?.errors?.required">
+              password is required
+            </div>
+            <div *ngIf="registerForm.get('password')?.errors?.minlength">
+              password is too short
+            </div>
+          </span>
+        </div>
+        <div class="repeat-password">
+          <label>repeat password</label>
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="rePassword"
+            formControlName="rePassword"
+          />
+          <span
+            *ngIf="
+              (registerForm.get('rePassword')?.errors ||
+                registerForm?.errors) &&
+              (registerForm.get('rePassword')!.dirty ||
+                registerForm.get('rePassword')!.touched)
+            "
+          >
+            <div *ngIf="registerForm?.errors?.different">
+              passwords does not match
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="wrapper-button">
+        <button type="submit" [disabled]="!registerForm.valid">Join</button>
+      </div>
+    </form>
+  </div>
+</div>

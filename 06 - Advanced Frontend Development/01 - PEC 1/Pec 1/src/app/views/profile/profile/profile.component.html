@@ -1,0 +1,44 @@
+<div class="wrapper-profile">
+  <div class="container-profile">
+    <h2>
+      Your profile <span>{{ profile?.firstName }} {{ profile?.lastName }}</span>
+    </h2>
+    <div class="data-group">
+      <div class="container">
+        <span>first name: </span>
+        <p>{{ profile?.firstName }}</p>
+      </div>
+      <div class="container">
+        <span>last name: </span>
+        <p>{{ profile?.lastName }}</p>
+      </div>
+      <div class="container">
+        <span>birthday: </span>
+        <p>{{ profile?.birthday | date: "dd/MM/yyyy" }}</p>
+      </div>
+      <div class="container">
+        <span>phone: </span>
+        <p>{{ profile?.phone }}</p>
+      </div>
+      <div class="container">
+        <span>nationality: </span>
+        <p>{{ profile?.nationality }}</p>
+      </div>
+      <div class="container">
+        <span>nif: </span>
+        <p>{{ profile?.nif }}</p>
+      </div>
+      <div class="container">
+        <span>about: </span>
+        <p>{{ profile?.about }}</p>
+      </div>
+    </div>
+    <div class="wrapper-button">
+      <button routerLink="/profile/edit/{{ profile?.type }}">
+        Update Profile
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-education class="education" [profile]="profile"></app-education>

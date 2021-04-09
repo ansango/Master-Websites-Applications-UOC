@@ -1,0 +1,47 @@
+<div class="wrapper-table">
+  <div class="main-container">
+    <div class="table-container">
+      <div class="table-row heading">
+        <div class="row-item">Type</div>
+        <div class="row-item">Level</div>
+        <div class="row-item">Name</div>
+        <div class="row-item">University</div>
+        <div class="row-item">Finish Date</div>
+        <div class="row-item">Actions</div>
+      </div>
+      <div class="table-row" *ngFor="let certificate of education">
+        <div class="row-item">{{ certificate.type }}</div>
+        <div class="row-item">{{ certificate.level }}</div>
+        <div class="row-item">{{ certificate.name }}</div>
+        <div class="row-item">{{ certificate.school }}</div>
+        <div class="row-item">
+          {{ certificate.finishDate | date: "dd/MM/yyyy" }}
+        </div>
+        <div class="row-item buttons">
+          <button routerLink="/profile/edit-edu/{{ certificate.id }}">
+            edit
+          </button>
+          <button (click)="onDelete(certificate, 'delete-modal')">
+            delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-button">
+    <button routerLink="/profile/new-edu">Add Education</button>
+  </div>
+</div>
+
+<app-modal id="delete-modal">
+  <div class="modal-container">
+    <p>You're deleting {{ selectedCertification?.name }}</p>
+    <p>are you sure?</p>
+  </div>
+  <div class="wrapper-buttons">
+    <button (click)="confirmModal(selectedCertification, 'delete-modal')">
+      Ok
+    </button>
+    <button (click)="closeModal('delete-modal')">Cancel</button>
+  </div>
+</app-modal>

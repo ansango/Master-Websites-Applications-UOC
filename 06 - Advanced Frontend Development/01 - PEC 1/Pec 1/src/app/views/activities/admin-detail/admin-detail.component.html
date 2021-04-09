@@ -1,0 +1,193 @@
+<div class="wrapper-activity">
+  <div class="form-group wrapper-form">
+    <h2>Update Activity</h2>
+    <form
+      class="activity-form"
+      (ngSubmit)="onSubmit(editActivityForm)"
+      [formGroup]="editActivityForm"
+    >
+      <div class="activity-group">
+        <div class="name">
+          <label>name</label>
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            formControlName="name"
+          />
+          <span
+            *ngIf="
+              editActivityForm.get('name')?.errors &&
+              (editActivityForm.get('name')!.dirty ||
+                editActivityForm.get('name')!.touched)
+            "
+          >
+            <div *ngIf="editActivityForm.get('name')?.errors?.required">
+              name is required
+            </div>
+            <div *ngIf="editActivityForm.get('name')?.errors?.minlength">
+              name is too short
+            </div>
+            <div *ngIf="editActivityForm.get('name')?.errors?.maxlength">
+              name is too long
+            </div>
+          </span>
+        </div>
+        <div class="category">
+          <label>category</label>
+          <select
+            aria-placeholder="Category"
+            name="category"
+            formControlName="category"
+            (change)="editActivityForm.patchValue({ subcategory: null })"
+          >
+            <option disabled value="null">Select a category</option>
+            <option *ngFor="let category of categories" [value]="category">
+              {{ category }}
+            </option>
+          </select>
+          <span
+            *ngIf="
+              editActivityForm.get('category')?.errors &&
+              (editActivityForm.get('category')!.dirty ||
+                editActivityForm.get('category')!.touched)
+            "
+          >
+            <div *ngIf="editActivityForm.get('category')?.errors?.required">
+              category is required
+            </div>
+          </span>
+        </div>
+
+        <div class="subcategory">
+          <label *ngIf="editActivityForm.get('category')?.value !== ''"
+            >subcategory</label
+          >
+          <select
+            aria-placeholder="Subcategory"
+            name="subcategory"
+            formControlName="subcategory"
+            *ngIf="
+              editActivityForm.get('category')?.value ===
+              ActivityCategory.CULTURE
+            "
+          >
+            <option disabled value="null">Select a subcategory</option>
+            <option
+              *ngFor="let subcategory of subCulture"
+              [value]="subcategory"
+            >
+              {{ subcategory }}
+            </option>
+          </select>
+          <select
+            aria-placeholder="Subcategory"
+            name="subcategory"
+            formControlName="subcategory"
+            *ngIf="
+              editActivityForm.get('category')?.value === ActivityCategory.WINE
+            "
+          >
+            <option disabled value="null">Select a subcategory</option>
+            <option *ngFor="let subcategory of subWine" [value]="subcategory">
+              {{ subcategory }}
+            </option>
+          </select>
+          <select
+            aria-placeholder="Subcategory"
+            name="subcategory"
+            formControlName="subcategory"
+            *ngIf="
+              editActivityForm.get('category')?.value === ActivityCategory.BEACH
+            "
+          >
+            <option disabled value="null">Select a subcategory</option>
+            <option *ngFor="let subcategory of subBeach" [value]="subcategory">
+              {{ subcategory }}
+            </option>
+          </select>
+          <span
+            *ngIf="
+              editActivityForm.get('subcategory')?.errors &&
+              (editActivityForm.get('subcategory')!.dirty ||
+                editActivityForm.get('subcategory')!.touched)
+            "
+          >
+            <div *ngIf="editActivityForm.get('subcategory')?.errors?.required">
+              subcategory is required
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="description">
+        <label>description</label>
+        <input
+          type="text"
+          placeholder="Description"
+          name="description"
+          formControlName="description"
+        />
+      </div>
+
+      <div class="language">
+        <label>language</label>
+        <select
+          aria-placeholder="Language"
+          name="language"
+          formControlName="language"
+        >
+          <option disabled value="null">Select a language</option>
+          <option *ngFor="let language of languages">{{ language }}</option>
+        </select>
+        <span
+          *ngIf="
+            editActivityForm.get('language')?.errors &&
+            (editActivityForm.get('language')!.dirty ||
+              editActivityForm.get('language')!.touched)
+          "
+        >
+          <div *ngIf="editActivityForm.get('language')?.errors?.required">
+            language is required
+          </div>
+        </span>
+      </div>
+
+      <div class="date">
+        <label>date</label>
+
+        <input type="date" placeholder="" name="date" formControlName="date" />
+      </div>
+
+      <div class="price">
+        <label>price</label>
+        <input
+          type="number"
+          placeholder="Price"
+          name="price"
+          formControlName="price"
+        />
+        <span
+          *ngIf="
+            editActivityForm.get('price')?.errors &&
+            (editActivityForm.get('price')!.dirty ||
+              editActivityForm.get('price')!.touched)
+          "
+        >
+          <div *ngIf="editActivityForm.get('price')?.errors?.required">
+            price is required
+          </div>
+          <div *ngIf="editActivityForm.get('price')?.errors?.min">
+            price must be greater than or equal to 0
+          </div>
+        </span>
+      </div>
+
+      <div class="wrapper-button">
+        <button type="submit" [disabled]="!editActivityForm.valid">
+          Update
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

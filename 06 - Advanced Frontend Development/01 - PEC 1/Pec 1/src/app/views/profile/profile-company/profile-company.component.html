@@ -1,0 +1,195 @@
+<div class="wrapper-profile">
+  <div class="form-group wrapper-form">
+    <h2>Update profile</h2>
+    <form
+      class="profile-form"
+      (ngSubmit)="onSubmit(profileForm)"
+      [formGroup]="profileForm"
+    >
+      <div class="profile-group">
+        <div class="first-name">
+          <label>first name</label>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="firstName"
+            formControlName="firstName"
+          />
+          <span
+            *ngIf="
+              profileForm.get('firstName')?.errors &&
+              (profileForm.get('firstName')!.dirty ||
+                profileForm.get('firstName')!.touched)
+            "
+          >
+            <div *ngIf="profileForm.get('firstName')?.errors?.required">
+              First name is required
+            </div>
+            <div *ngIf="profileForm.get('firstName')?.errors?.minlength">
+              First name is too short
+            </div>
+            <div *ngIf="profileForm.get('firstName')?.errors?.maxlength">
+              First name is too long
+            </div>
+          </span>
+        </div>
+        <div class="last-name">
+          <label>last name</label>
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="lastName"
+            formControlName="lastName"
+          />
+          <span
+            *ngIf="
+              profileForm.get('lastName')?.errors &&
+              (profileForm.get('lastName')!.dirty ||
+                profileForm.get('lastName')!.touched)
+            "
+          >
+            <div *ngIf="profileForm.get('lastName')?.errors?.required">
+              First name is required
+            </div>
+            <div *ngIf="profileForm.get('lastName')?.errors?.minlength">
+              First name is too short
+            </div>
+            <div *ngIf="profileForm.get('lastName')?.errors?.maxlength">
+              First name is too long
+            </div>
+          </span>
+        </div>
+        <div class="birthday">
+          <label>birthday</label>
+          <input
+            type="date"
+            placeholder=""
+            name="birthday"
+            formControlName="birthday"
+          />
+        </div>
+        <div class="phone">
+          <label>phone</label>
+          <input
+            type="number"
+            name="phone"
+            formControlName="phone"
+            placeholder="Phone"
+          />
+        </div>
+        <div class="natinality">
+          <label>Nationality</label>
+          <select
+            aria-placeholder="Nationality"
+            name="nationality"
+            formControlName="nationality"
+            (change)="selectNat($event)"
+          >
+            <option disabled value="null">Select a nationality</option>
+            <option *ngFor="let nationality of nationalities">
+              {{ nationality }}
+            </option>
+          </select>
+          <span
+            *ngIf="
+              profileForm.get('nationality')?.errors &&
+              (profileForm.get('nationality')!.dirty ||
+                profileForm.get('nationality')!.touched)
+            "
+          >
+            <div *ngIf="profileForm.get('nationality')?.errors?.required">
+              nationality is required
+            </div>
+          </span>
+        </div>
+        <div class="nif">
+          <label>nif</label>
+          <input
+            type="text"
+            placeholder="NIF"
+            name="nif"
+            formControlName="nif"
+          />
+          <span
+            *ngIf="
+              profileForm.get('nif')?.errors &&
+              (profileForm.get('nif')!.dirty || profileForm.get('nif')!.touched)
+            "
+          >
+            <div *ngIf="profileForm.get('nif')?.errors?.required">
+              nif is required
+            </div>
+          </span>
+          <div *ngIf="profileForm.errors?.errorNIF">nif isn't ok</div>
+        </div>
+        <div class="about-me">
+          <label>about me</label>
+          <textarea
+            name="about"
+            cols="38"
+            rows="5"
+            formControlName="about"
+          ></textarea>
+        </div>
+        <div class="company-name">
+          <label>company name</label>
+          <input
+            type="text"
+            placeholder="Company name"
+            name="companyName"
+            formControlName="companyName"
+          />
+          <span
+            *ngIf="
+              profileForm.get('companyName')?.errors &&
+              (profileForm.get('companyName')!.dirty ||
+                profileForm.get('companyName')!.touched)
+            "
+          >
+            <div *ngIf="profileForm.get('companyName')?.errors?.required">
+              company name is required
+            </div>
+            <div *ngIf="profileForm.get('companyName')?.errors?.minlength">
+              company name is too short
+            </div>
+            <div *ngIf="profileForm.get('companyName')?.errors?.maxlength">
+              company name is too long
+            </div>
+          </span>
+        </div>
+        <div class="company-description">
+          <label>company description</label>
+          <textarea
+            name="companyDescription"
+            cols="38"
+            rows="5"
+            formControlName="companyDescription"
+          ></textarea>
+        </div>
+        <div class="cif">
+          <label>cif</label>
+          <input
+            type="text"
+            placeholder="CIF"
+            name="cif"
+            formControlName="cif"
+          />
+          <span
+            *ngIf="
+              profileForm.get('cif')?.errors &&
+              (profileForm.get('cif')!.dirty || profileForm.get('nif')!.touched)
+            "
+          >
+            <div *ngIf="profileForm.get('cif')?.errors?.required">
+              cif is required
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="wrapper-button">
+        <button type="submit" [disabled]="!profileForm.valid">Update</button>
+      </div>
+    </form>
+  </div>
+</div>

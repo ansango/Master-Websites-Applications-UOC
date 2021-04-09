@@ -1,0 +1,53 @@
+<div *ngIf="activity">
+  <div class="wrapper-container">
+    <h2>Activities Details</h2>
+    <div class="wrapper-details">
+      <div class="container">
+        <span>name: </span>
+        <p>{{ activity.name }}</p>
+      </div>
+      <div class="container">
+        <span>description: </span>
+        <p>{{ activity.description }}</p>
+      </div>
+      <div class="container">
+        <span>language: </span>
+        <p>{{ activity.language }}</p>
+      </div>
+      <div class="container">
+        <span>date: </span>
+        <p>{{ activity.date | date: "dd/MM/yyyy" }}</p>
+      </div>
+      <div class="container">
+        <span>people registered: </span>
+        <p>{{ activity.peopleRegistered }}</p>
+      </div>
+      <div class="container">
+        <span> category: </span>
+        <p>{{ activity.category }}</p>
+      </div>
+      <div class="container">
+        <span>subcategory: </span>
+        <p>{{ activity.subcategory }}</p>
+      </div>
+      <div class="container">
+        <span>price: </span>
+        <p>{{ activity.price }}</p>
+      </div>
+    </div>
+    <div class="wrapper-buttons">
+      <button
+        *ngIf="isLoggedIn && isTourist && !activity?.signedUp"
+        (click)="subscription(activity)"
+        class="sign"
+      >
+        Signup</button
+      ><button
+        *ngIf="isLoggedIn && isTourist && !isFavorite"
+        (click)="addFavorites(activity)"
+      >
+        Favorites
+      </button>
+    </div>
+  </div>
+</div>

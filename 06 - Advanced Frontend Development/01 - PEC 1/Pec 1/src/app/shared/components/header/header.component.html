@@ -1,0 +1,16 @@
+<div class="header">
+  <a routerLink="/" class="logo"> <p>Awesome Activities</p> </a>
+  <div class="header-right">
+    <a routerLink="/activities/favorites" *ngIf="isLoggedIn && isTourist"
+      >Favorites</a
+    >
+    <a routerLink="/my-activities" *ngIf="isLoggedIn && isTourist"
+      >My Activities</a
+    >
+    <a routerLink="/profile" *ngIf="isLoggedIn">Profile</a>
+    <a routerLink="/admin" *ngIf="isLoggedIn && isCompany">Admin</a>
+    <a routerLink="/user/login" *ngIf="!isLoggedIn">Sign in</a>
+    <a routerLink="/user/register" *ngIf="!isLoggedIn">Join now</a>
+    <a (click)="logOut()" *ngIf="isLoggedIn">Logout</a>
+  </div>
+</div>
