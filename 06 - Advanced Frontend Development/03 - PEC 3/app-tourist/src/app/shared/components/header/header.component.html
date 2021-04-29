@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a [routerLink]="['/']"><span> Awesome Activities</span></a>
+  </div>
+  <div fxLayoutAlign="end" fxHide.xs style="width: 100%">
+    <div class="navigation-items">
+      <button
+        mat-icon-button
+        *ngIf="(isAuthenticated$ | async) && (userType$ | async) === 'tourist'"
+        [routerLink]="['/favorites']"
+      >
+        <mat-icon>favorite_outline</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        *ngIf="(isAuthenticated$ | async) && (userType$ | async) === 'tourist'"
+        [routerLink]="['/my-activities']"
+      >
+        <mat-icon>list</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        *ngIf="isAuthenticated$ | async"
+        [routerLink]="['/profile']"
+      >
+        <mat-icon>face_outline</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        *ngIf="(isAuthenticated$ | async) && (userType$ | async) === 'company'"
+        [routerLink]="['/admin']"
+      >
+        <mat-icon> admin_panel_settings </mat-icon>
+      </button>
+
+      <button
+        mat-icon-button
+        *ngIf="!(isAuthenticated$ | async)"
+        [routerLink]="['/auth']"
+      >
+        <mat-icon>login</mat-icon>
+      </button>
+      <button
+        *ngIf="!(isAuthenticated$ | async)"
+        mat-icon-button
+        [routerLink]="['/auth/signup']"
+      >
+        <mat-icon>account_circle</mat-icon>
+      </button>
+
+      <button
+        *ngIf="isAuthenticated$ | async"
+        mat-icon-button
+        (click)="onLogout($event)"
+      >
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

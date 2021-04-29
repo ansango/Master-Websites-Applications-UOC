@@ -1,0 +1,74 @@
+<div class="container-view">
+  <h1>Admin</h1>
+  <div class="wrapper">
+    <div>
+      <button mat-raised-button color="primary" [routerLink]="['add']">
+        Add Activity
+      </button>
+      <div *ngIf="(activities$ | async)!.length > 0">
+        <mat-accordion>
+          <mat-expansion-panel
+            *ngFor="let activity of activities$ | async"
+            #mapanel="matExpansionPanel"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title> {{ activity.name }}</mat-panel-title>
+              <mat-panel-description>
+                {{ activity.category }}
+              </mat-panel-description>
+              <mat-panel-description>
+                {{ activity.price | currency }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div>
+              <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput disabled [value]="activity.name" />
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-label>Category</mat-label>
+                <input matInput disabled [value]="activity.category" />
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Date</mat-label>
+                <input
+                  matInput
+                  disabled
+                  [value]="activity.date | date: 'dd/MM/yyyy'"
+                />
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Price</mat-label>
+                <input matInput disabled [value]="activity.price | currency" />
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Language</mat-label>
+                <input
+                  matInput
+                  disabled
+                  [value]="activity.language | uppercase"
+                />
+              </mat-form-field>
+              <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  (click)="mapanel.close()"
+                  [routerLink]="['edit/', activity.id]"
+                >
+                  Update
+                </button>
+                <button mat-button (click)="onDelete(activity.id)">
+                  Delete
+                </button>
+              </div>
+            </div>
+          </mat-expansion-panel>
+
+          <router-outlet></router-outlet>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+<div class="container-view">
+  <div class="wrapper">
+    <mat-card fxLayout="column">
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <h1>Education Update</h1>
+      </div>
+      <form [formGroup]="educationForm" (ngSubmit)="onUpdate()">
+        <div
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayout.xs="column"
+          fxLayoutGap="20px"
+        >
+          <mat-form-field appearance="outline">
+            <mat-label>Type</mat-label>
+            <mat-select
+              formControlName="type"
+              (change)="educationForm.patchValue({ level: null })"
+            >
+              <mat-option value="null" [disabled]="true"
+                >Select a type education</mat-option
+              >
+              <mat-option *ngFor="let type of types" [value]="type">{{
+                type
+              }}</mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="
+                educationForm.get('type')?.errors &&
+                (educationForm.get('type')!.dirty ||
+                  educationForm.get('type')!.touched)
+              "
+            >
+              <div *ngIf="educationForm.get('type')?.errors?.required">
+                type is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            *ngIf="educationForm.get('type')!.value !== null"
+          >
+            <mat-label>Level</mat-label>
+            <mat-select
+              formControlName="level"
+              *ngIf="
+                educationForm.get('type')?.value === EducationType.TRAINING
+              "
+            >
+              <mat-option value="null" [disabled]="true"
+                >Select a type education</mat-option
+              >
+              <mat-option *ngFor="let level of training" [value]="level">
+                {{ level }}
+              </mat-option>
+            </mat-select>
+            <mat-select
+              formControlName="level"
+              *ngIf="
+                educationForm.get('type')?.value === EducationType.UNIVERSITY
+              "
+            >
+              <mat-option value="null" [disabled]="true"
+                >Select a type education</mat-option
+              >
+              <mat-option *ngFor="let level of university" [value]="level">
+                {{ level }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="
+                educationForm.get('level')?.errors &&
+                (educationForm.get('level')!.dirty ||
+                  educationForm.get('level')!.touched)
+              "
+            >
+              <div *ngIf="educationForm.get('level')?.errors?.required">
+                level is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div *ngIf="educationForm.get('type')!.value !== null">
+          <div
+            fxLayout="row"
+            fxLayout.sm="column"
+            fxLayout.xs="column"
+            fxLayoutGap="20px"
+          >
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput type="text" formControlName="name" />
+              <mat-error
+                *ngIf="
+                  educationForm.get('name')?.errors &&
+                  (educationForm.get('name')!.dirty ||
+                    educationForm.get('name')!.touched)
+                "
+              >
+                <div *ngIf="educationForm.get('name')?.errors?.required">
+                  name is required
+                </div>
+                <div *ngIf="educationForm.get('name')?.errors?.minlength">
+                  name is too short
+                </div>
+                <div *ngIf="educationForm.get('name')?.errors?.maxlength">
+                  name is too long
+                </div>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>School</mat-label>
+              <input matInput type="text" formControlName="school" />
+              <mat-error
+                *ngIf="
+                  educationForm.get('school')?.errors &&
+                  (educationForm.get('school')!.dirty ||
+                    educationForm.get('school')!.touched)
+                "
+              >
+                <div *ngIf="educationForm.get('school')?.errors?.required">
+                  school is required
+                </div>
+                <div *ngIf="educationForm.get('school')?.errors?.minlength">
+                  school is too short
+                </div>
+                <div *ngIf="educationForm.get('school')?.errors?.maxlength">
+                  school is too long
+                </div>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Finish date</mat-label>
+              <input
+                matInput
+                [matDatepicker]="picker"
+                formControlName="finishDate"
+              />
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!educationForm.valid"
+          >
+            Update
+          </button>
+          <button mat-raised-button [routerLink]="['/profile']">Cancel</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

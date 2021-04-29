@@ -1,0 +1,125 @@
+<div class="container-view">
+  <h1>Profile</h1>
+  <div *ngIf="profile$ | async as profile" class="wrapper">
+    <mat-card fxLayout="column">
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <h2>Profile</h2>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="20px"
+      >
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput [value]="profile.firstName" disabled />
+          <mat-icon matSuffix>face_outline</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input matInput [value]="profile.lastName" disabled />
+        </mat-form-field>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="20px"
+      >
+        <mat-form-field>
+          <mat-label>Birthday</mat-label>
+          <input
+            matInput
+            [value]="profile.birthday | date: 'dd/MM/yyyy'"
+            disabled
+          />
+          <mat-icon matSuffix>cake</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Phone</mat-label>
+          <input matInput [value]="profile.phone" disabled />
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="20px"
+      >
+        <mat-form-field>
+          <mat-label>Nationality</mat-label>
+          <input matInput [value]="profile.nationality" disabled />
+          <mat-icon matSuffix>flag</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>NIF</mat-label>
+          <input matInput [value]="profile.nif" disabled />
+        </mat-form-field>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="20px"
+      >
+        <mat-form-field>
+          <mat-label>About</mat-label>
+          <textarea
+            matInput
+            cols="38"
+            rows="5"
+            [value]="profile.about"
+            disabled
+          ></textarea>
+        </mat-form-field>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="20px"
+      >
+        <mat-form-field *ngIf="(profileType$ | async) === 'company'">
+          <mat-label>Company Name</mat-label>
+          <input matInput [value]="profile.companyName" disabled />
+        </mat-form-field>
+        <mat-form-field *ngIf="(profileType$ | async) === 'company'">
+          <mat-label>CIF</mat-label>
+          <input matInput [value]="profile.cif" disabled />
+        </mat-form-field>
+      </div>
+      <div
+        fxLayout="row"
+        fxLayout.sm="column"
+        fxLayout.xs="column"
+        fxLayoutGap="20px"
+      >
+        <mat-form-field *ngIf="(profileType$ | async) === 'company'">
+          <mat-label>Company Description</mat-label>
+          <textarea
+            matInput
+            cols="38"
+            rows="5"
+            [value]="profile.companyDescription"
+            disabled
+          ></textarea>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [routerLink]="['edit', profile.id]"
+        >
+          Update
+        </button>
+      </div>
+    </mat-card>
+  </div>
+
+  <app-education></app-education>
+</div>

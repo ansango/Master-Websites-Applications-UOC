@@ -1,0 +1,34 @@
+<div class="container-view">
+  <h1>My Activities</h1>
+  <div class="wrapper">
+    <div>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-card
+          fxFlex="0 1 calc(100%-10px)"
+          fxFlex.gt-md="0 1 calc(60%-10px)"
+        >
+          <mat-selection-list *ngIf="isLoading$ | async" [multiple]="false">
+            <div *ngFor="let num of [1, 2, 3, 4, 5, 6]">
+              <mat-list-option>
+                <div mat-line><ngx-skeleton-loader></ngx-skeleton-loader></div>
+              </mat-list-option>
+            </div>
+          </mat-selection-list>
+          <mat-selection-list [multiple]="false" *ngIf="!(isLoading$ | async)">
+            <div *ngFor="let activity of activities">
+              <mat-list-option
+                [value]="activity"
+                [routerLink]="['detail', activity.id]"
+              >
+                <div mat-line>{{ activity.name }}</div>
+                <div mat-line>{{ activity.category }}</div>
+                <div mat-line>{{ activity.date | date: "dd/MM/yyyy" }}</div>
+              </mat-list-option>
+            </div>
+          </mat-selection-list>
+        </mat-card>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

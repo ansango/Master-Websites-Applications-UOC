@@ -1,0 +1,40 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** SETTINGS - 01_settings"
+ *
+ ** TOOLS - 02_tools
+  *
+ ** GENERIC - 03_generic
+ *
+ ** ELEMENTS - 04_elements
+ *
+ ** OBJECTS - 05_objects
+ *
+ ** COMPONENTS - 06_components
+ *
+ ** TRUMPS - 07_trumps
+ */
+
+@import "01-settings/index";
+@import "02-tools/index";
+@import "03-generic/index";
+@import "04-elements/index";
+@import "05-objects/index";
+@import "06-components/index";
+@import "07-trumps/index";
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
+@import "bootstrap/scss/bootstrap.scss";

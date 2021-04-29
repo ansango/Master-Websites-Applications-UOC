@@ -1,0 +1,29 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** COMPONENTS - 06_components
+ *? Specific UI components. This is where the majority of our work takes place and our UI components are often composed of Objects and Components
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ */
+
+.note {
+  & figure {
+    margin: 0;
+  }
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  margin: 10px 0;
+  border: solid 1px #f9f9f9;
+  background-color: $myWhite;
+  box-shadow: 1px 8px 20px 1px rgb(222 222 222);
+  border-radius: 5px;
+
+  &:hover {
+    & cite {
+      color: $primary;
+    }
+  }
+}

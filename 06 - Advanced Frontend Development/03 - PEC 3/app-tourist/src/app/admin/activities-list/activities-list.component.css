@@ -1,0 +1,24 @@
+.container-view {
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  margin: 0 auto;
+}
+.wrapper {
+  padding: 10px;
+}
+
+h1 {
+  padding: 50px 20px;
+}
+
+.container-accordion {
+  margin: 20px 0;
+}
+
+mat-expansion-panel {
+  margin: 20px 0;
+}
+
+mat-form-field {
+  width: 100%;
+}

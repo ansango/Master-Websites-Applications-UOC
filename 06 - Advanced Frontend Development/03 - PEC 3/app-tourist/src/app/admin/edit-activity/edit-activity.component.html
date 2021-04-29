@@ -1,0 +1,200 @@
+<mat-card fxLayout="column">
+  <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+    <h2>Update Activity</h2>
+  </div>
+  <form [formGroup]="activityForm" (ngSubmit)="onUpdate()">
+    <div
+      fxLayout="row"
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" />
+        <mat-error
+          *ngIf="
+            activityForm.get('name')?.errors &&
+            (activityForm.get('name')!.dirty ||
+              activityForm.get('name')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('name')?.errors?.required">
+            name is required
+          </div>
+          <div *ngIf="activityForm.get('name')?.errors?.minlength">
+            name is too short
+          </div>
+          <div *ngIf="activityForm.get('name')?.errors?.maxlength">
+            name is too long
+          </div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <mat-select
+          formControlName="category"
+          (change)="activityForm.patchValue({ category: null })"
+        >
+          <mat-option [disabled]="true" value="null"
+            >Select a category</mat-option
+          >
+          <mat-option *ngFor="let category of categories" [value]="category">{{
+            category
+          }}</mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="
+            activityForm.get('category')?.errors &&
+            (activityForm.get('category')!.dirty ||
+              activityForm.get('category')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('category')?.errors?.required">
+            category is required
+          </div>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field
+        appearance="outline"
+        *ngIf="activityForm.get('category')!.value !== null"
+      >
+        <mat-label>Subcategory</mat-label>
+        <mat-select
+          formControlName="subcategory"
+          *ngIf="
+            activityForm.get('category')!.value === ActivityCategory.CULTURE
+          "
+        >
+          <mat-option disabled value="null" [disabled]="true"
+            >Select a subcategory</mat-option
+          >
+          <mat-option
+            *ngFor="let subcategory of subCulture"
+            [value]="subcategory"
+          >
+            {{ subcategory }}
+          </mat-option>
+        </mat-select>
+        <mat-select
+          formControlName="subcategory"
+          *ngIf="activityForm.get('category')!.value === ActivityCategory.WINE"
+        >
+          <mat-option disabled value="null" [disabled]="true"
+            >Select a subcategory</mat-option
+          >
+          <mat-option *ngFor="let subcategory of subWine" [value]="subcategory">
+            {{ subcategory }}
+          </mat-option>
+        </mat-select>
+        <mat-select
+          formControlName="subcategory"
+          *ngIf="activityForm.get('category')!.value === ActivityCategory.BEACH"
+        >
+          <mat-option disabled value="null" [disabled]="true"
+            >Select a subcategory</mat-option
+          >
+          <mat-option
+            *ngFor="let subcategory of subBeach"
+            [value]="subcategory"
+          >
+            {{ subcategory }}
+          </mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="
+            activityForm.get('subcategory')?.errors &&
+            (activityForm.get('subcategory')!.dirty ||
+              activityForm.get('subcategory')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('subcategory')?.errors?.required">
+            subcategory is required
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          cols="38"
+          rows="5"
+          formControlName="description"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutGap="20px"
+    >
+      <mat-form-field appearance="outline">
+        <mat-label>Language</mat-label>
+        <mat-select formControlName="language">
+          <mat-option [disabled]="true" value="null"
+            >Select a language</mat-option
+          >
+          <mat-option *ngFor="let language of languages" [value]="language">{{
+            language
+          }}</mat-option>
+        </mat-select>
+        <mat-error
+          *ngIf="
+            activityForm.get('language')?.errors &&
+            (activityForm.get('language')!.dirty ||
+              activityForm.get('language')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('language')?.errors?.required">
+            language is required
+          </div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput type="number" formControlName="price" />
+        <mat-error
+          *ngIf="
+            activityForm.get('price')?.errors &&
+            (activityForm.get('price')!.dirty ||
+              activityForm.get('price')!.touched)
+          "
+        >
+          <div *ngIf="activityForm.get('price')?.errors?.required">
+            price is required
+          </div>
+          <div *ngIf="activityForm.get('price')?.errors?.min">
+            price must be greater than or equal to 0
+          </div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!activityForm.valid"
+      >
+        Update
+      </button>
+      <button mat-raised-button [routerLink]="['/admin']">Cancel</button>
+    </div>
+  </form>
+</mat-card>

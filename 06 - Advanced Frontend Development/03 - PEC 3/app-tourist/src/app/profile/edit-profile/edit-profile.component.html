@@ -1,0 +1,233 @@
+<div class="container-view">
+  <div class="wrapper">
+    <mat-card fxLayout="column">
+      <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <h1>Update Profile</h1>
+      </div>
+      <form [formGroup]="profileForm" (ngSubmit)="onUpdate()">
+        <div
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayout.xs="column"
+          fxLayoutGap="20px"
+        >
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" formControlName="firstName" />
+            <mat-icon
+              matSuffix
+              [ngClass]="{
+                'icon-invalid':
+                  profileForm.get('firstName')?.errors &&
+                  profileForm.get('firstName')?.touched
+              }"
+              >face_outline</mat-icon
+            >
+            <mat-error
+              *ngIf="
+                profileForm.get('firstName')?.errors &&
+                (profileForm.get('firstName')!.dirty ||
+                  profileForm.get('firstName')!.touched)
+              "
+            >
+              <div *ngIf="profileForm.get('firstName')?.errors?.required">
+                First name is required
+              </div>
+              <div *ngIf="profileForm.get('firstName')?.errors?.minlength">
+                First name is too short
+              </div>
+              <div *ngIf="profileForm.get('firstName')?.errors?.maxlength">
+                First name is too long
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" formControlName="lastName" />
+            <mat-error
+              *ngIf="
+                profileForm.get('lastName')?.errors &&
+                (profileForm.get('lastName')!.dirty ||
+                  profileForm.get('lastName')!.touched)
+              "
+            >
+              <div *ngIf="profileForm.get('lastName')?.errors?.required">
+                Last name is required
+              </div>
+              <div *ngIf="profileForm.get('lastName')?.errors?.minlength">
+                Last name is too short
+              </div>
+              <div *ngIf="profileForm.get('lastName')?.errors?.maxlength">
+                Last name is too long
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Birthday</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              formControlName="birthday"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayout.xs="column"
+          fxLayoutGap="20px"
+        >
+          <mat-form-field appearance="outline">
+            <mat-label>phone</mat-label>
+            <input matInput type="number" formControlName="phone" />
+            <mat-icon matSuffix>phone</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Nationality</mat-label>
+            <mat-select
+              formControlName="nationality"
+              (change)="selectNat($event)"
+            >
+              <mat-option [disabled]="true" value="null"
+                >Select a nationality</mat-option
+              >
+              <mat-option
+                *ngFor="let nationality of nationalities"
+                [value]="nationality"
+              >
+                {{ nationality }}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="
+                profileForm.get('nationality')?.errors &&
+                (profileForm.get('nationality')!.dirty ||
+                  profileForm.get('nationality')!.touched)
+              "
+            >
+              <div *ngIf="profileForm.get('nationality')?.errors?.required">
+                Nationality is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>NIF</mat-label>
+            <input matInput type="text" formControlName="nif" />
+            <mat-error
+              *ngIf="
+                profileForm.get('nif')?.errors &&
+                (profileForm.get('nif')!.dirty ||
+                  profileForm.get('nif')!.touched)
+              "
+            >
+              <div *ngIf="profileForm.get('nif')?.errors?.required">
+                NIF is required
+              </div>
+              <div *ngIf="profileForm.errors?.errorNIF">nif isn't ok</div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayout.xs="column"
+          fxLayoutGap="20px"
+        >
+          <mat-form-field appearance="outline">
+            <mat-label>About</mat-label>
+            <textarea
+              matInput
+              cols="38"
+              rows="5"
+              formControlName="about"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <div
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayout.xs="column"
+          fxLayoutGap="20px"
+        >
+          <mat-form-field
+            appearance="outline"
+            *ngIf="(profileType$ | async) === 'company'"
+          >
+            <mat-label>Company Name</mat-label>
+            <input matInput type="text" formControlName="companyName" />
+            <mat-error
+              *ngIf="
+                profileForm.get('companyName')?.errors &&
+                (profileForm.get('companyName')!.dirty ||
+                  profileForm.get('companyName')!.touched)
+              "
+            >
+              <div *ngIf="profileForm.get('companyName')?.errors?.required">
+                Company name is required
+              </div>
+              <div *ngIf="profileForm.get('companyName')?.errors?.minlength">
+                Company name is too short
+              </div>
+              <div *ngIf="profileForm.get('companyName')?.errors?.maxlength">
+                Company name is too long
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field
+            appearance="outline"
+            *ngIf="(profileType$ | async) === 'company'"
+          >
+            <mat-label>CIF</mat-label>
+            <input matInput type="text" formControlName="cif" />
+            <mat-error
+              *ngIf="
+                profileForm.get('cif')?.errors &&
+                (profileForm.get('cif')!.dirty ||
+                  profileForm.get('nif')!.touched)
+              "
+            >
+              <div *ngIf="profileForm.get('cif')?.errors?.required">
+                CIF is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayout.xs="column"
+          fxLayoutGap="20px"
+        >
+          <mat-form-field
+            appearance="outline"
+            *ngIf="(profileType$ | async) === 'company'"
+          >
+            <mat-label>Company Description</mat-label>
+            <textarea
+              matInput
+              cols="38"
+              rows="5"
+              formControlName="companyDescription"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!profileForm.valid"
+          >
+            Confirm
+          </button>
+          <button mat-raised-button [routerLink]="['/profile']">Cancel</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

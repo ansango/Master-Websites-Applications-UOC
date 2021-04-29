@@ -1,0 +1,65 @@
+<div class="container-view">
+  <h1>Favorites</h1>
+  <div class="wrapper">
+    <div
+      fxLayout.xs="column"
+      fxLayout="row wrap"
+      fxLayoutGap="10px"
+      ngClass.gt-xs="ml-10"
+      *ngIf="isLoading$ | async"
+    >
+      <mat-card
+        fxFlex.sm="0 1 calc(50%-10px)"
+        fxFlex.md="0 1 calc(33%-10px)"
+        fxFlex.gt-md="0 1 calc(33%-10px)"
+        *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      >
+        <mat-card-content>
+          <ngx-skeleton-loader></ngx-skeleton-loader>
+          <ngx-skeleton-loader></ngx-skeleton-loader>
+          <ngx-skeleton-loader></ngx-skeleton-loader>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div
+      fxLayout.xs="column"
+      fxLayout="row wrap"
+      fxLayoutGap="10px"
+      ngClass.gt-xs="ml-10"
+      *ngIf="!(isLoading$ | async)"
+    >
+      <mat-card
+        fxFlex.sm="0 1 calc(50%-10px)"
+        fxFlex.md="0 1 calc(33%-10px)"
+        fxFlex.gt-md="0 1 calc(33%-10px)"
+        *ngFor="let activity of favorites$ | async"
+      >
+        <mat-card-header>
+          <mat-card-title>{{ activity.name }}</mat-card-title>
+          <mat-card-subtitle>{{ activity.category }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
+          <button
+            mat-icon-button
+            color="primary"
+            [routerLink]="['detail', activity.id]"
+          >
+            <mat-icon>info_outline</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayoutAlign="center"
+      *ngIf="!(isLoading$ | async) && (favorites$ | async)!.length === 0"
+    >
+      <div fxLayout="column">
+        <h2>Favorites not found</h2>
+        <h4>Please add some activities</h4>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

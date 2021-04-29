@@ -1,0 +1,69 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** OBJECTS - 05_objects
+ *? Class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+ * Wrappers.............Wrapping and constraining elements.
+ */
+
+.view {
+  padding-bottom: 200px;
+  & .view_band {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+}
+
+.title-container {
+  padding: 200px 0;
+  margin: 0 auto;
+  max-width: 960px;
+  @include desktop {
+    padding: 150px 0;
+  }
+
+  code {
+    color: $primary;
+    font-weight: bold;
+  }
+  h1,
+  code {
+    font-size: 4rem;
+  }
+  @include mobile-lg {
+    h1,
+    code {
+      font-size: 4.5rem;
+    }
+  }
+
+  @include tablet {
+    h1,
+    code {
+      font-size: 7rem;
+    }
+  }
+}
+
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 960px;
+  }
+}
+
+.not-found {
+  height: calc(100vh - (56px * 2));
+}

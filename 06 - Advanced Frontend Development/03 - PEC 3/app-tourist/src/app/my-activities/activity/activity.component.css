@@ -1,0 +1,12 @@
+.container-view {
+  margin: 20px 0 50px 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 640px;
+}
+
+mat-card {
+  max-width: 640px;
+}

@@ -1,0 +1,22 @@
+<mat-drawer-container>
+  <mat-drawer #sidenav role="navigation">
+    <app-sidenav (sidenavClose)="sidenav.close()"></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-spinner *ngIf="showLoading | async"></app-spinner>
+    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <div class="container" fxLayout="row" fxLayoutAlign="center">
+      <div *ngIf="errorMessage | async as error">
+        {{ error }}
+      </div>
+      <div *ngIf="successMessage | async as success">
+        {{ success }}
+      </div>
+    </div>
+
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
+  </mat-drawer-content>
+</mat-drawer-container>

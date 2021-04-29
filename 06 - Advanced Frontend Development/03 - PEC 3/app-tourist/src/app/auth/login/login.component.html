@@ -1,0 +1,81 @@
+<div
+  class="container-view"
+  fxFlex
+  fxLayout="column"
+  fxLayoutGap="10px"
+  fxLayoutAlign="center center"
+>
+  <mat-card>
+    <div fxLayout="row" fxLayoutAlign="center none">
+      <h2>Sign In</h2>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center none">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="fields" fxLayout="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text " formControlName="email" />
+            <mat-icon
+              matSuffix
+              [ngClass]="{
+                'icon-invalid':
+                  loginForm.get('email')?.errors &&
+                  loginForm.get('email')?.touched
+              }"
+              >mail_outline</mat-icon
+            >
+
+            <mat-error
+              *ngIf="
+                loginForm.get('email')?.errors &&
+                (loginForm.get('email')?.dirty ||
+                  loginForm.get('email')?.touched)
+              "
+            >
+              <div *ngIf="loginForm.get('email')?.errors?.required">
+                email is required
+              </div>
+              <div *ngIf="loginForm.get('email')?.errors?.email">
+                email invalid
+              </div>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" />
+            <mat-icon
+              matSuffix
+              [ngClass]="{
+                'icon-invalid':
+                  loginForm.get('password')?.errors &&
+                  loginForm.get('password')?.touched
+              }"
+              >security</mat-icon
+            >
+            <mat-error
+              *ngIf="
+                loginForm.get('password')?.errors &&
+                (loginForm.get('password')!.dirty ||
+                  loginForm.get('password')!.touched)
+              "
+            >
+              <div *ngIf="loginForm.get('password')?.errors?.required">
+                password is required
+              </div>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="!loginForm.valid"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

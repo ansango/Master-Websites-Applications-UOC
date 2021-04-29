@@ -1,0 +1,21 @@
+.container-view {
+  min-height: calc(100vh - 7rem);
+}
+
+.wrapper {
+  padding: 10px;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 300px;
+}
+
+form {
+  width: 100%;
+  max-width: 300px;
+}
+
+mat-icon.icon-invalid {
+  color: #f44336;
+}

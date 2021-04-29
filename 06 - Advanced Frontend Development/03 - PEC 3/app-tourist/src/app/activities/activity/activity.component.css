@@ -1,0 +1,14 @@
+.container-view {
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  margin: 0 auto;
+}
+.wrapper {
+  padding: 10px;
+  width: 100%;
+}
+
+mat-card {
+  margin-bottom: 10px;
+  max-width: 640px;
+}

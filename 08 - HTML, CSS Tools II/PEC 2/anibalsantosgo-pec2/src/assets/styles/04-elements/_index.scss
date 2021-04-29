@@ -1,0 +1,14 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** ELEMENTS - 04_elements
+ *? Styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+ * Headings.............H1–H6 styles.
+ */
+
+h1,
+h2,
+h3 {
+  font-family: $font-family-serif;
+  text-transform: uppercase;
+}

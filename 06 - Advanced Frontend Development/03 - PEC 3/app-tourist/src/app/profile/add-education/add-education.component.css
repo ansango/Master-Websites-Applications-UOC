@@ -1,0 +1,12 @@
+.container-view {
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  margin: 0 auto;
+}
+.wrapper {
+  padding: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}

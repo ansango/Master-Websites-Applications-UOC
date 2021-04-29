@@ -1,0 +1,42 @@
+/**
+ *! BASE CONTENTS FOR ITCSS
+ *
+ ** TOOLS - 02_tools
+ *? Globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+ * Mixins...............Useful mixins.
+ */
+
+@mixin mobile-lg {
+  @media only screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin hover-item-grid($img-url, $opacity) {
+  background-image: $img-url;
+  background-position: center;
+  background-size: cover;
+  opacity: $opacity;
+  cursor: pointer;
+  & h3 {
+    display: none;
+  }
+}

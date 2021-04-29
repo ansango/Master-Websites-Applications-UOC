@@ -1,0 +1,165 @@
+<div class="container-view" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card>
+    <div fxLayout="row" fxLayoutAlign="center none">
+      <h2>Sign up</h2>
+    </div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+      <div class="fields" fxLayout="column">
+        <mat-form-field color="primary" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput type="text" formControlName="firstName" />
+          <mat-icon
+            matSuffix
+            [ngClass]="{
+              'icon-invalid':
+                registerForm.get('firstName')?.errors &&
+                registerForm.get('firstName')?.touched
+            }"
+            >face_outline</mat-icon
+          >
+          <mat-error
+            *ngIf="
+              registerForm.get('firstName')?.errors &&
+              (registerForm.get('firstName')!.dirty ||
+                registerForm.get('firstName')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('firstName')?.errors?.required">
+              First name is required
+            </div>
+            <div *ngIf="registerForm.get('firstName')?.errors?.minlength">
+              First name is too short
+            </div>
+            <div *ngIf="registerForm.get('firstName')?.errors?.maxlength">
+              first name is too long
+            </div>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput type="text" formControlName="lastName" />
+          <mat-error
+            *ngIf="
+              registerForm.get('lastName')?.errors &&
+              (registerForm.get('lastName')!.dirty ||
+                registerForm.get('lastName')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('lastName')?.errors?.minlength">
+              last name is too short
+            </div>
+            <div *ngIf="registerForm.get('lastName')?.errors?.maxlength">
+              last name is too long
+            </div>
+            <div *ngIf="registerForm.get('lastName')?.errors?.pattern">
+              last name is invalid
+            </div>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Type</mat-label>
+          <mat-select formControlName="type">
+            <mat-option [disabled]="true" [value]="null"
+              >Select a type</mat-option
+            >
+            <mat-option *ngFor="let option of options" [value]="option">{{
+              option
+            }}</mat-option>
+          </mat-select>
+          <mat-error
+            *ngIf="
+              registerForm.get('type')?.errors &&
+              (registerForm.get('type')!.dirty ||
+                registerForm.get('type')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('type')?.errors?.required">
+              type is required
+            </div>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" formControlName="email" />
+          <mat-icon
+            matSuffix
+            [ngClass]="{
+              'icon-invalid':
+                registerForm.get('email')?.errors &&
+                registerForm.get('email')?.touched
+            }"
+            >mail_outline</mat-icon
+          >
+          <mat-error
+            *ngIf="
+              registerForm.get('email')?.errors &&
+              (registerForm.get('email')!.dirty ||
+                registerForm.get('email')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('email')?.errors?.required">
+              email is required
+            </div>
+            <div *ngIf="registerForm.get('email')?.errors?.email">
+              email invalid
+            </div>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+          <mat-icon
+            matSuffix
+            [ngClass]="{
+              'icon-invalid':
+                registerForm.get('password')?.errors &&
+                registerForm.get('password')?.touched
+            }"
+            >security</mat-icon
+          >
+          <mat-error
+            *ngIf="
+              registerForm.get('password')?.errors &&
+              (registerForm.get('password')!.dirty ||
+                registerForm.get('password')!.touched)
+            "
+          >
+            <div *ngIf="registerForm.get('password')?.errors?.required">
+              password is required
+            </div>
+            <div *ngIf="registerForm.get('password')?.errors?.minlength">
+              password is too short
+            </div>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Repeat password</mat-label>
+          <input matInput type="password" formControlName="rePassword" />
+          <mat-error
+            *ngIf="
+              (registerForm.get('rePassword')?.errors ||
+                registerForm?.errors) &&
+              (registerForm.get('rePassword')!.dirty ||
+                registerForm.get('rePassword')!.touched)
+            "
+          >
+            <div *ngIf="registerForm?.errors?.different">
+              passwords does not match
+            </div>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!registerForm.valid"
+        >
+          Join
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
