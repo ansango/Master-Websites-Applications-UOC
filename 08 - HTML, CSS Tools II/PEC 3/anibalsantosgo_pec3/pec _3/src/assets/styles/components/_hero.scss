@@ -1,0 +1,20 @@
+/* ------------------------------------ *\
+  #HERO
+\* ------------------------------------ */
+
+.hero {
+  @apply font-serif text-white text-6xl grid md:grid-cols-3;
+  & .block-empty {
+    @apply hidden md:block h-60;
+  }
+  & .block-link {
+    @apply hidden w-full h-60 lg:h-72 xl:h-80 md:flex flex-col items-center justify-center;
+  }
+  & .block-text {
+    @apply h-60 lg:h-72 xl:h-80 w-full flex flex-col items-center justify-center;
+  }
+
+  & h3 {
+    @apply text-white;
+  }
+}

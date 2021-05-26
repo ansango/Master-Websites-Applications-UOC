@@ -1,0 +1,13 @@
+/* ------------------------------------ *\
+  #QUOTE
+\* ------------------------------------ */
+
+.quote {
+  @apply max-w-xl w-full p-5 my-3 bg-white border-gray shadow-2xl rounded-lg;
+  & blockquote > p {
+    @apply italic;
+  }
+  & figcaption > span {
+    @apply font-bold;
+  }
+}

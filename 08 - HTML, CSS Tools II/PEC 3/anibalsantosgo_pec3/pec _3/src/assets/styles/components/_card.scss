@@ -1,0 +1,57 @@
+/* ------------------------------------ *\
+  #CARD
+\* ------------------------------------ */
+
+.card {
+  @apply w-full md:w-1/2 lg:w-1/3 flex mb-5;
+  & > div {
+    @apply w-full flex justify-center;
+  }
+  & .thumbnail {
+    @apply flex justify-center items-center w-80 h-80 bg-cover border-8 border-black;
+    & .layer {
+      @apply hidden bg-white w-full h-full flex-col justify-center items-center;
+      & h5,
+      h6,
+      p {
+        @apply flex items-center;
+      }
+      & h5 {
+        @apply font-bold text-lg;
+      }
+
+      & .icon {
+        @apply mr-2 text-primary;
+      }
+
+      & a {
+        @apply mt-4 text-primary;
+      }
+    }
+  }
+  & .thumbnail:hover {
+    & .layer {
+      @apply flex;
+    }
+  }
+}
+
+/* ------------------------------------ *\
+  #TICKET
+\* ------------------------------------ */
+
+.ticket {
+  @apply mb-5;
+  & > div {
+    @apply flex justify-between p-4 border border-gray rounded-md;
+  }
+  & p {
+    @apply mb-4;
+  }
+  & button {
+    @apply bg-primary rounded-md px-3 py-2 text-white;
+  }
+  & span {
+    @apply text-primary;
+  }
+}

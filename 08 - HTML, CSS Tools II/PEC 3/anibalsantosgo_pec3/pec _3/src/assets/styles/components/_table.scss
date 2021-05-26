@@ -1,0 +1,25 @@
+/* ------------------------------------ *\
+  #TABLE
+\* ------------------------------------ */
+
+.table {
+  @apply table-auto;
+  & tbody {
+    @apply divide-y divide-gray;
+    & td {
+      @apply px-6 py-4;
+    }
+
+    & .icon {
+      @apply text-primary;
+    }
+
+    & .data {
+      @apply xl:px-20;
+    }
+
+    button {
+      @apply bg-primary rounded-md px-3 py-2 text-white;
+    }
+  }
+}

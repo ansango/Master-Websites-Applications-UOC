@@ -1,0 +1,34 @@
+/* ------------------------------------ *\
+  #NAVBAR
+\* ------------------------------------ */
+
+.navbar {
+  @apply py-3 sm:py-5 md:py-10;
+  & .container {
+    @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8;
+  }
+
+  & .block {
+    @apply relative flex items-center justify-between h-16;
+  }
+
+  & .blank {
+    @apply flex-1 flex items-center justify-center sm:items-stretch sm:justify-start;
+  }
+
+  & .home-link {
+    @apply absolute inset-y-0 left-0 flex items-center font-bold text-xl;
+  }
+
+  & .link {
+    @apply mx-2 text-primary font-bold;
+  }
+
+  & .mobile-menu {
+    @apply sm:hidden px-2 py-3 space-y-1;
+  }
+
+  & .mobile-btn {
+    @apply sm:hidden inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white;
+  }
+}
