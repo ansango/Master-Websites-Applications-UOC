@@ -1,0 +1,315 @@
+<div *ngIf="beer" class="animate__animated animate__bounce animate__fadeIn">
+  <div
+    class="
+      min-w-screen min-h-screen
+      bg-yellow-300
+      flex
+      items-center
+      px-5
+      py-14
+      lg:p-10
+      overflow-hidden
+      relative
+    "
+  >
+    <div
+      class="
+        w-full
+        max-w-6xl
+        rounded
+        bg-white
+        shadow-xl
+        p-10
+        lg:p-20
+        mx-auto
+        text-gray-800
+        relative
+        md:text-left
+      "
+    >
+      <div class="md:flex items-center -mx-10">
+        <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+          <div class="relative">
+            <img src="{{ beer.imgURL }}" class="w-full relative z-10" alt="" />
+            <div
+              class="
+                border-4 border-yellow-200
+                absolute
+                top-10
+                bottom-10
+                left-10
+                right-10
+                z-0
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 px-10">
+          <div class="mb-10">
+            <h1 class="font-bold uppercase text-2xl mb-5">
+              {{ beer.name }}
+            </h1>
+            <h2 class="text-xl mb-4 capitalize">{{ beer.subtitle }}</h2>
+            <h3 class="text-xl mb-4 capitalize">{{ beer.section }}</h3>
+            <p class="mb-4">
+              {{ beer.description }}
+            </p>
+            <p><span class="font-bold">ABV: </span>{{ beer.abv }}</p>
+          </div>
+
+          <div class="inline-block align-bottom">
+            <button
+              class="
+                bg-yellow-300
+                opacity-75
+                hover:opacity-100
+                text-yellow-900
+                hover:text-gray-900
+                rounded-full
+                px-10
+                py-2
+                font-semibold
+              "
+            >
+              <i class="mdi mdi-cart -ml-2 mr-2"></i> BUY NOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-20">
+    <div
+      class="px-14 py-10 mx-auto max-w-6xl"
+      *ngIf="
+        beer.tastingNotes.bitterness ||
+        beer.tastingNotes.hoppyness ||
+        beer.tastingNotes.maltyness
+      "
+    >
+      <h5 class="text-center text-2xl font-bold mb-5">Tasting Notes</h5>
+
+      <ul class="max-w-lg mx-auto">
+        <li *ngIf="beer.tastingNotes.bitterness">
+          <p>Bitterness:</p>
+          <div class="relative pt-1">
+            <div
+              class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200"
+            >
+              <div
+                [style.width]="bitterWidth"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-pink-500
+                "
+              ></div>
+            </div>
+          </div>
+        </li>
+        <div *ngIf="beer.tastingNotes.hoppyness">
+          <p>Hoppyness:</p>
+          <div class="relative pt-1">
+            <div
+              class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200"
+            >
+              <div
+                [style.width]="hoppyWidth"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-pink-500
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="beer.tastingNotes.maltyness">
+          <p>Maltyness:</p>
+          <div class="relative pt-1">
+            <div
+              class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-pink-200"
+            >
+              <div
+                [style.width]="maltyWidth"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-pink-500
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+    <div
+      class="px-14 py-10 mx-auto max-w-6xl"
+      *ngIf="
+        beer.brewSheet.hops ||
+        beer.brewSheet.malts ||
+        beer.brewSheet.colour ||
+        beer.brewSheet.style
+      "
+    >
+      <h5 class="text-center font-bold mb-5 text-2xl">Brew Sheet</h5>
+      <ul class="max-w-lg mx-auto">
+        <li *ngIf="beer.brewSheet.hops" class="mb-4">
+          <p>Hops:</p>
+          <ul class="flex flex-wrap mt-3">
+            <li
+              *ngFor="let hop of beer.brewSheet.hops"
+              class="
+                rounded-full
+                px-4
+                mr-2
+                mb-2
+                bg-yellow-200
+                text-yellow-700 text-sm
+                p-2
+                rounded
+                leading-none
+                flex
+                items-center
+                capitalize
+              "
+            >
+              {{ hop }}
+            </li>
+          </ul>
+        </li>
+        <li *ngIf="beer.brewSheet.malts" class="mb-4">
+          <p>Malts:</p>
+          <ul class="flex flex-wrap mt-3">
+            <li
+              *ngFor="let malt of beer.brewSheet.malts"
+              class="
+                rounded-full
+                px-4
+                mr-2
+                mb-2
+                bg-yellow-200
+                text-yellow-700 text-sm
+                p-2
+                rounded
+                leading-none
+                flex
+                items-center
+                capitalize
+              "
+            >
+              {{ malt }}
+            </li>
+          </ul>
+        </li>
+        <li *ngIf="beer.brewSheet.colour" class="mb-4">
+          <p>Colour:</p>
+          <div class="relative pt-1">
+            <div
+              class="
+                overflow-hidden
+                h-2
+                mb-4
+                text-xs
+                flex
+                rounded
+                bg-yellow-100
+              "
+            >
+              <div
+                [style.width]="colourWidth"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-yellow-300
+                "
+              ></div>
+            </div>
+          </div>
+        </li>
+        <li *ngIf="beer.brewSheet.style" class="mb-4">
+          <p>Style:</p>
+          <ul class="flex mt-3">
+            <li
+              class="
+                rounded-full
+                px-4
+                mr-2
+                mb-2
+                bg-yellow-200
+                text-yellow-700 text-sm
+                p-2
+                rounded
+                leading-none
+                flex
+                items-center
+                capitalize
+              "
+            >
+              {{ beer.brewSheet.style }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="px-14 py-10 mx-auto max-w-6xl" *ngIf="beer.ingredients">
+      <h5 class="text-center font-bold mb-5 text-2xl">Ingredients</h5>
+      <div class="max-w-lg mx-auto">
+        <ul class="flex flex-wrap justify-center">
+          <li
+            *ngFor="let ingredient of beer.ingredients"
+            class="
+              rounded-full
+              px-4
+              mr-2
+              mb-2
+              bg-green-400
+              text-green-800 text-sm
+              p-2
+              rounded
+              leading-none
+              flex
+              items-center
+              capitalize
+            "
+          >
+            {{ ingredient }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fixed bottom-10 right-10">
+  <a
+    class="
+      bg-blue-400
+      hover:bg-blue-300
+      text-white
+      font-bold
+      py-2
+      px-4
+      border-b-4 border-blue-500
+      hover:border-blue
+      rounded-xl
+    "
+    [routerLink]="['/']"
+    >Back</a
+  >
+</div>
