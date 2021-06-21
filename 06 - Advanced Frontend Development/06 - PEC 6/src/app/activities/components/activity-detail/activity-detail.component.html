@@ -1,0 +1,81 @@
+<!-- Si hay alguna actividad seleccionada -->
+<div *ngIf="activity">
+  <h5 class="float-left">Activities detail</h5>    
+  <br>
+  <hr style="border-top: 1px solid blue;"/>
+  <form class="text-center border border-light" [formGroup]="rForm">  
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- Name -->
+            <label class="float-left">Name:</label>
+            <input readonly type="text" formControlName="name" class="form-control mb-4">          
+        </div>
+        <div class="col">
+          <label class="float-left">Category:</label>
+          <input readonly type="text" formControlName="category" class="form-control mb-4">
+        </div>
+    </div>  
+    <div class="form-row mb-4">
+      <div class="col">
+        <label class="float-left">Description:</label>          
+        <input readonly type="text" formControlName="description" class="form-control mb-4">
+      </div>
+      <div class="col">
+        <label class="float-left">Subcategory:</label>
+        <input readonly type="text" formControlName="subcategory" class="form-control mb-4">
+      </div>
+    </div>
+    <div class="form-row mb-4">
+      <div class="col">
+        <label class="float-left">Language:</label>          
+        <input readonly type="text" formControlName="language" class="form-control mb-4">
+      </div>
+      <div class="col">
+        <label class="float-left">Date:</label>
+        <input readonly type="text" formControlName="date" class="form-control mb-4">
+      </div>
+    </div>
+    <div class="form-row mb-4">
+      <div class="col">
+        <label class="float-left">Price:</label>          
+        <input readonly type="text" formControlName="price" class="form-control mb-4">
+      </div>
+      <div class="col">
+        <label class="float-left">Minium capacity:</label>
+        <input readonly type="text" formControlName="miniumCapacity" class="form-control mb-4">
+      </div>
+    </div>
+    <div class="form-row mb-4">
+      <div class="col">
+        <label class="float-left">Limit capacity:</label>          
+        <input readonly type="text" formControlName="limitCapacity" class="form-control mb-4">
+      </div>
+      <div class="col">
+        <label class="float-left">State:</label>
+        <input readonly type="text" formControlName="state" class="form-control mb-4">
+      </div>
+    </div>
+    <div class="form-row mb-4">    
+      <div class="col">
+        <label class="float-left">People registered:</label>          
+        <input readonly type="text" formControlName="peopleRegistered" class="form-control mb-4">
+      </div>
+      <div class="col">      
+      </div>
+    </div>
+    <div class="form-row mb-4">
+      <div class="col">
+        <!-- SIGN UP BUTTON -->
+        <button *ngIf="rForm.get('myActivitySignUpVisible').value" class="btn btn-primary my-4 float-center" (click)="onClickSignUP()">SIGN UP</button>
+        <!-- DELETE ACTIVITY BUTTON -->
+        <button *ngIf="rForm.get('myActivityDeleteVisible').value" class="btn btn-danger my-4 float-center" (click)="onClickDelete()">DELETE</button>
+      </div>
+      <div class="col">
+        <!-- SAVE FAVORITES BUTTON -->
+        <button *ngIf="rForm.get('saveFavoritesVisible').value" class="btn btn-danger my-4 float-center" (click)="onClickSaveFavorites()"><i class="fas fa-heart"></i> SAVE FAVORITES</button>
+        <!-- DELETE FAVORITES BUTTON -->
+        <button *ngIf="rForm.get('deleteFavoritesVisible').value" class="btn btn-danger my-4 float-center" (click)="onClickDeleteFavorites()"><i class="fas fa-heart"></i> DELETE FAVORITES</button>
+      </div>
+    </div>  
+  </form>
+</div>

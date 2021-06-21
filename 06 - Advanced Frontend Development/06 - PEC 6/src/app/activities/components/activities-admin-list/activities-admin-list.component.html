@@ -1,0 +1,38 @@
+<div class="container">        
+    <form class="text-center border border-light p-5"> 
+        <br>
+        <h5 class="float-left">USER ACTIVITIES</h5>
+        <br>
+        <hr style="border-top: 1px solid blue;"/>
+        <ul class="list-group">
+            <table class="table table-bordered">
+              <thead>
+                <tr style="background-color:blue;color: #fff;">
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Language</th>
+                    <th>Date</th>
+                    <th>People reg.</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>            
+            <tbody>
+                <tr *ngFor="let activity of activitiesListState$.activity">
+                    <th>{{ activity.name }}</th>
+                    <th>{{ activity.category }}</th>
+                    <td>{{ activity.price }}€</td>
+                    <td>{{ activity.language }}</td>
+                    <td>{{ activity.date }}</td>
+                    <td>{{ activity.peopleRegistered }}</td>
+                    <td>
+                        <button class="btn btn-outline-info" [routerLink]="['/activity-admin-detail', activity.id]">Edit</button>
+                        <button class="btn btn-outline-danger" (click)="onClickDeleteActivity(activity)">Delete</button>
+                    </td>                    
+                </tr>
+            </tbody>            
+            </table>            
+            <button class="btn btn-outline-primary float-left" [routerLink]="['/activity-admin-detail']">Add</button>
+          </ul>          
+    </form>      
+</div>

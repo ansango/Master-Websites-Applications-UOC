@@ -1,0 +1,38 @@
+<div style="padding-left: 10px; padding-right: 10px;" class="row">  
+  <div class="col">
+    <h5 class="float-left">Activities list</h5>    
+    <br>
+    <hr style="border-top: 1px solid blue;"/>
+    <ul class="list-group">
+      <table class="table table-bordered">
+        <tr style="background-color:blue;color: #fff;">
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Language</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let activity of activitiesListState$.activity" (click)="onSelect(activity)">
+          <td>        
+            <b>{{activity.name}}</b>
+          </td>
+          <td>        
+            <b>{{activity.category}}</b>
+          </td>
+          <td>        
+            <b>{{activity.price}}€</b>
+          </td>
+          <td>
+            <b>{{activity.language}}</b>
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary btn-circle btn-sm"><i class="fa fa-arrow-right"></i></button>              
+          </td>
+        </tr>
+      </table>
+    </ul>
+  </div>
+  <div class="col">    
+      <app-activity-detail [activity]="selectedActivity" [eFilterType]="eFilterType" (signUpActivity)="onSignUpActivity($event)" (deleteSignUpActivity)="onDeleteSignUpActivity($event)" (deleteFavorites)="onDeleteFavorites($event)"></app-activity-detail>
+  </div>  
+</div>

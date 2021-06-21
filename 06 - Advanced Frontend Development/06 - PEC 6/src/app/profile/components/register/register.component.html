@@ -1,0 +1,50 @@
+<div class="container">    
+    <form class="text-center border border-light p-5"  [formGroup]="registerForm" (ngSubmit)="userRegister()">
+        <!-- User name -->
+        <input type="text"  [formControl]="name" class="form-control mb-4" placeholder="User Name">        
+        <span style="color: red;" *ngIf="registerForm.get('name').errors && (registerForm.get('name').touched || registerForm.get('name').dirty)">
+            <span *ngIf="registerForm.get('name').errors.required">Name is required</span> 
+            <span *ngIf="registerForm.get('name').errors.minlength || registerForm.get('name').errors.maxlength">User name must be greater than 3 characters and less than 55 characters</span>
+            <span *ngIf="registerForm.get('name').errors.pattern">Invalid character</span>
+        </span>            
+        <!-- User surname -->
+        <input type="text"  [formControl]="surname" class="form-control mb-4" placeholder="User surname">        
+        <span style="color: red;" *ngIf="registerForm.get('surname').errors && (registerForm.get('surname').touched || registerForm.get('surname').dirty)">                
+            <span *ngIf="registerForm.get('surname').errors.minlength || registerForm.get('surname').errors.maxlength">User surname must be greater than 3 characters and less than 55 characters</span>
+            <span *ngIf="registerForm.get('surname').errors.pattern">Invalid character</span>
+        </span>            
+        <!-- User type -->
+        <select [formControl]="type" class="form-control mb-4" placeholder="User type">
+            <option [ngValue]="null">Select user type...</option>                
+            <option *ngFor="let type of eUserTypes | keyvalue" [ngValue]="type.value">{{type.value}}</option>              
+        </select>
+        <!-- E-mail -->
+        <input type="email"  [formControl]="email" class="form-control mb-4" placeholder="E-mail">        
+        <span style="color: red;" *ngIf="registerForm.get('email').errors && (registerForm.get('email').touched || registerForm.get('email').dirty)">
+            <span *ngIf="registerForm.get('email').errors.required">Email is required</span> 
+            <span *ngIf="registerForm.get('email').errors.email">Email doesn't have a correct format</span>   
+        </span>            
+        <!-- pwd -->
+        <input type="password"  [formControl]="password" class="form-control mb-4" placeholder="Password">
+        <span style="color: red;" *ngIf="registerForm.get('password').errors && (registerForm.get('password').touched || registerForm.get('password').dirty)">
+            <span *ngIf="registerForm.get('password').errors.required">User pwd is required</span>    
+            <span *ngIf="registerForm.get('password').errors.minlength">User password must be greater than 8 characters</span>
+        </span>        
+        <!-- Repeat pwd -->
+        <input type="password"  [formControl]="password2" class="form-control mb-4" placeholder="Repeat password">
+        <span style="color: red;" *ngIf="registerForm.get('password2').errors && (registerForm.get('password2').touched || registerForm.get('password2').dirty)">
+            <span *ngIf="registerForm.get('password2').errors.required">Repeat pwd control is required</span>                
+        </span>
+        <!-- Check pwds -->
+        <span style="color: red;" *ngIf="registerForm.errors">
+            <span *ngIf="registerForm.errors.equalValue">Password controls must be equal</span>
+        </span>    
+        <div class="row">
+            <h3 style="color: red;" *ngIf="userState$.error && bSubmitted">
+                That email is already assigned to another user.
+            </h3>
+        </div>
+        <!-- JOIN NOW BUTTON -->
+        <button class="btn btn-primary my-4 float-left"  type="submit" [disabled]="!registerForm.valid">JOIN NOW</button>
+    </form>
+</div>

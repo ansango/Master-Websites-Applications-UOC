@@ -1,0 +1,16 @@
+.footer{  
+    /*position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #0275d8;*/
+
+    position: fixed; 
+    padding: 0px 10px 0px 10px; 
+    bottom: 0; 
+    width: 100%; 
+    /* Height of the footer*/  
+    height: 40px; 
+    background-color: #0275d8;
+}

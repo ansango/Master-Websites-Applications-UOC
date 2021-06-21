@@ -1,0 +1,274 @@
+<div class="container">
+  <form
+    class="text-center border border-light p-5"
+    [formGroup]="profileForm"
+    (ngSubmit)="updateProfile()"
+  >
+    <h5 class="float-left">PROFILE</h5>
+    <br />
+    <hr style="border-top: 1px solid blue" />
+    <!-- Si perfil de usuario company -->
+    <div *ngIf="companyProfile">
+      <!-- Company name -->
+      <input
+        type="text"
+        [formControl]="companyName"
+        class="form-control mb-4"
+        placeholder="Company Name"
+      />
+      <span
+        style="color: red"
+        *ngIf="
+          profileForm.get('companyName').errors &&
+          (profileForm.get('companyName').touched ||
+            profileForm.get('companyName').dirty)
+        "
+      >
+        <span *ngIf="profileForm.get('companyName').errors.required"
+          >Name is required</span
+        >
+        <span
+          *ngIf="
+            profileForm.get('companyName').errors.minlength ||
+            profileForm.get('companyName').errors.maxlength
+          "
+          >Company name must be greater than 3 characters and less than 55
+          characters</span
+        >
+      </span>
+      <!-- Company description -->
+      <input
+        type="text"
+        [formControl]="companyDescription"
+        class="form-control mb-4"
+        placeholder="Company Description"
+      />
+      <!-- CIF -->
+      <input
+        type="text"
+        [formControl]="cif"
+        class="form-control mb-4"
+        placeholder="CIF"
+      />
+    </div>
+    <!-- User name -->
+    <input
+      type="text"
+      [formControl]="name"
+      class="form-control mb-4"
+      placeholder="User Name"
+    />
+    <span
+      style="color: red"
+      *ngIf="
+        profileForm.get('name').errors &&
+        (profileForm.get('name').touched || profileForm.get('name').dirty)
+      "
+    >
+      <span *ngIf="profileForm.get('name').errors.required"
+        >Name is required</span
+      >
+      <span
+        *ngIf="
+          profileForm.get('name').errors.minlength ||
+          profileForm.get('name').errors.maxlength
+        "
+        >User name must be greater than 3 characters and less than 55
+        characters</span
+      >
+      <span *ngIf="profileForm.get('name').errors.pattern"
+        >Invalid character</span
+      >
+    </span>
+    <!-- Surname -->
+    <input
+      type="text"
+      [formControl]="surname"
+      class="form-control mb-4"
+      placeholder="Surname"
+    />
+    <span
+      style="color: red"
+      *ngIf="
+        profileForm.get('surname').errors &&
+        (profileForm.get('surname').touched || profileForm.get('surname').dirty)
+      "
+    >
+      <span
+        *ngIf="
+          profileForm.get('surname').errors.minlength ||
+          profileForm.get('surname').errors.maxlength
+        "
+        >User surname must be greater than 3 characters and less than 55
+        characters</span
+      >
+      <span *ngIf="profileForm.get('surname').errors.pattern"
+        >Invalid character</span
+      >
+    </span>
+    <!-- Birth date-->
+    <input
+      type="text"
+      placeholder="dd/MM/yyyy"
+      [formControl]="birthDate"
+      class="form-control mb-4"
+      placeholder="Birth Date"
+    />
+    <span
+      style="color: red"
+      *ngIf="
+        profileForm.get('birthDate').errors &&
+        (profileForm.get('birthDate').touched ||
+          profileForm.get('birthDate').dirty)
+      "
+    >
+      <span *ngIf="profileForm.get('birthDate').errors?.errorFormatDate"
+        >Invalid format date</span
+      >
+    </span>
+    <!-- Phone -->
+    <input
+      type="number"
+      [formControl]="phone"
+      class="form-control mb-4"
+      placeholder="Phone"
+    />
+    <!-- Nacionality -->
+    <select
+      [formControl]="nationality"
+      class="form-control mb-4"
+      placeholder="Nacionality"
+    >
+      <option [ngValue]="null">Select nacionality...</option>
+      <option
+        *ngFor="let nationality of eUserNationalities | keyvalue"
+        [ngValue]="nationality.value"
+      >
+        {{ nationality.value }}
+      </option>
+    </select>
+    <!-- NIF -->
+    <input
+      type="text"
+      [formControl]="nif"
+      class="form-control mb-4"
+      placeholder="NIF"
+    />
+    <!-- Check NIF -->
+    <span style="color: red" *ngIf="profileForm.errors">
+      <span *ngIf="profileForm.errors?.errorNIF">Wrong NIF</span>
+    </span>
+    <!-- About me -->
+    <textarea
+      [formControl]="aboutMe"
+      class="form-control mb-4"
+      placeholder="About me"
+    ></textarea>
+    <!-- UPDATE BUTTON -->
+    <button
+      class="btn btn-primary my-4 float-left"
+      type="submit"
+      [disabled]="!profileForm.valid"
+    >
+      UPDATE PROFILE INFORMATION
+    </button>
+  </form>
+  <form class="text-center border border-light p-5">
+    <br />
+    <h5 class="float-left">EDUCATION</h5>
+    <br />
+    <hr style="border-top: 1px solid blue" />
+    <ul class="list-group">
+      <table class="table table-bordered">
+        <thead>
+          <tr style="background-color: blue; color: #fff">
+            <th>Type</th>
+            <th>Level</th>
+            <th>Name</th>
+            <th>University</th>
+            <th>Finish date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let education of user.educations">
+            <th>{{ education.type }}</th>
+            <th>{{ education.level }}</th>
+            <td>{{ education.name }}</td>
+            <td>{{ education.university }}</td>
+            <td>{{ education.finish }}</td>
+            <td>
+              <button
+                class="btn btn-outline-info"
+                [routerLink]="['/profile-education', education.uid]"
+              >
+                Edit
+              </button>
+              <button
+                class="btn btn-outline-danger"
+                (click)="
+                  onDeleteButton({ button: btnEducation, id: education.uid })
+                "
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+        class="btn btn-outline-primary float-left"
+        [routerLink]="['/profile-education']"
+      >
+        Add
+      </button>
+    </ul>
+  </form>
+  <form class="text-center border border-light p-5">
+    <br />
+    <h5 class="float-left">LANGUAGES</h5>
+    <br />
+    <hr style="border-top: 1px solid blue" />
+    <ul class="list-group">
+      <table class="table table-bordered">
+        <thead>
+          <tr style="background-color: blue; color: #fff">
+            <th>Level</th>
+            <th>Language</th>
+            <th>Finish date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let language of user.languages">
+            <th>{{ language.level }}</th>
+            <td>{{ language.language }}</td>
+            <td>{{ language.finish }}</td>
+            <td>
+              <button
+                class="btn btn-outline-info"
+                [routerLink]="['/profile-language', language.uid]"
+              >
+                Edit
+              </button>
+              <button
+                class="btn btn-outline-danger"
+                (click)="
+                  onDeleteButton({ button: btnLanguage, id: language.uid })
+                "
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+        class="btn btn-outline-primary float-left"
+        [routerLink]="['/profile-language']"
+      >
+        Add
+      </button>
+    </ul>
+  </form>
+</div>

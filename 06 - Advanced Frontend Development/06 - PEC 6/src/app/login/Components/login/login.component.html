@@ -1,0 +1,22 @@
+<div class="container">    
+    <form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="checkLogin()">    
+        <!-- Email -->
+        <input type="email" [formControl]="email" class="form-control mb-4" placeholder="User E-mail">
+        <span style="color: red;" *ngIf="loginForm.get('email').errors && (loginForm.get('email').touched || loginForm.get('email').dirty)">
+            <span *ngIf="loginForm.get('email').errors.required">Email is required</span> 
+            <span *ngIf="loginForm.get('email').errors.email">Email doesn't have a correct format</span>   
+        </span>
+        <!-- Password -->
+        <input type="password" [formControl]="password" class="form-control mb-4" placeholder="User Password">
+        <span style="color: red;" *ngIf="loginForm.get('password').errors && (loginForm.get('password').touched || loginForm.get('password').dirty)">
+            <span *ngIf="loginForm.get('password').errors.required">User pwd is required</span>    
+        </span>
+        <div class="row">
+            <h3 style="color: red;" *ngIf="loginState$.error && (bSubmitted)">
+                Invalid user or password
+            </h3>
+        </div>
+        <!-- Sign in button -->
+        <button class="btn btn-primary my-4" type="submit" [disabled]="!loginForm.valid">Sign in</button>
+    </form>    
+</div>
