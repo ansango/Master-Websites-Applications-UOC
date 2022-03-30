@@ -1,0 +1,23 @@
+/**
+ * ?{{pascalCase name}} Component
+ */
+
+import { FC } from "react";
+import * as cn from "./{{pascalCase name}}Styles";
+import {{pascalCase name}}Props from "./{{pascalCase name}}Props";
+
+/**
+ * Description of {{pascalCase name}} component displayed in Storybook
+ */
+
+const {{pascalCase name}}: FC<{{pascalCase name}}Props> = ({ option = "option__one", className, ...props }) => {
+  const cnOption = cn.options[option];
+  const styles = className ?? cnOption;
+  return (
+    <div className={styles} {...props}>
+      <span>{{pascalCase name}}</span>
+    </div>
+  );
+};
+
+export default {{pascalCase name}};

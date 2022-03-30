@@ -1,0 +1,147 @@
+import { Meta } from "@storybook/addon-docs";
+
+import image from "../../../assets/readme/component.png";
+import docs from "../../../assets/readme/docs.png";
+
+<Meta title="Readme/Create a Component" />
+
+# Create a Component
+
+Open your terminal and run:
+
+```bash
+ yarn cli # or select "cli" option in the Script Manager
+```
+
+With the **CLI** you can choose what you want to create, **choose a component and type a name**:
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={image} width="650" />
+</div>
+
+> This generates template files to coding a component. You will find all the files in `src/components` folder. Your component folder contains:
+
+- `Component.tsx` file:
+
+```jsx
+import { FC } from "react";
+import * as cn from "./SampleComponentStyles";
+
+export type SampleComponentProps = {
+  /**
+   * Description of options in Storybook
+   */
+  option?: "option__one" | "option__two" | "option__three",
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void,
+  /**
+   * Class Name override
+   */
+  className?: string,
+};
+
+/**
+ * Description of SampleComponent component displayed in Storybook
+ */
+
+const SampleComponent: FC<SampleComponentProps> = ({
+  option = "option__one",
+  className,
+  ...props
+}) => {
+  const cnOption = cn.options[option];
+  const styles = className ?? cnOption;
+  return (
+    <div className={styles} {...props}>
+      <span>SampleComponent</span>
+    </div>
+  );
+};
+
+export default SampleComponent;
+```
+
+- `ComponentStyle.ts` file, to write Tailwind classes as blocks:
+
+```js
+/**
+ ** Write your tailwind classes as objects and strings and import them in your component
+ */
+
+export const options = {
+  option__one: "bg-red-500 text-white font-bold py-2 px-4 rounded max-w-xs cursor-pointer",
+  option__two: "bg-green-500 text-white font-bold py-2 px-4 rounded max-w-sm cursor-pointer",
+  option__three: "bg-blue-500 text-white font-bold py-2 px-4 rounded max-w-md cursor-pointer",
+};
+```
+
+- `Component.test.tsx` file, to testing your component:
+
+```jsx
+/**
+ *? SampleComponent Test
+ */
+
+import { render, screen } from "@testing-library/react";
+
+import SampleComponent from "./SampleComponent";
+
+describe("<SampleComponent />", () => {
+  it("should render", () => {
+    render(<SampleComponent />);
+    expect(screen.getByText("SampleComponent")).toBeInTheDocument();
+  });
+});
+```
+
+- `Componente.stories.tsx` file to write your Storybook component:
+
+```jsx
+/**
+ * ? SampleComponent Story
+ */
+
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import SampleComponent from "./SampleComponent";
+
+export default {
+  title: 'Samples/SampleComponent',
+  component: SampleComponent,
+} as ComponentMeta<typeof SampleComponent>;
+
+const Template: ComponentStory<typeof SampleComponent> = (args) => <SampleComponent {...args} />;
+
+export const OptionOne = Template.bind({});
+
+OptionOne.args = {
+  option: "option__one",
+};
+
+export const CustomClass = Template.bind({});
+
+CustomClass.args = {
+  className: "bg-yellow-500 text-white font-bold py-2 px-4 rounded max-w-lg cursor-pointer",
+};
+```
+
+### Create plain Docs pages
+
+Storybook supports **.mdx files**, so we will create our flat documentation this way. To do this we go back to our CLI and select the docs option. Type a section and a name and that's all 😄
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={docs} width="650" />
+</div>
+
+> This generates template file write "plain" docs as Markdown files. You will find all the files in `src/docs` folder. **Your doc file contains**:
+
+```md
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Sample/Sample" />import { Meta } from "@storybook/addon-docs";
+
+# Sample
+
+...
+```

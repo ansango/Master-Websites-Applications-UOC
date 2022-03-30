@@ -1,0 +1,16 @@
+/**
+ * ?{{pascalCase name}} Test
+ */
+
+import { render, screen } from "@testing-library/react";
+
+import {{pascalCase name}}, { {{pascalCase name}}Props } from ".";
+
+const props: {{pascalCase name}}Props = {};
+
+describe("<{{pascalCase name}} />", () => {
+  it("should render", () => {
+    render(<{{pascalCase name}} {...props} />);
+    expect(screen.getByText("{{pascalCase name}}")).toBeInTheDocument();
+  })
+})

@@ -1,0 +1,83 @@
+import { Meta } from "@storybook/addon-docs";
+
+import sb from "../../../assets/readme/sb.png";
+import publish from "../../../assets/readme/publish.png";
+
+<Meta title="Readme/Build and Deploy" />
+
+# Build, deploy and install your package
+
+## Build and deploy your **Storybook**
+
+It's easy, to compile your Storybook in **`/storybook-static` folder** run:
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={sb} width="650" />
+</div>
+
+> Easy to do at [Vercel](https://vercel.com/).
+
+## Build and publish **your library**
+
+Build runs by [Rollup](https://rollupjs.org/) and its entry point is `src/index.ts` file.
+
+Please make sure that **all your components** are being imported and exported in this file.
+
+```js
+// src/index.ts
+
+import Button from "./components/Button/Button";
+export { Button };
+```
+
+Then **run**:
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={publish} width="650" />
+</div>
+
+> You can find the bundle in **`/dist` folder** to be published at [npm](https://docs.npmjs.com/cli/v8/commands/npm-publish)
+
+> To publish run `npm publish` (after login `npm login`)
+
+## Install your own library
+
+Simple, install it!
+
+```bash
+yarn add {awesome-library} # or npm i {awesome-library}
+```
+
+Because we use Tailwindcss, we have to install and configure it. [Read the docs](https://tailwindcss.com/docs/installation).
+
+You have to add the following in your `tailwind.config.js`:
+
+```js
+module.exports = {
+  content: [
+    "./components/**/*.{html,js}",
+    "./pages/**/*.{html,js}",
+    "./node_modules/awesome-library/dist/**/*.{js,ts,jsx,tsx}",
+  ],
+  // ...
+};
+```
+
+> [See more](https://tailwindcss.com/docs/content-configuration#working-with-third-party-libraries)
+
+These are current `peerDependencies` you must be in your new project (`package.json`):
+
+```json
+{
+  "dependencies": {
+    "postcss": "^8.4.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.16"
+  }
+}
+```
+
+If you have problems, please open an [issue](https://github.com/ansango/rtb-starter/issues)

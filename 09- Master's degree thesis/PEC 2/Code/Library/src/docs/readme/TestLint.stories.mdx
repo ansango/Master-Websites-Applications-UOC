@@ -1,0 +1,29 @@
+import { Meta } from "@storybook/addon-docs";
+
+import test from "../../../assets/readme/test.png";
+import watch from "../../../assets/readme/watch.png";
+import lint from "../../../assets/readme/lint.png";
+
+<Meta title="Readme/Test and Lint" />
+
+# Test and Lint
+
+**You can run tests**:
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={test} width="650" />
+</div>
+
+Or you can also run unit tests in **watch mode**:
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={watch} width="650" />
+</div>
+
+You can run lint, **[ESLint](https://eslint.org/)**:
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={lint} width="650" />
+</div>
+
+> Before you can commit to your repository [ESLint](https://eslint.org/) and all tests will be run, if they fail [Husky](https://typicode.github.io/husky/#/) will not let you commit.

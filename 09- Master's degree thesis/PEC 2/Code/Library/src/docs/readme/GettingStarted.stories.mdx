@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/addon-docs";
+
+import image from "../../../assets/readme/manager.png";
+import com from "../../../assets/readme/clicomp.png";
+import doc from "../../../assets/readme/clidoc.png";
+
+<Meta title="Readme/Getting Started" />
+
+# Getting Started
+
+Use Github templete or:
+
+```bash
+git clone https://github.com/ansango/rtb-starter.git
+```
+
+and install the dependencies:
+
+```bash
+yarn install # or npm install
+```
+
+Then run in your terminal:
+
+```bash
+yarn start # npm start
+```
+
+> This runs a script manager, then you can choose what you want to do. 😄
+
+<div style={{ display: "flex", justifyContent: "center", padding: "50px 0" }}>
+  <img src={image} width="650" />
+</div>
+
+> ⚠️ The CLI works fine in **`bash`**, but in **`powershell`** the arrows do not allow you to select anything, so you will have to create the files manually. **[This is a bug in the Node core on Windows](https://github.com/SBoudrias/Inquirer.js/issues/793).**
